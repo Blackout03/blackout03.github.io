@@ -1,0 +1,156 @@
+﻿body {
+    background-color: #000022;
+    color: skyblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#Google {
+    color: aqua;
+}
+
+#ImageESP {
+    width: 384px;
+}
+
+#Header {
+    font-size: 2em;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+}
+
+header {
+    font-size: 1.25em;
+    padding: 15px;
+    border-style: solid;
+    border-color: turquoise;
+    border-width: 5px;
+    text-align: center;
+    background: black;
+    color: aquamarine;
+}
+
+nav {
+    z-index: 10000;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    background-color: royalblue;
+}
+
+    /* Style the navigation bar links */
+    nav a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+        /* Change color on hover */
+        nav a:hover {
+            background-color: steelblue;
+            color: black;
+        }
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+#Menu {
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    border-style: solid;
+    border-color: turquoise;
+    padding-left: 10px;
+}
+
+#Menu1 {
+    width: 110px;
+    left: 20px;
+    background-color: black;
+    border-style: solid;
+    border-color: turquoise;
+    padding-left: 10px;
+    display: inline;
+}
+
+#Menu2 {
+    width: 110px;
+    left: 200px;
+    background-color: black;
+    border-style: solid;
+    border-color: turquoise;
+    padding-left: 10px;
+    display: inline;
+}
+
+#MenuText1 {
+    color: aquamarine;
+    font-weight: bolder;
+}
+
+#MenuText2 {
+    color: turquoise;
+    font-weight: bolder;
+}
+
+#Content {
+    background-color: darkslateblue;
+    padding-bottom: 2000px;
+}
+
+#Image {
+    border-color: turquoise;
+    border-style: solid;
+    border-width: 5px;
+    width: 384px;
+    height: 242px;
+    position: absolute;
+    top: 170px;
+    left: 20px;
+}
+
+footer {
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    background-color: royalblue;
+}
+
+    /* Style the navigation bar links */
+    footer a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+        /* Change color on hover */
+        footer a:hover {
+            background-color: steelblue;
+            color: black;
+        }
+
+
+#Copyright {
+	color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+	padding-left: 1210px;
+}
