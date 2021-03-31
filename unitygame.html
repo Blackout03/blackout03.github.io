@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-
-<html>
-<head>
-<title> Welcome Page! </title>
-<link rel="stylesheet" href="css/StyleSheetUnityGame1.css" />
-<link rel="stylesheet" href="css/StyleSheetUnityGame2.css" />
-</head>
-<body>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | New Unity Project</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="css/StyleSheetUnityGame.css">
+  </head>
+  <body>
     <header>
         <h1>Welcome!</h1>
     </header>
@@ -16,17 +17,30 @@
         <a href="">Unity Game</a>
         <a href="Extra.html">MenuText4</a>
     </nav>
-    <div id="UnityGame">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">New Unity Project</div>
+      </div>
+    </div>
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Builds.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Builds.data.gz",
-        frameworkUrl: buildUrl + "/Builds.framework.js.gz",
-        codeUrl: buildUrl + "/Builds.wasm.gz",
+        dataUrl: buildUrl + "/Builds.data.unityweb",
+        frameworkUrl: buildUrl + "/Builds.framework.js.unityweb",
+        codeUrl: buildUrl + "/Builds.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "Cube",
+        productName: "New Unity Project",
         productVersion: "0.1",
       };
 
@@ -61,7 +75,6 @@
       };
       document.body.appendChild(script);
     </script>
-	</div>
     <footer>
         <a href="https://www.youtube.com/c/Blackout03">Youtube</a>
         <a href="https://www.twitch.tv/RealBlackout03">Twitch</a>
@@ -69,5 +82,5 @@
         <a href="https://www.reddit.com/u/Blackout03_">Reddit</a>
         <a href="https://www.discord.com/invite/5uMtag9">Discord</a>
     </footer>
-</body>
+  </body>
 </html>
