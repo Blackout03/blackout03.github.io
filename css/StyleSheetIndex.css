@@ -145,10 +145,16 @@ footer {
             color: black;
         }
 
-#Copyright {
+.Navigation {
 	color: white;
-    padding: 14px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     text-align: center;
-	padding-left: 1210px;
+}
+.Copyright {
+	color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+	padding-left: 56%;
 }

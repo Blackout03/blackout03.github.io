@@ -2,15 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="621ef5fd-cb7f-4456-8871-5c11a7db5390" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Builds.data.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Builds.data.unityweb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Builds.framework.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Builds.framework.js.unityweb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Builds.loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Builds.wasm.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Builds.wasm.unityweb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateData/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateData/fullscreen-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateData/progress-bar-empty-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateData/progress-bar-empty-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateData/progress-bar-full-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateData/progress-bar-full-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateData/unity-logo-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateData/unity-logo-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemplateData/webgl-logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/art.html" beforeDir="false" afterPath="$PROJECT_DIR$/art.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/StyleSheetArt.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/StyleSheetArt.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/StyleSheetIndex.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/StyleSheetIndex.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/StyleSheetUnityGame.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/StyleSheetMods.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitygame.html" beforeDir="false" afterPath="$PROJECT_DIR$/unitygame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods.html" beforeDir="false" afterPath="$PROJECT_DIR$/mods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitygame.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +43,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Developer\blackout03.github.io\css" />
       <recent name="C:\Users\User\Developer\blackout03.github.io" />
     </key>
   </component>
@@ -45,6 +61,9 @@
       <updated>1633787491625</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
