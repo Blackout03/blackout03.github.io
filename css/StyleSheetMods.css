@@ -2,34 +2,19 @@
     background-color: darkslateblue;
     color: skyblue;
     font-size: 20px;
-	font-family: arial, serif;
-    margin: 0px;
-    padding: 0px;
+    font-family: arial, serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 p {
-    margin: 0px;
-    padding: 0px;
-}
-
-#Google {
-    color: aqua;
-}
-
-#ImageESP {
-    width: 384px;
-}
-
-#Header {
-    font-size: 2em;
-    padding-top: 0px;
-    padding-left: 10px;
-    padding-bottom: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -46,115 +31,204 @@ header {
 nav {
     z-index: 10000;
     position: sticky;
-    top: 0px;
+    top: 0;
     display: flex;
     background-color: royalblue;
 }
 
-    /* Style the navigation bar links */
-    nav a {
-        color: white;
-        padding: 14px 20px;
-        text-decoration: none;
-        text-align: center;
-    }
+/* Style the navigation bar links */
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
 
-        /* Change color on hover */
-        nav a:hover {
-            background-color: steelblue;
-            color: black;
-        }
+/* Change color on hover */
+nav a:hover {
+    background-color: blueviolet;
+    color: black;
+}
 
 body {
-    font-family: Arial;
+    font-family: Arial, serif;
     margin: 0;
 }
 
-#Menu {
-    position: sticky;
-    top: 0px;
-    background-color: black;
-    border-style: solid;
-    border-color: turquoise;
-    padding-left: 10px;
-}
-
-#Menu1 {
-    width: 110px;
-    left: 20px;
-    background-color: black;
-    border-style: solid;
-    border-color: turquoise;
-    padding-left: 10px;
-    display: inline;
-}
-
-#Menu2 {
-    width: 110px;
-    left: 200px;
-    background-color: black;
-    border-style: solid;
-    border-color: turquoise;
-    padding-left: 10px;
-    display: inline;
-}
-
-#MenuText1 {
+#MainText {
+    font-size: 125%;
     color: aquamarine;
-    font-weight: bolder;
-}
-
-#MenuText2 {
-    color: turquoise;
     font-weight: bolder;
 }
 
 #Content {
     padding-bottom: 2000px;
+    width: 96%;
+    left: 1%;
+    position: relative;
 }
 
-#Image {
+#Mod1 {
     border-color: turquoise;
     border-style: solid;
     border-width: 5px;
-    width: 384px;
-    height: 242px;
-    position: absolute;
-    top: 170px;
-    left: 20px;
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    top: 250px;
+    left: 100px;
+}
+#ModImage1 {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    background-color: rgba(80, 0, 80, 0.125);
+    border: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .01s ease-in-out;
+}
+
+.collapse-wrapper {
+    width: 100%;
+    display: inline-block;
+}
+
+.collapse {
+    display: none;
+}
+
+#toggle-03:checked + #label-03 + #content-03 {
+    max-height: 100%;
+    width: 100%;
+    padding: .5rem 1rem;
+    border-left: 4px solid royalblue;
+    border-bottom: 4px solid blueviolet;
+    border-right: 4px solid blueviolet;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#toggle-03:checked + #label-03 {
+    border-top: 4px solid royalblue;
+    border-left: 4px solid royalblue;
+    border-bottom: none;
+    border-right: 4px solid blueviolet;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#toggle-02:checked + #label-02 + #content-02 {
+    max-height: 100%;
+    width: 100%;
+    padding: .5rem 1rem;
+    border-left: 4px solid royalblue;
+    border-bottom: 4px solid blueviolet;
+    border-right: 4px solid blueviolet;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#toggle-02:checked + #label-02 {
+    border-top: 4px solid royalblue;
+    border-left: 4px solid royalblue;
+    border-bottom: none;
+    border-right: 4px solid blueviolet;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#toggle-01:checked + #label-01 + #content-01 {
+    max-height: 100%;
+    width: 100%;
+    padding: .5rem 1rem;
+    border-left: 4px solid royalblue;
+    border-bottom: 4px solid blueviolet;
+    border-right: 4px solid blueviolet;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#toggle-01:checked + #label-01 {
+    border-top: 4px solid royalblue;
+    border-left: 4px solid royalblue;
+    border-bottom: none;
+    border-right: 4px solid blueviolet;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.label {
+    width: 100%;
+    display: inline-block;
+    background: rgba(80, 0, 80, 0.125);
+    padding: 1rem;
+    border-top: 4px solid royalblue;
+    border-left: 4px solid royalblue;
+    border-bottom: 4px solid blueviolet;
+    border-right: 4px solid blueviolet;
+    border-radius: 4px;
+}
+
+.label:hover {
+    cursor: pointer;
+    background: rgba(80, 0, 80, 0.25);
+}
+
+.label:active {
+    background: rgba(80, 0, 80, 0.5);
+}
+
+.label::before {
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    transform: translateY(-2px);
+}
+
+.link {
+    color: black;
+    font-weight: bolder;
+    float: left;
+}
+
+.label {
+    font-size: 32px;
+    user-select: none;
 }
 
 footer {
     position: sticky;
-    bottom: 0px;
+    bottom: 0;
     display: flex;
     background-color: royalblue;
 }
 
-    /* Style the navigation bar links */
-    footer a {
-        color: white;
-        padding: 14px 20px;
-        text-decoration: none;
-        text-align: center;
-    }
+/* Style the navigation bar links */
+footer a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
 
-        /* Change color on hover */
-        footer a:hover {
-            background-color: steelblue;
-            color: black;
-        }
+/* Change color on hover */
+footer a:hover {
+    background-color: blueviolet;
+    color: black;
+}
 
 .Navigation {
-	color: white;
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     text-align: center;
 }
 .Copyright {
-	color: white;
-    padding: 10px 20px;
+    color: white;
     text-decoration: none;
     text-align: center;
-	padding-left: 56%;
+    padding: 10px 20px 10px 56%;
 }

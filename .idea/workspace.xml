@@ -1,54 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="621ef5fd-cb7f-4456-8871-5c11a7db5390" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/images/chaos_additions_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mods/chaos-additions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mods/downloads/chaosadditions-1.16.5-0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mods/downloads/chaosadditions-1.16.5-0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mods/downloads/chaosadditions-1.16.5-0.3.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Builds.data.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Builds.data.unityweb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Builds.framework.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Builds.framework.js.unityweb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Builds.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Builds.wasm.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Builds.wasm.unityweb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateData/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateData/fullscreen-button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateData/progress-bar-empty-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateData/progress-bar-empty-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateData/progress-bar-full-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateData/progress-bar-full-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateData/unity-logo-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateData/unity-logo-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemplateData/webgl-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/art.html" beforeDir="false" afterPath="$PROJECT_DIR$/art.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/StyleSheetArt.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/StyleSheetArt.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/StyleSheetIndex.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/StyleSheetIndex.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/StyleSheetUnityGame.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/StyleSheetMods.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/StyleSheetMods.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/StyleSheetMods.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mods.html" beforeDir="false" afterPath="$PROJECT_DIR$/mods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitygame.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1zGvyK7TozjIxpV9QKZHXMLnY7x" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Developer\blackout03.github.io\css" />
       <recent name="C:\Users\User\Developer\blackout03.github.io" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Developer\blackout03.github.io\mods\downloads" />
+      <recent name="C:\Users\User\Developer\blackout03.github.io\mods" />
+      <recent name="C:\Users\User\Developer\blackout03.github.io\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -59,8 +70,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1633787491625</updated>
+      <workItem from="1636621014109" duration="12211000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
