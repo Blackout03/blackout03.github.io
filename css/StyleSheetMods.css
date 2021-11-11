@@ -55,12 +55,6 @@ body {
     margin: 0;
 }
 
-#MainText {
-    font-size: 125%;
-    color: aquamarine;
-    font-weight: bolder;
-}
-
 #Content {
     padding-bottom: 2000px;
     width: 96%;
