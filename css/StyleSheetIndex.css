@@ -17,10 +17,6 @@ p {
     padding: 0px;
 }
 
-#Google {
-    color: aqua;
-}
-
 #ImageESP {
     width: 196px;
 }
@@ -111,6 +107,12 @@ body {
 
 #Content {
     padding-bottom: 2000px;
+    font-weight: bolder;
+}
+
+#Content a {
+    color: skyblue;
+    font-weight: bolder;
 }
 
 #Image {
