@@ -94,6 +94,26 @@ body {
     display: none;
 }
 
+#toggle-04:checked + #label-04 + #content-04 {
+    max-height: 100%;
+    width: 100%;
+    padding: .5rem 1rem;
+    border-left: 4px solid royalblue;
+    border-bottom: 4px solid blueviolet;
+    border-right: 4px solid blueviolet;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#toggle-04:checked + #label-04 {
+    border-top: 4px solid royalblue;
+    border-left: 4px solid royalblue;
+    border-bottom: none;
+    border-right: 4px solid blueviolet;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 #toggle-03:checked + #label-03 + #content-03 {
     max-height: 100%;
     width: 100%;
