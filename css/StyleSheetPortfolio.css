@@ -1,0 +1,84 @@
+body {
+    background-color: darkslateblue;
+    color: skyblue;
+    font-size: 20px;
+	font-family: arial, serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#Content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.ContributionsImage {
+    width: 650px;
+}
+
+.ExtendedSlabsPlusLogo {
+    width: 300px;
+}
+
+.BlackoutsBackpacksLogo {
+    width: 300px;
+}
+
+.NoFallingBlocksLogo {
+    width: 300px;
+}
+
+.PixelWikiLogo {
+    width: 300px;
+}
+
+body {
+    color: skyblue;
+    font-size: 20px;
+    font-family: arial, serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+footer {
+    font-family: Arial;
+    margin: 0;
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    background-color: royalblue;
+}
+
+    /* Style the navigation bar links */
+    footer a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+        /* Change color on hover */
+        footer a:hover {
+            background-color: steelblue;
+            color: black;
+        }
+
+.Copyright {
+	color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+	padding-left: 56%;
+}
