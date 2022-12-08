@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>1.16.5 Release</title>
+    <style>
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      transform: translate(-50%, -150%);
+      font-weight: bold;
+      font-size: 36px;
+    }
+  </style>
+</head>
+<body>
+<script>
+// Create a date instance for the specific date
+const oldDate = new Date('2021-01-15');
+
+// Create a new Date instance for the last day of the month
+var lastDayOfMonth = new Date(oldDate.getFullYear(), oldDate.getMonth(), 0);
+
+// Get the number of days in the month by getting the day of the last day of the month
+var daysInMonth = lastDayOfMonth.getDate();
+
+// Get the current date and time
+var currentDate = new Date();
+
+// Calculate the number of years by subtracting the year of the old date from the year of the current date
+var years = currentDate.getFullYear() - oldDate.getFullYear();
+
+// Calculate the number of months by subtracting the month of the old date from the month of the current date
+var months = currentDate.getMonth() - oldDate.getMonth();
+
+// If the month of the current date is less than the month of the old date, subtract 1 from the number of years and add 12 to the number of months
+if (currentDate.getMonth() < oldDate.getMonth()) {
+  years--;
+  months += 12;
+}
+
+// Calculate the number of days by subtracting the day of the old date from the day of the current date
+var days = currentDate.getDate() - oldDate.getDate();
+console.log(`1 + ${days}`);
+console.log(`2 + ${daysInMonth}`);
+
+// If the day of the current date is less than the day of the old date, subtract 1 from the number of months and add the number of days in the month to the number of days
+if (currentDate.getDate() < oldDate.getDate()) {
+  months--;
+  days += daysInMonth;
+  days--;
+}
+
+// Print the number of days to the console
+const text = document.createTextNode(`It has been ${years} years, ${months} months, and ${days} days since Minecraft Java Edition 1.16.5 was released on ${oldDate.toDateString()}.`);
+
+// Add the text node to an element on your website
+const p = document.createElement('p');
+p.appendChild(text);
+document.body.appendChild(p);
+</script>
+</body>
+</html>

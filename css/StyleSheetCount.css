@@ -1,0 +1,136 @@
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 55px;
+      background-color: CornflowerBlue;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    #navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    #navbar ul li {
+      margin: 0 10
+    }
+
+    #navbar ul li:first-child {
+      position: absolute;
+      right: 0%;
+      top: 0%;
+      transform: translate(-20%, 70%);
+    }
+
+    #navbar ul li a {
+      padding: 14px 20px;
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #navbar ul li a:hover {
+      color: #444;
+      border-bottom: 6px solid LightSkyBlue;
+    }
+
+    #navbar ul li a.current {
+      color: #222;
+      border-bottom: 6px solid DarkBlue;
+    }
+
+    #footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 55px;
+      background-color: CornflowerBlue;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    #footer ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      font-size: 20px;
+    }
+
+    #footer ul li {
+      margin: 0 10;
+      font-weight: bold;
+    }
+
+    #footer ul li:first-child {
+      position: absolute;
+      right: 0%;
+      bottom: 0%;
+      transform: translate(-20%, -70%);
+    }
+
+    #footer ul li a {
+      padding: 14px 20px;
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #footer ul li a:hover {
+      color: #444;
+      border-top: 6px solid LightSkyBlue;
+    }
+
+    @media screen and (max-width: 865px) {
+      #footer-copyright {
+        display: none;
+      }
+    }
+
+    body {
+      background-color: DodgerBlue;
+      text-align: center;
+    }
+
+    #count {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: CornflowerBlue;
+      font-size: 22px;
+      border: 5px solid DarkBlue;
+      white-space: nowrap;
+    }
+
+    #reset-count {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: 200px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: CornflowerBlue;
+      font-size: 25px;
+      border: 5px solid DarkBlue;
+    }

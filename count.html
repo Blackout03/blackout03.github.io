@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+    <link rel="stylesheet" href="css/StyleSheetCount.css" />
+</head>
+<body>
+<button id="count">Count: 0</button>
+<button id="reset-count">Reset Count!</button>
+<div id="navbar">
+    <ul>
+        <li><a href="https://www.youtube.com/@blackout_">Discord</a></li>
+        <li><a href="./">Home</a></li>
+        <li><a href="./mods/">Mods</a></li>
+        <li><a href="./art.html">Art</a></li>
+        <li><a href="" class="current">Count</a></li>
+    </ul>
+</div>
+<div id="footer">
+    <ul>
+        <li id="footer-copyright"><script>document.write("&copy; " + new Date().getFullYear() + " Blackout");</script></li>
+        <li><a href="https://www.curseforge.com/members/realblackout03/projects">Curseforge</a></li>
+        <li><a href="https://modrinth.com/user/Blackout">Modrinth</a></li>
+        <li><a href="https://www.youtube.com/@blackout_">Youtube</a></li>
+        <li><a href="https://www.twitch.tv/RealBlackout03">Twitch</a></li>
+        <li><a href="https://www.youtube.com/@blackout_">Twitter</a></li>
+        <li><a href="https://www.reddit.com/u/Blackout03_">Reddit</a></li>
+    </ul>
+</div>
+<script>
+    let count = 0;
+    const countButton = document.querySelector('#count');
+    countButton.addEventListener('click', updateCount);
+
+    function updateCount() {
+      if (localStorage.getItem('count')) {
+        count = parseInt(localStorage.getItem('count'));
+      }
+
+      count++;
+      console.log(count);
+
+      countButton.innerText = `Count: ${count}`;
+
+      localStorage.setItem('count', count);
+    }
+
+    // call the updateCount function on page load
+    onRefreshPage();
+
+
+    function onRefreshPage() {
+      if (localStorage.getItem('count')) {
+        count = parseInt(localStorage.getItem('count'));
+      }
+
+      countButton.innerText = `Count: ${count}`;
+
+      localStorage.setItem('count', count);
+    }
+
+    const resetCountButton = document.querySelector('#reset-count');
+    resetCountButton.addEventListener('click', resetCount);
+
+    function resetCount() {
+      // reset the count value in local storage to 0
+      localStorage.setItem('count', 0);
+
+      // refresh the current page
+      window.location.reload();
+    }
+  </script>
+</body>
+</html>
