@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>How Old Is...</title>
+	<link rel="stylesheet" href="version.css" />
+</head>
+<body>
+<div class="version_text_div"></div>
+<script>
+	const urlParams = new URLSearchParams(window.location.search);
+	const versionParam = urlParams.get('version');
+
+	fetch('version_data.json')
+		.then(response => response.json())
+		.then(data => {
+			const releaseDate = getVersionDate(versionParam, data);
+
+			if (releaseDate) {
+				const currentDate = new Date();
+				const oldDate = releaseDate;
+
+				const timeDiff = currentDate.getTime() - oldDate.getTime();
+
+				const years = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365));
+				const months = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 30.436875)) % 12;
+				const days = Math.floor(Math.floor(timeDiff / (1000 * 60 * 60 * 24)) % 30.436875);
+
+				if (years !== 0 || months !== 0 || days !== 0) {
+					const parts = [];
+					if (years !== 0) {
+						parts.push(`${years} year${years !== 1 ? 's' : ''}`);
+					}
+					if (months !== 0) {
+						parts.push(`${months} month${months !== 1 ? 's' : ''}`);
+					}
+					if (days !== 0) {
+						parts.push(`${days} day${days !== 1 ? 's' : ''}`);
+					}
+					let result = parts.join(', ');
+					if (days !== 0) {
+						result = result.replace(/,\s([^,]+)$/, ' and $1');
+					}
+					console.log(result);
+
+					const text = `It has been ${result} since Minecraft Java Edition ${versionParam} was released on ${oldDate.toDateString()}.`;
+
+					const p = document.createElement('p');
+					p.appendChild(document.createTextNode(text));
+					document.querySelector(".version_text_div").appendChild(p)
+				}
+			} else {
+				const errorMessage = "This version was not found in my database of versions.";
+
+				const p = document.createElement('p');
+				p.appendChild(document.createTextNode(errorMessage));
+				document.querySelector(".version_text_div").appendChild(p)
+			}
+		})
+		.catch(error => {
+			console.error("Error fetching version data:", error)
+		})
+
+	function getVersionDate(version, data) {
+		if (version in data) {
+			return new Date(data[version]);
+		}
+		return null;
+	}
+</script>
+</body>
+</html>
