@@ -7,6 +7,7 @@
 </head>
 <body>
 <div class="version_text_div"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.28.5/date_fns.min.js"></script>
 <script>
 	const urlParams = new URLSearchParams(window.location.search);
 	const versionParam = urlParams.get('version');
@@ -18,43 +19,48 @@
 
 			if (releaseDate) {
 				const currentDate = new Date();
-				const oldDate = releaseDate;
+				const oldDate = new Date(releaseDate);
 
-				const timeDiff = currentDate.getTime() - oldDate.getTime();
+				const diff = dateFns.differenceInDays(currentDate, oldDate)
 
-				const years = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365));
-				const months = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 30.436875)) % 12;
-				const days = Math.floor(Math.floor(timeDiff / (1000 * 60 * 60 * 24)) % 30.436875);
+				const diffYears = dateFns.differenceInYears(currentDate, oldDate);
+				const remainingDays = diff - dateFns.differenceInDays(dateFns.addYears(oldDate, diffYears), oldDate);
+
+				const diffMonths = dateFns.differenceInMonths(currentDate, dateFns.addYears(oldDate, diffYears));
+				const remainingDaysInMonths = remainingDays - dateFns.differenceInDays(dateFns.addMonths(oldDate, diffMonths), oldDate);
+
+				let years = diffYears;
+				let months = diffMonths;
+				let days = remainingDaysInMonths;
 
 				if (years !== 0 || months !== 0 || days !== 0) {
-					const parts = [];
+					const result = [];
 					if (years !== 0) {
-						parts.push(`${years} year${years !== 1 ? 's' : ''}`);
+						result.push(`${years} year${years !== 1 ? 's' : ''}`);
 					}
 					if (months !== 0) {
-						parts.push(`${months} month${months !== 1 ? 's' : ''}`);
+						result.push(`${months} month${months !== 1 ? 's' : ''}`);
 					}
 					if (days !== 0) {
-						parts.push(`${days} day${days !== 1 ? 's' : ''}`);
+						result.push(`${days} day${days !== 1 ? 's' : ''}`);
 					}
-					let result = parts.join(', ');
+					let diffResult = result.join(', ');
 					if (days !== 0) {
-						result = result.replace(/,\s([^,]+)$/, ' and $1');
+						diffResult = diffResult.replace(/,\s([^,]+)$/, ' and $1');
 					}
-					console.log(result);
 
-					const text = `It has been ${result} since Minecraft Java Edition ${versionParam} was (maybe) released on ${oldDate.toDateString()}.`;
+					const text = `It has been ${diffResult} since Minecraft Java Edition ${versionParam} was (maybe) released on ${oldDate.toDateString()}.`;
 
 					const p = document.createElement('p');
 					p.appendChild(document.createTextNode(text));
 					document.querySelector(".version_text_div").appendChild(p)
-				}
-			} else {
-				const errorMessage = "This version was not found in my database of versions.";
+				} else {
+					const errorMessage = "This version was not found in my database of versions.";
 
-				const p = document.createElement('p');
-				p.appendChild(document.createTextNode(errorMessage));
-				document.querySelector(".version_text_div").appendChild(p)
+					const p = document.createElement('p');
+					p.appendChild(document.createTextNode(errorMessage));
+					document.querySelector(".version_text_div").appendChild(p)
+				}
 			}
 		})
 		.catch(error => {
