@@ -27,11 +27,15 @@
 				const remainingDays = diff - dateFns.differenceInDays(dateFns.addYears(oldDate, diffYears), oldDate);
 
 				const diffMonths = dateFns.differenceInMonths(currentDate, dateFns.addYears(oldDate, diffYears));
-				const remainingDaysInMonths = remainingDays - dateFns.differenceInDays(dateFns.addMonths(oldDate, diffMonths), oldDate);
+				let remainingDaysInMonths = remainingDays - dateFns.differenceInDays(dateFns.addMonths(oldDate, diffMonths), oldDate);
 
 				let years = diffYears;
 				let months = diffMonths;
 				let days = remainingDaysInMonths;
+				
+				if (days < 0) {
+					days = 0;
+				}
 
 				if (years !== 0 || months !== 0 || days !== 0) {
 					const result = [];
