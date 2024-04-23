@@ -59,12 +59,18 @@
 					p.appendChild(document.createTextNode(text));
 					document.querySelector(".version_text_div").appendChild(p)
 				} else {
-					const errorMessage = "This version was not found in my database of versions.";
+					const text = `Minecraft Java Edition ${versionParam} was (maybe) released today.`
 
 					const p = document.createElement('p');
-					p.appendChild(document.createTextNode(errorMessage));
+					p.appendChild(document.createTextNode(text));
 					document.querySelector(".version_text_div").appendChild(p)
 				}
+			} else {
+				const errorMessage = "This version was not found in my database of versions.";
+
+				const p = document.createElement('p');
+				p.appendChild(document.createTextNode(errorMessage));
+				document.querySelector(".version_text_div").appendChild(p)
 			}
 		})
 		.catch(error => {
