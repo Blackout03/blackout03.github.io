@@ -62,9 +62,57 @@ function createElement(type, className, textContent = '', innerHTML = '') {
 function displayRerunInfo(rerunData) {
 	const characterList = document.getElementById('character-list');
 
-	rerunData.characters
-		.filter(character => character.reruns.length > 0) // Exclude characters with no reruns
-		.forEach(character => {
+	let characters = rerunData.characters.filter(character => character.reruns.length > 0); // Exclude characters with no reruns
+
+	const hash = window.location.hash;
+
+	// Check if URL contains the hash '#latest' and sort characters by last rerun date if present
+	if (hash === '#oldest' || hash === '#longest') {
+		characters.sort((a, b) => {
+			const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
+			const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
+			return daysSinceLastRerunB - daysSinceLastRerunA; // Sort by longest wait
+		});
+	} else if (hash === '#newest' || hash === '#shortest') {
+		characters.sort((a, b) => {
+			const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
+			const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
+			return daysSinceLastRerunA - daysSinceLastRerunB; // Sort by shortest wait
+		});
+	} else if (hash === '#alphabetical') {
+		characters.sort((a, b) => {
+			const nameA = a.name.toLowerCase();
+			const nameB = b.name.toLowerCase();
+			if (nameA < nameB) return -1;
+			if (nameA > nameB) return 1;
+			return 0; // Sort alphabetically by name
+		});
+	} else if (hash === '#reverse-alphabetical' || hash === '#alphabetical-reverse') {
+		characters.sort((a, b) => {
+			const nameA = a.name.toLowerCase();
+			const nameB = b.name.toLowerCase();
+			if (nameA < nameB) return 1;
+			if (nameA > nameB) return -1;
+			return 0; // Sort alphabetically by name
+		});
+	} else if (hash === '#fewest-reruns' || hash === '#least-reruns') {
+		characters.sort((a, b) => a.reruns.length - b.reruns.length); // Sort by fewest reruns
+	} else if (hash === '#most-reruns') {
+		characters.sort((a, b) => b.reruns.length - a.reruns.length); // Sort by most reruns
+	} else if (hash === '#release-earliest') {
+		characters.sort((a, b) => new Date(a.reruns[0].startDate) - new Date(b.reruns[0].startDate)); // Sort by earliest first rerun
+	} else if (hash === '#release-latest') {
+		characters.sort((a, b) => new Date(b.reruns[0].startDate) - new Date(a.reruns[0].startDate)); // Sort by latest first rerun
+	} else if (hash === '#random') {
+		characters.sort(() => Math.random() - 0.5); // Completely random sort
+	} else if (hash === '#element') {
+		characters.sort((a, b) => a.element.localeCompare(b.element)); // Sort by element (alphabetically)
+	} else if (hash.startsWith('#pyro') || hash.startsWith('#hydro') || hash.startsWith('#electro') || hash.startsWith('#cryo') || hash.startsWith('#geo') || hash.startsWith('#anemo') || hash.startsWith('#dendro')) {
+		const elementFilter = hash.substring(1).toLowerCase();
+		characters = characters.filter(character => character.element && character.element.toLowerCase() === elementFilter);
+	}
+
+	characters.forEach(character => {
 			const reruns = character.reruns;
 			const lastRerun = reruns[reruns.length - 1];
 			const startDate = new Date(lastRerun.startDate);
@@ -83,7 +131,8 @@ function displayRerunInfo(rerunData) {
 			img.title = `${character.name}`;
 
 			const details = createElement('div', 'character-details');
-			const name = createElement('div', 'character-name', character.name);
+			const name = createElement('span', 'character-name', character.name);
+			const bannerCount = createElement('div', 'banner-count', `Banners: ${reruns.length}`);
 
 			let rerunStatus;
 			let rerunInfo;
@@ -159,6 +208,7 @@ function displayRerunInfo(rerunData) {
 			}
 
 			details.appendChild(name);
+		name.appendChild(bannerCount);
 			details.appendChild(rerunInfo);
 			details.appendChild(rerunVersionInfo);
 

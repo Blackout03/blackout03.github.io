@@ -54,10 +54,19 @@ h1 {
 }
 
 .character-name {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 87.5%;
 	font-size: 1.5em;
 	color: #333;
 	font-weight: bold;
-	margin-bottom: 0;
+}
+
+.banner-count {
+	font-size: 0.65em;
+	color: #888;
+	font-weight: normal;
 }
 
 .rerun-info {
@@ -70,9 +79,10 @@ h1 {
 .rerun-version-info {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	width: 87.5%;
 	font-size: 0.75em;
-	color: #666;
+	color: #888;
 	margin-top: 0.1em;
 	margin-bottom: 0.95em;
 	margin-left: 0.45em;
