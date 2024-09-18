@@ -58,61 +58,112 @@ function createElement(type, className, textContent = '', innerHTML = '') {
 	return element;
 }
 
+// Function to filter and sort characters based on hash
+function filterAndSortCharacters(characters) {
+	const hash = window.location.hash.toLowerCase().substring(1); // Remove leading '#'
+	const criteria = hash.split('#'); // Split by '#'
+	let filteredCharacters = characters;
+
+	// Define the valid elements for filtering
+	const validElements = ['pyro', 'hydro', 'electro', 'cryo', 'geo', 'anemo', 'dendro'];
+
+	// Filter characters based on elements (pyro, geo, etc.)
+	const elementCriteria = criteria.filter(c => validElements.includes(c));
+	if (elementCriteria.length > 0) {
+		filteredCharacters = filteredCharacters.filter(character => {
+			// Check if character's element matches any of the element criteria
+			return elementCriteria.includes(character.element?.toLowerCase());
+		});
+	}
+
+
+	// Filter characters based on upcoming
+	const upcomingCriteria = criteria.find(c => ['upcoming'].includes(c));
+	if (upcomingCriteria) {
+		filteredCharacters = filteredCharacters.filter(character => {
+			const reruns = character.reruns;
+			const lastRerun = reruns[reruns.length - 1];
+			const startDate = new Date(lastRerun.startDate);
+			const now = new Date();
+			return (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming") || now < startDate;
+		});
+	}
+	// if (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming" || now < startDate) {
+
+	// Apply sorting based on the criteria
+	const sortCriteria = criteria.find(c => ['oldest', 'longest', 'newest', 'shortest', 'alphabetical', 'alphabetical-abc', 'reverse-alphabetical', 'alphabetical-reverse', 'alphabetical-zyx', 'release-earliest', 'release-latest', 'random', 'most-reruns', 'least-reruns', 'element'].includes(c));
+	if (sortCriteria) {
+		switch (sortCriteria) {
+			case 'oldest':
+			case 'longest':
+				filteredCharacters.sort((a, b) => {
+					const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
+					const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
+					return daysSinceLastRerunB - daysSinceLastRerunA; // Sort by longest wait
+				});
+				break;
+			case 'newest':
+			case 'shortest':
+				filteredCharacters.sort((a, b) => {
+					const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
+					const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
+					return daysSinceLastRerunA - daysSinceLastRerunB; // Sort by shortest wait
+				});
+				break;
+			case 'alphabetical':
+			case 'alphabetical-abc':
+				filteredCharacters.sort((a, b) => {
+					const nameA = a.name ? a.name.toLowerCase() : '';
+					const nameB = b.name ? b.name.toLowerCase() : '';
+					return nameA.localeCompare(nameB); // Sort alphabetically by name
+				});
+				break;
+			case 'reverse-alphabetical':
+			case 'alphabetical-reverse':
+			case 'alphabetical-zyx':
+				filteredCharacters.sort((a, b) => {
+					const nameA = a.name ? a.name.toLowerCase() : '';
+					const nameB = b.name ? b.name.toLowerCase() : '';
+					return nameB.localeCompare(nameA); // Sort alphabetically by name (reverse)
+				});
+				break;
+			case 'release-earliest':
+				characters.sort((a, b) => new Date(a.reruns[0].startDate) - new Date(b.reruns[0].startDate)); // Sort by earliest first rerun
+				break;
+			case 'release-latest':
+				characters.sort((a, b) => new Date(b.reruns[0].startDate) - new Date(a.reruns[0].startDate)); // Sort by latest first rerun
+				break;
+			case 'random':
+				filteredCharacters.sort(() => Math.random() - 0.5); // Randomize order
+				break;
+			case 'most-reruns':
+				filteredCharacters.sort((a, b) => b.reruns.length - a.reruns.length); // Sort by number of reruns (most first)
+				break;
+			case 'least-reruns':
+				filteredCharacters.sort((a, b) => a.reruns.length - b.reruns.length); // Sort by number of reruns (least first)
+				break;
+			case 'element':
+				filteredCharacters.sort((a, b) => {
+					const elementA = a.element ? a.element.toLowerCase() : '';
+					const elementB = b.element ? b.element.toLowerCase() : '';
+					return elementA.localeCompare(elementB); // Sort by element (alphabetically)
+				});
+				break;
+		}
+	}
+
+	return filteredCharacters;
+}
+
 // Function to display character rerun information
 function displayRerunInfo(rerunData) {
 	const characterList = document.getElementById('character-list');
 
 	let characters = rerunData.characters.filter(character => character.reruns.length > 0); // Exclude characters with no reruns
 
-	const hash = window.location.hash;
+	const sortedCharacters = filterAndSortCharacters(characters);
 
-	// Check if URL contains the hash '#latest' and sort characters by last rerun date if present
-	if (hash === '#oldest' || hash === '#longest') {
-		characters.sort((a, b) => {
-			const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
-			const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
-			return daysSinceLastRerunB - daysSinceLastRerunA; // Sort by longest wait
-		});
-	} else if (hash === '#newest' || hash === '#shortest') {
-		characters.sort((a, b) => {
-			const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
-			const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
-			return daysSinceLastRerunA - daysSinceLastRerunB; // Sort by shortest wait
-		});
-	} else if (hash === '#alphabetical') {
-		characters.sort((a, b) => {
-			const nameA = a.name.toLowerCase();
-			const nameB = b.name.toLowerCase();
-			if (nameA < nameB) return -1;
-			if (nameA > nameB) return 1;
-			return 0; // Sort alphabetically by name
-		});
-	} else if (hash === '#reverse-alphabetical' || hash === '#alphabetical-reverse') {
-		characters.sort((a, b) => {
-			const nameA = a.name.toLowerCase();
-			const nameB = b.name.toLowerCase();
-			if (nameA < nameB) return 1;
-			if (nameA > nameB) return -1;
-			return 0; // Sort alphabetically by name
-		});
-	} else if (hash === '#fewest-reruns' || hash === '#least-reruns') {
-		characters.sort((a, b) => a.reruns.length - b.reruns.length); // Sort by fewest reruns
-	} else if (hash === '#most-reruns') {
-		characters.sort((a, b) => b.reruns.length - a.reruns.length); // Sort by most reruns
-	} else if (hash === '#release-earliest') {
-		characters.sort((a, b) => new Date(a.reruns[0].startDate) - new Date(b.reruns[0].startDate)); // Sort by earliest first rerun
-	} else if (hash === '#release-latest') {
-		characters.sort((a, b) => new Date(b.reruns[0].startDate) - new Date(a.reruns[0].startDate)); // Sort by latest first rerun
-	} else if (hash === '#random') {
-		characters.sort(() => Math.random() - 0.5); // Completely random sort
-	} else if (hash === '#element') {
-		characters.sort((a, b) => a.element.localeCompare(b.element)); // Sort by element (alphabetically)
-	} else if (hash.startsWith('#pyro') || hash.startsWith('#hydro') || hash.startsWith('#electro') || hash.startsWith('#cryo') || hash.startsWith('#geo') || hash.startsWith('#anemo') || hash.startsWith('#dendro')) {
-		const elementFilter = hash.substring(1).toLowerCase();
-		characters = characters.filter(character => character.element && character.element.toLowerCase() === elementFilter);
-	}
-
-	characters.forEach(character => {
+	sortedCharacters.forEach(character => {
 			const reruns = character.reruns;
 			const lastRerun = reruns[reruns.length - 1];
 			const startDate = new Date(lastRerun.startDate);
@@ -160,7 +211,7 @@ function displayRerunInfo(rerunData) {
 					rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
 					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type">[${wishType}]</div>`)
 					const daysUntilStart = calculateDaysUntil(startDate);
-					rerunStatus = `Upcoming Rerun: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
+					upcomingRerun = `Upcoming Rerun: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
 
 					if (reruns.length > 1) {
 						const previousRerun = reruns[reruns.length - 2];
