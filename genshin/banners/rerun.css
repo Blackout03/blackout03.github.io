@@ -1,0 +1,109 @@
+﻿body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+}
+
+#character-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.character-card {
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	display: flex;
+	align-items: flex-start; /* Align items to the start */
+	min-width: max-content; /* Fixed width for consistent card size */
+	width: max-content; /* Fixed width for consistent card size */
+	max-width: max-content; /* Fixed width for consistent card size */
+	min-height: max-content; /* Ensure a minimum height for uniformity */
+	flex-direction: row; /* Ensure horizontal layout */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease;
+	text-align: left; /* Align text to the left */
+}
+
+.character-card:hover {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.character-image {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 15px; /* Adds space between image and name */
+}
+
+.character-name {
+	font-size: 1.5em;
+	color: #333;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.rerun-info {
+	font-size: 1em;
+	color: #666;
+	margin-top: 0.1em;
+	margin-bottom: 0.75em;
+	text-align: left;
+}
+
+.time-since,
+.days-since {
+	font-size: 1em;
+	color: #007bff;
+	font-weight: bold;
+	text-align: left;
+	width: 400px;
+}
+
+.wish-type {
+	 font-size: 1em;
+	 color: #ff6347; /* You can change this color to your preference */
+	 font-weight: bold;
+	margin-bottom: 0.5em;
+	 text-align: left;
+ }
+
+
+.character-details {
+	display: flex;
+	flex-direction: column; /* Stack details vertically */
+	justify-content: space-between; /* Distribute space between details */
+	flex-grow: 1; /* Allow details to grow and fill available space */
+}
+
+/* Make sure the text inside the cards is responsive and fits well */
+.character-card div {
+	word-wrap: break-word;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	#character-list {
+		flex-direction: column;
+		align-items: center;
+	}
+}
