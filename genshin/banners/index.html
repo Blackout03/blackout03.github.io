@@ -9,6 +9,38 @@
 <body>
 <div class="container">
 	<h1>Genshin Character Rerun Tracker</h1>
+
+	<div class="sorting">
+		<!-- Sorting dropdown -->
+		<label for="sortOptions">Sort by:</label>
+		<select id="sortOptions">
+			<option value="default">Default</option>
+			<option value="longest">Longest</option>
+			<option value="shortest">Shortest</option>
+			<option value="alphabetical">Alphabetical</option>
+			<option value="alphabetical-zyx">Reverse Alphabetical</option>
+			<option value="release-earliest">Release Earliest</option>
+			<option value="release-latest">Release Latest</option>
+			<option value="random">Random</option>
+			<option value="most-reruns">Most Reruns</option>
+			<option value="least-reruns">Least Reruns</option>
+			<option value="element">Element</option>
+			<option value="upcoming">Upcoming</option>
+		</select>
+
+		<!-- Element filter dropdown -->
+		<label for="elementFilter">Filter by Element:</label>
+		<div id="elementFilter">
+			<label><input type="checkbox" value="pyro"> Pyro</label>
+			<label><input type="checkbox" value="hydro"> Hydro</label>
+			<label><input type="checkbox" value="electro"> Electro</label>
+			<label><input type="checkbox" value="cryo"> Cryo</label>
+			<label><input type="checkbox" value="geo"> Geo</label>
+			<label><input type="checkbox" value="anemo"> Anemo</label>
+			<label><input type="checkbox" value="dendro"> Dendro</label>
+		</div>
+	</div>
+
 	<div id="character-list">
 		<!-- Character rerun information will be displayed here -->
 	</div>

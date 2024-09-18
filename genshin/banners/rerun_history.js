@@ -60,100 +60,104 @@ function createElement(type, className, textContent = '', innerHTML = '') {
 
 // Function to filter and sort characters based on hash
 function filterAndSortCharacters(characters) {
-	const hash = window.location.hash.toLowerCase().substring(1); // Remove leading '#'
-	const criteria = hash.split('#'); // Split by '#'
+	const sortOption = document.getElementById('sortOptions').value;
+	const elementFilter = Array.from(document.querySelectorAll('#elementFilter input[type="checkbox"]:checked')).map(input => input.value);
+
 	let filteredCharacters = characters;
 
-	// Define the valid elements for filtering
-	const validElements = ['pyro', 'hydro', 'electro', 'cryo', 'geo', 'anemo', 'dendro'];
-
-	// Filter characters based on elements (pyro, geo, etc.)
-	const elementCriteria = criteria.filter(c => validElements.includes(c));
-	if (elementCriteria.length > 0) {
-		filteredCharacters = filteredCharacters.filter(character => {
-			// Check if character's element matches any of the element criteria
-			return elementCriteria.includes(character.element?.toLowerCase());
-		});
+	// Filter characters by selected elements
+	if (elementFilter.length > 0) {
+		filteredCharacters = filteredCharacters.filter(character => elementFilter.includes(character.element?.toLowerCase()));
 	}
 
-
-	// Filter characters based on upcoming
-	const upcomingCriteria = criteria.find(c => ['upcoming'].includes(c));
-	if (upcomingCriteria) {
-		filteredCharacters = filteredCharacters.filter(character => {
-			const reruns = character.reruns;
-			const lastRerun = reruns[reruns.length - 1];
-			const startDate = new Date(lastRerun.startDate);
-			const now = new Date();
-			return (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming") || now < startDate;
-		});
-	}
-	// if (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming" || now < startDate) {
-
-	// Apply sorting based on the criteria
-	const sortCriteria = criteria.find(c => ['oldest', 'longest', 'newest', 'shortest', 'alphabetical', 'alphabetical-abc', 'reverse-alphabetical', 'alphabetical-reverse', 'alphabetical-zyx', 'release-earliest', 'release-latest', 'random', 'most-reruns', 'least-reruns', 'element'].includes(c));
-	if (sortCriteria) {
-		switch (sortCriteria) {
-			case 'oldest':
-			case 'longest':
-				filteredCharacters.sort((a, b) => {
-					const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
-					const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
-					return daysSinceLastRerunB - daysSinceLastRerunA; // Sort by longest wait
-				});
-				break;
-			case 'newest':
-			case 'shortest':
-				filteredCharacters.sort((a, b) => {
-					const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
-					const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
-					return daysSinceLastRerunA - daysSinceLastRerunB; // Sort by shortest wait
-				});
-				break;
-			case 'alphabetical':
-			case 'alphabetical-abc':
-				filteredCharacters.sort((a, b) => {
-					const nameA = a.name ? a.name.toLowerCase() : '';
-					const nameB = b.name ? b.name.toLowerCase() : '';
-					return nameA.localeCompare(nameB); // Sort alphabetically by name
-				});
-				break;
-			case 'reverse-alphabetical':
-			case 'alphabetical-reverse':
-			case 'alphabetical-zyx':
-				filteredCharacters.sort((a, b) => {
-					const nameA = a.name ? a.name.toLowerCase() : '';
-					const nameB = b.name ? b.name.toLowerCase() : '';
-					return nameB.localeCompare(nameA); // Sort alphabetically by name (reverse)
-				});
-				break;
-			case 'release-earliest':
-				characters.sort((a, b) => new Date(a.reruns[0].startDate) - new Date(b.reruns[0].startDate)); // Sort by earliest first rerun
-				break;
-			case 'release-latest':
-				characters.sort((a, b) => new Date(b.reruns[0].startDate) - new Date(a.reruns[0].startDate)); // Sort by latest first rerun
-				break;
-			case 'random':
-				filteredCharacters.sort(() => Math.random() - 0.5); // Randomize order
-				break;
-			case 'most-reruns':
-				filteredCharacters.sort((a, b) => b.reruns.length - a.reruns.length); // Sort by number of reruns (most first)
-				break;
-			case 'least-reruns':
-				filteredCharacters.sort((a, b) => a.reruns.length - b.reruns.length); // Sort by number of reruns (least first)
-				break;
-			case 'element':
-				filteredCharacters.sort((a, b) => {
-					const elementA = a.element ? a.element.toLowerCase() : '';
-					const elementB = b.element ? b.element.toLowerCase() : '';
-					return elementA.localeCompare(elementB); // Sort by element (alphabetically)
-				});
-				break;
-		}
+	// Apply sorting based on the selected sorting option
+	switch (sortOption) {
+		case 'longest':
+			filteredCharacters.sort((a, b) => {
+				const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
+				const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
+				return daysSinceLastRerunB - daysSinceLastRerunA; // Sort by longest wait
+			});
+			break;
+		case 'shortest':
+			filteredCharacters.sort((a, b) => {
+				const daysSinceLastRerunA = calculateDaysSince(a.reruns[a.reruns.length - 1].endDate);
+				const daysSinceLastRerunB = calculateDaysSince(b.reruns[b.reruns.length - 1].endDate);
+				return daysSinceLastRerunA - daysSinceLastRerunB; // Sort by shortest wait
+			});
+			break;
+		case 'alphabetical':
+			filteredCharacters.sort((a, b) => {
+				const nameA = a.name ? a.name.toLowerCase() : '';
+				const nameB = b.name ? b.name.toLowerCase() : '';
+				return nameA.localeCompare(nameB); // Sort alphabetically by name
+			});
+			break;
+		case 'alphabetical-zyx':
+			filteredCharacters.sort((a, b) => {
+				const nameA = a.name ? a.name.toLowerCase() : '';
+				const nameB = b.name ? b.name.toLowerCase() : '';
+				return nameB.localeCompare(nameA); // Sort alphabetically by name (reverse)
+			});
+			break;
+		case 'release-earliest':
+			characters.sort((a, b) => new Date(a.reruns[0].startDate) - new Date(b.reruns[0].startDate)); // Sort by earliest first rerun
+			break;
+		case 'release-latest':
+			characters.sort((a, b) => new Date(b.reruns[0].startDate) - new Date(a.reruns[0].startDate)); // Sort by latest first rerun
+			break;
+		case 'random':
+			filteredCharacters.sort(() => Math.random() - 0.5); // Randomize order
+			break;
+		case 'most-reruns':
+			filteredCharacters.sort((a, b) => b.reruns.length - a.reruns.length); // Sort by number of reruns (most first)
+			break;
+		case 'least-reruns':
+			filteredCharacters.sort((a, b) => a.reruns.length - b.reruns.length); // Sort by number of reruns (least first)
+			break;
+		case 'element':
+			filteredCharacters.sort((a, b) => {
+				const elementA = a.element ? a.element.toLowerCase() : '';
+				const elementB = b.element ? b.element.toLowerCase() : '';
+				return elementA.localeCompare(elementB); // Sort by element (alphabetically)
+			});
+			break;
+		case 'upcoming':
+			filteredCharacters = filteredCharacters.filter(character => {
+				const reruns = character.reruns;
+				const lastRerun = reruns[reruns.length - 1];
+				const startDate = new Date(lastRerun.startDate);
+				const now = new Date();
+				return (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming") || now < startDate;
+			});
+			break
 	}
 
 	return filteredCharacters;
 }
+
+// Function to clear the current character list
+function clearCharacterList() {
+	const characterList = document.getElementById('character-list');
+	while (characterList.firstChild) {
+		characterList.removeChild(characterList.firstChild);
+	}
+}
+
+// Combined event listener for both dropdowns
+function updateCharacterList() {
+	fetch('rerun_data.json')
+		.then(response => response.json())
+		.then(data => {
+			clearCharacterList(); // Clear the list before updating
+			displayRerunInfo(data); // Update with the new filter and sort
+		})
+		.catch(error => console.error('Error fetching rerun data:', error));
+}
+
+// Add event listeners for both dropdowns
+document.getElementById('sortOptions').addEventListener('change', updateCharacterList);
+document.getElementById('elementFilter').addEventListener('change', updateCharacterList);
 
 // Function to display character rerun information
 function displayRerunInfo(rerunData) {
@@ -164,121 +168,115 @@ function displayRerunInfo(rerunData) {
 	const sortedCharacters = filterAndSortCharacters(characters);
 
 	sortedCharacters.forEach(character => {
-			const reruns = character.reruns;
-			const lastRerun = reruns[reruns.length - 1];
-			const startDate = new Date(lastRerun.startDate);
-			const endDate = new Date(lastRerun.endDate);
-			const now = new Date();
-			const daysSinceLastRerun = calculateDaysSince(lastRerun.endDate);
-			const timeSinceLastRerun = calculateMonthsAndDaysSince(lastRerun.endDate);
-			const snakeCaseName = toSnakeCase(character.name);
-			const wishType = lastRerun.wishType === "chronicled" ? "Chronicled Wish" : "Event Wish";
+		const reruns = character.reruns;
+		const lastRerun = reruns[reruns.length - 1];
+		const startDate = new Date(lastRerun.startDate);
+		const endDate = new Date(lastRerun.endDate);
+		const now = new Date();
+		const daysSinceLastRerun = calculateDaysSince(lastRerun.endDate);
+		const timeSinceLastRerun = calculateMonthsAndDaysSince(lastRerun.endDate);
+		const snakeCaseName = toSnakeCase(character.name);
+		const wishType = lastRerun.wishType === "chronicled" ? "Chronicled Wish" : "Event Wish";
 
-			const card = createElement('div', 'character-card');
+		const card = createElement('div', 'character-card');
 
-			const img = createElement('img', 'character-image');
-			img.src = `https://game-cdn.appsample.com/gim/avatars/${snakeCaseName}.png`
-			img.alt = `${character.name} avatar`;
-			img.title = `${character.name}`;
+		const img = createElement('img', 'character-image');
+		img.src = `https://game-cdn.appsample.com/gim/avatars/${snakeCaseName}.png`
+		img.alt = `${character.name} avatar`;
+		img.title = `${character.name}`;
 
-			const details = createElement('div', 'character-details');
-			const name = createElement('span', 'character-name', character.name);
-			const bannerCount = createElement('div', 'banner-count', `Banners: ${reruns.length}`);
+		const details = createElement('div', 'character-details');
+		const name = createElement('span', 'character-name', character.name);
+		const bannerCount = createElement('div', 'banner-count', `Banners: ${reruns.length}`);
 
-			let rerunStatus;
-			let rerunInfo;
-			let rerunVersionInfo;
-			let previousRun;
-			let ongoingRun;
-			let upcomingRun;
-			let timeSince;
-			let daysSince;
+		let rerunStatus;
+		let rerunInfo;
+		let rerunVersionInfo;
+		let previousRun;
+		let ongoingRun;
+		let upcomingRun;
+		let timeSince;
+		let daysSince;
 
-			// Append other info to card
+		// Append other info to card
 
-			const rerunStatusElement = document.createElement('div');
-			rerunStatusElement.classList.add('rerun-status');
+		const rerunStatusElement = document.createElement('div');
+		rerunStatusElement.classList.add('rerun-status');
 
-			if (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming" || now < startDate) {
-				const isUpcoming = lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming";
+		if (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming" || now < startDate) {
+			const isUpcoming = lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming";
 
-				if (isUpcoming) {
-					rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
-					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type">[${wishType}]</div>`)
-					upcomingRun = createElement('div', 'upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version}`)
-
-				} else {
-					rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
-					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type">[${wishType}]</div>`)
-					const daysUntilStart = calculateDaysUntil(startDate);
-					upcomingRerun = `Upcoming Rerun: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
-
-					if (reruns.length > 1) {
-						const previousRerun = reruns[reruns.length - 2];
-						const previousRerunEndDate = new Date(previousRerun.endDate);
-						rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
-						rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type">[${wishType}]</div>`)
-						const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
-						const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
-
-						rerunStatus = ``;
-						upcomingRerun = `Upcoming Banner: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
-						timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
-						daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
-
-						previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
-					}
-
-					upcomingRun = createElement('div', 'upcoming-rerun-status', upcomingRerun)
-				}
-			} else {
-				rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
+			if (isUpcoming) {
+				rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
 				rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type">[${wishType}]</div>`)
-				if (now >= startDate && now <= endDate) {
-					if (reruns.length > 1) {
-						const previousRerun = reruns[reruns.length - 2];
-						const previousRerunEndDate = new Date(previousRerun.endDate);
-						rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
-						rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type">[${wishType}]</div>`)
-						const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
-						const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
-						timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
-						daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
+				upcomingRun = createElement('div', 'upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version}`)
 
-						previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
-					}
+			} else {
+				rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
+				rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type">[${wishType}]</div>`)
+				const daysUntilStart = calculateDaysUntil(startDate);
+				upcomingRerun = `Upcoming Rerun: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
 
-					ongoingRun = createElement('div', 'ongoing-rerun-status', `Ongoing: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
+				if (reruns.length > 1) {
+					const previousRerun = reruns[reruns.length - 2];
+					const previousRerunEndDate = new Date(previousRerun.endDate);
+					rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
+					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type">[${wishType}]</div>`)
+					const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
+					const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
 
-				} else {
-					timeSince = `Time since last banner: ${timeSinceLastRerun.months} months, ${timeSinceLastRerun.days} days`;
-					daysSince = `Days since last banner: ${daysSinceLastRerun} days`;
+					rerunStatus = ``;
+					upcomingRerun = `Upcoming Banner: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
+					timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
+					daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
 
 					previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
 				}
+
+				upcomingRun = createElement('div', 'upcoming-rerun-status', upcomingRerun)
 			}
+		} else {
+			rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
+			rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type">[${wishType}]</div>`)
+			if (now >= startDate && now <= endDate) {
+				if (reruns.length > 1) {
+					const previousRerun = reruns[reruns.length - 2];
+					const previousRerunEndDate = new Date(previousRerun.endDate);
+					rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
+					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type">[${wishType}]</div>`)
+					const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
+					const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
+					timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
+					daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
 
-			details.appendChild(name);
+					previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+				}
+
+				ongoingRun = createElement('div', 'ongoing-rerun-status', `Ongoing: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
+
+			} else {
+				timeSince = `Time since last banner: ${timeSinceLastRerun.months} months, ${timeSinceLastRerun.days} days`;
+				daysSince = `Days since last banner: ${daysSinceLastRerun} days`;
+
+				previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+			}
+		}
+
+		details.appendChild(name);
 		name.appendChild(bannerCount);
-			details.appendChild(rerunInfo);
-			details.appendChild(rerunVersionInfo);
+		details.appendChild(rerunInfo);
+		details.appendChild(rerunVersionInfo);
 
-			if (previousRun) details.appendChild(previousRun);
-			if (ongoingRun) details.appendChild(ongoingRun);
-			if (upcomingRun) details.appendChild(upcomingRun);
+		if (previousRun) details.appendChild(previousRun);
+		if (ongoingRun) details.appendChild(ongoingRun);
+		if (upcomingRun) details.appendChild(upcomingRun);
 
-			card.appendChild(img);
-			card.appendChild(details);
+		card.appendChild(img);
+		card.appendChild(details);
 
-			// Append card to character list
-			characterList.appendChild(card);
-		});
+		// Append card to character list
+		characterList.appendChild(card);
+	});
 }
 
-// Fetch JSON data from external file and display the rerun info
-fetch('rerun_data.json')
-	.then(response => response.json())
-	.then(data => {
-		displayRerunInfo(data);
-	})
-	.catch(error => console.error('Error fetching rerun data:', error));
+updateCharacterList();
