@@ -79,10 +79,34 @@
           "wishType": "event"
         },
         {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
           "startDate": "2024-03-13",
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
         }
       ]
     },
@@ -108,10 +132,28 @@
           "wishType": "event"
         },
         {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
           "startDate": "2024-03-13",
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
+          "wishType": "event"
         }
       ]
     },
@@ -153,6 +195,36 @@
           "endDate": "2022-04-19",
           "version": "2.6",
           "wishType": "event"
+        },
+        {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
+          "wishType": "event"
         }
       ]
     },
@@ -187,6 +259,30 @@
           "startDate": "2022-01-25",
           "endDate": "2022-02-15",
           "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
           "wishType": "event"
         }
       ]
@@ -235,6 +331,24 @@
           "endDate": "2022-09-27",
           "version": "3.0",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
         }
       ]
     },
@@ -282,6 +396,24 @@
           "endDate": "2022-08-02",
           "version": "2.8",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
         }
       ]
     },
@@ -322,6 +454,18 @@
           "startDate": "2022-08-24",
           "endDate": "2022-09-09",
           "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
           "wishType": "event"
         },
         {
@@ -372,10 +516,46 @@
           "wishType": "event"
         },
         {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
           "startDate": "2024-03-13",
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
         }
       ]
     },
@@ -419,10 +599,34 @@
           "wishType": "event"
         },
         {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
           "startDate": "2024-03-13",
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
         }
       ]
     },
@@ -463,6 +667,24 @@
           "startDate": "2022-06-21",
           "endDate": "2022-07-12",
           "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-01",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
           "wishType": "event"
         }
       ]
@@ -510,6 +732,18 @@
           "startDate": "2022-09-09",
           "endDate": "2022-09-27",
           "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
           "wishType": "event"
         },
         {
@@ -594,6 +828,24 @@
           "endDate": "2022-04-19",
           "version": "2.6",
           "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-01",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
+          "wishType": "event"
         }
       ]
     },
@@ -616,6 +868,12 @@
           "startDate": "2022-07-13",
           "endDate": "2022-08-02",
           "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
           "wishType": "event"
         },
         {
@@ -672,6 +930,18 @@
           "wishType": "event"
         },
         {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
           "startDate": "2024-03-13",
           "endDate": "2024-04-02",
           "version": "4.5",
@@ -698,6 +968,18 @@
           "startDate": "2021-10-13",
           "endDate": "2021-11-02",
           "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
           "wishType": "event"
         }
       ]
@@ -740,6 +1022,24 @@
           "endDate": "2022-08-23",
           "version": "2.8",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
         }
       ]
     },
@@ -769,6 +1069,12 @@
           "endDate": "2022-09-09",
           "version": "3.0",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
+          "wishType": "event"
         }
       ]
     },
@@ -785,6 +1091,12 @@
           "startDate": "2021-11-24",
           "endDate": "2021-12-14",
           "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
           "wishType": "event"
         },
         {
@@ -815,6 +1127,12 @@
           "endDate": "2022-09-27",
           "version": "3.0",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
         }
       ]
     },
@@ -838,6 +1156,18 @@
           "endDate": "2022-06-21",
           "version": "2.7",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
+          "wishType": "event"
         }
       ]
     },
@@ -854,6 +1184,18 @@
           "startDate": "2021-11-02",
           "endDate": "2021-11-23",
           "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
           "wishType": "event"
         }
       ]
@@ -886,10 +1228,34 @@
           "wishType": "event"
         },
         {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
           "startDate": "2024-03-13",
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
         }
       ]
     },
@@ -925,6 +1291,24 @@
           "endDate": "2022-12-27",
           "version": "3.3",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
+          "wishType": "event"
         }
       ]
     },
@@ -941,6 +1325,12 @@
           "startDate": "2021-11-24",
           "endDate": "2021-12-14",
           "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
           "wishType": "event"
         },
         {
@@ -965,6 +1355,24 @@
           "endDate": "2022-08-02",
           "version": "2.8",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
         }
       ]
     },
@@ -981,6 +1389,18 @@
           "startDate": "2022-04-19",
           "endDate": "2022-05-31",
           "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
           "wishType": "event"
         }
       ]
@@ -1005,6 +1425,24 @@
           "endDate": "2022-05-31",
           "version": "2.6",
           "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
+          "wishType": "event"
         }
       ]
     },
@@ -1021,6 +1459,24 @@
           "startDate": "2022-08-02",
           "endDate": "2022-08-23",
           "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
           "wishType": "event"
         }
       ]
@@ -1039,6 +1495,24 @@
           "endDate": "2022-03-29",
           "version": "2.5",
           "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
+          "wishType": "event"
         }
       ]
     },
@@ -1055,6 +1529,24 @@
           "startDate": "2022-03-08",
           "endDate": "2022-03-29",
           "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
           "wishType": "event"
         }
       ]
@@ -1079,6 +1571,12 @@
           "endDate": "2022-09-27",
           "version": "3.0",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
         }
       ]
     },
@@ -1101,6 +1599,42 @@
           "startDate": "2022-07-13",
           "endDate": "2022-08-02",
           "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-01",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
           "wishType": "event"
         }
       ]
@@ -1185,6 +1719,18 @@
           "wishType": "event"
         },
         {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
           "startDate": "2024-03-13",
           "endDate": "2024-04-02",
           "version": "4.5",
@@ -1200,6 +1746,12 @@
           "endDate": "2022-01-25",
           "version": "2.4",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
         }
       ]
     },
@@ -1210,6 +1762,24 @@
           "startDate": "2022-02-16",
           "endDate": "2022-03-08",
           "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
           "wishType": "event"
         }
       ]
@@ -1222,6 +1792,18 @@
           "endDate": "2022-04-19",
           "version": "2.6",
           "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
         }
       ]
     },
@@ -1232,6 +1814,24 @@
           "startDate": "2022-05-31",
           "endDate": "2022-06-21",
           "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
           "wishType": "event"
         }
       ]
@@ -1244,6 +1844,24 @@
           "endDate": "2022-07-12",
           "version": "2.7",
           "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
         }
       ]
     },
@@ -1255,6 +1873,18 @@
           "endDate": "2022-08-02",
           "version": "2.8",
           "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
         }
       ]
     },
@@ -1265,6 +1895,18 @@
           "startDate": "2022-08-24",
           "endDate": "2022-09-09",
           "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
           "wishType": "event"
         }
       ]
@@ -1290,6 +1932,24 @@
           "wishType": "event"
         },
         {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-01",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
           "startDate": "2024-03-13",
           "endDate": "2024-04-02",
           "version": "4.5",
@@ -1299,23 +1959,118 @@
     },
     {
       "name": "Candace",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Cyno",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Nilou",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Nahida",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Layla",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Faruzan",
@@ -1324,6 +2079,24 @@
           "startDate": "2022-12-07",
           "endDate": "2022-12-27",
           "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
           "wishType": "event"
         }
       ]
@@ -1336,24 +2109,93 @@
           "endDate": "2022-12-27",
           "version": "3.3",
           "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
+          "wishType": "event"
         }
       ]
     },
     {
       "name": "Yaoyao",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Alhaitham",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Dehya",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Mika",
       "reruns": [
+        {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
+          "wishType": "event"
+        },
         {
           "startDate": "2024-03-13",
           "endDate": "2024-04-02",
@@ -1364,59 +2206,241 @@
     },
     {
       "name": "Kaveh",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Baizhu",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Kirara",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Lynette",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Lyney",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Freminet",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Neuvillette",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Wriothesley",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-01",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Charlotte",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Furina",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Navia",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Chevreuse",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Gaming",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Xianyun",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Chiori",
@@ -1431,39 +2455,102 @@
     },
     {
       "name": "Arlecchino",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Sethos",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Clorinde",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Sigewinne",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Emilie",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Kachina",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Mualani",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Kinich",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ]
     },
     {
       "name": "Xilonen",
-      "reruns": []
+      "reruns": [
+        {
+          "startDate": "upcoming",
+          "endDate": "upcoming",
+          "version": "5.1",
+          "wishType": "event"
+        }
+      ]
     }
   ]
 }

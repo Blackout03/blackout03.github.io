@@ -6,9 +6,9 @@
 }
 
 .container {
-	max-width: 1200px;
-	margin: 20px auto;
-	padding: 20px;
+	max-width: 1400px;
+	margin: 5px auto;
+	padding: 10px;
 	background-color: #ffffff;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -33,9 +33,7 @@ h1 {
 	padding: 20px;
 	display: flex;
 	align-items: flex-start; /* Align items to the start */
-	min-width: max-content; /* Fixed width for consistent card size */
 	width: max-content; /* Fixed width for consistent card size */
-	max-width: max-content; /* Fixed width for consistent card size */
 	min-height: max-content; /* Ensure a minimum height for uniformity */
 	flex-direction: row; /* Ensure horizontal layout */
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -66,41 +64,59 @@ h1 {
 	font-size: 1em;
 	color: #666;
 	margin-top: 0.1em;
-	margin-bottom: 0.75em;
 	text-align: left;
 }
 
+.rerun-version-info {
+	display: flex;
+	justify-content: space-between;
+	width: 87.5%;
+	font-size: 0.75em;
+	color: #666;
+	margin-top: 0.1em;
+	margin-bottom: 0.95em;
+	margin-left: 0.45em;
+	text-align: left;
+}
+
+.wish-type {
+	font-size: 1em;
+	color: #ff6347;
+	font-weight: bold;
+	display: inline;
+}
+
+.rerun-status,
 .time-since,
 .days-since {
 	font-size: 1em;
 	color: #007bff;
 	font-weight: bold;
 	text-align: left;
-	width: 400px;
+	width: 450px;
 }
 
-.wish-type {
-	 font-size: 1em;
-	 color: #ff6347; /* You can change this color to your preference */
-	 font-weight: bold;
-	margin-bottom: 0.5em;
-	 text-align: left;
- }
+.ongoing-rerun-status,
+.upcoming-rerun-status {
+	font-size: 1em;
+	color: #ff7b00;
+	font-weight: bold;
+	text-align: left;
+	width: 450px;
+}
 
 
 .character-details {
 	display: flex;
-	flex-direction: column; /* Stack details vertically */
-	justify-content: space-between; /* Distribute space between details */
-	flex-grow: 1; /* Allow details to grow and fill available space */
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
 }
 
-/* Make sure the text inside the cards is responsive and fits well */
 .character-card div {
 	word-wrap: break-word;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
 	#character-list {
 		flex-direction: column;

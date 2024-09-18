@@ -40,76 +40,138 @@ function calculateDaysSince(endDate) {
 	return daysSince;
 }
 
+// Function to calculate days until a given date
+function calculateDaysUntil(date) {
+	const now = new Date();
+	const givenDate = new Date(date);
+	const timeDifference = givenDate - now;
+	const daysUntil = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+	return daysUntil;
+}
+
+// Function to create and return an element with given type, class, and text content
+function createElement(type, className, textContent = '', innerHTML = '') {
+	const element = document.createElement(type);
+	if (className) element.classList.add(className);
+	if (textContent) element.textContent = textContent;
+	if (innerHTML) element.innerHTML = innerHTML;
+	return element;
+}
+
 // Function to display character rerun information
 function displayRerunInfo(rerunData) {
 	const characterList = document.getElementById('character-list');
-	rerunData.characters.forEach(character => {
-		// Check if the reruns array is empty
-		if (character.reruns.length === 0) {
-			console.warn(`No reruns available for character: ${character.name}`);
-			return; // Skip this character if there are no reruns
-		}
 
-		const lastRerun = character.reruns[character.reruns.length - 1];
-		const daysSinceLastRerun = calculateDaysSince(lastRerun.endDate);
-		const timeSinceLastRerun = calculateMonthsAndDaysSince(lastRerun.endDate);
-		const snakeCaseName = toSnakeCase(character.name);
+	rerunData.characters
+		.filter(character => character.reruns.length > 0) // Exclude characters with no reruns
+		.forEach(character => {
+			const reruns = character.reruns;
+			const lastRerun = reruns[reruns.length - 1];
+			const startDate = new Date(lastRerun.startDate);
+			const endDate = new Date(lastRerun.endDate);
+			const now = new Date();
+			const daysSinceLastRerun = calculateDaysSince(lastRerun.endDate);
+			const timeSinceLastRerun = calculateMonthsAndDaysSince(lastRerun.endDate);
+			const snakeCaseName = toSnakeCase(character.name);
+			const wishType = lastRerun.wishType === "chronicled" ? "Chronicled Wish" : "Event Wish";
 
-		// Create character card
-		const characterCard = document.createElement('div');
-		characterCard.classList.add('character-card');
+			const card = createElement('div', 'character-card');
 
-		// Character image
-		const imgElement = document.createElement('img');
-		imgElement.src = `https://game-cdn.appsample.com/gim/avatars/${snakeCaseName}.png`;
-		imgElement.alt = `${character.name} avatar`;
-		imgElement.classList.add('character-image');
+			const img = createElement('img', 'character-image');
+			img.src = `https://game-cdn.appsample.com/gim/avatars/${snakeCaseName}.png`
+			img.alt = `${character.name} avatar`;
+			img.title = `${character.name}`;
 
-		// Create the character details container
-		const characterDetails = document.createElement('div');
-		characterDetails.classList.add('character-details');
+			const details = createElement('div', 'character-details');
+			const name = createElement('div', 'character-name', character.name);
 
-		// Character name
-		const nameElement = document.createElement('div');
-		nameElement.classList.add('character-name');
-		nameElement.textContent = character.name;
+			let rerunStatus;
+			let rerunInfo;
+			let rerunVersionInfo;
+			let previousRun;
+			let ongoingRun;
+			let upcomingRun;
+			let timeSince;
+			let daysSince;
 
-		// Rerun info
-		const rerunInfoElement = document.createElement('div');
-		rerunInfoElement.classList.add('rerun-info');
-		rerunInfoElement.textContent = `Last Rerun: ${lastRerun.endDate} (Version ${lastRerun.version})`;
+			// Append other info to card
 
-		// Wish type display
-		const wishTypeElement = document.createElement('div');
-		wishTypeElement.classList.add('wish-type');
-		console.log(lastRerun.wishType)
-		console.log(lastRerun.wishType === "chronicled")
-		wishTypeElement.textContent = lastRerun.wishType === "chronicled" ? "Chronicled Wish" : "Event Wish";
+			const rerunStatusElement = document.createElement('div');
+			rerunStatusElement.classList.add('rerun-status');
 
-		// Time since last rerun (in months and days)
-		const timeSinceElement = document.createElement('div');
-		timeSinceElement.classList.add('time-since');
-		timeSinceElement.textContent = `Time since last rerun: ${timeSinceLastRerun.months} months, ${timeSinceLastRerun.days} days`;
+			if (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming" || now < startDate) {
+				const isUpcoming = lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming";
 
-		// Days since last rerun
-		const daysSinceElement = document.createElement('div');
-		daysSinceElement.classList.add('days-since');
-		daysSinceElement.textContent = `Days since last rerun: ${daysSinceLastRerun} days`;
+				if (isUpcoming) {
+					rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
+					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type">[${wishType}]</div>`)
+					upcomingRun = createElement('div', 'upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version}`)
 
-		// Append other info to card
-		characterDetails.appendChild(nameElement);
-		characterDetails.appendChild(rerunInfoElement);
-		characterDetails.appendChild(wishTypeElement); // Append wish type at the bottom
-		characterDetails.appendChild(timeSinceElement);
-		characterDetails.appendChild(daysSinceElement);
+				} else {
+					rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
+					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type">[${wishType}]</div>`)
+					const daysUntilStart = calculateDaysUntil(startDate);
+					rerunStatus = `Upcoming Rerun: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
 
-		// Append image and name to card
-		characterCard.appendChild(imgElement);
-		characterCard.appendChild(characterDetails);
+					if (reruns.length > 1) {
+						const previousRerun = reruns[reruns.length - 2];
+						const previousRerunEndDate = new Date(previousRerun.endDate);
+						rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
+						rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type">[${wishType}]</div>`)
+						const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
+						const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
 
-		// Append card to character list
-		characterList.appendChild(characterCard);
-	});
+						rerunStatus = ``;
+						upcomingRerun = `Upcoming Banner: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
+						timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
+						daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
+
+						previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+					}
+
+					upcomingRun = createElement('div', 'upcoming-rerun-status', upcomingRerun)
+				}
+			} else {
+				rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
+				rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type">[${wishType}]</div>`)
+				if (now >= startDate && now <= endDate) {
+					if (reruns.length > 1) {
+						const previousRerun = reruns[reruns.length - 2];
+						const previousRerunEndDate = new Date(previousRerun.endDate);
+						rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
+						rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type">[${wishType}]</div>`)
+						const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
+						const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
+						timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
+						daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
+
+						previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+					}
+
+					ongoingRun = createElement('div', 'ongoing-rerun-status', `Ongoing: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
+
+				} else {
+					timeSince = `Time since last banner: ${timeSinceLastRerun.months} months, ${timeSinceLastRerun.days} days`;
+					daysSince = `Days since last banner: ${daysSinceLastRerun} days`;
+
+					previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+				}
+			}
+
+			details.appendChild(name);
+			details.appendChild(rerunInfo);
+			details.appendChild(rerunVersionInfo);
+
+			if (previousRun) details.appendChild(previousRun);
+			if (ongoingRun) details.appendChild(ongoingRun);
+			if (upcomingRun) details.appendChild(upcomingRun);
+
+			card.appendChild(img);
+			card.appendChild(details);
+
+			// Append card to character list
+			characterList.appendChild(card);
+		});
 }
 
 // Fetch JSON data from external file and display the rerun info
