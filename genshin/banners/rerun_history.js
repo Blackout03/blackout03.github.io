@@ -145,7 +145,7 @@ function clearCharacterList() {
 }
 
 // Combined event listener for both dropdowns
-function updateCharacterList() {
+function checkJsonData() {
 	fetch('rerun_data.json')
 		.then(response => response.json())
 		.then(data => {
@@ -156,8 +156,8 @@ function updateCharacterList() {
 }
 
 // Add event listeners for both dropdowns
-document.getElementById('sortOptions').addEventListener('change', updateCharacterList);
-document.getElementById('elementFilter').addEventListener('change', updateCharacterList);
+document.getElementById('sortOptions').addEventListener('change', checkJsonData);
+document.getElementById('elementFilter').addEventListener('change', checkJsonData);
 
 // Function to display character rerun information
 function displayRerunInfo(rerunData) {
@@ -195,6 +195,7 @@ function displayRerunInfo(rerunData) {
 		let previousRun;
 		let ongoingRun;
 		let upcomingRun;
+		let upcomingRerun;
 		let timeSince;
 		let daysSince;
 
@@ -279,4 +280,4 @@ function displayRerunInfo(rerunData) {
 	});
 }
 
-updateCharacterList();
+checkJsonData();
