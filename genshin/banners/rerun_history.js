@@ -193,6 +193,7 @@ function displayRerunInfo(rerunData) {
 		img.src = `https://paimon.moe/images/characters/${snakeCaseName}.png`
 		img.alt = `${character.name} avatar`;
 		img.title = `${character.name}`;
+		img.classList.add(character.star === 5 ? 'five-star-image' : 'four-star-image');
 
 		const details = createElement('div', 'character-details');
 		const name = createElement('span', 'character-name', character.name);

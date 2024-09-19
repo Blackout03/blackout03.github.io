@@ -46,7 +46,8 @@ function findLongestGaps(data) {
 				character: character.name,
 				gap,
 				start: currentEnd,
-				end: nextStart
+				end: nextStart,
+				star: character.star
 			});
 		}
 
@@ -59,7 +60,8 @@ function findLongestGaps(data) {
 				character: character.name,
 				gap,
 				start: mostRecentEnd,
-				end: "Ongoing"
+				end: "Ongoing",
+				star: character.star
 			});
 		}
 	});
@@ -92,6 +94,7 @@ function displayLongestGaps(gaps) {
 		img.src = `https://paimon.moe/images/characters/${snakeCaseName}.png`;
 		img.alt = `${gap.character} avatar`;
 		img.title = `${gap.character}`;
+		img.classList.add(gap.star === 5 ? 'five-star-image' : 'four-star-image');
 
 		const info = createElement('div', 'gap-info', '', `
 			<div class="character-name">${gap.character}</div>

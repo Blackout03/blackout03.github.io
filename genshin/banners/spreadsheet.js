@@ -17,6 +17,7 @@ function createCharacterImage(character) {
 	img.alt = `${character.name} avatar`;
 	img.title = `${character.name}`;
 	img.classList.add('character-image');
+	img.classList.add(character.star === 5 ? 'five-star-image' : 'four-star-image');
 	return img;
 }
 
@@ -215,8 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
 							phaseCell.classList.add('upcoming-version');
 							if (phaseRerun) {
 								const checkmark = createCheckmark(phaseRerun.wishType);
-								console.log(phase)
-								console.log(phaseRerun)
 								phaseCell.appendChild(checkmark);
 							} else {
 								phaseCell.textContent = '???'; // Display "Invalid" if dates are not valid

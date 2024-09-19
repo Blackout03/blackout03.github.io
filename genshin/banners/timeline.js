@@ -20,6 +20,7 @@ function createCharacterImage(character) {
 	img.alt = `${character.name} avatar`;
 	img.title = `${character.name}`;
 	img.classList.add('character-image');
+	img.classList.add(character.star === 5 ? 'five-star-image' : 'four-star-image');
 	return img;
 }
 

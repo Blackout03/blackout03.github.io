@@ -66,6 +66,24 @@ h1 {
 	border-radius: 50%;
 }
 
+/* Style for 5-star characters images */
+.five-star-image {
+	background-image: linear-gradient(
+			180deg,
+			#a47d5c,
+			#d2945f
+	);
+}
+
+/* Style for 4-star characters images */
+.four-star-image {
+	background-image: linear-gradient(
+			180deg,
+			#7e6998,
+			#8a6bbb
+	);
+}
+
 /* Style for 5-star characters */
 .five-star {
 	color: #b59410;
