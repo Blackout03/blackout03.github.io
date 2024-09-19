@@ -89,7 +89,7 @@ function displayLongestGaps(gaps) {
 		const snakeCaseName = gap.character.toLowerCase().replace(/\s+/g, '_');
 
 		const img = createElement('img', 'character-image');
-		img.src = `https://game-cdn.appsample.com/gim/avatars/${snakeCaseName}.png`;
+		img.src = `https://paimon.moe/images/characters/${snakeCaseName}.png`;
 		img.alt = `${gap.character} avatar`;
 		img.title = `${gap.character}`;
 

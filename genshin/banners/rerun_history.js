@@ -190,7 +190,7 @@ function displayRerunInfo(rerunData) {
 		const card = createElement('div', 'character-card');
 
 		const img = createElement('img', 'character-image');
-		img.src = `https://game-cdn.appsample.com/gim/avatars/${snakeCaseName}.png`
+		img.src = `https://paimon.moe/images/characters/${snakeCaseName}.png`
 		img.alt = `${character.name} avatar`;
 		img.title = `${character.name}`;
 

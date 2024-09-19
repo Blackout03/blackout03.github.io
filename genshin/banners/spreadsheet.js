@@ -13,7 +13,7 @@ function toSnakeCase(name) {
 function createCharacterImage(character) {
 	const snakeCaseName = toSnakeCase(character.name);
 	const img = document.createElement('img');
-	img.src = `https://game-cdn.appsample.com/gim/avatars/${snakeCaseName}.png`;
+	img.src = `https://paimon.moe/images/characters/${snakeCaseName}.png`;
 	img.alt = `${character.name} avatar`;
 	img.title = `${character.name}`;
 	img.classList.add('character-image');
