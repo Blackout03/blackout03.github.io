@@ -1,0 +1,94 @@
+﻿body {
+	font-family: Arial, sans-serif;
+	background-color: #f9f9f9;
+	margin: 0;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+}
+
+#timeline {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.banner-entry {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	font-size: 1.1em;
+	width: 80%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+.banner-entry div {
+	margin: 0;
+	padding-bottom: 1em;
+}
+
+.banner-details {
+	display: flex;
+	flex-direction: column; /* Stack details vertically */
+	justify-content: space-between;
+}
+
+.banner-details span {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 0.2em; /* Add space between the date/version entries */
+}
+
+/* Container for all characters in a banner */
+.character-container {
+	display: flex;
+	flex-wrap: wrap; /* Allows wrapping to the next line if there's not enough space */
+	gap: 0 1em; /* Space between characters */
+}
+
+/* Container for each character's image and name */
+.character-entry {
+	display: flex;
+	align-items: center;
+	gap: 0.25em; /* Space between image and name */
+}
+
+/* Style for character images */
+.character-image {
+	width: 50px; /* Adjust size as needed */
+	height: 50px; /* Adjust size as needed */
+	border-radius: 50%;
+}
+
+/* Style for 5-star characters */
+.five-star {
+	color: #b59410;
+	font-weight: bolder;
+}
+
+/* Style for 4-star characters */
+.four-star {
+	color: #6510b5;
+}
+
+.wish-type {
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	font-size: 0.6em;
+	font-weight: bold;
+}
+
+.event-wish {
+	color: #ff6347;
+}
+
+.chronicled-wish {
+	color: #6347ff;
+}

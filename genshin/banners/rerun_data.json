@@ -2,6 +2,7 @@
   "characters": [
     {
       "name": "Amber",
+      "star": 4,
       "element": "Pyro",
       "reruns": [
         {
@@ -14,6 +15,7 @@
     },
     {
       "name": "Kaeya",
+      "star": 4,
       "element": "Cryo",
       "reruns": [
         {
@@ -26,6 +28,7 @@
     },
     {
       "name": "Lisa",
+      "star": 4,
       "element": "Electro",
       "reruns": [
         {
@@ -38,6 +41,7 @@
     },
     {
       "name": "Barbara",
+      "star": 4,
       "element": "Hydro",
       "reruns": [
         {
@@ -110,6 +114,7 @@
     },
     {
       "name": "Razor",
+      "star": 4,
       "element": "Electro",
       "reruns": [
         {
@@ -158,6 +163,7 @@
     },
     {
       "name": "Xiangling",
+      "star": 4,
       "element": "Pyro",
       "reruns": [
         {
@@ -230,6 +236,7 @@
     },
     {
       "name": "Beidou",
+      "star": 4,
       "element": "Electro",
       "reruns": [
         {
@@ -290,6 +297,7 @@
     },
     {
       "name": "Xingqiu",
+      "star": 4,
       "element": "Hydro",
       "reruns": [
         {
@@ -356,6 +364,7 @@
     },
     {
       "name": "Ningguang",
+      "star": 4,
       "element": "Geo",
       "reruns": [
         {
@@ -416,6 +425,7 @@
     },
     {
       "name": "Fischl",
+      "star": 4,
       "element": "Electro",
       "reruns": [
         {
@@ -476,6 +486,7 @@
     },
     {
       "name": "Bennett",
+      "star": 4,
       "element": "Pyro",
       "reruns": [
         {
@@ -554,6 +565,7 @@
     },
     {
       "name": "Noelle",
+      "star": 4,
       "element": "Geo",
       "reruns": [
         {
@@ -626,6 +638,7 @@
     },
     {
       "name": "Chongyun",
+      "star": 4,
       "element": "Cryo",
       "reruns": [
         {
@@ -672,12 +685,6 @@
         },
         {
           "startDate": "2023-10-17",
-          "endDate": "2023-11-01",
-          "version": "4.1",
-          "wishType": "event"
-        },
-        {
-          "startDate": "2023-10-17",
           "endDate": "2023-11-07",
           "version": "4.1",
           "wishType": "event"
@@ -686,6 +693,7 @@
     },
     {
       "name": "Sucrose",
+      "star": 4,
       "element": "Anemo",
       "reruns": [
         {
@@ -752,6 +760,7 @@
     },
     {
       "name": "Jean",
+      "star": 5,
       "element": "Anemo",
       "reruns": [
         {
@@ -764,6 +773,7 @@
     },
     {
       "name": "Diluc",
+      "star": 5,
       "element": "Pyro",
       "reruns": [
         {
@@ -776,11 +786,13 @@
     },
     {
       "name": "Qiqi",
+      "star": 5,
       "element": "Cryo",
       "reruns": []
     },
     {
       "name": "Mona",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -793,6 +805,7 @@
     },
     {
       "name": "Keqing",
+      "star": 5,
       "element": "Electro",
       "reruns": [
         {
@@ -805,6 +818,7 @@
     },
     {
       "name": "Venti",
+      "star": 5,
       "element": "Anemo",
       "reruns": [
         {
@@ -833,12 +847,6 @@
         },
         {
           "startDate": "2023-10-17",
-          "endDate": "2023-11-01",
-          "version": "4.1",
-          "wishType": "event"
-        },
-        {
-          "startDate": "2023-10-17",
           "endDate": "2023-11-07",
           "version": "4.1",
           "wishType": "event"
@@ -847,6 +855,7 @@
     },
     {
       "name": "Klee",
+      "star": 5,
       "element": "Pyro",
       "reruns": [
         {
@@ -883,6 +892,7 @@
     },
     {
       "name": "Diona",
+      "star": 4,
       "element": "Cryo",
       "reruns": [
         {
@@ -949,6 +959,7 @@
     },
     {
       "name": "Tartaglia",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -985,6 +996,7 @@
     },
     {
       "name": "Xinyan",
+      "star": 4,
       "element": "Pyro",
       "reruns": [
         {
@@ -1045,6 +1057,7 @@
     },
     {
       "name": "Zhongli",
+      "star": 5,
       "element": "Geo",
       "reruns": [
         {
@@ -1081,6 +1094,7 @@
     },
     {
       "name": "Albedo",
+      "star": 5,
       "element": "Geo",
       "reruns": [
         {
@@ -1111,6 +1125,7 @@
     },
     {
       "name": "Ganyu",
+      "star": 5,
       "element": "Cryo",
       "reruns": [
         {
@@ -1141,6 +1156,7 @@
     },
     {
       "name": "Xiao",
+      "star": 5,
       "element": "Anemo",
       "reruns": [
         {
@@ -1177,6 +1193,7 @@
     },
     {
       "name": "Hu Tao",
+      "star": 5,
       "element": "Pyro",
       "reruns": [
         {
@@ -1207,6 +1224,7 @@
     },
     {
       "name": "Rosaria",
+      "star": 4,
       "element": "Cryo",
       "reruns": [
         {
@@ -1267,6 +1285,7 @@
     },
     {
       "name": "Yanfei",
+      "star": 4,
       "element": "Pyro",
       "reruns": [
         {
@@ -1321,6 +1340,7 @@
     },
     {
       "name": "Eula",
+      "star": 5,
       "element": "Cryo",
       "reruns": [
         {
@@ -1351,6 +1371,7 @@
     },
     {
       "name": "Kaedehara Kazuha",
+      "star": 5,
       "element": "Anemo",
       "reruns": [
         {
@@ -1387,6 +1408,7 @@
     },
     {
       "name": "Kamisato Ayaka",
+      "star": 5,
       "element": "Cryo",
       "reruns": [
         {
@@ -1417,6 +1439,7 @@
     },
     {
       "name": "Sayu",
+      "star": 4,
       "element": "Anemo",
       "reruns": [
         {
@@ -1459,6 +1482,7 @@
     },
     {
       "name": "Yoimiya",
+      "star": 5,
       "element": "Pyro",
       "reruns": [
         {
@@ -1495,6 +1519,7 @@
     },
     {
       "name": "Kujou Sara",
+      "star": 4,
       "element": "Electro",
       "reruns": [
         {
@@ -1531,6 +1556,7 @@
     },
     {
       "name": "Raiden Shogun",
+      "star": 5,
       "element": "Electro",
       "reruns": [
         {
@@ -1567,6 +1593,7 @@
     },
     {
       "name": "Sangonomiya Kokomi",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -1597,6 +1624,7 @@
     },
     {
       "name": "Thoma",
+      "star": 4,
       "element": "Pyro",
       "reruns": [
         {
@@ -1631,12 +1659,6 @@
         },
         {
           "startDate": "2023-10-17",
-          "endDate": "2023-11-01",
-          "version": "4.1",
-          "wishType": "event"
-        },
-        {
-          "startDate": "2023-10-17",
           "endDate": "2023-11-07",
           "version": "4.1",
           "wishType": "event"
@@ -1657,6 +1679,7 @@
     },
     {
       "name": "Gorou",
+      "star": 4,
       "element": "Geo",
       "reruns": [
         {
@@ -1687,6 +1710,7 @@
     },
     {
       "name": "Arataki Itto",
+      "star": 5,
       "element": "Geo",
       "reruns": [
         {
@@ -1717,6 +1741,7 @@
     },
     {
       "name": "Yun Jin",
+      "star": 4,
       "element": "Geo",
       "reruns": [
         {
@@ -1759,6 +1784,7 @@
     },
     {
       "name": "Shenhe",
+      "star": 5,
       "element": "Cryo",
       "reruns": [
         {
@@ -1777,6 +1803,7 @@
     },
     {
       "name": "Yae Miko",
+      "star": 5,
       "element": "Electro",
       "reruns": [
         {
@@ -1807,6 +1834,7 @@
     },
     {
       "name": "Kamisato Ayato",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -1831,6 +1859,7 @@
     },
     {
       "name": "Yelan",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -1861,6 +1890,7 @@
     },
     {
       "name": "Kuki Shinobu",
+      "star": 4,
       "element": "Electro",
       "reruns": [
         {
@@ -1891,6 +1921,7 @@
     },
     {
       "name": "Shikanoin Heizou",
+      "star": 4,
       "element": "Anemo",
       "reruns": [
         {
@@ -1915,6 +1946,7 @@
     },
     {
       "name": "Collei",
+      "star": 4,
       "element": "Dendro",
       "reruns": [
         {
@@ -1939,6 +1971,7 @@
     },
     {
       "name": "Tighnari",
+      "star": 5,
       "element": "Dendro",
       "reruns": [
         {
@@ -1951,6 +1984,7 @@
     },
     {
       "name": "Dori",
+      "star": 4,
       "element": "Electro",
       "reruns": [
         {
@@ -1963,12 +1997,6 @@
           "startDate": "2023-04-12",
           "endDate": "2023-05-02",
           "version": "3.6",
-          "wishType": "event"
-        },
-        {
-          "startDate": "2023-10-17",
-          "endDate": "2023-11-01",
-          "version": "4.1",
           "wishType": "event"
         },
         {
@@ -1987,6 +2015,7 @@
     },
     {
       "name": "Candace",
+      "star": 4,
       "element": "Hydro",
       "reruns": [
         {
@@ -2011,6 +2040,7 @@
     },
     {
       "name": "Cyno",
+      "star": 5,
       "element": "Electro",
       "reruns": [
         {
@@ -2035,6 +2065,7 @@
     },
     {
       "name": "Nilou",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -2059,6 +2090,7 @@
     },
     {
       "name": "Nahida",
+      "star": 5,
       "element": "Dendro",
       "reruns": [
         {
@@ -2083,6 +2115,7 @@
     },
     {
       "name": "Layla",
+      "star": 4,
       "element": "Cryo",
       "reruns": [
         {
@@ -2107,6 +2140,7 @@
     },
     {
       "name": "Faruzan",
+      "star": 4,
       "element": "Anemo",
       "reruns": [
         {
@@ -2137,6 +2171,7 @@
     },
     {
       "name": "Wanderer",
+      "star": 5,
       "element": "Anemo",
       "reruns": [
         {
@@ -2161,6 +2196,7 @@
     },
     {
       "name": "Yaoyao",
+      "star": 4,
       "element": "Dendro",
       "reruns": [
         {
@@ -2185,6 +2221,7 @@
     },
     {
       "name": "Alhaitham",
+      "star": 5,
       "element": "Dendro",
       "reruns": [
         {
@@ -2209,6 +2246,7 @@
     },
     {
       "name": "Dehya",
+      "star": 5,
       "element": "Pyro",
       "reruns": [
         {
@@ -2221,6 +2259,7 @@
     },
     {
       "name": "Mika",
+      "star": 4,
       "element": "Cryo",
       "reruns": [
         {
@@ -2245,6 +2284,7 @@
     },
     {
       "name": "Kaveh",
+      "star": 4,
       "element": "Dendro",
       "reruns": [
         {
@@ -2263,6 +2303,7 @@
     },
     {
       "name": "Baizhu",
+      "star": 5,
       "element": "Dendro",
       "reruns": [
         {
@@ -2287,6 +2328,7 @@
     },
     {
       "name": "Kirara",
+      "star": 4,
       "element": "Dendro",
       "reruns": [
         {
@@ -2311,6 +2353,7 @@
     },
     {
       "name": "Lynette",
+      "star": 4,
       "element": "Anemo",
       "reruns": [
         {
@@ -2329,6 +2372,7 @@
     },
     {
       "name": "Lyney",
+      "star": 5,
       "element": "Pyro",
       "reruns": [
         {
@@ -2347,6 +2391,7 @@
     },
     {
       "name": "Freminet",
+      "star": 4,
       "element": "Cryo",
       "reruns": [
         {
@@ -2365,6 +2410,7 @@
     },
     {
       "name": "Neuvillette",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -2383,14 +2429,9 @@
     },
     {
       "name": "Wriothesley",
+      "star": 5,
       "element": "Cryo",
       "reruns": [
-        {
-          "startDate": "2023-10-17",
-          "endDate": "2023-11-01",
-          "version": "4.1",
-          "wishType": "event"
-        },
         {
           "startDate": "2023-10-17",
           "endDate": "2023-11-07",
@@ -2401,6 +2442,7 @@
     },
     {
       "name": "Charlotte",
+      "star": 4,
       "element": "Cryo",
       "reruns": [
         {
@@ -2413,6 +2455,7 @@
     },
     {
       "name": "Furina",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -2431,6 +2474,7 @@
     },
     {
       "name": "Navia",
+      "star": 5,
       "element": "Geo",
       "reruns": [
         {
@@ -2449,6 +2493,7 @@
     },
     {
       "name": "Chevreuse",
+      "star": 4,
       "element": "Pyro",
       "reruns": [
         {
@@ -2467,6 +2512,7 @@
     },
     {
       "name": "Gaming",
+      "star": 4,
       "element": "Pyro",
       "reruns": [
         {
@@ -2485,6 +2531,7 @@
     },
     {
       "name": "Xianyun",
+      "star": 5,
       "element": "Anemo",
       "reruns": [
         {
@@ -2497,6 +2544,7 @@
     },
     {
       "name": "Chiori",
+      "star": 5,
       "element": "Geo",
       "reruns": [
         {
@@ -2509,6 +2557,7 @@
     },
     {
       "name": "Arlecchino",
+      "star": 5,
       "element": "Pyro",
       "reruns": [
         {
@@ -2521,6 +2570,7 @@
     },
     {
       "name": "Sethos",
+      "star": 4,
       "element": "Electro",
       "reruns": [
         {
@@ -2533,6 +2583,7 @@
     },
     {
       "name": "Clorinde",
+      "star": 5,
       "element": "Electro",
       "reruns": [
         {
@@ -2545,6 +2596,7 @@
     },
     {
       "name": "Sigewinne",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -2557,6 +2609,7 @@
     },
     {
       "name": "Emilie",
+      "star": 5,
       "element": "Dendro",
       "reruns": [
         {
@@ -2569,6 +2622,7 @@
     },
     {
       "name": "Kachina",
+      "star": 4,
       "element": "Geo",
       "reruns": [
         {
@@ -2581,6 +2635,7 @@
     },
     {
       "name": "Mualani",
+      "star": 5,
       "element": "Hydro",
       "reruns": [
         {
@@ -2593,6 +2648,7 @@
     },
     {
       "name": "Kinich",
+      "star": 5,
       "element": "Dendro",
       "reruns": [
         {
@@ -2605,6 +2661,7 @@
     },
     {
       "name": "Xilonen",
+      "star": 5,
       "element": "Geo",
       "reruns": [
         {

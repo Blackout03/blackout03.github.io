@@ -91,9 +91,16 @@ h1 {
 
 .wish-type {
 	font-size: 1em;
-	color: #ff6347;
 	font-weight: bold;
 	display: inline;
+}
+
+.event-wish {
+	color: #ff6347;
+}
+
+.chronicled-wish {
+	color: #6347ff;
 }
 
 .rerun-status,
@@ -168,6 +175,7 @@ select:focus {
 }
 
 /* Element filter checkboxes styling */
+#starFilter,
 #elementFilter {
 	display: flex;
 	flex-wrap: wrap;
@@ -175,6 +183,7 @@ select:focus {
 	margin-bottom: 20px;
 }
 
+#starFilter label,
 #elementFilter label {
 	display: flex;
 	align-items: center;
@@ -186,10 +195,12 @@ select:focus {
 	transition: background-color 0.3s ease;
 }
 
+#starFilter label:hover,
 #elementFilter label:hover {
 	background-color: #f1f1f1;
 }
 
+#starFilter input[type="checkbox"],
 #elementFilter input[type="checkbox"] {
 	margin-right: 8px;
 	transform: scale(1.2);
