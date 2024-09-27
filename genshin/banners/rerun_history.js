@@ -173,6 +173,7 @@ function displayRerunInfo(rerunData) {
 	const characterList = document.getElementById('character-list');
 
 	let characters = rerunData.characters.filter(character => character.reruns.length > 0); // Exclude characters with no reruns
+	const currentDate = new Date(); // Get the current date as a Date object
 
 	const sortedCharacters = filterAndSortCharacters(characters);
 

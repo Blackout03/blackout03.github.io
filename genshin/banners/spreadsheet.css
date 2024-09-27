@@ -6,7 +6,7 @@
 
 h1 {
 	top: 0.25em;
-	position: sticky;
+	position: static;
 	text-align: center;
 }
 
@@ -90,7 +90,7 @@ thead .version {
 /* Sticky second header row */
 thead .phase {
 	position: sticky;
-	top: 61px; /* Height of the first row */
+	top: 37px; /* Height of the first row */
 	z-index: 4; /* Ensure it is above other content */
 }
 

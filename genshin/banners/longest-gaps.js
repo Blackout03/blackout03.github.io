@@ -28,20 +28,17 @@ function findLongestGaps(data) {
 	]);
 
 	const gaps = [];
+	const currentDate = new Date(); // Get the current date as a Date object
 
 	data.characters
 		.filter(character => !excludedCharacters.has(character.name))
 		.forEach(character => {
-		const reruns = character.reruns;
-
-		// Sort reruns by startDate to ensure chronological order
-		reruns.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
 
 		// Calculate gaps between consecutive banners
 		for (let i = 0; i < reruns.length - 1; i++) {
 			const currentEnd = reruns[i].endDate;
 			const nextStart = reruns[i + 1].startDate;
-			const gap = calculateGap(nextStart, currentEnd);
+			let gap = calculateGap(nextStart, currentEnd);
 			gaps.push({
 				character: character.name,
 				gap,
@@ -55,7 +52,7 @@ function findLongestGaps(data) {
 		if (reruns.length > 0) {
 			const mostRecentEnd = reruns[reruns.length - 1].endDate;
 			const currentDate = new Date().toISOString().split('T')[0];
-			const gap = calculateGap(currentDate, mostRecentEnd);
+			let gap = calculateGap(currentDate, mostRecentEnd);
 			gaps.push({
 				character: character.name,
 				gap,
@@ -66,7 +63,7 @@ function findLongestGaps(data) {
 		}
 	});
 
-	// Sort gaps in descending order and get the top 3
+	// Sort gaps in descending order and get the top 10
 	gaps.sort((a, b) => b.gap - a.gap);
 	return gaps.slice(0, 10);
 }
