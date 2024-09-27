@@ -33,6 +33,10 @@ function findLongestGaps(data) {
 	data.characters
 		.filter(character => !excludedCharacters.has(character.name))
 		.forEach(character => {
+			const reruns = character.reruns
+				// Filter out upcoming banners (future start dates)
+				.filter(rerun => new Date(rerun.startDate) <= currentDate)
+				.filter(rerun => rerun.startDate !== "upcoming");
 
 		// Calculate gaps between consecutive banners
 		for (let i = 0; i < reruns.length - 1; i++) {
