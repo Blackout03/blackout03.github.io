@@ -94,7 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				const group = groupedReruns.find(group =>
 					group.startDate === rerun.startDate &&
 					group.endDate === rerun.endDate &&
-					group.wishType === rerun.wishType
+					group.wishType === rerun.wishType &&
+					group.phase === rerun.phase
 				);
 
 				if (group) {

@@ -219,7 +219,25 @@ function displayRerunInfo(rerunData) {
 		if (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming" || now < startDate) {
 			const isUpcoming = lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming";
 
-			if (isUpcoming) {
+			if (isUpcoming && reruns.length > 1) {
+				rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
+				rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+				upcomingRun = createElement('div', 'upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version} `)
+
+				if (reruns.length > 1) {
+					const previousRerun = reruns[reruns.length - 2];
+					const previousRerunEndDate = new Date(previousRerun.endDate);
+					rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
+					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+					const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
+					const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
+
+					timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
+					daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
+
+					previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+				}
+			} else if (isUpcoming) {
 				rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
 				rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 				upcomingRun = createElement('div', 'upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version}`)

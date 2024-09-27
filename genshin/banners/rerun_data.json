@@ -1231,6 +1231,13 @@
           "endDate": "2023-10-17",
           "version": "4.1",
           "wishType": "event"
+        },
+        {
+          "startDate": "upcoming",
+          "endDate": "upcoming",
+          "version": "5.1",
+          "wishType": "event",
+          "phase": 2
         }
       ]
     },
@@ -2134,6 +2141,13 @@
           "endDate": "2024-02-20",
           "version": "4.4",
           "wishType": "event"
+        },
+        {
+          "startDate": "upcoming",
+          "endDate": "upcoming",
+          "version": "5.1",
+          "wishType": "event",
+          "phase": 2
         }
       ]
     },
@@ -2576,6 +2590,13 @@
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "event"
+        },
+        {
+          "startDate": "upcoming",
+          "endDate": "upcoming",
+          "version": "5.1",
+          "wishType": "event",
+          "phase": 1
         }
       ]
     },
@@ -2692,7 +2713,8 @@
           "startDate": "upcoming",
           "endDate": "upcoming",
           "version": "5.1",
-          "wishType": "event"
+          "wishType": "event",
+          "phase": 1
         }
       ]
     }
