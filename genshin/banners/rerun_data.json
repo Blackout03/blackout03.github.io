@@ -1233,11 +1233,10 @@
           "wishType": "event"
         },
         {
-          "startDate": "upcoming",
-          "endDate": "upcoming",
+          "startDate": "2024-10-30",
+          "endDate": "2024-11-20",
           "version": "5.1",
-          "wishType": "event",
-          "phase": 2
+          "wishType": "event"
         }
       ]
     },
@@ -1997,6 +1996,12 @@
           "endDate": "2023-11-28",
           "version": "4.2",
           "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-30",
+          "version": "5.1",
+          "wishType": "event"
         }
       ]
     },
@@ -2041,6 +2046,12 @@
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-30",
+          "version": "5.1",
+          "wishType": "event"
         }
       ]
     },
@@ -2065,6 +2076,12 @@
           "startDate": "2023-12-20",
           "endDate": "2024-01-09",
           "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-30",
+          "version": "5.1",
           "wishType": "event"
         }
       ]
@@ -2143,11 +2160,10 @@
           "wishType": "event"
         },
         {
-          "startDate": "upcoming",
-          "endDate": "upcoming",
+          "startDate": "2024-10-30",
+          "endDate": "2024-11-20",
           "version": "5.1",
-          "wishType": "event",
-          "phase": 2
+          "wishType": "event"
         }
       ]
     },
@@ -2592,11 +2608,10 @@
           "wishType": "event"
         },
         {
-          "startDate": "upcoming",
-          "endDate": "upcoming",
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-30",
           "version": "5.1",
-          "wishType": "event",
-          "phase": 1
+          "wishType": "event"
         }
       ]
     },
@@ -2710,11 +2725,10 @@
       "element": "Geo",
       "reruns": [
         {
-          "startDate": "upcoming",
-          "endDate": "upcoming",
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-30",
           "version": "5.1",
-          "wishType": "event",
-          "phase": 1
+          "wishType": "event"
         }
       ]
     }

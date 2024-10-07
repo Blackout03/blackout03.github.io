@@ -247,7 +247,7 @@ function displayRerunInfo(rerunData) {
 				rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
 				rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 				const daysUntilStart = calculateDaysUntil(startDate);
-				upcomingRerun = `Upcoming Rerun: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
+				upcomingRerun = `Upcoming Release: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
 
 				if (reruns.length > 1) {
 					const previousRerun = reruns[reruns.length - 2];
