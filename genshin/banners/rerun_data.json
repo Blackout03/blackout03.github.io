@@ -2731,6 +2731,28 @@
           "wishType": "event"
         }
       ]
+    },
+    {
+      "name": "Chasca",
+      "element": "Anemo",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.2",
+          "wishType": "event"
+        }
+      ]
+    },
+    {
+      "name": "Ororon",
+      "element": "Electro",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.2",
+          "wishType": "event"
+        }
+      ]
     }
   ]
 }
