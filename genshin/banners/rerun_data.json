@@ -1233,8 +1233,8 @@
           "wishType": "event"
         },
         {
-          "startDate": "2024-10-30",
-          "endDate": "2024-11-20",
+          "startDate": "2024-10-29",
+          "endDate": "2024-11-19",
           "version": "5.1",
           "wishType": "event"
         }
@@ -1999,7 +1999,7 @@
         },
         {
           "startDate": "2024-10-09",
-          "endDate": "2024-10-30",
+          "endDate": "2024-10-29",
           "version": "5.1",
           "wishType": "event"
         }
@@ -2049,7 +2049,7 @@
         },
         {
           "startDate": "2024-10-09",
-          "endDate": "2024-10-30",
+          "endDate": "2024-10-29",
           "version": "5.1",
           "wishType": "event"
         }
@@ -2080,7 +2080,7 @@
         },
         {
           "startDate": "2024-10-09",
-          "endDate": "2024-10-30",
+          "endDate": "2024-10-29",
           "version": "5.1",
           "wishType": "event"
         }
@@ -2160,8 +2160,8 @@
           "wishType": "event"
         },
         {
-          "startDate": "2024-10-30",
-          "endDate": "2024-11-20",
+          "startDate": "2024-10-29",
+          "endDate": "2024-11-19",
           "version": "5.1",
           "wishType": "event"
         }
@@ -2609,7 +2609,7 @@
         },
         {
           "startDate": "2024-10-09",
-          "endDate": "2024-10-30",
+          "endDate": "2024-10-29",
           "version": "5.1",
           "wishType": "event"
         }
@@ -2726,7 +2726,7 @@
       "reruns": [
         {
           "startDate": "2024-10-09",
-          "endDate": "2024-10-30",
+          "endDate": "2024-10-29",
           "version": "5.1",
           "wishType": "event"
         }
