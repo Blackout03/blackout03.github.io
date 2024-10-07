@@ -45,6 +45,10 @@ h1 {
 	margin-bottom: 0.2em; /* Add space between the date/version entries */
 }
 
+.banner-details span.upcoming-banner {
+	font-size: 18px;
+}
+
 /* Container for all characters in a banner */
 .character-container {
 	display: flex;
@@ -84,15 +88,29 @@ h1 {
 	);
 }
 
+/* Style for ???-star characters images */
+.unknown-star-image {
+	background-image: linear-gradient(
+			180deg,
+			#888,
+			#aaa
+	);
+}
+
 /* Style for 5-star characters */
 .five-star {
-	color: #b59410;
+	color: #d2945f;
 	font-weight: bolder;
 }
 
 /* Style for 4-star characters */
 .four-star {
-	color: #6510b5;
+	color: #8a6bbb;
+}
+
+/* Style for ???-star characters */
+.unknown-star {
+	color: #888;
 }
 
 .wish-type {

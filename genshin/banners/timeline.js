@@ -1,9 +1,4 @@
-﻿// Function to convert character name to snake_case
-function toSnakeCase(name) {
-	return name.toLowerCase().replace(/ /g, '_');
-}
-
-// Function to create and return an element with given type, class, and text content
+﻿// Function to create and return an element with given type, class, and text content
 function createElement(type, className, textContent = '', innerHTML = '') {
 	const element = document.createElement(type);
 	if (className) element.classList.add(className);
@@ -14,13 +9,13 @@ function createElement(type, className, textContent = '', innerHTML = '') {
 
 // Function to create an image element for a character
 function createCharacterImage(character) {
-	const snakeCaseName = toSnakeCase(character.name);
+	const characterName = character.imageName ? character.imageName : character.name;
 	const img = document.createElement('img');
-	img.src = `https://paimon.moe/images/characters/${snakeCaseName}.png`;
+	img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
 	img.alt = `${character.name} avatar`;
 	img.title = `${character.name}`;
 	img.classList.add('character-image');
-	img.classList.add(character.star === 5 ? 'five-star-image' : 'four-star-image');
+	img.classList.add(character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image');
 	return img;
 }
 
@@ -29,9 +24,10 @@ function createCharacterNameContainer(group) {
 	// Separate characters by star rating
 	const fiveStarCharacters = group.characters.filter(char => char.star === 5);
 	const fourStarCharacters = group.characters.filter(char => char.star === 4);
+	const unknownStarCharacters = group.characters.filter(char => char.star !== 5 && char.star !== 4);
 
 	// Combine characters and sort by star rating
-	const sortedCharacters = [...fiveStarCharacters, ...fourStarCharacters];
+	const sortedCharacters = [...fiveStarCharacters, ...fourStarCharacters, ...unknownStarCharacters];
 
 	// Create a container for all character entries
 	const characterContainer = document.createElement('div');
@@ -49,7 +45,7 @@ function createCharacterNameContainer(group) {
 		// Append name
 		const nameElement = document.createElement('span');
 		nameElement.textContent = char.name;
-		nameElement.classList.add(char.star === 5 ? 'five-star' : 'four-star');
+		nameElement.classList.add(char.star === 5 ? 'five-star' : char.star === 4 ? 'four-star' : 'unknown-star');
 		entry.appendChild(nameElement);
 
 		characterContainer.appendChild(entry);
@@ -71,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				character.reruns.forEach(rerun => {
 					reruns.push({
 						name: character.name,
+						imageName: character.imageName,
 						startDate: rerun.startDate,
 						endDate: rerun.endDate,
 						version: rerun.version,
@@ -100,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				if (group) {
 					// If found, add the character to the existing group
-					group.characters.push({ name: rerun.name, star: rerun.star });
+					group.characters.push({ name: rerun.name, imageName: rerun.imageName, star: rerun.star });
 				} else {
 					// If not, create a new group
 					groupedReruns.push({
@@ -108,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						endDate: rerun.endDate,
 						version: rerun.version,
 						wishType: rerun.wishType,
-						characters: [{ name: rerun.name, star: rerun.star }],
+						characters: [{ name: rerun.name, imageName: rerun.imageName, star: rerun.star }],
 						phase: rerun.phase || null // Store phase if it exists
 					});
 				}
@@ -127,53 +124,81 @@ document.addEventListener("DOMContentLoaded", () => {
 				);
 
 				let phase;
-				if (existingPhase) {
-					// If same date banner exists, use the same phase
-					phase = existingPhase.phase;
+				if (!group.startDate && !group.endDate) {
+					const bannerEntry = document.createElement('div');
+					bannerEntry.classList.add('banner-entry');
+
+					const characterNameContainer = createCharacterNameContainer(group);
+					bannerEntry.appendChild(characterNameContainer);
+					// Create and append the wish type, style it based on wishType
+					const wishType = document.createElement('div');
+					wishType.textContent = group.wishType === 'event' ? '[Event Wish]' : '[Chronicled Wish]';
+					wishType.classList.add('wish-type', group.wishType === 'event' ? 'event-wish' : 'chronicled-wish');
+					bannerEntry.appendChild(wishType);
+
+					const bannerDetails = document.createElement('div');
+					bannerDetails.classList.add('banner-details');
+
+					// Add Upcoming Character message!
+					const upcomingBanner = document.createElement('span');
+					upcomingBanner.textContent = `Upcoming Characters in ${group.version}`;
+					upcomingBanner.classList.add('upcoming-banner');
+					bannerDetails.appendChild(upcomingBanner);
+
+					const version = document.createElement('span');
+					version.textContent = `Version: ${group.version}`;
+					bannerDetails.appendChild(version);
+
+					bannerEntry.appendChild(bannerDetails);
+					timeline.appendChild(bannerEntry);
 				} else {
-					// Assign a new phase and push this banner's dates into the version's banner list
-					phase = bannersByVersion[group.version].length + 1;
-					bannersByVersion[group.version].push({
-						startDate: group.startDate,
-						endDate: group.endDate,
-						phase
-					});
+					if (existingPhase) {
+						// If same date banner exists, use the same phase
+						phase = existingPhase.phase;
+					} else {
+						// Assign a new phase and push this banner's dates into the version's banner list
+						phase = bannersByVersion[group.version].length + 1;
+						bannersByVersion[group.version].push({
+							startDate: group.startDate,
+							endDate: group.endDate,
+							phase
+						});
+					}
+
+					const bannerEntry = document.createElement('div');
+					bannerEntry.classList.add('banner-entry');
+
+					const characterNameContainer = createCharacterNameContainer(group);
+					bannerEntry.appendChild(characterNameContainer);
+					// Create and append the wish type, style it based on wishType
+					const wishType = document.createElement('div');
+					wishType.textContent = group.wishType === 'event' ? '[Event Wish]' : '[Chronicled Wish]';
+					wishType.classList.add('wish-type', group.wishType === 'event' ? 'event-wish' : 'chronicled-wish');
+					bannerEntry.appendChild(wishType);
+
+					const bannerDetails = document.createElement('div');
+					bannerDetails.classList.add('banner-details');
+
+					// Create and append the start and end date
+					const startDate = document.createElement('span');
+					startDate.textContent = `Start: ${group.startDate}`;
+					bannerDetails.appendChild(startDate);
+
+					const endDate = document.createElement('span');
+					endDate.textContent = `End: ${group.endDate}`;
+					bannerDetails.appendChild(endDate);
+
+					const version = document.createElement('span');
+					if (group.phase) {
+						version.textContent = `Version: ${group.version}, Phase ${group.phase}`;
+					} else {
+						version.textContent = `Version: ${group.version}, Phase ${phase}`;
+					}
+					bannerDetails.appendChild(version);
+
+					bannerEntry.appendChild(bannerDetails);
+					timeline.appendChild(bannerEntry);
 				}
-
-				const bannerEntry = document.createElement('div');
-				bannerEntry.classList.add('banner-entry');
-
-				const characterNameContainer = createCharacterNameContainer(group);
-				bannerEntry.appendChild(characterNameContainer);
-
-				// Create and append the wish type, style it based on wishType
-				const wishType = document.createElement('div');
-				wishType.textContent = group.wishType === 'event' ? '[Event Wish]' : '[Chronicled Wish]';
-				wishType.classList.add('wish-type', group.wishType === 'event' ? 'event-wish' : 'chronicled-wish');
-				bannerEntry.appendChild(wishType);
-
-				const bannerDetails = document.createElement('div');
-				bannerDetails.classList.add('banner-details');
-
-				// Create and append the start and end date
-				const startDate = document.createElement('span');
-				startDate.textContent = `Start: ${group.startDate}`;
-				bannerDetails.appendChild(startDate);
-
-				const endDate = document.createElement('span');
-				endDate.textContent = `End: ${group.endDate}`;
-				bannerDetails.appendChild(endDate);
-
-				const version = document.createElement('span');
-				if (group.phase) {
-					version.textContent = `Version: ${group.version}, Phase ${group.phase}`;
-				} else {
-					version.textContent = `Version: ${group.version}, Phase ${phase}`;
-				}
-				bannerDetails.appendChild(version);
-
-				bannerEntry.appendChild(bannerDetails);
-				timeline.appendChild(bannerEntry);
 			});
 		})
 		.catch(error => console.error('Error loading JSON:', error));

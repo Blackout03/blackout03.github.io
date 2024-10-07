@@ -65,6 +65,15 @@ th[colspan] {
 	);
 }
 
+/* Style for ???-star characters images */
+.unknown-star-image {
+	background-image: linear-gradient(
+			180deg,
+			#888,
+			#aaa
+	);
+}
+
 /* Ensure table layout is consistent */
 table {
 	width: 100%;

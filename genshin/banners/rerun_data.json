@@ -2,6 +2,7 @@
   "characters": [
     {
       "name": "Amber",
+      "imageName": "Ambor",
       "star": 4,
       "element": "Pyro",
       "reruns": [
@@ -577,6 +578,7 @@
     },
     {
       "name": "Noelle",
+      "imageName": "Noel",
       "star": 4,
       "element": "Geo",
       "reruns": [
@@ -772,6 +774,7 @@
     },
     {
       "name": "Jean",
+      "imageName": "Qin",
       "star": 5,
       "element": "Anemo",
       "reruns": [
@@ -1205,6 +1208,7 @@
     },
     {
       "name": "Hu Tao",
+      "imageName": "Hutao",
       "star": 5,
       "element": "Pyro",
       "reruns": [
@@ -1309,6 +1313,7 @@
     },
     {
       "name": "Yanfei",
+      "imageName": "Feiyan",
       "star": 4,
       "element": "Pyro",
       "reruns": [
@@ -1401,6 +1406,7 @@
     },
     {
       "name": "Kaedehara Kazuha",
+      "imageName": "Kazuha",
       "star": 5,
       "element": "Anemo",
       "reruns": [
@@ -1438,6 +1444,7 @@
     },
     {
       "name": "Kamisato Ayaka",
+      "imageName": "Ayaka",
       "star": 5,
       "element": "Cryo",
       "reruns": [
@@ -1549,6 +1556,7 @@
     },
     {
       "name": "Kujou Sara",
+      "imageName": "Sara",
       "star": 4,
       "element": "Electro",
       "reruns": [
@@ -1586,6 +1594,7 @@
     },
     {
       "name": "Raiden Shogun",
+      "imageName": "Shougun",
       "star": 5,
       "element": "Electro",
       "reruns": [
@@ -1623,6 +1632,7 @@
     },
     {
       "name": "Sangonomiya Kokomi",
+      "imageName": "Kokomi",
       "star": 5,
       "element": "Hydro",
       "reruns": [
@@ -1654,6 +1664,7 @@
     },
     {
       "name": "Thoma",
+      "imageName": "Tohma",
       "star": 4,
       "element": "Pyro",
       "reruns": [
@@ -1740,6 +1751,7 @@
     },
     {
       "name": "Arataki Itto",
+      "imageName": "Itto",
       "star": 5,
       "element": "Geo",
       "reruns": [
@@ -1771,6 +1783,7 @@
     },
     {
       "name": "Yun Jin",
+      "imageName": "Yunjin",
       "star": 4,
       "element": "Geo",
       "reruns": [
@@ -1833,6 +1846,7 @@
     },
     {
       "name": "Yae Miko",
+      "imageName": "Yae",
       "star": 5,
       "element": "Electro",
       "reruns": [
@@ -1864,6 +1878,7 @@
     },
     {
       "name": "Kamisato Ayato",
+      "imageName": "Ayato",
       "star": 5,
       "element": "Hydro",
       "reruns": [
@@ -1920,6 +1935,7 @@
     },
     {
       "name": "Kuki Shinobu",
+      "imageName": "Shinobu",
       "star": 4,
       "element": "Electro",
       "reruns": [
@@ -1951,6 +1967,7 @@
     },
     {
       "name": "Shikanoin Heizou",
+      "imageName": "Heizo",
       "star": 4,
       "element": "Anemo",
       "reruns": [
@@ -2275,6 +2292,7 @@
     },
     {
       "name": "Alhaitham",
+      "imageName": "Alhatham",
       "star": 5,
       "element": "Dendro",
       "reruns": [
@@ -2357,6 +2375,7 @@
     },
     {
       "name": "Baizhu",
+      "imageName": "Baizhuer",
       "star": 5,
       "element": "Dendro",
       "reruns": [
@@ -2382,6 +2401,7 @@
     },
     {
       "name": "Kirara",
+      "imageName": "Momoka",
       "star": 4,
       "element": "Dendro",
       "reruns": [
@@ -2407,6 +2427,7 @@
     },
     {
       "name": "Lynette",
+      "imageName": "Linette",
       "star": 4,
       "element": "Anemo",
       "reruns": [
@@ -2426,6 +2447,7 @@
     },
     {
       "name": "Lyney",
+      "imageName": "Liney",
       "star": 5,
       "element": "Pyro",
       "reruns": [
@@ -2585,6 +2607,7 @@
     },
     {
       "name": "Xianyun",
+      "imageName": "Liuyun",
       "star": 5,
       "element": "Anemo",
       "reruns": [
@@ -2745,6 +2768,7 @@
     },
     {
       "name": "Ororon",
+      "imageName": "Olorun",
       "element": "Electro",
       "reruns": [
         {

@@ -71,6 +71,15 @@ h1 {
 	);
 }
 
+/* Style for ???-star characters images */
+.unknown-star-image {
+	background-image: linear-gradient(
+			180deg,
+			#888,
+			#aaa
+	);
+}
+
 .character-name {
 	display: flex;
 	justify-content: space-between;

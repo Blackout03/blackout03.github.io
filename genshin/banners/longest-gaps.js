@@ -45,6 +45,7 @@ function findLongestGaps(data) {
 			let gap = calculateGap(nextStart, currentEnd);
 			gaps.push({
 				character: character.name,
+				imageName: character.imageName,
 				gap,
 				start: currentEnd,
 				end: nextStart,
@@ -59,6 +60,7 @@ function findLongestGaps(data) {
 			let gap = calculateGap(currentDate, mostRecentEnd);
 			gaps.push({
 				character: character.name,
+				imageName: character.imageName,
 				gap,
 				start: mostRecentEnd,
 				end: "Ongoing",
@@ -89,13 +91,13 @@ function displayLongestGaps(gaps) {
 
 	gaps.forEach((gap, index) => {
 		const gapElement = createElement('div', 'gap-item');
-		const snakeCaseName = gap.character.toLowerCase().replace(/\s+/g, '_');
+		const characterName = gap.imageName ? gap.imageName : gap.character;
 
 		const img = createElement('img', 'character-image');
-		img.src = `https://paimon.moe/images/characters/${snakeCaseName}.png`;
+		img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
 		img.alt = `${gap.character} avatar`;
 		img.title = `${gap.character}`;
-		img.classList.add(gap.star === 5 ? 'five-star-image' : 'four-star-image');
+		img.classList.add(gap.star === 5 ? 'five-star-image' : gap.star === 4 ? 'four-star-image' : 'unknown-star-image');
 
 		const info = createElement('div', 'gap-info', '', `
 			<div class="character-name">${gap.character}</div>

@@ -136,7 +136,7 @@ function filterAndSortCharacters(characters) {
 				const lastRerun = reruns[reruns.length - 1];
 				const startDate = new Date(lastRerun.startDate);
 				const now = new Date();
-				return (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming") || now < startDate;
+				return (!lastRerun.startDate && !lastRerun.endDate) || ((lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming") || now < startDate);
 			});
 			break
 	}
@@ -185,16 +185,16 @@ function displayRerunInfo(rerunData) {
 		const now = new Date();
 		const daysSinceLastRerun = calculateDaysSince(lastRerun.endDate);
 		const timeSinceLastRerun = calculateMonthsAndDaysSince(lastRerun.endDate);
-		const snakeCaseName = toSnakeCase(character.name);
+		const characterName = character.imageName ? character.imageName : character.name;
 		const wishType = lastRerun.wishType === "chronicled" ? "Chronicled Wish" : "Event Wish";
 
 		const card = createElement('div', 'character-card');
 
 		const img = createElement('img', 'character-image');
-		img.src = `https://paimon.moe/images/characters/${snakeCaseName}.png`
+		img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
 		img.alt = `${character.name} avatar`;
 		img.title = `${character.name}`;
-		img.classList.add(character.star === 5 ? 'five-star-image' : 'four-star-image');
+		img.classList.add(character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image');
 
 		const details = createElement('div', 'character-details');
 		const name = createElement('span', 'character-name', character.name);
@@ -217,7 +217,12 @@ function displayRerunInfo(rerunData) {
 		const rerunStatusElement = document.createElement('div');
 		rerunStatusElement.classList.add('rerun-status');
 
-		if (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming" || now < startDate) {
+		if (!lastRerun.startDate && !lastRerun.endDate) {
+			rerunInfo = createElement('div', 'rerun-info', '', `Upcoming Release!`)
+			rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+
+			upcomingRun = createElement('div', 'upcoming-rerun-status', '', `<span>Upcoming Release: ${lastRerun.version}</span>`)
+		} else if (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming" || now < startDate) {
 			const isUpcoming = lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming";
 
 			if (isUpcoming && reruns.length > 1) {

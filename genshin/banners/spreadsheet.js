@@ -4,20 +4,15 @@ function isUpcomingDate(dateString) {
 	return date > new Date();
 }
 
-// Function to convert character name to snake_case
-function toSnakeCase(name) {
-	return name.toLowerCase().replace(/ /g, '_');
-}
-
 // Function to create an image element for a character
 function createCharacterImage(character) {
-	const snakeCaseName = toSnakeCase(character.name);
+	const characterName = character.imageName ? character.imageName : character.name;
 	const img = document.createElement('img');
-	img.src = `https://paimon.moe/images/characters/${snakeCaseName}.png`;
+	img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
 	img.alt = `${character.name} avatar`;
 	img.title = `${character.name}`;
 	img.classList.add('character-image');
-	img.classList.add(character.star === 5 ? 'five-star-image' : 'four-star-image');
+	img.classList.add(character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image');
 	return img;
 }
 
@@ -131,19 +126,27 @@ document.addEventListener('DOMContentLoaded', () => {
 			const phaseRow = document.createElement('tr');
 
 			versionArray.forEach(version => {
-				const versionTh = document.createElement('th');
-				versionTh.colSpan = versionPhases[version].length;
-				versionTh.textContent = `Version ${version}`;
-				versionTh.classList.add('version');
-				headerRow.appendChild(versionTh);
-
-				versionPhases[version].forEach((phase, index) => {
-					const phaseTh = document.createElement('th');
-
-					phaseTh.textContent = phase[3] !== undefined ? `Phase ${phase[3]}` : phase[0] === 'upcoming' ? `Phase ???` : `Phase ${index + 1}`;
-					phaseTh.classList.add('phase');
-					phaseRow.appendChild(phaseTh);
+				// Check if any character has a rerun with a valid startDate and endDate for this version
+				const versionHasValidRerun = characters.some(character => {
+					return character.reruns.some(rerun => rerun.version === version && rerun.startDate && rerun.endDate);
 				});
+
+				// Only add the version column if there's a valid rerun for this version
+				if (versionHasValidRerun) {
+					const versionTh = document.createElement('th');
+					versionTh.colSpan = versionPhases[version].length;
+					versionTh.textContent = `Version ${version}`;
+					versionTh.classList.add('version');
+					headerRow.appendChild(versionTh);
+
+					versionPhases[version].forEach((phase, index) => {
+						const phaseTh = document.createElement('th');
+
+						phaseTh.textContent = phase[3] !== undefined ? `Phase ${phase[3]}` : phase[0] === 'upcoming' ? `Phase ???` : `Phase ${index + 1}`;
+						phaseTh.classList.add('phase');
+						phaseRow.appendChild(phaseTh);
+					});
+				}
 			});
 
 			table.querySelector('thead').appendChild(headerRow);
@@ -185,58 +188,66 @@ document.addEventListener('DOMContentLoaded', () => {
 				const maxElapsedTime = 20; // Maximum elapsed time for gradient
 
 				versionArray.forEach(version => {
-					const versionReruns = character.reruns.filter(rerun => rerun.version === version);
-					versionPhases[version].forEach((phase) => {
-						const phaseCell = document.createElement('td');
-						const phaseStartDate = createValidDate(phase[0]);
-						const phaseEndDate = createValidDate(phase[1]);
+					// Check if any character has a rerun with a valid startDate and endDate for this version
+					const versionHasValidRerun = characters.some(character => {
+						return character.reruns.some(rerun => rerun.version === version && rerun.startDate && rerun.endDate);
+					});
 
-						// Check for a rerun in this phase
-						const phaseRerun = versionReruns.find(rerun => {
-							const phaseStart = createValidDate(rerun.startDate);
-							const phaseEnd = createValidDate(rerun.endDate);
-							const validPhaseStart = createValidDate(phase[0]);
-							const validPhaseEnd = createValidDate(phase[1]);
+					// Only add the version column if there's a valid rerun for this version
+					if (versionHasValidRerun) {
+						const versionReruns = character.reruns.filter(rerun => rerun.version === version);
+						versionPhases[version].forEach((phase) => {
+							const phaseCell = document.createElement('td');
+							const phaseStartDate = createValidDate(phase[0]);
+							const phaseEndDate = createValidDate(phase[1]);
 
-							// Check if it's an upcoming phase
-							if (phase[0] === "upcoming") {
-								// Only match if the phase is set and matches
-								return (rerun.phase && (rerun.phase === phase[3]) || phase[3] === undefined);
-							}
+							// Check for a rerun in this phase
+							const phaseRerun = versionReruns.find(rerun => {
+								const phaseStart = createValidDate(rerun.startDate);
+								const phaseEnd = createValidDate(rerun.endDate);
+								const validPhaseStart = createValidDate(phase[0]);
+								const validPhaseEnd = createValidDate(phase[1]);
 
-							return phase[0] === "upcoming" || phaseStart && phaseEnd && validPhaseStart && validPhaseEnd &&
-								phaseStart.toISOString() === validPhaseStart.toISOString() &&
-								phaseEnd.toISOString() === validPhaseEnd.toISOString();
-						});
+								// Check if it's an upcoming phase
+								if (phase[0] === "upcoming") {
+									// Only match if the phase is set and matches
+									return (rerun.phase && (rerun.phase === phase[3]) || phase[3] === undefined);
+								}
 
-						// If this phase is before the first run, make it dark grey
-						if ((rerunDates[0].start.toString() === "Invalid Date" && !(phase[0] === "upcoming")) || (phaseStartDate < rerunDates[0].start && !(phase[0] === "upcoming"))) {
-							phaseCell.classList.add('before-release');
-						} else if (phase[0] === "upcoming") {
-							phaseCell.classList.add('upcoming-version');
-							if (phaseRerun) {
+								return phase[0] === "upcoming" || phaseStart && phaseEnd && validPhaseStart && validPhaseEnd &&
+									phaseStart.toISOString() === validPhaseStart.toISOString() &&
+									phaseEnd.toISOString() === validPhaseEnd.toISOString();
+							});
+
+							// If this phase is before the first run, make it dark grey
+							if ((rerunDates[0].start.toString() === "Invalid Date" && !(phase[0] === "upcoming")) || (phaseStartDate < rerunDates[0].start && !(phase[0] === "upcoming"))) {
+								phaseCell.classList.add('before-release');
+							} else if (phase[0] === "upcoming") {
+								phaseCell.classList.add('upcoming-version');
+								if (phaseRerun) {
+									const checkmark = createCheckmark(phaseRerun.wishType);
+									phaseCell.appendChild(checkmark);
+								} else {
+									phaseCell.textContent = '???'; // Display "Invalid" if dates are not valid
+								}
+								row.appendChild(phaseCell);
+								return;
+							} else if (phaseRerun) {
 								const checkmark = createCheckmark(phaseRerun.wishType);
 								phaseCell.appendChild(checkmark);
+
+								// Reset elapsedTime after each rerun
+								elapsedTime = 0;
 							} else {
-								phaseCell.textContent = '???'; // Display "Invalid" if dates are not valid
+								phaseCell.classList.add(`${elapsedTime}`);
+								phaseCell.style.backgroundColor = calculateCharacterGradientColor(elapsedTime, maxElapsedTime);
+								elapsedTime++;
+								phaseCell.textContent = `${elapsedTime}`; // Display elapsedTime
 							}
+
 							row.appendChild(phaseCell);
-							return;
-						} else if (phaseRerun) {
-							const checkmark = createCheckmark(phaseRerun.wishType);
-							phaseCell.appendChild(checkmark);
-
-							// Reset elapsedTime after each rerun
-							elapsedTime = 0;
-						} else {
-							phaseCell.classList.add(`${elapsedTime}`);
-							phaseCell.style.backgroundColor = calculateCharacterGradientColor(elapsedTime, maxElapsedTime);
-							elapsedTime++;
-							phaseCell.textContent = `${elapsedTime}`; // Display elapsedTime
-						}
-
-						row.appendChild(phaseCell);
-					});
+						});
+					}
 				});
 				tbody.appendChild(row);
 			});
