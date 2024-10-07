@@ -93,6 +93,26 @@
           "wishType": "event"
         }
       ]
+    },
+    {
+      "name": "Mavuika",
+      "element": "Pyro",
+      "reruns": []
+    },
+    {
+      "name": "Citlali",
+      "element": "Cryo",
+      "reruns": []
+    },
+    {
+      "name": "Capitano",
+      "imageName": "IlCapitano",
+      "reruns": []
+    },
+    {
+      "name": "Iansan",
+      "element": "Electro",
+      "reruns": []
     }
   ]
 }
