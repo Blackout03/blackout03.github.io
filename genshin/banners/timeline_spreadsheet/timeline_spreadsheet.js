@@ -4,16 +4,6 @@ function isUpcomingDate(dateString) {
 	return date > new Date();
 }
 
-// Function to create an image element for a character
-function createCharacterImage(character) {
-	const characterName = character.imageName ? character.imageName : character.name;
-	const img = createImg(['character-image', character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image']);
-	img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
-	img.alt = `${character.name} avatar`;
-	img.title = `${character.name}`;
-	return img;
-}
-
 // Function to create a checkmark element with color based on wishType
 function createCheckmark(wishType) {
 	const span = createSpan(['checkmark', wishType === 'chronicled' ? 'chronicled-wish' : 'event-wish']);
@@ -45,19 +35,35 @@ function calculateCharacterGradientColor(elapsedTime, maxElapsedTime) {
 	return `rgb(${r}, ${g}, ${b})`;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-	const table = document.getElementById('banner-timeline');
+// Combined event listener for both dropdowns
+function checkJsonData() {
+	Promise.all([
+		fetch('../../character_data.json').then(response => response.json()),
+		fetch('../../image_data.json').then(response => response.json())
+	])
+		.then(([characterData, imageData]) => {
+			// Helper function to get image ID from imageData.json or fallback to itemName
+			function getImageId(itemName, imageData) {
+				return imageData[itemName] || itemName;
+			}
 
-	// Fetch JSON data from rerun_data.json
-	fetch('../../character_data.json')
-		.then(response => response.json())
-		.then(data => {
+			// Function to create an image element for a character
+			function createCharacterImage(character) {
+				const characterName = getImageId(character.name, imageData);
+				const img = createImage(['character-image', character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image']);
+				img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
+				img.alt = `${character.name} avatar`;
+				img.title = `${character.name}`;
+				return img;
+			}
+
+			const table = document.getElementById('banner-timeline');
 			const versionPhases = {};
 			const versionPhasesSet = {};  // {version: Set<phase>}
 			const characters = [];
 
 			// Extract versions and characters, and collect unique phases by version
-			data.characters.forEach(character => {
+			characterData.characters.forEach(character => {
 				if (character.reruns && character.reruns.length > 0) {
 					characters.push(character);
 					character.reruns.forEach(rerun => {
@@ -226,5 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		})
 		.catch(error => console.error('Error loading JSON data:', error));
-});
+}
 
+checkJsonData();

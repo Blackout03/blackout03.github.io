@@ -1,59 +1,66 @@
-﻿// Function to create an image element for a character
-function createCharacterImage(character) {
-	const characterName = character.imageName ? character.imageName : character.name;
-	const img =
-		createImg(['character-image', character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
-			`https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`,
-			`${character.name} avatar`,
-			`${character.name}`);
-	return img;
-}
+﻿// Combined event listener for both dropdowns
+function checkJsonData() {
+	Promise.all([
+		fetch('../../character_data.json').then(response => response.json()),
+		fetch('../../image_data.json').then(response => response.json())
+	])
+		.then(([characterData, imageData]) => {
+			// Helper function to get image ID from imageData.json or fallback to itemName
+			function getImageId(itemName, imageData) {
+				return imageData[itemName] || itemName;
+			}
 
-// Function to create and style the list of character names based on their star rating
-function createCharacterNameContainer(group) {
-	// Separate characters by star rating
-	const fiveStarCharacters = group.characters.filter(char => char.star === 5);
-	const fourStarCharacters = group.characters.filter(char => char.star === 4);
-	const unknownStarCharacters = group.characters.filter(char => char.star !== 5 && char.star !== 4);
+			// Function to create an image element for a character
+			function createCharacterImage(character) {
+				const characterName = getImageId(character.name, imageData);
+				const img =
+					createImage(['character-image', character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
+						`https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`,
+						`${character.name} avatar`,
+						`${character.name}`);
+				return img;
+			}
 
-	// Combine characters and sort by star rating
-	const sortedCharacters = [...fiveStarCharacters, ...fourStarCharacters, ...unknownStarCharacters];
+			// Function to create and style the list of character names based on their star rating
+			function createCharacterNameContainer(group) {
+				// Separate characters by star rating
+				const fiveStarCharacters = group.characters.filter(char => char.star === 5);
+				const fourStarCharacters = group.characters.filter(char => char.star === 4);
+				const unknownStarCharacters = group.characters.filter(char => char.star !== 5 && char.star !== 4);
 
-	// Create a container for all character entries
-	const characterContainer = createDiv('character-container');
+				// Combine characters and sort by star rating
+				const sortedCharacters = [...fiveStarCharacters, ...fourStarCharacters, ...unknownStarCharacters];
 
-	// Create a comma-separated list of names
-	sortedCharacters.forEach(char => {
-		const entry = createDiv('character-entry');
+				// Create a container for all character entries
+				const characterContainer = createDiv('character-container');
 
-		// Append image
-		const img = createCharacterImage(char);
-		entry.appendChild(img);
+				// Create a comma-separated list of names
+				sortedCharacters.forEach(char => {
+					const entry = createDiv('character-entry');
 
-		// Append name
-		const nameElement = createSpan(char.star === 5 ? 'five-star' : char.star === 4 ? 'four-star' : 'unknown-star', char.name);
-		entry.appendChild(nameElement);
+					// Append image
+					const img = createCharacterImage(char);
+					entry.appendChild(img);
 
-		characterContainer.appendChild(entry);
-	});
+					// Append name
+					const nameElement = createSpan(char.star === 5 ? 'five-star' : char.star === 4 ? 'four-star' : 'unknown-star', char.name);
+					entry.appendChild(nameElement);
 
-	return characterContainer;
-}
+					characterContainer.appendChild(entry);
+				});
 
-document.addEventListener("DOMContentLoaded", () => {
-	fetch('../../character_data.json')
-		.then(response => response.json())
-		.then(data => {
+				return characterContainer;
+			}
+
 			const timeline = document.getElementById('timeline');
 			const bannersByVersion = {}; // To store phases by version
 
 			// Create a combined list of all reruns with character data
 			const reruns = [];
-			data.characters.forEach(character => {
+			characterData.characters.forEach(character => {
 				character.reruns.forEach(rerun => {
 					reruns.push({
 						name: character.name,
-						imageName: character.imageName,
 						startDate: rerun.startDate,
 						endDate: rerun.endDate,
 						version: rerun.version,
@@ -83,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				if (group) {
 					// If found, add the character to the existing group
-					group.characters.push({ name: rerun.name, imageName: rerun.imageName, star: rerun.star });
+					group.characters.push({ name: rerun.name, star: rerun.star });
 				} else {
 					// If not, create a new group
 					groupedReruns.push({
@@ -91,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						endDate: rerun.endDate,
 						version: rerun.version,
 						wishType: rerun.wishType,
-						characters: [{ name: rerun.name, imageName: rerun.imageName, star: rerun.star }],
+						characters: [{ name: rerun.name, star: rerun.star }],
 						phase: rerun.phase || null // Store phase if it exists
 					});
 				}
@@ -171,4 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		})
 		.catch(error => console.error('Error loading JSON:', error));
-});
+}
+
+checkJsonData();

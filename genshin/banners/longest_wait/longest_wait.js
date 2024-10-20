@@ -74,29 +74,13 @@ function findLongestGaps(data) {
 	return filteredGaps.slice(0, top);
 }
 
-function checkJsonData() {
-	fetch('../../character_data.json')
-		.then(response => response.json())
-		.then(data => {
-			const longestGaps = findLongestGaps(data);
-			displayLongestGaps(longestGaps);
-		})
-		.catch(error => console.error('Error fetching rerun data:', error));
-}
-
 // Function to display the longest gaps on the page
 function displayLongestGaps(gaps) {
-	const container = document.getElementById('longest-gaps');
-	container.innerHTML = '';
-
-	let currentBannerNumber = 1;  // Start with banner number 1
-	let previousGap = null;       // Keep track of the previous gap length
-
 	gaps.forEach((gap, index) => {
 		const gapElement = createDiv('gap-item');
-		const characterName = gap.imageName ? gap.imageName : gap.character;
+		const characterName = getImageId(character.name);
 
-		const img = createImg('character-image');
+		const img = createImage('character-image');
 		img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
 		img.alt = `${gap.character} avatar`;
 		img.title = `${gap.character}`;
@@ -127,5 +111,55 @@ function displayLongestGaps(gaps) {
 	});
 }
 
+Promise.all([
+	fetch('../../character_data.json').then(response => response.json()),
+	fetch('../../image_data.json').then(response => response.json())
+])
+	.then(([characterData, imageData]) => {
+		const container = document.getElementById('longest-gaps');
+		container.innerHTML = '';
 
-checkJsonData()
+		let currentBannerNumber = 1;  // Start with banner number 1
+		let previousGap = null;       // Keep track of the previous gap length
+
+		// Helper function to get image ID from imageData.json or fallback to itemName
+		function getImageId(itemName) {
+			return imageData[itemName] || itemName;
+		}
+
+		const longestGaps = findLongestGaps(characterData);
+		longestGaps.forEach((gap, index) => {
+			const gapElement = createDiv('gap-item');
+			const characterName = getImageId(gap.character);
+
+			const img = createImage('character-image');
+			img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
+			img.alt = `${gap.character} avatar`;
+			img.title = `${gap.character}`;
+			img.classList.add(gap.star === 5 ? 'five-star-image' : gap.star === 4 ? 'four-star-image' : 'unknown-star-image');
+
+			// Increment the banner number only if the current gap length is different from the previous one
+			if (previousGap !== null && gap.gap !== previousGap) {
+				currentBannerNumber++;
+			}
+			previousGap = gap.gap; // Update previous gap length
+
+			const info = createDiv('gap-info', '', `
+			<div class="character-name">${gap.character}</div>
+			<p><strong>Gap Length:</strong> ${gap.gap} days <span class="banner-number">#${currentBannerNumber}</span></p>
+			<p><strong>Gap Start:</strong> ${gap.start}</p>
+			<p><strong>Gap End:</strong> ${gap.end}</p>`);
+
+			// Create the banner number element and append it to the gap item
+			const bannerNumber = createDiv('',);
+			const indexText = createSpan('index-number', '', `#${index + 1}`);
+
+			gapElement.appendChild(img);
+			gapElement.appendChild(info);
+			gapElement.appendChild(bannerNumber);
+			bannerNumber.appendChild(indexText);
+
+			container.appendChild(gapElement);
+		});
+	})
+	.catch(error => console.error('Error fetching rerun data:', error));
