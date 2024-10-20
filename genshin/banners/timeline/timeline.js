@@ -1,21 +1,11 @@
-﻿// Function to create and return an element with given type, class, and text content
-function createElement(type, className, textContent = '', innerHTML = '') {
-	const element = document.createElement(type);
-	if (className) element.classList.add(className);
-	if (textContent) element.textContent = textContent;
-	if (innerHTML) element.innerHTML = innerHTML;
-	return element;
-}
-
-// Function to create an image element for a character
+﻿// Function to create an image element for a character
 function createCharacterImage(character) {
 	const characterName = character.imageName ? character.imageName : character.name;
-	const img = document.createElement('img');
-	img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
-	img.alt = `${character.name} avatar`;
-	img.title = `${character.name}`;
-	img.classList.add('character-image');
-	img.classList.add(character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image');
+	const img =
+		createImg(['character-image', character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
+			`https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`,
+			`${character.name} avatar`,
+			`${character.name}`);
 	return img;
 }
 
@@ -30,22 +20,18 @@ function createCharacterNameContainer(group) {
 	const sortedCharacters = [...fiveStarCharacters, ...fourStarCharacters, ...unknownStarCharacters];
 
 	// Create a container for all character entries
-	const characterContainer = document.createElement('div');
-	characterContainer.classList.add('character-container');
+	const characterContainer = createDiv('character-container');
 
 	// Create a comma-separated list of names
 	sortedCharacters.forEach(char => {
-		const entry = document.createElement('div');
-		entry.classList.add('character-entry');
+		const entry = createDiv('character-entry');
 
 		// Append image
 		const img = createCharacterImage(char);
 		entry.appendChild(img);
 
 		// Append name
-		const nameElement = document.createElement('span');
-		nameElement.textContent = char.name;
-		nameElement.classList.add(char.star === 5 ? 'five-star' : char.star === 4 ? 'four-star' : 'unknown-star');
+		const nameElement = createSpan(char.star === 5 ? 'five-star' : char.star === 4 ? 'four-star' : 'unknown-star', char.name);
 		entry.appendChild(nameElement);
 
 		characterContainer.appendChild(entry);
@@ -55,7 +41,7 @@ function createCharacterNameContainer(group) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	fetch('rerun_data.json')
+	fetch('../../character_data.json')
 		.then(response => response.json())
 		.then(data => {
 			const timeline = document.getElementById('timeline');
@@ -125,28 +111,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				let phase;
 				if (!group.startDate && !group.endDate) {
-					const bannerEntry = document.createElement('div');
-					bannerEntry.classList.add('banner-entry');
+					const bannerEntry = createDiv('banner-entry');
 
 					const characterNameContainer = createCharacterNameContainer(group);
 					bannerEntry.appendChild(characterNameContainer);
 					// Create and append the wish type, style it based on wishType
-					const wishType = document.createElement('div');
-					wishType.textContent = group.wishType === 'event' ? '[Event Wish]' : '[Chronicled Wish]';
-					wishType.classList.add('wish-type', group.wishType === 'event' ? 'event-wish' : 'chronicled-wish');
+					const wishType = createDiv(['wish-type', group.wishType === 'event' ? 'event-wish' : 'chronicled-wish'], group.wishType === 'event' ? '[Event Wish]' : '[Chronicled Wish]');
 					bannerEntry.appendChild(wishType);
 
-					const bannerDetails = document.createElement('div');
-					bannerDetails.classList.add('banner-details');
+					const bannerDetails = createDiv('banner-details');
 
 					// Add Upcoming Character message!
-					const upcomingBanner = document.createElement('span');
-					upcomingBanner.textContent = `Upcoming Characters in ${group.version}`;
-					upcomingBanner.classList.add('upcoming-banner');
+					const upcomingBanner = createSpan('upcoming-banner', `Upcoming Characters in ${group.version}`);
 					bannerDetails.appendChild(upcomingBanner);
 
-					const version = document.createElement('span');
-					version.textContent = `Version: ${group.version}`;
+					const version = createSpan('', `Version: ${group.version}`);
 					bannerDetails.appendChild(version);
 
 					bannerEntry.appendChild(bannerDetails);
@@ -165,35 +144,25 @@ document.addEventListener("DOMContentLoaded", () => {
 						});
 					}
 
-					const bannerEntry = document.createElement('div');
-					bannerEntry.classList.add('banner-entry');
+					const bannerEntry = createDiv('banner-entry');
 
 					const characterNameContainer = createCharacterNameContainer(group);
 					bannerEntry.appendChild(characterNameContainer);
 					// Create and append the wish type, style it based on wishType
-					const wishType = document.createElement('div');
-					wishType.textContent = group.wishType === 'event' ? '[Event Wish]' : '[Chronicled Wish]';
-					wishType.classList.add('wish-type', group.wishType === 'event' ? 'event-wish' : 'chronicled-wish');
+					const wishType = createDiv(['wish-type', group.wishType === 'event' ? 'event-wish' : 'chronicled-wish'], group.wishType === 'event' ? '[Event Wish]' : '[Chronicled Wish]');
 					bannerEntry.appendChild(wishType);
 
-					const bannerDetails = document.createElement('div');
-					bannerDetails.classList.add('banner-details');
+					const bannerDetails = createDiv('banner-details');
 
 					// Create and append the start and end date
-					const startDate = document.createElement('span');
-					startDate.textContent = `Start: ${group.startDate}`;
+					const startDate = createSpan('', `Start: ${group.startDate}`);
 					bannerDetails.appendChild(startDate);
 
-					const endDate = document.createElement('span');
-					endDate.textContent = `End: ${group.endDate}`;
+					const endDate = createSpan('', `End: ${group.endDate}`);
 					bannerDetails.appendChild(endDate);
 
-					const version = document.createElement('span');
-					if (group.phase) {
-						version.textContent = `Version: ${group.version}, Phase ${group.phase}`;
-					} else {
-						version.textContent = `Version: ${group.version}, Phase ${phase}`;
-					}
+					const version = createSpan('', group.phase ? `Version: ${group.version}, Phase ${group.phase}` : `Version: ${group.version}, Phase ${phase}`);
+
 					bannerDetails.appendChild(version);
 
 					bannerEntry.appendChild(bannerDetails);

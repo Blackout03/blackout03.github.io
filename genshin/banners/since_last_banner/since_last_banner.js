@@ -1,67 +1,8 @@
-﻿// Function to convert character name to snake_case
-function toSnakeCase(name) {
-	return name.toLowerCase().replace(/ /g, '_');
-}
-
-// Function to calculate the difference in months and days since the last rerun
-function calculateMonthsAndDaysSince(endDate) {
-	const now = new Date();
-	const lastRerunEnd = new Date(endDate);
-
-	let years = now.getFullYear() - lastRerunEnd.getFullYear();
-	let months = now.getMonth() - lastRerunEnd.getMonth();
-	let days = now.getDate() - lastRerunEnd.getDate();
-
-	// Adjust if the current day of the month is before the rerun end day
-	if (days < 0) {
-		months -= 1;
-		days += new Date(now.getFullYear(), now.getMonth(), 0).getDate(); // Get days in the previous month
-	}
-
-	// Adjust if the current month is before the rerun end month
-	if (months < 0) {
-		years -= 1;
-		months += 12;
-	}
-
-	// Add the year difference to months (since each year adds 12 months)
-	months += years * 12;
-
-	// Return the time in months and days
-	return { months, days };
-}
-
-// Function to calculate days since the last rerun
-function calculateDaysSince(endDate) {
-	const now = new Date();
-	const lastRerunEnd = new Date(endDate);
-	const timeDifference = now - lastRerunEnd;
-	const daysSince = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-	return daysSince;
-}
-
-// Function to calculate days until a given date
-function calculateDaysUntil(date) {
-	const now = new Date();
-	const givenDate = new Date(date);
-	const timeDifference = givenDate - now;
-	const daysUntil = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-	return daysUntil;
-}
-
-// Function to create and return an element with given type, class, and text content
-function createElement(type, className, textContent = '', innerHTML = '') {
-	const element = document.createElement(type);
-	if (className) element.classList.add(className);
-	if (textContent) element.textContent = textContent;
-	if (innerHTML) element.innerHTML = innerHTML;
-	return element;
-}
-
-// Function to filter and sort characters based on hash
+﻿// Function to filter and sort characters based on hash
 function filterAndSortCharacters(characters) {
 	const sortOption = document.getElementById('sortOptions').value;
 	const elementFilter = Array.from(document.querySelectorAll('#elementFilter input[type="checkbox"]:checked')).map(input => input.value);
+	const weaponFilter = Array.from(document.querySelectorAll('#weaponFilter input[type="checkbox"]:checked')).map(input => input.value);
 	const starFilter = Array.from(document.querySelectorAll('#starFilter input[type="checkbox"]:checked')).map(input => Number(input.value));
 
 	let filteredCharacters = characters;
@@ -69,6 +10,11 @@ function filterAndSortCharacters(characters) {
 	// Filter characters by selected elements
 	if (elementFilter.length > 0) {
 		filteredCharacters = filteredCharacters.filter(character => elementFilter.includes(character.element?.toLowerCase()));
+	}
+
+	// Filter characters by selected elements
+	if (weaponFilter.length > 0) {
+		filteredCharacters = filteredCharacters.filter(character => weaponFilter.includes(character.weapon?.toLowerCase()));
 	}
 
 	// Filter characters by selected star level
@@ -154,7 +100,7 @@ function clearCharacterList() {
 
 // Combined event listener for both dropdowns
 function checkJsonData() {
-	fetch('rerun_data.json')
+	fetch('../../character_data.json')
 		.then(response => response.json())
 		.then(data => {
 			clearCharacterList(); // Clear the list before updating
@@ -166,6 +112,7 @@ function checkJsonData() {
 // Add event listeners for both dropdowns
 document.getElementById('sortOptions').addEventListener('change', checkJsonData);
 document.getElementById('elementFilter').addEventListener('change', checkJsonData);
+document.getElementById('weaponFilter').addEventListener('change', checkJsonData);
 document.getElementById('starFilter').addEventListener('change', checkJsonData);
 
 // Function to display character rerun information
@@ -188,17 +135,17 @@ function displayRerunInfo(rerunData) {
 		const characterName = character.imageName ? character.imageName : character.name;
 		const wishType = lastRerun.wishType === "chronicled" ? "Chronicled Wish" : "Event Wish";
 
-		const card = createElement('div', 'character-card');
+		const card = createDiv('character-card');
 
-		const img = createElement('img', 'character-image');
+		const img = createImg('character-image');
 		img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
 		img.alt = `${character.name} avatar`;
 		img.title = `${character.name}`;
 		img.classList.add(character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image');
 
-		const details = createElement('div', 'character-details');
-		const name = createElement('span', 'character-name', character.name);
-		const bannerCount = createElement('div', 'banner-count', `Banners: ${reruns.length}`);
+		const details = createDiv('character-details');
+		const name = createSpan('character-name', character.name);
+		const bannerCount = createDiv('banner-count', `Banners: ${reruns.length}`);
 
 		let rerunStatus;
 		let rerunInfo;
@@ -214,51 +161,48 @@ function displayRerunInfo(rerunData) {
 
 		// Append other info to card
 
-		const rerunStatusElement = document.createElement('div');
-		rerunStatusElement.classList.add('rerun-status');
-
 		if (!lastRerun.startDate && !lastRerun.endDate) {
-			rerunInfo = createElement('div', 'rerun-info', '', `Upcoming Release!`)
-			rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+			rerunInfo = createDiv('rerun-info', '', `Upcoming Release!`)
+			rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 
-			upcomingRun = createElement('div', 'upcoming-rerun-status', '', `<span>Upcoming Release: ${lastRerun.version}</span>`)
+			upcomingRun = createDiv('upcoming-rerun-status', '', `<span>Upcoming Release: ${lastRerun.version}</span>`)
 		} else if (lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming" || now < startDate) {
 			const isUpcoming = lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming";
 
 			if (isUpcoming && reruns.length > 1) {
-				rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
-				rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
-				upcomingRun = createElement('div', 'upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version} `)
+				rerunInfo = createDiv('rerun-info', '', `Release: ${lastRerun.endDate}`)
+				rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+				upcomingRun = createDiv('upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version} `)
 
 				if (reruns.length > 1) {
 					const previousRerun = reruns[reruns.length - 2];
 					const previousRerunEndDate = new Date(previousRerun.endDate);
-					rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
-					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+					rerunInfo = createDiv('rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
+					rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 					const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
 					const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
 
 					timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
 					daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
 
-					previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+					previousRun = createDiv('rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
 				}
 			} else if (isUpcoming) {
-				rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
-				rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
-				upcomingRun = createElement('div', 'upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version}`)
+				rerunInfo = createDiv('rerun-info', '', `Release: ${lastRerun.endDate}`)
+				rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+				upcomingRun = createDiv('upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version}`)
 
 			} else {
-				rerunInfo = createElement('div', 'rerun-info', '', `Release: ${lastRerun.endDate}`)
-				rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+				rerunInfo = createDiv('rerun-info', '', `Release: ${lastRerun.endDate}`)
+				rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 				const daysUntilStart = calculateDaysUntil(startDate);
 				upcomingRerun = `Upcoming Release: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
 
 				if (reruns.length > 1) {
 					const previousRerun = reruns[reruns.length - 2];
 					const previousRerunEndDate = new Date(previousRerun.endDate);
-					rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
-					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+					rerunInfo = createDiv('rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
+					rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 					const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
 					const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
 
@@ -267,35 +211,35 @@ function displayRerunInfo(rerunData) {
 					timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
 					daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
 
-					previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+					previousRun = createDiv('rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
 				}
 
-				upcomingRun = createElement('div', 'upcoming-rerun-status', upcomingRerun)
+				upcomingRun = createDiv('upcoming-rerun-status', upcomingRerun)
 			}
 		} else {
-			rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
-			rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+			rerunInfo = createDiv('rerun-info', '', `Previous Banner: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
+			rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 			if (now >= startDate && now <= endDate) {
 				if (reruns.length > 1) {
 					const previousRerun = reruns[reruns.length - 2];
 					const previousRerunEndDate = new Date(previousRerun.endDate);
-					rerunInfo = createElement('div', 'rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
-					rerunVersionInfo = createElement('span', 'rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+					rerunInfo = createDiv('rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
+					rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 					const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
 					const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
 					timeSince = `Time since last banner: ${timeSincePreviousRerun.months} months, ${timeSincePreviousRerun.days} days`;
 					daysSince = `Days since last banner: ${daysSincePreviousRerun} days`;
 
-					previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+					previousRun = createDiv('rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
 				}
 
-				ongoingRun = createElement('div', 'ongoing-rerun-status', `Ongoing: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
+				ongoingRun = createDiv('ongoing-rerun-status', `Ongoing: (${lastRerun.startDate}) - (${lastRerun.endDate})`)
 
 			} else {
 				timeSince = `Time since last banner: ${timeSinceLastRerun.months} months, ${timeSinceLastRerun.days} days`;
 				daysSince = `Days since last banner: ${daysSinceLastRerun} days`;
 
-				previousRun = createElement('div', 'rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
+				previousRun = createDiv('rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
 			}
 		}
 

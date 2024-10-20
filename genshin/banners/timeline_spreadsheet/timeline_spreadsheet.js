@@ -7,38 +7,17 @@ function isUpcomingDate(dateString) {
 // Function to create an image element for a character
 function createCharacterImage(character) {
 	const characterName = character.imageName ? character.imageName : character.name;
-	const img = document.createElement('img');
+	const img = createImg(['character-image', character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image']);
 	img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
 	img.alt = `${character.name} avatar`;
 	img.title = `${character.name}`;
-	img.classList.add('character-image');
-	img.classList.add(character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image');
 	return img;
 }
 
 // Function to create a checkmark element with color based on wishType
 function createCheckmark(wishType) {
-	const span = document.createElement('span');
-	span.classList.add('checkmark');
-
-	// Add a class based on the wishType for different colors
-	switch (wishType) {
-		case 'chronicled':
-			span.classList.add('chronicled-wish');
-			break;
-		case 'event':
-		default:
-			span.classList.add('event-wish');
-			break;
-	}
-
+	const span = createSpan(['checkmark', wishType === 'chronicled' ? 'chronicled-wish' : 'event-wish']);
 	return span;
-}
-
-// Function to create a valid Date object
-function createValidDate(dateString) {
-	const date = new Date(dateString);
-	return isNaN(date.getTime()) ? null : date;
 }
 
 // Function to calculate color transition from green to red
@@ -70,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const table = document.getElementById('banner-timeline');
 
 	// Fetch JSON data from rerun_data.json
-	fetch('rerun_data.json')
+	fetch('../../character_data.json')
 		.then(response => response.json())
 		.then(data => {
 			const versionPhases = {};
@@ -101,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			// Sort phases for each version by the start date
 			Object.keys(versionPhases).forEach(version => {
 				versionPhases[version].sort((a, b) => {
-					const startDateA = createValidDate(a[0]);
-					const startDateB = createValidDate(b[0]);
+					const startDateA = safeParseDate(a[0]);
+					const startDateB = safeParseDate(b[0]);
 					return (startDateA && startDateB) ? startDateA.getTime() - startDateB.getTime() : 0;
 				});
 			});
@@ -123,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Create header columns for versions
 			const headerRow = table.querySelector('thead tr');
-			const phaseRow = document.createElement('tr');
+			const phaseRow = createElement('tr');
 
 			versionArray.forEach(version => {
 				// Check if any character has a rerun with a valid startDate and endDate for this version
@@ -133,17 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				// Only add the version column if there's a valid rerun for this version
 				if (versionHasValidRerun) {
-					const versionTh = document.createElement('th');
+					const versionTh = createElement('th', 'version', `Version ${version}`);
 					versionTh.colSpan = versionPhases[version].length;
-					versionTh.textContent = `Version ${version}`;
-					versionTh.classList.add('version');
 					headerRow.appendChild(versionTh);
 
 					versionPhases[version].forEach((phase, index) => {
-						const phaseTh = document.createElement('th');
+						const phaseTh = createElement('th', 'phase', phase[3] !== undefined ? `Phase ${phase[3]}` : phase[0] === 'upcoming' ? `Phase ???` : `Phase ${index + 1}`);
 
-						phaseTh.textContent = phase[3] !== undefined ? `Phase ${phase[3]}` : phase[0] === 'upcoming' ? `Phase ???` : `Phase ${index + 1}`;
-						phaseTh.classList.add('phase');
 						phaseRow.appendChild(phaseTh);
 					});
 				}
@@ -162,18 +137,16 @@ document.addEventListener('DOMContentLoaded', () => {
 			// Create rows for each character
 			const tbody = table.querySelector('tbody');
 			characters.forEach(character => {
-				const row = document.createElement('tr');
+				const row = createElement('tr');
 
-				const entry = document.createElement('td');
-				entry.classList.add('character-entry');
+				const entry = createElement('td', 'character-entry');
 
 				// Append image
 				const img = createCharacterImage(character);
 				entry.appendChild(img);
 
 				// Append name
-				const nameElement = document.createElement('span');
-				nameElement.textContent = character.name;
+				const nameElement = createSpan('', character.name);
 				entry.appendChild(nameElement);
 
 				row.appendChild(entry);
@@ -197,16 +170,16 @@ document.addEventListener('DOMContentLoaded', () => {
 					if (versionHasValidRerun) {
 						const versionReruns = character.reruns.filter(rerun => rerun.version === version);
 						versionPhases[version].forEach((phase) => {
-							const phaseCell = document.createElement('td');
-							const phaseStartDate = createValidDate(phase[0]);
-							const phaseEndDate = createValidDate(phase[1]);
+							const phaseCell = createElement('td');
+							const phaseStartDate = safeParseDate(phase[0]);
+							const phaseEndDate = safeParseDate(phase[1]);
 
 							// Check for a rerun in this phase
 							const phaseRerun = versionReruns.find(rerun => {
-								const phaseStart = createValidDate(rerun.startDate);
-								const phaseEnd = createValidDate(rerun.endDate);
-								const validPhaseStart = createValidDate(phase[0]);
-								const validPhaseEnd = createValidDate(phase[1]);
+								const phaseStart = safeParseDate(rerun.startDate);
+								const phaseEnd = safeParseDate(rerun.endDate);
+								const validPhaseStart = safeParseDate(phase[0]);
+								const validPhaseEnd = safeParseDate(phase[1]);
 
 								// Check if it's an upcoming phase
 								if (phase[0] === "upcoming") {

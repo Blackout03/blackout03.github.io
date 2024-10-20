@@ -1,26 +1,4 @@
-﻿// Function to convert character name to snake_case
-function toSnakeCase(name) {
-	return name.toLowerCase().replace(/ /g, '_');
-}
-
-// Function to create and return an element with given type, class, and text content
-function createElement(type, className, textContent = '', innerHTML = '') {
-	const element = document.createElement(type);
-	if (className) element.classList.add(className);
-	if (textContent) element.textContent = textContent;
-	if (innerHTML) element.innerHTML = innerHTML;
-	return element;
-}
-
-
-// Function to calculate the gap between two dates
-function calculateGap(startDate, endDate) {
-	const start = new Date(startDate);
-	const end = new Date(endDate);
-	return Math.abs(start - end) / (1000 * 60 * 60 * 24); // Gap in days
-}
-
-// Function to find the 3 longest gaps without a banner
+﻿// Function to find the 3 longest gaps without a banner
 function findLongestGaps(data) {
 	const excludedCharacters = new Set([
 		"Keqing", "Tighnari", "Dehya", "Amber", "Kaeya",
@@ -71,11 +49,33 @@ function findLongestGaps(data) {
 
 	// Sort gaps in descending order and get the top 10
 	gaps.sort((a, b) => b.gap - a.gap);
-	return gaps.slice(0, 10);
+
+	// Get 'top' value from the query parameter, default to 10
+	const urlParams = new URLSearchParams(window.location.search);
+	const isOngoing = urlParams.has('ongoing');
+	const top = parseInt(urlParams.get('top')) || 10;
+
+	// Filter for ongoing banners if ?ongoing is in the URL
+	let filteredGaps;
+	if (isOngoing) {
+		filteredGaps = gaps.filter(gap => gap.end === "Ongoing");
+	} else {
+		filteredGaps = gaps;
+	}
+
+	// Return the top gaps based on the query parameter
+	const heading = document.querySelector('h1');
+	if (isOngoing) {
+		heading.textContent = `Top ${top} Longest Ongoing Banners`;
+	} else {
+		heading.textContent = `Top ${top} Longest Periods Between Banners`;
+	}
+
+	return filteredGaps.slice(0, top);
 }
 
 function checkJsonData() {
-	fetch('rerun_data.json')
+	fetch('../../character_data.json')
 		.then(response => response.json())
 		.then(data => {
 			const longestGaps = findLongestGaps(data);
@@ -89,24 +89,40 @@ function displayLongestGaps(gaps) {
 	const container = document.getElementById('longest-gaps');
 	container.innerHTML = '';
 
+	let currentBannerNumber = 1;  // Start with banner number 1
+	let previousGap = null;       // Keep track of the previous gap length
+
 	gaps.forEach((gap, index) => {
-		const gapElement = createElement('div', 'gap-item');
+		const gapElement = createDiv('gap-item');
 		const characterName = gap.imageName ? gap.imageName : gap.character;
 
-		const img = createElement('img', 'character-image');
+		const img = createImg('character-image');
 		img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
 		img.alt = `${gap.character} avatar`;
 		img.title = `${gap.character}`;
 		img.classList.add(gap.star === 5 ? 'five-star-image' : gap.star === 4 ? 'four-star-image' : 'unknown-star-image');
 
-		const info = createElement('div', 'gap-info', '', `
+		// Increment the banner number only if the current gap length is different from the previous one
+		if (previousGap !== null && gap.gap !== previousGap) {
+			currentBannerNumber++;
+		}
+		previousGap = gap.gap; // Update previous gap length
+
+		const info = createDiv('gap-info', '', `
 			<div class="character-name">${gap.character}</div>
-			<p><strong>Gap Length:</strong> ${gap.gap} days</p>
+			<p><strong>Gap Length:</strong> ${gap.gap} days <span class="banner-number">#${currentBannerNumber}</span></p>
 			<p><strong>Gap Start:</strong> ${gap.start}</p>
 			<p><strong>Gap End:</strong> ${gap.end}</p>`);
 
+		// Create the banner number element and append it to the gap item
+		const bannerNumber = createDiv('',);
+		const indexText = createSpan('index-number', '', `#${index + 1}`);
+
 		gapElement.appendChild(img);
 		gapElement.appendChild(info);
+		gapElement.appendChild(bannerNumber);
+		bannerNumber.appendChild(indexText);
+
 		container.appendChild(gapElement);
 	});
 }

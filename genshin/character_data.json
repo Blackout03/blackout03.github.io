@@ -1,0 +1,6544 @@
+{
+  "characters": [
+    {
+      "name": "Traveler",
+      "star": 5,
+      "element": "Anemo",
+      "weapon": "Sword",
+      "reruns": [],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "enemyDrop2": [
+            {
+              "enemyName": "Electro Samachurl",
+              "shortItemName": "Scroll",
+              "itemName1": "Divining Scroll",
+              "itemName2": "Sealed Scroll",
+              "itemName3": "Forbidden Curse Scroll"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Stormterror Dvalin",
+              "itemName": "Dvalin's Sigh"
+            }
+          ],
+          "travelerTalentBooks": [
+            {
+              "teachingsName": "Teachings of Freedom",
+              "guideName1": "Guide of Resistance",
+              "guideName2": "Guide of Ballad",
+              "guideName3": "Guide of Freedom",
+              "philosophiesName1": "Philosophies of Ballad",
+              "philosophiesName2": "Philosophies of Freedom",
+              "philosophiesName3": "Philosophies of Resistance"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Windwheel Aster"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Traveler",
+      "star": 5,
+      "element": "Geo",
+      "weapon": "Sword",
+      "reruns": [],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "enemyDrop2": [
+            {
+              "enemyName": "Electro Samachurl",
+              "shortItemName": "Scroll",
+              "itemName1": "Divining Scroll",
+              "itemName2": "Sealed Scroll",
+              "itemName3": "Forbidden Curse Scroll",
+              "enemy2Name": "Electro Hilichurl Shooter",
+              "shortItem2Name": "Arrowhead",
+              "item2Name1": "Firm Arrowhead",
+              "item2Name2": "Sharp Arrowhead",
+              "item2Name3": "Weathered Arrowhead"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Stormterror Dvalin",
+              "itemName": "Dvalin's Sigh",
+              "boss2Name": "Andrius",
+              "item2Name": "Tail of Boreas"
+            }
+          ],
+          "travelerTalentBooks": [
+            {
+              "teachingsName": "Teachings of Freedom",
+              "guideName1": "Guide of Resistance",
+              "guideName2": "Guide of Ballad",
+              "guideName3": "Guide of Freedom",
+              "philosophiesName1": "Philosophies of Ballad",
+              "philosophiesName2": "Philosophies of Freedom",
+              "philosophiesName3": "Philosophies of Resistance",
+              "teachings2Name": "Teachings of Prosperity",
+              "guide2Name1": "Guide of Diligence",
+              "guide2Name2": "Guide of Gold",
+              "guide2Name3": "Guide of Prosperity",
+              "philosophies2Name1": "Philosophies of Prosperity",
+              "philosophies2Name2": "Philosophies of Gold",
+              "philosophies2Name3": "Philosophies of Diligence"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Windwheel Aster"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Traveler",
+      "star": 5,
+      "element": "Electro",
+      "weapon": "Sword",
+      "reruns": [],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "enemyDrop2": [
+            {
+              "enemyName": "Nobushi Jintouban",
+              "shortItemName": "Handguard",
+              "itemName1": "Old Handguard",
+              "itemName2": "Kageuchi Handguard",
+              "itemName3": "Famed Handguard"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Azhdaha (Weekly Boss)",
+              "itemName": "Dragon Lord's Crown"
+            }
+          ],
+          "travelerTalentBooks": [
+            {
+              "teachingsName": "Teachings of Transience",
+              "guideName1": "Guide of Elegance",
+              "guideName2": "Guide of Light",
+              "guideName3": "Guide of Transience",
+              "philosophiesName1": "Philosophies of Light",
+              "philosophiesName2": "Philosophies of Transience",
+              "philosophiesName3": "Philosophies of Elegance"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Windwheel Aster"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Traveler",
+      "star": 5,
+      "element": "Dendro",
+      "weapon": "Sword",
+      "reruns": [],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "enemyDrop2": [
+            {
+              "enemyName": "Floating Dendro Fungus",
+              "shortItemName": "Spores",
+              "itemName1": "Fungal Spores",
+              "itemName2": "Luminescent Pollen",
+              "itemName3": "Crystalline Cyst Dust"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Magatsu Mitake Narukami no Mikoto",
+              "itemName": "Mudra of the Malefic General"
+            }
+          ],
+          "travelerTalentBooks": [
+            {
+              "teachingsName": "Teachings of Admonition",
+              "guideName1": "Guide of Ingenuity",
+              "guideName2": "Guide of Praxis",
+              "guideName3": "Guide of Admonition",
+              "philosophiesName1": "Philosophies of Praxis",
+              "philosophiesName2": "Philosophies of Admonition",
+              "philosophiesName3": "Philosophies of Ingenuity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Windwheel Aster"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Traveler",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Sword",
+      "reruns": [],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "enemyDrop2": [
+            {
+              "enemyName": "Sternshield Crab",
+              "shortItemName": "Pearl",
+              "itemName1": "Transoceanic Pearl",
+              "itemName2": "Transoceanic Chunk",
+              "itemName3": "Xenchromatic Crystal"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Guardian of Apep's Oasis",
+              "itemName": "Worldspan Fern"
+            }
+          ],
+          "travelerTalentBooks": [
+            {
+              "teachingsName": "Teachings of Equity",
+              "guideName1": "Guide of Justice",
+              "guideName2": "Guide of Order",
+              "guideName3": "Guide of Equity",
+              "philosophiesName1": "Philosophies of Order",
+              "philosophiesName2": "Philosophies of Equity",
+              "philosophiesName3": "Philosophies of Justice"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Windwheel Aster"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Amber",
+      "star": 4,
+      "element": "Pyro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Hilichurl Shooter",
+              "shortItemName": "Arrowhead",
+              "itemName1": "Firm Arrowhead",
+              "itemName2": "Sharp Arrowhead",
+              "itemName3": "Weathered Arrowhead"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Pyro Regisvine",
+              "itemName": "Everflame Seed"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Stormterror Dvalin",
+              "itemName": "Dvalin's Sigh"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Freedom",
+              "teachingsName": "Teachings of Freedom",
+              "guideName": "Guide of Freedom",
+              "philosophiesName": "Philosophies of Freedom"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Small Lamp Grass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kaeya",
+      "star": 4,
+      "element": "Cryo",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "TH Crusher",
+              "shortItemName": "Insignia",
+              "itemName1": "Treasure Hoarder Insignia",
+              "itemName2": "Silver Raven Insignia",
+              "itemName3": "Golden Raven Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Cryo Regisvine",
+              "itemName": "Hoarfrost Core"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Andrius",
+              "itemName": "Spirit Locket of Boreas"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ballad",
+              "teachingsName": "Teachings of Ballad",
+              "guideName": "Guide of Ballad",
+              "philosophiesName": "Philosophies of Ballad"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Calla Lily"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lisa",
+      "star": 4,
+      "element": "Electro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Large Hydro Slime",
+              "shortItemName": "Slime",
+              "itemName1": "Slime Condensate",
+              "itemName2": "Slime Secretions",
+              "itemName3": "Slime Concentrate"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Electro Hypostasis",
+              "itemName": "Lightning Prism"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Stormterror Dvalin",
+              "itemName": "Dvalin's Claw"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ballad",
+              "teachingsName": "Teachings of Ballad",
+              "guideName": "Guide of Ballad",
+              "philosophiesName": "Philosophies of Ballad"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Valberry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Barbara",
+      "star": 4,
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2020-09-28",
+          "endDate": "2020-10-18",
+          "version": "1.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-02-17",
+          "endDate": "2021-03-02",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-04-06",
+          "endDate": "2021-04-27",
+          "version": "1.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-06-09",
+          "endDate": "2021-06-29",
+          "version": "1.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-12-14",
+          "endDate": "2022-01-04",
+          "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-05-31",
+          "endDate": "2022-06-21",
+          "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Samachurl",
+              "shortItemName": "Scroll",
+              "itemName1": "Divining Scroll",
+              "itemName2": "Sealed Scroll",
+              "itemName3": "Forbidden Curse Scroll"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Freedom",
+              "teachingsName": "Teachings of Freedom",
+              "guideName": "Guide of Freedom",
+              "philosophiesName": "Philosophies of Freedom"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Razor",
+      "star": 4,
+      "element": "Electro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2020-12-01",
+          "endDate": "2020-12-22",
+          "version": "1.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-03-17",
+          "endDate": "2021-04-06",
+          "version": "1.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-06-29",
+          "endDate": "2021-07-20",
+          "version": "1.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-04-19",
+          "endDate": "2022-05-31",
+          "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Electro Hypostasis",
+              "itemName": "Lightning Prism"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Resistance",
+              "teachingsName": "Teachings of Resistance",
+              "guideName": "Guide of Resistance",
+              "philosophiesName": "Philosophies of Resistance"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Xiangling",
+      "star": 4,
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2020-09-28",
+          "endDate": "2020-10-18",
+          "version": "1.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-01-12",
+          "endDate": "2021-02-02",
+          "version": "1.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-03-02",
+          "endDate": "2021-03-16",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-09-01",
+          "endDate": "2021-09-21",
+          "version": "2.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-12-14",
+          "endDate": "2022-01-04",
+          "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-03-30",
+          "endDate": "2022-04-19",
+          "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Pyro Regisvine",
+              "itemName": "Everflame Seed"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Beidou",
+      "star": 4,
+      "element": "Electro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2020-11-11",
+          "endDate": "2020-12-01",
+          "version": "1.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-02-03",
+          "endDate": "2021-02-17",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-05-18",
+          "endDate": "2021-06-08",
+          "version": "1.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-09-21",
+          "endDate": "2021-10-12",
+          "version": "2.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-01-25",
+          "endDate": "2022-02-15",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "TH Crusher",
+              "shortItemName": "Insignia",
+              "itemName1": "Treasure Hoarder Insignia",
+              "itemName2": "Silver Raven Insignia",
+              "itemName3": "Golden Raven Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Electro Hypostasis",
+              "itemName": "Lightning Prism"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Stormterror Dvalin",
+              "itemName": "Dvalin's Sigh"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Xingqiu",
+      "star": 4,
+      "element": "Hydro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2020-10-20",
+          "endDate": "2020-11-10",
+          "version": "1.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-01-12",
+          "endDate": "2021-02-02",
+          "version": "1.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-03-02",
+          "endDate": "2021-03-16",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-05-18",
+          "endDate": "2021-06-08",
+          "version": "1.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-09-21",
+          "endDate": "2021-10-12",
+          "version": "2.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-01-25",
+          "endDate": "2022-02-15",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-09",
+          "endDate": "2022-09-27",
+          "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ningguang",
+      "star": 4,
+      "element": "Geo",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2020-11-11",
+          "endDate": "2020-12-01",
+          "version": "1.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-02-17",
+          "endDate": "2021-03-02",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-07-21",
+          "endDate": "2021-08-10",
+          "version": "2.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-10-13",
+          "endDate": "2021-11-02",
+          "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-01-05",
+          "endDate": "2022-01-25",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-07-13",
+          "endDate": "2022-08-02",
+          "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Cryogunner Legionnaire",
+              "shortItemName": "Insignia",
+              "itemName1": "Recruit's Insignia",
+              "itemName2": "Sergeant's Insignia",
+              "itemName3": "Lieutenant's Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fischl",
+      "star": 4,
+      "element": "Electro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2020-09-28",
+          "endDate": "2020-10-18",
+          "version": "1.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2020-12-23",
+          "endDate": "2021-01-12",
+          "version": "1.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-04-06",
+          "endDate": "2021-04-27",
+          "version": "1.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-06-09",
+          "endDate": "2021-06-29",
+          "version": "1.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-02-16",
+          "endDate": "2022-03-08",
+          "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-08-24",
+          "endDate": "2022-09-09",
+          "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Hilichurl Shooter",
+              "shortItemName": "Arrowhead",
+              "itemName1": "Firm Arrowhead",
+              "itemName2": "Sharp Arrowhead",
+              "itemName3": "Weathered Arrowhead"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Electro Hypostasis",
+              "itemName": "Lightning Prism"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ballad",
+              "teachingsName": "Teachings of Ballad",
+              "guideName": "Guide of Ballad",
+              "philosophiesName": "Philosophies of Ballad"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bennett",
+      "star": 4,
+      "element": "Pyro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2020-12-23",
+          "endDate": "2021-01-12",
+          "version": "1.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-02-17",
+          "endDate": "2021-03-02",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-06-29",
+          "endDate": "2021-07-20",
+          "version": "1.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-11-24",
+          "endDate": "2021-12-14",
+          "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-03-08",
+          "endDate": "2022-03-29",
+          "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-08-02",
+          "endDate": "2022-08-23",
+          "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "TH Crusher",
+              "shortItemName": "Insignia",
+              "itemName1": "Treasure Hoarder Insignia",
+              "itemName2": "Silver Raven Insignia",
+              "itemName3": "Golden Raven Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Pyro Regisvine",
+              "itemName": "Everflame Seed"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Resistance",
+              "teachingsName": "Teachings of Resistance",
+              "guideName": "Guide of Resistance",
+              "philosophiesName": "Philosophies of Resistance"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Windwheel Aster"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Noelle",
+      "star": 4,
+      "element": "Geo",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2020-10-20",
+          "endDate": "2020-11-10",
+          "version": "1.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-01-12",
+          "endDate": "2021-02-02",
+          "version": "1.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-03-17",
+          "endDate": "2021-04-06",
+          "version": "1.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-04-28",
+          "endDate": "2021-05-18",
+          "version": "1.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-11-24",
+          "endDate": "2021-12-14",
+          "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-05-31",
+          "endDate": "2022-06-21",
+          "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Resistance",
+              "teachingsName": "Teachings of Resistance",
+              "guideName": "Guide of Resistance",
+              "philosophiesName": "Philosophies of Resistance"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Valberry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chongyun",
+      "star": 4,
+      "element": "Cryo",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2020-12-01",
+          "endDate": "2020-12-22",
+          "version": "1.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-03-02",
+          "endDate": "2021-03-16",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-07-21",
+          "endDate": "2021-08-10",
+          "version": "2.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-10-13",
+          "endDate": "2021-11-02",
+          "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-01-05",
+          "endDate": "2022-01-25",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-06-21",
+          "endDate": "2022-07-12",
+          "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Stormterror Dvalin",
+              "itemName": "Dvalin's Sigh"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sucrose",
+      "star": 4,
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2020-10-20",
+          "endDate": "2020-11-10",
+          "version": "1.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2020-12-23",
+          "endDate": "2021-01-12",
+          "version": "1.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-03-17",
+          "endDate": "2021-04-06",
+          "version": "1.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-06-09",
+          "endDate": "2021-06-29",
+          "version": "1.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-09-01",
+          "endDate": "2021-09-21",
+          "version": "2.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-03-30",
+          "endDate": "2022-04-19",
+          "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-09",
+          "endDate": "2022-09-27",
+          "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Freedom",
+              "teachingsName": "Teachings of Freedom",
+              "guideName": "Guide of Freedom",
+              "philosophiesName": "Philosophies of Freedom"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Windwheel Aster"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jean",
+      "star": 5,
+      "element": "Anemo",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Resistance",
+              "teachingsName": "Teachings of Resistance",
+              "guideName": "Guide of Resistance",
+              "philosophiesName": "Philosophies of Resistance"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Diluc",
+      "star": 5,
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Cryogunner Legionnaire",
+              "shortItemName": "Insignia",
+              "itemName1": "Recruit's Insignia",
+              "itemName2": "Sergeant's Insignia",
+              "itemName3": "Lieutenant's Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Pyro Regisvine",
+              "itemName": "Everflame Seed"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Resistance",
+              "teachingsName": "Teachings of Resistance",
+              "guideName": "Guide of Resistance",
+              "philosophiesName": "Philosophies of Resistance"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Qiqi",
+      "star": 5,
+      "element": "Cryo",
+      "weapon": "Sword",
+      "reruns": [],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Samachurl",
+              "shortItemName": "Scroll",
+              "itemName1": "Divining Scroll",
+              "itemName2": "Sealed Scroll",
+              "itemName3": "Forbidden Curse Scroll"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mona",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Resistance",
+              "teachingsName": "Teachings of Resistance",
+              "guideName": "Guide of Resistance",
+              "philosophiesName": "Philosophies of Resistance"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Keqing",
+      "star": 5,
+      "element": "Electro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2021-02-17",
+          "endDate": "2021-03-02",
+          "version": "1.3",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Electro Hypostasis",
+              "itemName": "Lightning Prism"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Venti",
+      "star": 5,
+      "element": "Anemo",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2020-09-28",
+          "endDate": "2020-10-18",
+          "version": "1.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-03-17",
+          "endDate": "2021-04-06",
+          "version": "1.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-03-30",
+          "endDate": "2022-04-19",
+          "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ballad",
+              "teachingsName": "Teachings of Ballad",
+              "guideName": "Guide of Ballad",
+              "philosophiesName": "Philosophies of Ballad"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Klee",
+      "star": 5,
+      "element": "Pyro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2020-10-20",
+          "endDate": "2020-11-10",
+          "version": "1.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-06-09",
+          "endDate": "2021-06-29",
+          "version": "1.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-07-13",
+          "endDate": "2022-08-02",
+          "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Samachurl",
+              "shortItemName": "Scroll",
+              "itemName1": "Divining Scroll",
+              "itemName2": "Sealed Scroll",
+              "itemName3": "Forbidden Curse Scroll"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Pyro Regisvine",
+              "itemName": "Everflame Seed"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Freedom",
+              "teachingsName": "Teachings of Freedom",
+              "guideName": "Guide of Freedom",
+              "philosophiesName": "Philosophies of Freedom"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Diona",
+      "star": 4,
+      "element": "Cryo",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2020-11-11",
+          "endDate": "2020-12-01",
+          "version": "1.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-02-03",
+          "endDate": "2021-02-17",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-04-28",
+          "endDate": "2021-05-18",
+          "version": "1.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-08-10",
+          "endDate": "2021-08-31",
+          "version": "2.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-11-02",
+          "endDate": "2021-11-23",
+          "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-02-16",
+          "endDate": "2022-03-08",
+          "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-08-24",
+          "endDate": "2022-09-09",
+          "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Hilichurl Shooter",
+              "shortItemName": "Arrowhead",
+              "itemName1": "Firm Arrowhead",
+              "itemName2": "Sharp Arrowhead",
+              "itemName3": "Weathered Arrowhead"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Freedom",
+              "teachingsName": "Teachings of Freedom",
+              "guideName": "Guide of Freedom",
+              "philosophiesName": "Philosophies of Freedom"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Calla Lily"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tartaglia",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2020-11-11",
+          "endDate": "2020-12-01",
+          "version": "1.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-04-06",
+          "endDate": "2021-04-27",
+          "version": "1.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-10-13",
+          "endDate": "2021-11-02",
+          "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Cryogunner Legionnaire",
+              "shortItemName": "Insignia",
+              "itemName1": "Recruit's Insignia",
+              "itemName2": "Sergeant's Insignia",
+              "itemName3": "Lieutenant's Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Freedom",
+              "teachingsName": "Teachings of Freedom",
+              "guideName": "Guide of Freedom",
+              "philosophiesName": "Philosophies of Freedom"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Xinyan",
+      "star": 4,
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2020-12-01",
+          "endDate": "2020-12-22",
+          "version": "1.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-02-03",
+          "endDate": "2021-02-17",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-05-18",
+          "endDate": "2021-06-08",
+          "version": "1.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-08-10",
+          "endDate": "2021-08-31",
+          "version": "2.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-03-08",
+          "endDate": "2022-03-29",
+          "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-08-02",
+          "endDate": "2022-08-23",
+          "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "TH Crusher",
+              "shortItemName": "Insignia",
+              "itemName1": "Treasure Hoarder Insignia",
+              "itemName2": "Silver Raven Insignia",
+              "itemName3": "Golden Raven Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Pyro Regisvine",
+              "itemName": "Everflame Seed"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Zhongli",
+      "star": 5,
+      "element": "Geo",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2020-12-01",
+          "endDate": "2020-12-22",
+          "version": "1.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-04-28",
+          "endDate": "2021-05-18",
+          "version": "1.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-01-25",
+          "endDate": "2022-02-15",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-08-24",
+          "endDate": "2022-09-09",
+          "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Albedo",
+      "star": 5,
+      "element": "Geo",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2020-12-23",
+          "endDate": "2021-01-12",
+          "version": "1.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-11-24",
+          "endDate": "2021-12-14",
+          "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Samachurl",
+              "shortItemName": "Scroll",
+              "itemName1": "Divining Scroll",
+              "itemName2": "Sealed Scroll",
+              "itemName3": "Forbidden Curse Scroll"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ballad",
+              "teachingsName": "Teachings of Ballad",
+              "guideName": "Guide of Ballad",
+              "philosophiesName": "Philosophies of Ballad"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ganyu",
+      "star": 5,
+      "element": "Cryo",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2021-01-12",
+          "endDate": "2021-02-02",
+          "version": "1.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-01-25",
+          "endDate": "2022-02-15",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-09",
+          "endDate": "2022-09-27",
+          "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Xiao",
+      "star": 5,
+      "element": "Anemo",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2021-02-03",
+          "endDate": "2021-02-17",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-01-05",
+          "endDate": "2022-01-25",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-05-31",
+          "endDate": "2022-06-21",
+          "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hu Tao",
+      "star": 5,
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2021-03-02",
+          "endDate": "2021-03-16",
+          "version": "1.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-11-02",
+          "endDate": "2021-11-23",
+          "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-29",
+          "endDate": "2024-11-19",
+          "version": "5.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rosaria",
+      "star": 4,
+      "element": "Cryo",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2021-04-06",
+          "endDate": "2021-04-27",
+          "version": "1.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-06-29",
+          "endDate": "2021-07-20",
+          "version": "1.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-09-21",
+          "endDate": "2021-10-12",
+          "version": "2.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-11-24",
+          "endDate": "2021-12-14",
+          "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-04-19",
+          "endDate": "2022-05-31",
+          "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Cryogunner Legionnaire",
+              "shortItemName": "Insignia",
+              "itemName1": "Recruit's Insignia",
+              "itemName2": "Sergeant's Insignia",
+              "itemName3": "Lieutenant's Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ballad",
+              "teachingsName": "Teachings of Ballad",
+              "guideName": "Guide of Ballad",
+              "philosophiesName": "Philosophies of Ballad"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Valberry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yanfei",
+      "star": 4,
+      "element": "Pyro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2021-04-28",
+          "endDate": "2021-05-18",
+          "version": "1.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-07-21",
+          "endDate": "2021-08-10",
+          "version": "2.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-10-13",
+          "endDate": "2021-11-02",
+          "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-01-25",
+          "endDate": "2022-02-15",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-05-31",
+          "endDate": "2022-06-21",
+          "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-07",
+          "endDate": "2022-12-27",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "TH Crusher",
+              "shortItemName": "Insignia",
+              "itemName1": "Treasure Hoarder Insignia",
+              "itemName2": "Silver Raven Insignia",
+              "itemName3": "Golden Raven Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Eula",
+      "star": 5,
+      "element": "Cryo",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2021-05-18",
+          "endDate": "2021-06-08",
+          "version": "1.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-11-24",
+          "endDate": "2021-12-14",
+          "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Azhdaha (Weekly Boss)",
+              "itemName": "Dragon Lord's Crown"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Resistance",
+              "teachingsName": "Teachings of Resistance",
+              "guideName": "Guide of Resistance",
+              "philosophiesName": "Philosophies of Resistance"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kaedehara Kazuha",
+      "star": 5,
+      "element": "Anemo",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2021-06-29",
+          "endDate": "2021-07-20",
+          "version": "1.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-07-13",
+          "endDate": "2022-08-02",
+          "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "TH Crusher",
+              "shortItemName": "Insignia",
+              "itemName1": "Treasure Hoarder Insignia",
+              "itemName2": "Silver Raven Insignia",
+              "itemName3": "Golden Raven Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kamisato Ayaka",
+      "star": 5,
+      "element": "Cryo",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2021-07-21",
+          "endDate": "2021-08-10",
+          "version": "2.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-04-19",
+          "endDate": "2022-05-31",
+          "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Nobushi Jintouban",
+              "shortItemName": "Handguard",
+              "itemName1": "Old Handguard",
+              "itemName2": "Kageuchi Handguard",
+              "itemName3": "Famed Handguard"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sayu",
+      "star": 4,
+      "element": "Anemo",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2021-08-10",
+          "endDate": "2021-08-31",
+          "version": "2.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2021-11-02",
+          "endDate": "2021-11-23",
+          "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-04-19",
+          "endDate": "2022-05-31",
+          "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yoimiya",
+      "star": 5,
+      "element": "Pyro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2021-08-10",
+          "endDate": "2021-08-31",
+          "version": "2.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-08-02",
+          "endDate": "2022-08-23",
+          "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Samachurl",
+              "shortItemName": "Scroll",
+              "itemName1": "Divining Scroll",
+              "itemName2": "Sealed Scroll",
+              "itemName3": "Forbidden Curse Scroll"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Azhdaha (Weekly Boss)",
+              "itemName": "Dragon Lord's Crown"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aloy",
+      "star": 5,
+      "starType": "Special",
+      "element": "Cryo",
+      "weapon": "Bow",
+      "reruns": [],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Freedom",
+              "teachingsName": "Teachings of Freedom",
+              "guideName": "Guide of Freedom",
+              "philosophiesName": "Philosophies of Freedom"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kujou Sara",
+      "star": 4,
+      "element": "Electro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2021-09-01",
+          "endDate": "2021-09-21",
+          "version": "2.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-03-08",
+          "endDate": "2022-03-29",
+          "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Raiden Shogun",
+      "star": 5,
+      "element": "Electro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2021-09-01",
+          "endDate": "2021-09-21",
+          "version": "2.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-03-08",
+          "endDate": "2022-03-29",
+          "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Nobushi Jintouban",
+              "shortItemName": "Handguard",
+              "itemName1": "Old Handguard",
+              "itemName2": "Kageuchi Handguard",
+              "itemName3": "Famed Handguard"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sangonomiya Kokomi",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2021-09-21",
+          "endDate": "2021-10-12",
+          "version": "2.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-03-08",
+          "endDate": "2022-03-29",
+          "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-09",
+          "endDate": "2022-09-27",
+          "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thoma",
+      "star": 4,
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2021-11-02",
+          "endDate": "2021-11-23",
+          "version": "2.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-02-16",
+          "endDate": "2022-03-08",
+          "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-07-13",
+          "endDate": "2022-08-02",
+          "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "TH Crusher",
+              "shortItemName": "Insignia",
+              "itemName1": "Treasure Hoarder Insignia",
+              "itemName2": "Silver Raven Insignia",
+              "itemName3": "Golden Raven Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gorou",
+      "star": 4,
+      "element": "Geo",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2021-12-14",
+          "endDate": "2022-01-04",
+          "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-06-21",
+          "endDate": "2022-07-12",
+          "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-07",
+          "endDate": "2022-12-27",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arataki Itto",
+      "star": 5,
+      "element": "Geo",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2021-12-14",
+          "endDate": "2022-01-04",
+          "version": "2.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-06-21",
+          "endDate": "2022-07-12",
+          "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-07",
+          "endDate": "2022-12-27",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yun Jin",
+      "star": 4,
+      "element": "Geo",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2022-01-05",
+          "endDate": "2022-01-25",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-03-30",
+          "endDate": "2022-04-19",
+          "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-08-02",
+          "endDate": "2022-08-23",
+          "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shenhe",
+      "star": 5,
+      "element": "Cryo",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2022-01-05",
+          "endDate": "2022-01-25",
+          "version": "2.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yae Miko",
+      "star": 5,
+      "element": "Electro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2022-02-16",
+          "endDate": "2022-03-08",
+          "version": "2.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Nobushi Jintouban",
+              "shortItemName": "Handguard",
+              "itemName1": "Old Handguard",
+              "itemName2": "Kageuchi Handguard",
+              "itemName3": "Famed Handguard"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kamisato Ayato",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2022-03-30",
+          "endDate": "2022-04-19",
+          "version": "2.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-12-27",
+          "endDate": "2023-01-17",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Nobushi Jintouban",
+              "shortItemName": "Handguard",
+              "itemName1": "Old Handguard",
+              "itemName2": "Kageuchi Handguard",
+              "itemName3": "Famed Handguard"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Magatsu Mitake Narukami no Mikoto",
+              "itemName": "Mudra of the Malefic General"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yelan",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2022-05-31",
+          "endDate": "2022-06-21",
+          "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-02-07",
+          "endDate": "2023-02-28",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Cryogunner Legionnaire",
+              "shortItemName": "Insignia",
+              "itemName1": "Recruit's Insignia",
+              "itemName2": "Sergeant's Insignia",
+              "itemName3": "Lieutenant's Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kuki Shinobu",
+      "star": 4,
+      "element": "Electro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2022-06-21",
+          "endDate": "2022-07-12",
+          "version": "2.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shikanoin Heizou",
+      "star": 4,
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2022-07-13",
+          "endDate": "2022-08-02",
+          "version": "2.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "TH Crusher",
+              "shortItemName": "Insignia",
+              "itemName1": "Treasure Hoarder Insignia",
+              "itemName2": "Silver Raven Insignia",
+              "itemName3": "Golden Raven Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Collei",
+      "star": 4,
+      "element": "Dendro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2022-08-24",
+          "endDate": "2022-09-09",
+          "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-29",
+          "version": "5.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Hilichurl Shooter",
+              "shortItemName": "Arrowhead",
+              "itemName1": "Firm Arrowhead",
+              "itemName2": "Sharp Arrowhead",
+              "itemName3": "Weathered Arrowhead"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Praxis",
+              "teachingsName": "Teachings of Praxis",
+              "guideName": "Guide of Praxis",
+              "philosophiesName": "Philosophies of Praxis"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tighnari",
+      "star": 5,
+      "element": "Dendro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2022-08-24",
+          "endDate": "2022-09-09",
+          "version": "3.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Floating Dendro Fungus",
+              "shortItemName": "Spores",
+              "itemName1": "Fungal Spores",
+              "itemName2": "Luminescent Pollen",
+              "itemName3": "Crystalline Cyst Dust"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Admonition",
+              "teachingsName": "Teachings of Admonition",
+              "guideName": "Guide of Admonition",
+              "philosophiesName": "Philosophies of Admonition"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dori",
+      "star": 4,
+      "element": "Electro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2022-09-09",
+          "endDate": "2022-09-27",
+          "version": "3.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-29",
+          "version": "5.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ingenuity",
+              "teachingsName": "Teachings of Ingenuity",
+              "guideName": "Guide of Ingenuity",
+              "philosophiesName": "Philosophies of Ingenuity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Candace",
+      "star": 4,
+      "element": "Hydro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-29",
+          "version": "5.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Admonition",
+              "teachingsName": "Teachings of Admonition",
+              "guideName": "Guide of Admonition",
+              "philosophiesName": "Philosophies of Admonition"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cyno",
+      "star": 5,
+      "element": "Electro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2022-09-28",
+          "endDate": "2022-10-14",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Samachurl",
+              "shortItemName": "Scroll",
+              "itemName1": "Divining Scroll",
+              "itemName2": "Sealed Scroll",
+              "itemName3": "Forbidden Curse Scroll"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Magatsu Mitake Narukami no Mikoto",
+              "itemName": "Mudra of the Malefic General"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Admonition",
+              "teachingsName": "Teachings of Admonition",
+              "guideName": "Guide of Admonition",
+              "philosophiesName": "Philosophies of Admonition"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nilou",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2022-10-14",
+          "endDate": "2022-11-01",
+          "version": "3.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Floating Dendro Fungus",
+              "shortItemName": "Spores",
+              "itemName1": "Fungal Spores",
+              "itemName2": "Luminescent Pollen",
+              "itemName3": "Crystalline Cyst Dust"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Praxis",
+              "teachingsName": "Teachings of Praxis",
+              "guideName": "Guide of Praxis",
+              "philosophiesName": "Philosophies of Praxis"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nahida",
+      "star": 5,
+      "element": "Dendro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2022-11-02",
+          "endDate": "2022-11-18",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-29",
+          "endDate": "2024-11-19",
+          "version": "5.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Floating Dendro Fungus",
+              "shortItemName": "Spores",
+              "itemName1": "Fungal Spores",
+              "itemName2": "Luminescent Pollen",
+              "itemName3": "Crystalline Cyst Dust"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ingenuity",
+              "teachingsName": "Teachings of Ingenuity",
+              "guideName": "Guide of Ingenuity",
+              "philosophiesName": "Philosophies of Ingenuity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Layla",
+      "star": 4,
+      "element": "Cryo",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2022-11-18",
+          "endDate": "2022-12-06",
+          "version": "3.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-04-12",
+          "endDate": "2023-05-02",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ingenuity",
+              "teachingsName": "Teachings of Ingenuity",
+              "guideName": "Guide of Ingenuity",
+              "philosophiesName": "Philosophies of Ingenuity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Faruzan",
+      "star": 4,
+      "element": "Anemo",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2022-12-07",
+          "endDate": "2022-12-27",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Admonition",
+              "teachingsName": "Teachings of Admonition",
+              "guideName": "Guide of Admonition",
+              "philosophiesName": "Philosophies of Admonition"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wanderer",
+      "star": 5,
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2022-12-07",
+          "endDate": "2022-12-27",
+          "version": "3.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-25",
+          "endDate": "2023-08-15",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Nobushi Jintouban",
+              "shortItemName": "Handguard",
+              "itemName1": "Old Handguard",
+              "itemName2": "Kageuchi Handguard",
+              "itemName3": "Famed Handguard"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Praxis",
+              "teachingsName": "Teachings of Praxis",
+              "guideName": "Guide of Praxis",
+              "philosophiesName": "Philosophies of Praxis"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yaoyao",
+      "star": 4,
+      "element": "Dendro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-02-20",
+          "endDate": "2024-03-12",
+          "version": "4.4",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alhaitham",
+      "star": 5,
+      "element": "Dendro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2023-01-18",
+          "endDate": "2023-02-07",
+          "version": "3.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-06-13",
+          "endDate": "2023-07-04",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ingenuity",
+              "teachingsName": "Teachings of Ingenuity",
+              "guideName": "Guide of Ingenuity",
+              "philosophiesName": "Philosophies of Ingenuity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dehya",
+      "star": 5,
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-03-21",
+          "version": "3.5",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Praxis",
+              "teachingsName": "Teachings of Praxis",
+              "guideName": "Guide of Praxis",
+              "philosophiesName": "Philosophies of Praxis"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mika",
+      "star": 4,
+      "element": "Cryo",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2023-03-21",
+          "endDate": "2023-04-11",
+          "version": "3.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-07-05",
+          "endDate": "2023-07-25",
+          "version": "3.8",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "chronicled"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Cryogunner Legionnaire",
+              "shortItemName": "Insignia",
+              "itemName1": "Recruit's Insignia",
+              "itemName2": "Sergeant's Insignia",
+              "itemName3": "Lieutenant's Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ballad",
+              "teachingsName": "Teachings of Ballad",
+              "guideName": "Guide of Ballad",
+              "philosophiesName": "Philosophies of Ballad"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kaveh",
+      "star": 4,
+      "element": "Dendro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Floating Dendro Fungus",
+              "shortItemName": "Spores",
+              "itemName1": "Fungal Spores",
+              "itemName2": "Luminescent Pollen",
+              "itemName3": "Crystalline Cyst Dust"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Ingenuity",
+              "teachingsName": "Teachings of Ingenuity",
+              "guideName": "Guide of Ingenuity",
+              "philosophiesName": "Philosophies of Ingenuity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Baizhu",
+      "star": 5,
+      "element": "Dendro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2023-05-02",
+          "endDate": "2023-05-23",
+          "version": "3.6",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-05-14",
+          "endDate": "2024-06-04",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Floating Dendro Fungus",
+              "shortItemName": "Spores",
+              "itemName1": "Fungal Spores",
+              "itemName2": "Luminescent Pollen",
+              "itemName3": "Crystalline Cyst Dust"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Guardian of Apep's Oasis",
+              "itemName": "Worldspan Fern"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kirara",
+      "star": 4,
+      "element": "Dendro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2023-05-24",
+          "endDate": "2023-06-13",
+          "version": "3.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2023-11-28",
+          "endDate": "2023-12-19",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lynette",
+      "star": 4,
+      "element": "Anemo",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Cryogunner Legionnaire",
+              "shortItemName": "Insignia",
+              "itemName1": "Recruit's Insignia",
+              "itemName2": "Sergeant's Insignia",
+              "itemName3": "Lieutenant's Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Order",
+              "teachingsName": "Teachings of Order",
+              "guideName": "Guide of Order",
+              "philosophiesName": "Philosophies of Order"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lyney",
+      "star": 5,
+      "element": "Pyro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2023-08-16",
+          "endDate": "2023-09-05",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Equity",
+              "teachingsName": "Teachings of Equity",
+              "guideName": "Guide of Equity",
+              "philosophiesName": "Philosophies of Equity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Freminet",
+      "star": 4,
+      "element": "Cryo",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2023-09-05",
+          "endDate": "2023-09-26",
+          "version": "4.0",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Sternshield Crab",
+              "shortItemName": "Pearl",
+              "itemName1": "Transoceanic Pearl",
+              "itemName2": "Transoceanic Chunk",
+              "itemName3": "Xenchromatic Crystal"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Guardian of Apep's Oasis",
+              "itemName": "Worldspan Fern"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Justice",
+              "teachingsName": "Teachings of Justice",
+              "guideName": "Guide of Justice",
+              "philosophiesName": "Philosophies of Justice"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neuvillette",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2023-09-27",
+          "endDate": "2023-10-17",
+          "version": "4.1",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-04-02",
+          "endDate": "2024-04-23",
+          "version": "4.5",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Sternshield Crab",
+              "shortItemName": "Pearl",
+              "itemName1": "Transoceanic Pearl",
+              "itemName2": "Transoceanic Chunk",
+              "itemName3": "Xenchromatic Crystal"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Equity",
+              "teachingsName": "Teachings of Equity",
+              "guideName": "Guide of Equity",
+              "philosophiesName": "Philosophies of Equity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wriothesley",
+      "star": 5,
+      "element": "Cryo",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2023-10-17",
+          "endDate": "2023-11-07",
+          "version": "4.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Order",
+              "teachingsName": "Teachings of Order",
+              "guideName": "Guide of Order",
+              "philosophiesName": "Philosophies of Order"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Charlotte",
+      "star": 4,
+      "element": "Cryo",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Justice",
+              "teachingsName": "Teachings of Justice",
+              "guideName": "Guide of Justice",
+              "philosophiesName": "Philosophies of Justice"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Furina",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2023-11-08",
+          "endDate": "2023-11-28",
+          "version": "4.2",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Justice",
+              "teachingsName": "Teachings of Justice",
+              "guideName": "Guide of Justice",
+              "philosophiesName": "Philosophies of Justice"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Navia",
+      "star": 5,
+      "element": "Geo",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2023-12-20",
+          "endDate": "2024-01-09",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-07-17",
+          "endDate": "2024-08-06",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Sternshield Crab",
+              "shortItemName": "Pearl",
+              "itemName1": "Transoceanic Pearl",
+              "itemName2": "Transoceanic Chunk",
+              "itemName3": "Xenchromatic Crystal"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Equity",
+              "teachingsName": "Teachings of Equity",
+              "guideName": "Guide of Equity",
+              "philosophiesName": "Philosophies of Equity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chevreuse",
+      "star": 4,
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2024-01-09",
+          "endDate": "2024-01-30",
+          "version": "4.3",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Order",
+              "teachingsName": "Teachings of Order",
+              "guideName": "Guide of Order",
+              "philosophiesName": "Philosophies of Order"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gaming",
+      "star": 4,
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Xianyun",
+      "star": 5,
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2024-01-31",
+          "endDate": "2024-02-20",
+          "version": "4.4",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Electro Samachurl",
+              "shortItemName": "Scroll",
+              "itemName1": "Divining Scroll",
+              "itemName2": "Sealed Scroll",
+              "itemName3": "Forbidden Curse Scroll"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chiori",
+      "star": 5,
+      "element": "Geo",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2024-03-13",
+          "endDate": "2024-04-02",
+          "version": "4.5",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-29",
+          "version": "5.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arlecchino",
+      "star": 5,
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2024-04-24",
+          "endDate": "2024-05-14",
+          "version": "4.6",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Cryogunner Legionnaire",
+              "shortItemName": "Insignia",
+              "itemName1": "Recruit's Insignia",
+              "itemName2": "Sergeant's Insignia",
+              "itemName3": "Lieutenant's Insignia"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Order",
+              "teachingsName": "Teachings of Order",
+              "guideName": "Guide of Order",
+              "philosophiesName": "Philosophies of Order"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sethos",
+      "star": 4,
+      "element": "Electro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Praxis",
+              "teachingsName": "Teachings of Praxis",
+              "guideName": "Guide of Praxis",
+              "philosophiesName": "Philosophies of Praxis"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Clorinde",
+      "star": 5,
+      "element": "Electro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2024-06-05",
+          "endDate": "2024-06-25",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Sternshield Crab",
+              "shortItemName": "Pearl",
+              "itemName1": "Transoceanic Pearl",
+              "itemName2": "Transoceanic Chunk",
+              "itemName3": "Xenchromatic Crystal"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Justice",
+              "teachingsName": "Teachings of Justice",
+              "guideName": "Guide of Justice",
+              "philosophiesName": "Philosophies of Justice"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sigewinne",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "startDate": "2024-06-25",
+          "endDate": "2024-07-16",
+          "version": "4.7",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Sternshield Crab",
+              "shortItemName": "Pearl",
+              "itemName1": "Transoceanic Pearl",
+              "itemName2": "Transoceanic Chunk",
+              "itemName3": "Xenchromatic Crystal"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Equity",
+              "teachingsName": "Teachings of Equity",
+              "guideName": "Guide of Equity",
+              "philosophiesName": "Philosophies of Equity"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Emilie",
+      "star": 5,
+      "element": "Dendro",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2024-08-06",
+          "endDate": "2024-08-27",
+          "version": "4.8",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Order",
+              "teachingsName": "Teachings of Order",
+              "guideName": "Guide of Order",
+              "philosophiesName": "Philosophies of Order"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kachina",
+      "star": 4,
+      "element": "Geo",
+      "weapon": "Polearm",
+      "reruns": [
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of Conflict",
+              "guideName": "Guide of Conflict",
+              "philosophiesName": "Philosophies of Conflict"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mualani",
+      "star": 5,
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "startDate": "2024-08-24",
+          "endDate": "2024-09-17",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Contention",
+              "teachingsName": "Teachings of Contention",
+              "guideName": "Guide of Contention",
+              "philosophiesName": "Philosophies of Contention"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kinich",
+      "star": 5,
+      "element": "Dendro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "startDate": "2024-09-17",
+          "endDate": "2024-10-08",
+          "version": "5.0",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Kindling",
+              "teachingsName": "Teachings of Kindling",
+              "guideName": "Guide of Kindling",
+              "philosophiesName": "Philosophies of Kindling"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Xilonen",
+      "star": 5,
+      "element": "Geo",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "startDate": "2024-10-09",
+          "endDate": "2024-10-29",
+          "version": "5.1",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Kindling",
+              "teachingsName": "Teachings of Kindling",
+              "guideName": "Guide of Kindling",
+              "philosophiesName": "Philosophies of Kindling"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chasca",
+      "element": "Anemo",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.2",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ororon",
+      "element": "Electro",
+      "weapon": "Bow",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.2",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "",
+              "shortItemName": "",
+              "itemName1": "",
+              "itemName2": "",
+              "itemName3": ""
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": ""
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "",
+              "teachingsName": "Teachings of ",
+              "guideName": "Guide of ",
+              "philosophiesName": "Philosophies of "
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

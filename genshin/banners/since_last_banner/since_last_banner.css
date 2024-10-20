@@ -1,22 +1,10 @@
-﻿body {
-	font-family: Arial, sans-serif;
-	background-color: #f4f4f4;
-	margin: 0;
-	padding: 0;
-}
-
-.container {
+﻿.container {
 	max-width: 1400px;
 	margin: 5px auto;
 	padding: 10px;
 	background-color: #ffffff;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-	text-align: center;
-	color: #333;
 }
 
 #character-list {
@@ -43,41 +31,6 @@ h1 {
 
 .character-card:hover {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.character-image {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	object-fit: cover;
-	margin-right: 15px; /* Adds space between image and name */
-}
-
-/* Style for 5-star characters images */
-.five-star-image {
-	background-image: linear-gradient(
-			180deg,
-			#a47d5c,
-			#d2945f
-	);
-}
-
-/* Style for 4-star characters images */
-.four-star-image {
-	background-image: linear-gradient(
-			180deg,
-			#7e6998,
-			#8a6bbb
-	);
-}
-
-/* Style for ???-star characters images */
-.unknown-star-image {
-	background-image: linear-gradient(
-			180deg,
-			#888,
-			#aaa
-	);
 }
 
 .character-name {
@@ -203,7 +156,8 @@ select:focus {
 
 /* Element filter checkboxes styling */
 #starFilter,
-#elementFilter {
+#elementFilter,
+#weaponFilter {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
@@ -211,7 +165,8 @@ select:focus {
 }
 
 #starFilter label,
-#elementFilter label {
+#elementFilter label,
+#weaponFilter label {
 	display: flex;
 	align-items: center;
 	background-color: #f9f9f9;
@@ -223,13 +178,16 @@ select:focus {
 }
 
 #starFilter label:hover,
-#elementFilter label:hover {
+#elementFilter label:hover,
+#weaponFilter label:hover {
 	background-color: #f1f1f1;
 }
 
 #starFilter input[type="checkbox"],
-#elementFilter input[type="checkbox"] {
+#elementFilter input[type="checkbox"],
+#weaponFilter input[type="checkbox"] {
 	margin-right: 8px;
 	transform: scale(1.2);
 	cursor: pointer;
 }
+

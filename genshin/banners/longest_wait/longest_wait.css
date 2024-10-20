@@ -1,0 +1,59 @@
+﻿.container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gap-item {
+	margin-bottom: 20px;
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	display: flex;
+	align-items: flex-start; /* Align items to the start */
+	min-height: max-content; /* Ensure a minimum height for uniformity */
+	flex-direction: row; /* Ensure horizontal layout */
+	position: relative;
+}
+
+.gap-item p {
+	margin: 5px 0;
+}
+
+.gap-item strong {
+	color: #555;
+}
+
+.character-name {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 87.5%;
+	font-size: 1.5em;
+	color: #333;
+	font-weight: bold;
+}
+
+/* Style for the banner number */
+.banner-number {
+	font-size: 0.925em;
+	font-weight: bold;
+	color: #333;
+	margin-left: 10px; /* Adjust for spacing */
+}
+
+/* Style for the banner number */
+.index-number {
+	font-size: 1.175em;
+	font-weight: bold;
+	color: #666;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: block;
+	margin-bottom: 10px; /* Adjust for spacing */
+}

@@ -1,13 +1,6 @@
-﻿body {
-	font-family: Arial, sans-serif;
-	padding: 0 0 0 0;
-	margin: 0;
-}
-
-h1 {
+﻿h1 {
 	top: 0.25em;
 	position: static;
-	text-align: center;
 }
 
 table {
@@ -33,45 +26,11 @@ th[colspan] {
 	background-color: #e0e0e0;
 }
 
-/* Container for each character's image and name */
-.character-entry {
-	display: flex;
-	align-items: center;
-	gap: 0.45em; /* Space between image and name */
-}
-
 /* Style for character images */
 .character-image {
-	width: 50px; /* Adjust size as needed */
-	height: 50px; /* Adjust size as needed */
-	border-radius: 50%;
-}
-
-/* Style for 5-star characters images */
-.five-star-image {
-	background-image: linear-gradient(
-			180deg,
-			#a47d5c,
-			#d2945f
-	);
-}
-
-/* Style for 4-star characters images */
-.four-star-image {
-	background-image: linear-gradient(
-			180deg,
-			#7e6998,
-			#8a6bbb
-	);
-}
-
-/* Style for ???-star characters images */
-.unknown-star-image {
-	background-image: linear-gradient(
-			180deg,
-			#888,
-			#aaa
-	);
+	width: 50px;
+	height: 50px;
+	margin-right: 0;
 }
 
 /* Ensure table layout is consistent */
@@ -151,18 +110,7 @@ thead th {
 	background-color: #6347ff;
 }
 
-/* Base color for cells before the first run */
 .before-release {
-	background-color: #333; /* Dark grey */
-	background-image: repeating-linear-gradient(
-			-42deg,
-			white 0,
-			white 10px,
-			transparent 10px,
-			transparent 25px
-	);
-	background-size: 2000px 2000px; /* Span the whole row with consistent stripe size */
-	background-position: 0 0; /* Aligns the background at the top left of each cell */
-	color: white; /* Text color for visibility */
+	background-color: #333;
 }
 

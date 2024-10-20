@@ -1,16 +1,4 @@
-﻿body {
-	font-family: Arial, sans-serif;
-	background-color: #f9f9f9;
-	margin: 0;
-	padding: 20px;
-}
-
-h1 {
-	text-align: center;
-	color: #333;
-}
-
-#timeline {
+﻿#timeline {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -56,61 +44,11 @@ h1 {
 	gap: 0 1em; /* Space between characters */
 }
 
-/* Container for each character's image and name */
-.character-entry {
-	display: flex;
-	align-items: center;
-	gap: 0.25em; /* Space between image and name */
-}
-
 /* Style for character images */
 .character-image {
-	width: 50px; /* Adjust size as needed */
-	height: 50px; /* Adjust size as needed */
-	border-radius: 50%;
-}
-
-/* Style for 5-star characters images */
-.five-star-image {
-	background-image: linear-gradient(
-			180deg,
-			#a47d5c,
-			#d2945f
-	);
-}
-
-/* Style for 4-star characters images */
-.four-star-image {
-	background-image: linear-gradient(
-			180deg,
-			#7e6998,
-			#8a6bbb
-	);
-}
-
-/* Style for ???-star characters images */
-.unknown-star-image {
-	background-image: linear-gradient(
-			180deg,
-			#888,
-			#aaa
-	);
-}
-
-/* Style for 5-star characters */
-.five-star {
-	color: #d2945f;
-	font-weight: bolder;
-}
-
-/* Style for 4-star characters */
-.four-star {
-	color: #8a6bbb;
-}
-
-/* Style for ???-star characters */
-.unknown-star {
-	color: #888;
+	width: 50px;
+	height: 50px;
+	margin-right: 0;
 }
 
 .wish-type {
