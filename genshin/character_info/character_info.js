@@ -223,7 +223,7 @@ Promise.all([
 
 						const enemyImageLink =
 							createLink(['item-link'],
-								`https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName.replace("TH", "Treasure Hoarders:")}`);
+								`https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}`);
 						const dropImage1Link =
 							createLink(['item-link'],
 								`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName1}`);
@@ -244,8 +244,8 @@ Promise.all([
 						enemyDropItem.appendChild(dropImage3Link);
 						const enemyDropItemText =
 							createDiv(['item-text', 'enemy-drop-text'], '',
-								`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName.replace("TH", "Treasure Hoarders:")}"><bold>${enemyDrop.enemyName}</bold>:</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.shortItemName}">${enemyDrop.shortItemName}</a>`);
+								`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}"><bold>${enemyDrop.enemyName}</bold>:</a><br>
+										${enemyDrop.shortItemName}`);
 						enemyDropItem.appendChild(enemyDropItemText);
 						materialList.appendChild(enemyDropItem);
 					}
@@ -344,10 +344,10 @@ Promise.all([
 							enemyDropItem.appendChild(div);
 							const enemyDropItemText =
 								createDiv(['item-text', 'enemy-drop-text'], '',
-									`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemy2Name}"><bold>${enemyDrop.enemyName}</bold>:</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.shortItem2Name}">${enemyDrop.shortItemName}</a><br>
+									`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}"><bold>${enemyDrop.enemyName}</bold>:</a><br>
+										${enemyDrop.shortItemName}<br>
 										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemy2Name}"><bold>${enemyDrop.enemy2Name}</bold>:</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.shortItem2Name}">${enemyDrop.shortItem2Name}</a>`);
+										${enemyDrop.shortItem2Name}`);
 							enemyDropItem.appendChild(enemyDropItemText);
 						} else {
 							const enemyImage =
@@ -394,7 +394,7 @@ Promise.all([
 							const enemyDropItemText =
 								createDiv(['item-text', 'enemy-drop-text'], '',
 									`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}"><bold>${enemyDrop.enemyName}</bold>:</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.shortItemName}">${enemyDrop.shortItemName}</a>`);
+										${enemyDrop.shortItemName}`);
 							enemyDropItem.appendChild(enemyDropItemText);
 						}
 
@@ -429,8 +429,8 @@ Promise.all([
 						normalBossItem.appendChild(itemImageLink);
 						const normalBossItemText =
 							createDiv(['item-text', 'normal-boss-text'], '',
-								`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${normalBoss.bossName}"><bold>${normalBoss.bossName}</bold>:</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${normalBoss.itemName}">${normalBoss.itemName}</a>`);
+								`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${normalBoss.bossName}"><bold>${normalBoss.bossName.replace('Algorithm of Semi-Intransient Matrix of Overseer Network', 'ASIMON').replace('Secret Source Automaton', 'Secret Source')}</bold>:</a><br>
+										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${normalBoss.itemName}">${normalBoss.itemName.replace('Artificed Spare Clockwork Component', 'Clockwork Component')}</a>`);
 						normalBossItem.appendChild(normalBossItemText);
 						materialList.appendChild(normalBossItem);
 					}
