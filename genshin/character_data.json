@@ -908,6 +908,12 @@
           "endDate": "2024-04-23",
           "version": "4.5",
           "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-29",
+          "endDate": "2024-11-19",
+          "version": "5.1",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -4095,6 +4101,12 @@
           "endDate": "2023-12-19",
           "version": "4.2",
           "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-29",
+          "endDate": "2024-11-19",
+          "version": "5.1",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -6034,6 +6046,12 @@
           "startDate": "2024-06-05",
           "endDate": "2024-06-25",
           "version": "4.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-10-29",
+          "endDate": "2024-11-19",
+          "version": "5.1",
           "wishType": "event"
         }
       ],
