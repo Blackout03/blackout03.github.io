@@ -1,6 +1,11 @@
 {
   "characters": [
     {
+      "name": "Paimon",
+      "birthday": "06-01",
+      "reruns": []
+    },
+    {
       "name": "Traveler",
       "star": 5,
       "element": "Anemo",
@@ -274,6 +279,7 @@
       "star": 4,
       "element": "Pyro",
       "weapon": "Bow",
+      "birthday": "08-10",
       "reruns": [
         {
           "startDate": "2024-03-13",
@@ -326,6 +332,7 @@
       "star": 4,
       "element": "Cryo",
       "weapon": "Sword",
+      "birthday": "11-30",
       "reruns": [
         {
           "startDate": "2024-03-13",
@@ -378,6 +385,7 @@
       "star": 4,
       "element": "Electro",
       "weapon": "Catalyst",
+      "birthday": "06-09",
       "reruns": [
         {
           "startDate": "2024-03-13",
@@ -430,6 +438,7 @@
       "star": 4,
       "element": "Hydro",
       "weapon": "Catalyst",
+      "birthday": "07-05",
       "reruns": [
         {
           "startDate": "2020-09-28",
@@ -542,6 +551,7 @@
       "star": 4,
       "element": "Electro",
       "weapon": "Claymore",
+      "birthday": "09-09",
       "reruns": [
         {
           "startDate": "2020-12-01",
@@ -636,6 +646,7 @@
       "star": 4,
       "element": "Pyro",
       "weapon": "Polearm",
+      "birthday": "11-02",
       "reruns": [
         {
           "startDate": "2020-09-28",
@@ -748,6 +759,7 @@
       "star": 4,
       "element": "Electro",
       "weapon": "Claymore",
+      "birthday": "02-14",
       "reruns": [
         {
           "startDate": "2020-11-11",
@@ -848,6 +860,7 @@
       "star": 4,
       "element": "Hydro",
       "weapon": "Sword",
+      "birthday": "10-09",
       "reruns": [
         {
           "startDate": "2020-10-20",
@@ -960,6 +973,7 @@
       "star": 4,
       "element": "Geo",
       "weapon": "Catalyst",
+      "birthday": "08-26",
       "reruns": [
         {
           "startDate": "2020-11-11",
@@ -1060,6 +1074,7 @@
       "star": 4,
       "element": "Electro",
       "weapon": "Bow",
+      "birthday": "05-27",
       "reruns": [
         {
           "startDate": "2020-09-28",
@@ -1160,6 +1175,7 @@
       "star": 4,
       "element": "Pyro",
       "weapon": "Sword",
+      "birthday": "02-29",
       "reruns": [
         {
           "startDate": "2020-12-23",
@@ -1284,6 +1300,7 @@
       "star": 4,
       "element": "Geo",
       "weapon": "Claymore",
+      "birthday": "03-21",
       "reruns": [
         {
           "startDate": "2020-10-20",
@@ -1396,6 +1413,7 @@
       "star": 4,
       "element": "Cryo",
       "weapon": "Claymore",
+      "birthday": "09-07",
       "reruns": [
         {
           "startDate": "2020-12-01",
@@ -1490,6 +1508,7 @@
       "star": 4,
       "element": "Anemo",
       "weapon": "Catalyst",
+      "birthday": "11-26",
       "reruns": [
         {
           "startDate": "2020-10-20",
@@ -1596,6 +1615,7 @@
       "star": 5,
       "element": "Anemo",
       "weapon": "Sword",
+      "birthday": "03-14",
       "reruns": [
         {
           "startDate": "2024-03-13",
@@ -1648,6 +1668,7 @@
       "star": 5,
       "element": "Pyro",
       "weapon": "Claymore",
+      "birthday": "04-30",
       "reruns": [
         {
           "startDate": "2024-03-13",
@@ -1700,6 +1721,7 @@
       "star": 5,
       "element": "Cryo",
       "weapon": "Sword",
+      "birthday": "03-03",
       "reruns": [],
       "materials": [
         {
@@ -1745,6 +1767,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Catalyst",
+      "birthday": "08-31",
       "reruns": [
         {
           "startDate": "2024-03-13",
@@ -1797,6 +1820,7 @@
       "star": 5,
       "element": "Electro",
       "weapon": "Sword",
+      "birthday": "11-20",
       "reruns": [
         {
           "startDate": "2021-02-17",
@@ -1849,6 +1873,7 @@
       "star": 5,
       "element": "Anemo",
       "weapon": "Bow",
+      "birthday": "06-16",
       "reruns": [
         {
           "startDate": "2020-09-28",
@@ -1925,6 +1950,7 @@
       "star": 5,
       "element": "Pyro",
       "weapon": "Catalyst",
+      "birthday": "07-27",
       "reruns": [
         {
           "startDate": "2020-10-20",
@@ -2001,6 +2027,7 @@
       "star": 4,
       "element": "Cryo",
       "weapon": "Bow",
+      "birthday": "01-18",
       "reruns": [
         {
           "startDate": "2020-11-11",
@@ -2107,6 +2134,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Bow",
+      "birthday": "07-20",
       "reruns": [
         {
           "startDate": "2020-11-11",
@@ -2183,6 +2211,7 @@
       "star": 4,
       "element": "Pyro",
       "weapon": "Claymore",
+      "birthday": "10-16",
       "reruns": [
         {
           "startDate": "2020-12-01",
@@ -2283,6 +2312,7 @@
       "star": 5,
       "element": "Geo",
       "weapon": "Polearm",
+      "birthday": "12-31",
       "reruns": [
         {
           "startDate": "2020-12-01",
@@ -2359,6 +2389,7 @@
       "star": 5,
       "element": "Geo",
       "weapon": "Sword",
+      "birthday": "09-13",
       "reruns": [
         {
           "startDate": "2020-12-23",
@@ -2429,6 +2460,7 @@
       "star": 5,
       "element": "Cryo",
       "weapon": "Bow",
+      "birthday": "12-02",
       "reruns": [
         {
           "startDate": "2021-01-12",
@@ -2499,6 +2531,7 @@
       "star": 5,
       "element": "Anemo",
       "weapon": "Polearm",
+      "birthday": "04-17",
       "reruns": [
         {
           "startDate": "2021-02-03",
@@ -2575,6 +2608,7 @@
       "star": 5,
       "element": "Pyro",
       "weapon": "Polearm",
+      "birthday": "06-09",
       "reruns": [
         {
           "startDate": "2021-03-02",
@@ -2651,6 +2685,7 @@
       "star": 4,
       "element": "Cryo",
       "weapon": "Polearm",
+      "birthday": "01-24",
       "reruns": [
         {
           "startDate": "2021-04-06",
@@ -2757,6 +2792,7 @@
       "star": 4,
       "element": "Pyro",
       "weapon": "Catalyst",
+      "birthday": "07-28",
       "reruns": [
         {
           "startDate": "2021-04-28",
@@ -2857,6 +2893,7 @@
       "star": 5,
       "element": "Cryo",
       "weapon": "Claymore",
+      "birthday": "10-25",
       "reruns": [
         {
           "startDate": "2021-05-18",
@@ -2927,6 +2964,7 @@
       "star": 5,
       "element": "Anemo",
       "weapon": "Sword",
+      "birthday": "10-29",
       "reruns": [
         {
           "startDate": "2021-06-29",
@@ -3003,6 +3041,7 @@
       "star": 5,
       "element": "Cryo",
       "weapon": "Sword",
+      "birthday": "09-28",
       "reruns": [
         {
           "startDate": "2021-07-21",
@@ -3073,6 +3112,7 @@
       "star": 4,
       "element": "Anemo",
       "weapon": "Claymore",
+      "birthday": "10-19",
       "reruns": [
         {
           "startDate": "2021-08-10",
@@ -3155,6 +3195,7 @@
       "star": 5,
       "element": "Pyro",
       "weapon": "Bow",
+      "birthday": "06-21",
       "reruns": [
         {
           "startDate": "2021-08-10",
@@ -3232,6 +3273,7 @@
       "starType": "Special",
       "element": "Cryo",
       "weapon": "Bow",
+      "birthday": "04-04",
       "reruns": [],
       "materials": [
         {
@@ -3277,6 +3319,7 @@
       "star": 4,
       "element": "Electro",
       "weapon": "Bow",
+      "birthday": "07-14",
       "reruns": [
         {
           "startDate": "2021-09-01",
@@ -3353,6 +3396,7 @@
       "star": 5,
       "element": "Electro",
       "weapon": "Polearm",
+      "birthday": "06-26",
       "reruns": [
         {
           "startDate": "2021-09-01",
@@ -3429,6 +3473,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Catalyst",
+      "birthday": "02-22",
       "reruns": [
         {
           "startDate": "2021-09-21",
@@ -3499,6 +3544,7 @@
       "star": 4,
       "element": "Pyro",
       "weapon": "Polearm",
+      "birthday": "01-09",
       "reruns": [
         {
           "startDate": "2021-11-02",
@@ -3593,6 +3639,7 @@
       "star": 4,
       "element": "Geo",
       "weapon": "Bow",
+      "birthday": "05-18",
       "reruns": [
         {
           "startDate": "2021-12-14",
@@ -3663,6 +3710,7 @@
       "star": 5,
       "element": "Geo",
       "weapon": "Claymore",
+      "birthday": "06-01",
       "reruns": [
         {
           "startDate": "2021-12-14",
@@ -3733,6 +3781,7 @@
       "star": 4,
       "element": "Geo",
       "weapon": "Polearm",
+      "birthday": "05-21",
       "reruns": [
         {
           "startDate": "2022-01-05",
@@ -3815,6 +3864,7 @@
       "star": 5,
       "element": "Cryo",
       "weapon": "Polearm",
+      "birthday": "03-10",
       "reruns": [
         {
           "startDate": "2022-01-05",
@@ -3873,6 +3923,7 @@
       "star": 5,
       "element": "Electro",
       "weapon": "Catalyst",
+      "birthday": "06-27",
       "reruns": [
         {
           "startDate": "2022-02-16",
@@ -3943,6 +3994,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Sword",
+      "birthday": "03-26",
       "reruns": [
         {
           "startDate": "2022-03-30",
@@ -4007,6 +4059,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Bow",
+      "birthday": "04-20",
       "reruns": [
         {
           "startDate": "2022-05-31",
@@ -4077,6 +4130,7 @@
       "star": 4,
       "element": "Electro",
       "weapon": "Sword",
+      "birthday": "07-27",
       "reruns": [
         {
           "startDate": "2022-06-21",
@@ -4153,6 +4207,7 @@
       "star": 4,
       "element": "Anemo",
       "weapon": "Catalyst",
+      "birthday": "07-24",
       "reruns": [
         {
           "startDate": "2022-07-13",
@@ -4217,6 +4272,7 @@
       "star": 4,
       "element": "Dendro",
       "weapon": "Bow",
+      "birthday": "05-08",
       "reruns": [
         {
           "startDate": "2022-08-24",
@@ -4287,6 +4343,7 @@
       "star": 5,
       "element": "Dendro",
       "weapon": "Bow",
+      "birthday": "12-29",
       "reruns": [
         {
           "startDate": "2022-08-24",
@@ -4339,6 +4396,7 @@
       "star": 4,
       "element": "Electro",
       "weapon": "Claymore",
+      "birthday": "12-21",
       "reruns": [
         {
           "startDate": "2022-09-09",
@@ -4415,6 +4473,7 @@
       "star": 4,
       "element": "Hydro",
       "weapon": "Polearm",
+      "birthday": "05-03",
       "reruns": [
         {
           "startDate": "2022-09-28",
@@ -4485,6 +4544,7 @@
       "star": 5,
       "element": "Electro",
       "weapon": "Polearm",
+      "birthday": "06-23",
       "reruns": [
         {
           "startDate": "2022-09-28",
@@ -4549,6 +4609,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Sword",
+      "birthday": "12-03",
       "reruns": [
         {
           "startDate": "2022-10-14",
@@ -4613,6 +4674,7 @@
       "star": 5,
       "element": "Dendro",
       "weapon": "Catalyst",
+      "birthday": "10-27",
       "reruns": [
         {
           "startDate": "2022-11-02",
@@ -4683,6 +4745,7 @@
       "star": 4,
       "element": "Cryo",
       "weapon": "Sword",
+      "birthday": "12-19",
       "reruns": [
         {
           "startDate": "2022-11-18",
@@ -4747,6 +4810,7 @@
       "star": 4,
       "element": "Anemo",
       "weapon": "Bow",
+      "birthday": "08-20",
       "reruns": [
         {
           "startDate": "2022-12-07",
@@ -4817,6 +4881,7 @@
       "star": 5,
       "element": "Anemo",
       "weapon": "Catalyst",
+      "birthday": "01-03",
       "reruns": [
         {
           "startDate": "2022-12-07",
@@ -4881,6 +4946,7 @@
       "star": 4,
       "element": "Dendro",
       "weapon": "Polearm",
+      "birthday": "03-06",
       "reruns": [
         {
           "startDate": "2023-01-18",
@@ -4945,6 +5011,7 @@
       "star": 5,
       "element": "Dendro",
       "weapon": "Sword",
+      "birthday": "02-11",
       "reruns": [
         {
           "startDate": "2023-01-18",
@@ -5009,6 +5076,7 @@
       "star": 5,
       "element": "Pyro",
       "weapon": "Claymore",
+      "birthday": "04-07",
       "reruns": [
         {
           "startDate": "2023-03-01",
@@ -5061,6 +5129,7 @@
       "star": 4,
       "element": "Cryo",
       "weapon": "Polearm",
+      "birthday": "08-11",
       "reruns": [
         {
           "startDate": "2023-03-21",
@@ -5125,6 +5194,7 @@
       "star": 4,
       "element": "Dendro",
       "weapon": "Claymore",
+      "birthday": "07-09",
       "reruns": [
         {
           "startDate": "2023-05-02",
@@ -5183,6 +5253,7 @@
       "star": 5,
       "element": "Dendro",
       "weapon": "Catalyst",
+      "birthday": "04-25",
       "reruns": [
         {
           "startDate": "2023-05-02",
@@ -5247,6 +5318,7 @@
       "star": 4,
       "element": "Dendro",
       "weapon": "Sword",
+      "birthday": "01-22",
       "reruns": [
         {
           "startDate": "2023-05-24",
@@ -5311,6 +5383,7 @@
       "star": 4,
       "element": "Anemo",
       "weapon": "Sword",
+      "birthday": "02-02",
       "reruns": [
         {
           "startDate": "2023-08-16",
@@ -5339,7 +5412,7 @@
           "normalBoss": [
             {
               "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component — Coppelia"
+              "itemName": "Artificed Spare Clockwork Component \u00e2\u20ac\u201d Coppelia"
             }
           ],
           "weeklyBoss": [
@@ -5369,6 +5442,7 @@
       "star": 5,
       "element": "Pyro",
       "weapon": "Bow",
+      "birthday": "02-02",
       "reruns": [
         {
           "startDate": "2023-08-16",
@@ -5427,6 +5501,7 @@
       "star": 4,
       "element": "Cryo",
       "weapon": "Claymore",
+      "birthday": "09-24",
       "reruns": [
         {
           "startDate": "2023-09-05",
@@ -5455,7 +5530,7 @@
           "normalBoss": [
             {
               "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component — Coppelius"
+              "itemName": "Artificed Spare Clockwork Component \u00e2\u20ac\u201d Coppelius"
             }
           ],
           "weeklyBoss": [
@@ -5485,6 +5560,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Catalyst",
+      "birthday": "12-18",
       "reruns": [
         {
           "startDate": "2023-09-27",
@@ -5543,6 +5619,7 @@
       "star": 5,
       "element": "Cryo",
       "weapon": "Catalyst",
+      "birthday": "11-23",
       "reruns": [
         {
           "startDate": "2023-10-17",
@@ -5595,6 +5672,7 @@
       "star": 4,
       "element": "Cryo",
       "weapon": "Catalyst",
+      "birthday": "04-10",
       "reruns": [
         {
           "startDate": "2023-11-08",
@@ -5647,6 +5725,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Sword",
+      "birthday": "10-13",
       "reruns": [
         {
           "startDate": "2023-11-08",
@@ -5705,6 +5784,7 @@
       "star": 5,
       "element": "Geo",
       "weapon": "Claymore",
+      "birthday": "08-16",
       "reruns": [
         {
           "startDate": "2023-12-20",
@@ -5733,7 +5813,7 @@
           "normalBoss": [
             {
               "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component — Coppelius"
+              "itemName": "Artificed Spare Clockwork Component \u00e2\u20ac\u201d Coppelius"
             }
           ],
           "weeklyBoss": [
@@ -5763,6 +5843,7 @@
       "star": 4,
       "element": "Pyro",
       "weapon": "Polearm",
+      "birthday": "01-10",
       "reruns": [
         {
           "startDate": "2024-01-09",
@@ -5821,6 +5902,7 @@
       "star": 4,
       "element": "Pyro",
       "weapon": "Claymore",
+      "birthday": "12-22",
       "reruns": [
         {
           "startDate": "2024-01-31",
@@ -5879,6 +5961,7 @@
       "star": 5,
       "element": "Anemo",
       "weapon": "Catalyst",
+      "birthday": "04-11",
       "reruns": [
         {
           "startDate": "2024-01-31",
@@ -5931,6 +6014,7 @@
       "star": 5,
       "element": "Geo",
       "weapon": "Sword",
+      "birthday": "08-17",
       "reruns": [
         {
           "startDate": "2024-03-13",
@@ -5959,7 +6043,7 @@
           "normalBoss": [
             {
               "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component — Coppelia"
+              "itemName": "Artificed Spare Clockwork Component \u00e2\u20ac\u201d Coppelia"
             }
           ],
           "weeklyBoss": [
@@ -5989,6 +6073,7 @@
       "star": 5,
       "element": "Pyro",
       "weapon": "Polearm",
+      "birthday": "08-22",
       "reruns": [
         {
           "startDate": "2024-04-24",
@@ -6041,6 +6126,7 @@
       "star": 4,
       "element": "Electro",
       "weapon": "Bow",
+      "birthday": "05-31",
       "reruns": [
         {
           "startDate": "2024-06-05",
@@ -6099,6 +6185,7 @@
       "star": 5,
       "element": "Electro",
       "weapon": "Sword",
+      "birthday": "09-20",
       "reruns": [
         {
           "startDate": "2024-06-05",
@@ -6151,6 +6238,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Bow",
+      "birthday": "03-30",
       "reruns": [
         {
           "startDate": "2024-06-25",
@@ -6203,6 +6291,7 @@
       "star": 5,
       "element": "Dendro",
       "weapon": "Polearm",
+      "birthday": "09-22",
       "reruns": [
         {
           "startDate": "2024-08-06",
@@ -6255,6 +6344,7 @@
       "star": 4,
       "element": "Geo",
       "weapon": "Polearm",
+      "birthday": "04-22",
       "reruns": [
         {
           "startDate": "2024-08-24",
@@ -6307,6 +6397,7 @@
       "star": 5,
       "element": "Hydro",
       "weapon": "Catalyst",
+      "birthday": "08-03",
       "reruns": [
         {
           "startDate": "2024-08-24",
@@ -6359,6 +6450,7 @@
       "star": 5,
       "element": "Dendro",
       "weapon": "Claymore",
+      "birthday": "11-11",
       "reruns": [
         {
           "startDate": "2024-09-17",
@@ -6411,6 +6503,7 @@
       "star": 5,
       "element": "Geo",
       "weapon": "Sword",
+      "birthday": "03-13",
       "reruns": [
         {
           "startDate": "2024-10-09",
@@ -6462,6 +6555,7 @@
       "name": "Ororon",
       "element": "Electro",
       "weapon": "Bow",
+      "birthday": "10-14",
       "reruns": [
         {
           "banner": "upcoming",
@@ -6512,6 +6606,7 @@
       "name": "Chasca",
       "element": "Anemo",
       "weapon": "Bow",
+      "birthday": "12-10",
       "reruns": [
         {
           "banner": "upcoming",

@@ -1,0 +1,82 @@
+﻿#calendar {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.month {
+	width: 95%;
+	margin-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.month-header {
+	margin: 0; /* Remove default margin for better alignment */
+}
+
+.days-container {
+	display: grid; /* Use flex to keep days in a row */
+	grid-template-columns: repeat(7, 1fr); /* Allow wrapping if there are too many */
+	gap: 10px; /* Space between day elements */
+}
+
+.day {
+	border: black 2px solid;
+	border-radius: 5px;
+	height: 5em;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75em;
+	padding: 0.65em;
+}
+
+.character-container {
+	display: flex;
+	gap: 0.25em;
+}
+
+.character-image {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+}
+
+/* Style for 5-star characters images */
+.five-star-image {
+	background-image: linear-gradient(
+			0deg,
+			#de9552 0%,
+			#9a6d43 100%
+	);
+}
+
+/* Style for Special 5-star characters images */
+.special-star-image {
+	background-image: linear-gradient(
+			0deg,
+			#da4f55 0%,
+			#af5155 100%
+	);
+}
+
+/* Style for 4-star characters images */
+.four-star-image {
+	background-image: linear-gradient(
+			0deg,
+			#917ab1 0%,
+			#6c6192 100%
+	);
+}
+
+/* Style for ???-star characters images */
+.unknown-star-image {
+	background-image: linear-gradient(
+			0deg,
+			#a4a4a4 0%,
+			#76787c 100%
+	);
+}
