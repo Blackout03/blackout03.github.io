@@ -13,6 +13,7 @@ bold {
 
 h1 {
 	color: #f3f3f3;
+	text-align: center;
 }
 
 .character-container {
@@ -26,7 +27,7 @@ h1 {
 	font-size: 0.9em;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid #444;
+	border: 3px solid #bbb;
 	background-color: #777;
 	padding: 10px;
 	border-radius: 5px;
