@@ -6571,6 +6571,7 @@
     },
     {
       "name": "Ororon",
+      "star": 4,
       "element": "Electro",
       "weapon": "Bow",
       "birthday": "10-14",
@@ -6623,6 +6624,7 @@
     },
     {
       "name": "Chasca",
+      "star": 5,
       "element": "Anemo",
       "weapon": "Bow",
       "birthday": "12-10",
