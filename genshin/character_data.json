@@ -505,6 +505,12 @@
           "endDate": "2024-04-23",
           "version": "4.5",
           "wishType": "event"
+        },
+        {
+          "startDate": "2024-11-20",
+          "endDate": "2024-12-10",
+          "version": "5.2",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -1129,6 +1135,12 @@
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-12-10",
+          "endDate": "2024-12-31",
+          "version": "5.2",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -1569,6 +1581,12 @@
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2024-11-20",
+          "endDate": "2024-12-10",
+          "version": "5.2",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -4232,6 +4250,12 @@
           "endDate": "2023-07-04",
           "version": "3.7",
           "wishType": "event"
+        },
+        {
+          "startDate": "2024-12-10",
+          "endDate": "2024-12-31",
+          "version": "5.2",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -4970,6 +4994,12 @@
           "startDate": "2024-02-20",
           "endDate": "2024-03-12",
           "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2024-12-10",
+          "endDate": "2024-12-31",
+          "version": "5.2",
           "wishType": "event"
         }
       ],
