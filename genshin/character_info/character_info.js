@@ -107,13 +107,22 @@ Promise.all([
 ])
 	.then(([characterData, imageData]) => {
 		const charactersContainer = document.getElementById('charactersContainer');
+		const urlParams = new URLSearchParams(window.location.search);
+		const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
 
 		// Helper function to get image ID from imageData.json or fallback to itemName
 		function getImageId(itemName) {
 			return imageData[itemName] || itemName;
 		}
 
-		characterData.characters.forEach(character => {
+		characterData.characters
+			.filter(character => {
+				// If '?upcoming' is present, include all characters
+				if (includeUpcomingCharacters) return true;
+				// Otherwise, exclude characters with an upcoming banner
+				return !character.reruns.some(rerun => rerun.banner === 'upcoming');
+			})
+			.forEach(character => {
 			// Only display characters with materials
 			if (character.materials && character.materials.length > 0) {
 				// Create a div for the character
@@ -493,6 +502,27 @@ Promise.all([
 										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.itemName}">${weeklyBoss.itemName}</a><br>
 										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.boss2Name}"><bold>${weeklyBoss.boss2Name.replace(' (Weekly Boss)', '').replace(' Dvalin', '')}</bold>:</a><br>
 										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.item2Name}">${weeklyBoss.item2Name}</a>`);
+							weeklyBossItem.appendChild(weeklyBossItemText);
+						} else if (character.name === "Traveler" && character.element === "Pyro") {
+							const itemImage =
+								createNumberedItemImage('item-image',
+									`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBoss.itemName)}.png`,
+									weeklyBoss.itemName,
+									12);
+
+							const itemImageLink =
+								createLink(['item-link'],
+									`https://genshin-impact.fandom.com/wiki/${weeklyBoss.itemName}`);
+
+							const row1 = createSpan('row1');
+							const row2 = createSpan('row2');
+							const div = createDiv(['pyro-traveler-weekly-boss']);
+							itemImageLink.appendChild(itemImage);
+							div.appendChild(itemImageLink);
+							weeklyBossItem.appendChild(div);
+							const weeklyBossItemText =
+								createDiv(['item-text', 'weekly-boss-text'], '',
+									`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.itemName}">${weeklyBoss.itemName}</a>`);
 							weeklyBossItem.appendChild(weeklyBossItemText);
 						} else {
 							const weeklyBossImage =

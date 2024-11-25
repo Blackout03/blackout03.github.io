@@ -275,6 +275,61 @@
       ]
     },
     {
+      "name": "Traveler",
+      "star": 5,
+      "element": "Pyro",
+      "weapon": "Sword",
+      "reruns": [
+        {
+          "banner": "upcoming"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Hilichurl",
+              "shortItemName": "Mask",
+              "itemName1": "Damaged Mask",
+              "itemName2": "Stained Mask",
+              "itemName3": "Ominous Mask"
+            }
+          ],
+          "enemyDrop2": [
+            {
+              "enemyName": "Sauroform Tribal Warriors",
+              "shortItemName": "Whistle",
+              "itemName1": "Sentry's Wooden Whistle",
+              "itemName2": "Warrior's Metal Whistle",
+              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "",
+              "itemName": "The Cornerstone of Stars and Flames"
+            }
+          ],
+          "travelerTalentBooks": [
+            {
+              "teachingsName": "Teachings of Contention",
+              "guideName1": "Guide of Kindling",
+              "guideName2": "Guide of Conflict",
+              "guideName3": "Guide of Contention",
+              "philosophiesName1": "Philosophies of Conflict",
+              "philosophiesName2": "Philosophies of Contention",
+              "philosophiesName3": "Philosophies of Kindling"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Windwheel Aster"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Amber",
       "star": 4,
       "element": "Pyro",
@@ -1593,11 +1648,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Whopperflower",
+              "shortItemName": "Nectar",
+              "itemName1": "Whopperflower Nectar",
+              "itemName2": "Shimmering Nectar",
+              "itemName3": "Energy Nectar"
             }
           ],
           "normalBoss": [
@@ -1798,11 +1853,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Whopperflower",
+              "shortItemName": "Nectar",
+              "itemName1": "Whopperflower Nectar",
+              "itemName2": "Shimmering Nectar",
+              "itemName3": "Energy Nectar"
             }
           ],
           "normalBoss": [
@@ -1851,11 +1906,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Whopperflower",
+              "shortItemName": "Nectar",
+              "itemName1": "Whopperflower Nectar",
+              "itemName2": "Shimmering Nectar",
+              "itemName3": "Energy Nectar"
             }
           ],
           "normalBoss": [
@@ -2515,11 +2570,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Whopperflower",
+              "shortItemName": "Nectar",
+              "itemName1": "Whopperflower Nectar",
+              "itemName2": "Shimmering Nectar",
+              "itemName3": "Energy Nectar"
             }
           ],
           "normalBoss": [
@@ -2669,11 +2724,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Whopperflower",
+              "shortItemName": "Nectar",
+              "itemName1": "Whopperflower Nectar",
+              "itemName2": "Shimmering Nectar",
+              "itemName3": "Energy Nectar"
             }
           ],
           "normalBoss": [
@@ -3179,11 +3234,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Whopperflower",
+              "shortItemName": "Nectar",
+              "itemName1": "Whopperflower Nectar",
+              "itemName2": "Shimmering Nectar",
+              "itemName3": "Energy Nectar"
             }
           ],
           "normalBoss": [
@@ -3907,11 +3962,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Whopperflower",
+              "shortItemName": "Nectar",
+              "itemName1": "Whopperflower Nectar",
+              "itemName2": "Shimmering Nectar",
+              "itemName3": "Energy Nectar"
             }
           ],
           "normalBoss": [
@@ -5448,7 +5503,7 @@
           "normalBoss": [
             {
               "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component \u00e2\u20ac\u201d Coppelia"
+              "itemName": "Artificed Spare Clockwork Component - Coppelia"
             }
           ],
           "weeklyBoss": [
@@ -5572,7 +5627,7 @@
           "normalBoss": [
             {
               "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component \u00e2\u20ac\u201d Coppelius"
+              "itemName": "Artificed Spare Clockwork Component - Coppelius"
             }
           ],
           "weeklyBoss": [
@@ -5792,11 +5847,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Whopperflower",
+              "shortItemName": "Nectar",
+              "itemName1": "Whopperflower Nectar",
+              "itemName2": "Shimmering Nectar",
+              "itemName3": "Energy Nectar"
             }
           ],
           "normalBoss": [
@@ -5861,7 +5916,7 @@
           "normalBoss": [
             {
               "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component \u00e2\u20ac\u201d Coppelius"
+              "itemName": "Artificed Spare Clockwork Component - Coppelius"
             }
           ],
           "weeklyBoss": [
@@ -6091,7 +6146,7 @@
           "normalBoss": [
             {
               "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component \u00e2\u20ac\u201d Coppelia"
+              "itemName": "Artificed Spare Clockwork Component - Coppelia"
             }
           ],
           "weeklyBoss": [
@@ -6405,11 +6460,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Sauroform Tribal Warriors",
+              "shortItemName": "Whistle",
+              "itemName1": "Sentry's Wooden Whistle",
+              "itemName2": "Warrior's Metal Whistle",
+              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
             }
           ],
           "normalBoss": [
@@ -6458,11 +6513,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Sauroform Tribal Warriors",
+              "shortItemName": "Whistle",
+              "itemName1": "Sentry's Wooden Whistle",
+              "itemName2": "Warrior's Metal Whistle",
+              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
             }
           ],
           "normalBoss": [
@@ -6564,11 +6619,11 @@
         {
           "enemyDrop": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyName": "Sauroform Tribal Warriors",
+              "shortItemName": "Whistle",
+              "itemName1": "Sentry's Wooden Whistle",
+              "itemName2": "Warrior's Metal Whistle",
+              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
             }
           ],
           "normalBoss": [
@@ -6700,6 +6755,162 @@
           "localSpecialty": [
             {
               "itemName": "Withering Purpurbloom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lan Yan",
+      "star": 4,
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.3",
+          "phase": "upcoming",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Whopperflower",
+              "shortItemName": "Nectar",
+              "itemName1": "Whopperflower Nectar",
+              "itemName2": "Shimmering Nectar",
+              "itemName3": "Energy Nectar"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Secret Source Automaton: Configuration Device",
+              "itemName": "Gold-Inscribed Secret Source Core"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Abyss",
+              "itemName": "AbyssDrop2"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Diligence",
+              "teachingsName": "Teachings of Diligence",
+              "guideName": "Guide of Diligence",
+              "philosophiesName": "Philosophies of Diligence"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Clearwater Jade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mavuika",
+      "star": 5,
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.3",
+          "phase": "upcoming",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Sauroform Tribal Warriors",
+              "shortItemName": "Whistle",
+              "itemName1": "Sentry's Wooden Whistle",
+              "itemName2": "Warrior's Metal Whistle",
+              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Secret Source Automaton: Configuration Device",
+              "itemName": "Gold-Inscribed Secret Source Core"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "Abyss",
+              "itemName": "AbyssDrop1"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Contention",
+              "teachingsName": "Teachings of Contention",
+              "guideName": "Guide of Contention",
+              "philosophiesName": "Philosophies of Contention"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Withering Purpurbloom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Citlali",
+      "star": 5,
+      "element": "Cryo",
+      "weapon": "Catalyst",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.3",
+          "phase": "upcoming",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Natlan Saurians",
+              "shortItemName": "Saurian Fang",
+              "itemName1": "Juvenile Fang",
+              "itemName2": "Seasoned Fang",
+              "itemName3": "Tyrant's Fang"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Wayward Hermetic Spiritspeaker",
+              "itemName": "Talisman of the Enigmatic Land"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "The Knave",
+              "itemName": "Denial and Judgment"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Conflict",
+              "teachingsName": "Teachings of Conflict",
+              "guideName": "Guide of Conflict",
+              "philosophiesName": "Philosophies of Conflict"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Quenepa Berry"
             }
           ]
         }

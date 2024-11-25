@@ -6,7 +6,7 @@ function isUpcomingDate(dateString) {
 
 // Function to create a checkmark element with color based on wishType
 function createCheckmark(wishType) {
-	const span = createSpan(['checkmark', wishType === 'chronicled' ? 'chronicled-wish' : 'event-wish']);
+	const span = createSpan(['checkmark', wishType === 'chronicled' ? 'chronicled-wish' : wishType === 'upcoming' ? 'upcoming-wish' : 'event-wish']);
 	return span;
 }
 
@@ -42,6 +42,9 @@ function checkJsonData() {
 		fetch('../../image_data.json').then(response => response.json())
 	])
 		.then(([characterData, imageData]) => {
+			const urlParams = new URLSearchParams(window.location.search);
+			const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
+
 			// Helper function to get image ID from imageData.json or fallback to itemName
 			function getImageId(itemName, imageData) {
 				return imageData[itemName] || itemName;
@@ -63,24 +66,33 @@ function checkJsonData() {
 			const characters = [];
 
 			// Extract versions and characters, and collect unique phases by version
-			characterData.characters.forEach(character => {
-				if (character.reruns && character.reruns.length > 0) {
-					characters.push(character);
-					character.reruns.forEach(rerun => {
-						if (!versionPhases[rerun.version]) {
-							versionPhases[rerun.version] = [];
-						}
-						// Check for duplicates before adding a phase
-						const isDuplicate = versionPhases[rerun.version].some(phase =>
-							phase[0] === rerun.startDate && phase[1] === rerun.endDate && (phase[3] === undefined || phase[3] === rerun.phase)
-						);
+			characterData.characters
+				.filter(character => {
+					// If '?upcoming' is present, include all characters
+					if (includeUpcomingCharacters) return true;
+					// Only include characters that do not have an upcoming banner and have a version field in reruns
+					return character.reruns.some(rerun => rerun.version) &&
+						!character.reruns.some(rerun => rerun.banner === 'upcoming');
+				})
+				.forEach(character => {
+					if ((character.reruns && character.reruns.length > 0)) {
+						if (character.name === "Traveler") return
+						characters.push(character);
+						character.reruns.forEach(rerun => {
+							if (!versionPhases[rerun.version]) {
+								versionPhases[rerun.version] = [];
+							}
+							// Check for duplicates before adding a phase
+							const isDuplicate = versionPhases[rerun.version].some(phase =>
+								phase[0] === rerun.startDate && phase[1] === rerun.endDate && phase[3] === rerun.phase
+							);
 
-						// Only add the phase if it's not a duplicate
-						if (!isDuplicate) {
-							versionPhases[rerun.version].push([rerun.startDate, rerun.endDate, rerun.version, rerun.phase]);
-						}
-					});
-				}
+							// Only add the phase if it's not a duplicate
+							if (!isDuplicate) {
+								versionPhases[rerun.version].push([rerun.startDate, rerun.endDate, rerun.version, rerun.phase]);
+							}
+						});
+					}
 			});
 
 			// Sort phases for each version by the start date
@@ -113,7 +125,7 @@ function checkJsonData() {
 			versionArray.forEach(version => {
 				// Check if any character has a rerun with a valid startDate and endDate for this version
 				const versionHasValidRerun = characters.some(character => {
-					return character.reruns.some(rerun => rerun.version === version && rerun.startDate && rerun.endDate);
+					return character.reruns.some(rerun => rerun.version === version && ((rerun.startDate && rerun.endDate) || rerun.banner === "upcoming"));
 				});
 
 				// Only add the version column if there's a valid rerun for this version
@@ -123,7 +135,7 @@ function checkJsonData() {
 					headerRow.appendChild(versionTh);
 
 					versionPhases[version].forEach((phase, index) => {
-						const phaseTh = createElement('th', 'phase', phase[3] !== undefined ? `Phase ${phase[3]}` : phase[0] === 'upcoming' ? `Phase ???` : `Phase ${index + 1}`);
+						const phaseTh = createElement('th', 'phase', phase[3] === 'upcoming' ? `Phase ???` : phase[3] !== undefined ? `Phase ${phase[3]}` : `Phase ${index + 1}`);
 
 						phaseRow.appendChild(phaseTh);
 					});
@@ -160,6 +172,8 @@ function checkJsonData() {
 				const rerunDates = character.reruns.map(rerun => ({
 					start: new Date(rerun.startDate),
 					end: new Date(rerun.endDate),
+					banner: rerun.banner,
+					version: rerun.version
 				}));
 
 				// Initialize elapsedTime and maxElapsedTime
@@ -169,7 +183,7 @@ function checkJsonData() {
 				versionArray.forEach(version => {
 					// Check if any character has a rerun with a valid startDate and endDate for this version
 					const versionHasValidRerun = characters.some(character => {
-						return character.reruns.some(rerun => rerun.version === version && rerun.startDate && rerun.endDate);
+						return character.reruns.some(rerun => rerun.version === version && ((rerun.startDate && rerun.endDate) || rerun.banner === "upcoming"));
 					});
 
 					// Only add the version column if there's a valid rerun for this version
@@ -188,29 +202,39 @@ function checkJsonData() {
 								const validPhaseEnd = safeParseDate(phase[1]);
 
 								// Check if it's an upcoming phase
-								if (phase[0] === "upcoming") {
+								if (phase[3] === "upcoming") {
 									// Only match if the phase is set and matches
 									return (rerun.phase && (rerun.phase === phase[3]) || phase[3] === undefined);
 								}
 
-								return phase[0] === "upcoming" || phaseStart && phaseEnd && validPhaseStart && validPhaseEnd &&
+								return phase[3] === "upcoming" || phaseStart && phaseEnd && validPhaseStart && validPhaseEnd &&
 									phaseStart.toISOString() === validPhaseStart.toISOString() &&
 									phaseEnd.toISOString() === validPhaseEnd.toISOString();
 							});
 
 							// If this phase is before the first run, make it dark grey
-							if ((rerunDates[0].start.toString() === "Invalid Date" && !(phase[0] === "upcoming")) || (phaseStartDate < rerunDates[0].start && !(phase[0] === "upcoming"))) {
-								phaseCell.classList.add('before-release');
-							} else if (phase[0] === "upcoming") {
-								phaseCell.classList.add('upcoming-version');
-								if (phaseRerun) {
-									const checkmark = createCheckmark(phaseRerun.wishType);
-									phaseCell.appendChild(checkmark);
+							if (rerunDates[0].banner === "upcoming") {
+								if (version === rerunDates[0].version) {
+									phaseCell.classList.add('upcoming-version');
+									if (phaseRerun) {
+										const checkmark = createCheckmark(phaseRerun.wishType);
+										phaseCell.appendChild(checkmark);
+									} else {
+										phaseCell.textContent = '???'; // Display "Invalid" if dates are not valid
+									}
 								} else {
-									phaseCell.textContent = '???'; // Display "Invalid" if dates are not valid
+									phaseCell.classList.add('before-release');
 								}
 								row.appendChild(phaseCell);
 								return;
+							} else if ((phaseStartDate < rerunDates[0].start && !(phase[0] === "upcoming"))) {
+								if (phase[3] === "upcoming") {
+									phaseCell.classList.add('upcoming-version')
+									const questionmark = createCheckmark('upcoming');
+									phaseCell.appendChild(questionmark);
+								} else {
+									phaseCell.classList.add('before-release');
+								}
 							} else if (phaseRerun) {
 								const checkmark = createCheckmark(phaseRerun.wishType);
 								phaseCell.appendChild(checkmark);

@@ -110,7 +110,26 @@ thead th {
 	background-color: #6347ff;
 }
 
+.upcoming-wish {
+	background-color: #666;
+}
+
+.upcoming-wish.checkmark::before {
+	content: '?';
+	position: absolute;
+	top: 52.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 26px;
+	font-weight: bold;
+}
+
 .before-release {
 	background-color: #333;
+}
+
+.upcoming-version {
+	background-color: #ccc;
 }
 

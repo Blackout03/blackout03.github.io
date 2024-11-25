@@ -5,6 +5,9 @@ function checkJsonData() {
 		fetch('../../image_data.json').then(response => response.json())
 	])
 		.then(([characterData, imageData]) => {
+			const urlParams = new URLSearchParams(window.location.search);
+			const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
+
 			// Helper function to get image ID from imageData.json or fallback to itemName
 			function getImageId(itemName, imageData) {
 				return imageData[itemName] || itemName;
@@ -57,19 +60,28 @@ function checkJsonData() {
 
 			// Create a combined list of all reruns with character data
 			const reruns = [];
-			characterData.characters.forEach(character => {
-				character.reruns.forEach(rerun => {
-					reruns.push({
-						name: character.name,
-						startDate: rerun.startDate,
-						endDate: rerun.endDate,
-						version: rerun.version,
-						wishType: rerun.wishType,
-						star: character.star,
-						phase: rerun.phase || null // Add phase, use null if it doesn't exist
+			characterData.characters
+				.filter(character => {
+					// If '?upcoming' is present, include all characters
+					if (includeUpcomingCharacters) return true;
+					// Only include characters that do not have an upcoming banner and have a version field in reruns
+					return character.reruns.some(rerun => rerun.version) &&
+						!character.reruns.some(rerun => rerun.banner === 'upcoming');
+				})
+				.forEach(character => {
+					if (character.name === "Traveler") return
+					character.reruns.forEach(rerun => {
+						reruns.push({
+							name: character.name,
+							startDate: rerun.startDate,
+							endDate: rerun.endDate,
+							version: rerun.version,
+							wishType: rerun.wishType,
+							star: character.star,
+							phase: rerun.phase || null // Add phase, use null if it doesn't exist
+						});
 					});
 				});
-			});
 
 			// Sort reruns by startDate and endDate
 			reruns.sort((a, b) => {
