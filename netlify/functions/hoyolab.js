@@ -2,12 +2,9 @@
 
 async function fetchArticleContent(url) {
 	try {
-		console.log('Chromium executable path:', puppeteer.executablePath());
-		console.log('Chromium Path:', process.env.CHROME_BIN);
-
 		const browser = await puppeteer.launch({
 			headless: true,
-			executablePath: process.env.CHROME_BIN || '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome', // Netlify specific path
+			executablePath: '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome', // Netlify specific path
 			args: ['--no-sandbox', '--disable-setuid-sandbox'],
 		});
 
