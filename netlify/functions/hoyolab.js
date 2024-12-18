@@ -1,55 +1,40 @@
 ﻿const fetch = require('node-fetch');
-const { JSDOM } = require('jsdom');
 
-module.exports = async (req, res) => {
-	const { id } = req.query;
-
-	if (!id) {
-		return res.status(400).send("Error: No article ID provided.");
-	}
-
-	const hoyolabUrl = `https://www.hoyolab.com/article/${id}`;
-
+module.exports.handler = async (event, context) => {
 	try {
-		// Fetch the Hoyolab article
-		const response = await fetch(hoyolabUrl);
+		const articleId = event.queryStringParameters.q;
+		if (!articleId) {
+			return {
+				statusCode: 400,
+				body: JSON.stringify({ error: 'Missing query parameter: q' }),
+			};
+		}
+
+		const url = `https://www.hoyolab.com/article/${articleId}`;
+		const response = await fetch(url);
 		const html = await response.text();
 
-		// Parse the HTML
-		const dom = new JSDOM(html);
-		const metaTitle = dom.window.document.querySelector('meta[property="og:title"]')?.content || "Hoyolab Article";
-		const metaDescription = dom.window.document.querySelector('meta[property="og:description"]')?.content || "Read this article on Hoyolab.";
-		const metaImage = dom.window.document.querySelector('meta[property="og:image"]')?.content || "";
+		// Extract title and content (basic parsing using regex or jsdom)
+		const titleMatch = html.match(/<title>(.*?)<\/title>/);
+		const title = titleMatch ? titleMatch[1] : 'Hoyolab Article';
+		const contentMatch = html.match(/<meta name="description" content="(.*?)"/);
+		const description = contentMatch ? contentMatch[1] : 'No description available';
 
-		// Generate the HTML response
-		const embedHtml = `
-		<!DOCTYPE html>
-		<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>${metaTitle}</title>
-
-			<!-- Discord embed meta tags -->
-			<meta property="og:title" content="${metaTitle}">
-			<meta property="og:description" content="${metaDescription}">
-			<meta property="og:image" content="${metaImage}">
-			<meta property="og:url" content="${hoyolabUrl}">
-		</head>
-		<body>
-			<h1>Redirecting...</h1>
-			<p>You are being redirected to <a href="${hoyolabUrl}">the article</a>.</p>
-			<script>
-				window.location.href = "${hoyolabUrl}";
-			</script>
-		</body>
-		</html>
-		`;
-
-		res.setHeader('Content-Type', 'text/html');
-		res.status(200).send(embedHtml);
+		// Return the response
+		return {
+			statusCode: 200,
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				title,
+				description,
+				originalUrl: url,
+			}),
+		};
 	} catch (error) {
-		console.error("Failed to fetch article:", error);
-		res.status(500).send("Error: Failed to fetch article details.");
+		console.error(error);
+		return {
+			statusCode: 500,
+			body: JSON.stringify({ error: 'Failed to fetch Hoyolab article' }),
+		};
 	}
 };
