@@ -1,11 +1,13 @@
-﻿const puppeteer = require('puppeteer');
-const cheerio = require('cheerio');
+﻿const puppeteer = require('puppeteer-extra');
 
 async function fetchArticleContent(url) {
 	try {
 		const browser = await puppeteer.launch({
 			headless: true, // Runs in headless mode (without GUI)
+			executablePath: process.env.CHROME_BIN || '/opt/buildhome/.puppeteer/chromium/linux-9000/chrome-linux/chrome', // Netlify specific path
+			args: ['--no-sandbox', '--disable-setuid-sandbox'],
 		});
+
 		const page = await browser.newPage();
 		await page.goto(url, { waitUntil: 'domcontentloaded' }); // Wait until the DOM is loaded
 
