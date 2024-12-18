@@ -1,11 +1,12 @@
-﻿const puppeteer = require('puppeteer-extra');
+﻿const puppeteer = require('puppeteer');
 
 async function fetchArticleContent(url) {
 	try {
+		console.log('Chromium executable path:', puppeteer.executablePath());
+		console.log('Chromium Path:', process.env.CHROME_BIN);
+
 		const browser = await puppeteer.launch({
 			headless: true, // Runs in headless mode (without GUI)
-			executablePath: process.env.CHROME_BIN || await puppeteer.executablePath(), // Use default path
-			args: ['--no-sandbox', '--disable-setuid-sandbox'], // Sandbox arguments for serverless environments
 		});
 
 		const page = await browser.newPage();
