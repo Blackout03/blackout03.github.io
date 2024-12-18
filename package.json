@@ -23,6 +23,7 @@
     "node-fetch": "^2.7.0",
     "puppeteer": "^23.10.4",
     "puppeteer-core": "^23.10.4",
-    "puppeteer-extra": "^3.3.6"
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   }
 }

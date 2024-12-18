@@ -1,11 +1,15 @@
 ﻿const puppeteer = require('puppeteer-extra');
+const path = require('path');
+
+const puppeteerExtraPluginStealth = require('puppeteer-extra-plugin-stealth');
+puppeteer.use(puppeteerExtraPluginStealth());
 
 async function fetchArticleContent(url) {
 	try {
 		const browser = await puppeteer.launch({
 			headless: true, // Runs in headless mode (without GUI)
-			executablePath: process.env.CHROME_BIN || '/opt/buildhome/.puppeteer/chromium/linux-9000/chrome-linux/chrome', // Netlify specific path
-			args: ['--no-sandbox', '--disable-setuid-sandbox'],
+			executablePath: process.env.CHROME_BIN || '/usr/bin/chromium-browser', // Path to Chromium (adjust this to your server path)
+			args: ['--no-sandbox', '--disable-setuid-sandbox'], // Sandbox arguments for serverless environments
 		});
 
 		const page = await browser.newPage();
