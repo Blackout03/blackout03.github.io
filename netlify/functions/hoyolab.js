@@ -1,6 +1,7 @@
 ﻿const fetch = require('node-fetch');
+const cheerio = require('cheerio');
 
-module.exports.handler = async (event, context) => {
+exports.handler = async (event, context) => {
 	try {
 		const articleId = event.queryStringParameters.q;
 		if (!articleId) {
@@ -14,11 +15,14 @@ module.exports.handler = async (event, context) => {
 		const response = await fetch(url);
 		const html = await response.text();
 
-		// Extract title and content (basic parsing using regex or jsdom)
-		const titleMatch = html.match(/<title>(.*?)<\/title>/);
-		const title = titleMatch ? titleMatch[1] : 'Hoyolab Article';
-		const contentMatch = html.match(/<meta name="description" content="(.*?)"/);
-		const description = contentMatch ? contentMatch[1] : 'No description available';
+		// Load HTML content using cheerio
+		const $ = cheerio.load(html);
+
+		// Extract title from the page
+		const title = $('div.mhy-article-page__title h1').text().trim();
+
+		// Extract description/content
+		const description = $('div.mhy-article-page__content').text().trim();
 
 		// Return the response
 		return {
@@ -28,6 +32,11 @@ module.exports.handler = async (event, context) => {
 				title,
 				description,
 				originalUrl: url,
+				embed: {
+					title: title,
+					description: description.length > 200 ? description.substring(0, 200) + '...' : description,
+					url: url,
+				},
 			}),
 		};
 	} catch (error) {
