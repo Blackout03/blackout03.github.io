@@ -1,15 +1,16 @@
-﻿const fetch = require('node-fetch');
+﻿const axios = require('axios');
 const cheerio = require('cheerio');
 
 async function fetchArticleContent(url) {
 	try {
 		// Make the HTTP request to fetch the article page
-		const response = await fetch(url);
-		console.log(response.text)
-		const $ = cheerio.load(response.text); // Load the HTML content using Cheerio
+		const response = await axios.get(url);
+		console.log(response.data)
+		const $ = cheerio.load(response.data); // Load the HTML content using Cheerio
 
 		// Extract the title and description
 		const title = $('.mhy-article-page__title h1').text();
+		console.log(title)
 		// const description = $('.mhy-article-page__content p').first().text();
 		const description = title;
 
