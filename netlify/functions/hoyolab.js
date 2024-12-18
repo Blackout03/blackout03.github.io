@@ -1,18 +1,23 @@
-﻿const axios = require('axios');
+﻿const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 
 async function fetchArticleContent(url) {
 	try {
-		// Make the HTTP request to fetch the article page
-		const response = await axios.get(url);
-		console.log(response.data)
-		const $ = cheerio.load(response.data); // Load the HTML content using Cheerio
+		const browser = await puppeteer.launch({
+			headless: true, // Runs in headless mode (without GUI)
+		});
+		const page = await browser.newPage();
+		await page.goto(url, { waitUntil: 'domcontentloaded' }); // Wait until the DOM is loaded
+
+		// Wait for specific elements to load (you can customize this based on your needs)
+		await page.waitForSelector('.mhy-article-page__title h1'); // Adjust this to match the element you're looking for
 
 		// Extract the title and description
-		const title = $('.mhy-article-page__title h1').text();
+		const title = await page.$eval('.mhy-article-page__title h1', (el) => el.innerText);
+		const description = await page.$eval('.mhy-article-page__content p', (el) => el.innerText);
+
 		console.log(title)
-		// const description = $('.mhy-article-page__content p').first().text();
-		const description = title;
+		await browser.close();
 
 		// Return the extracted data
 		return {
@@ -27,7 +32,7 @@ async function fetchArticleContent(url) {
 		};
 	} catch (error) {
 		console.error('Error fetching article:', error);
-		return { title: '', description: '', originalUrl: url, embed: { title: '', description: '', url: url } };
+		return { title: '', description: 'Error fetching article', originalUrl: url, embed: { title: '', description: 'Error fetching article', url: url } };
 	}
 }
 
