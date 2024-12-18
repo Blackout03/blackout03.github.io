@@ -1,49 +1,44 @@
 ﻿const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 
-exports.handler = async (event, context) => {
+async function fetchArticleContent(url) {
 	try {
-		const articleId = event.queryStringParameters.q;
-		if (!articleId) {
-			return {
-				statusCode: 400,
-				body: JSON.stringify({ error: 'Missing query parameter: q' }),
-			};
-		}
-
-		const url = `https://www.hoyolab.com/article/${articleId}`;
+		// Make the HTTP request to fetch the article page
 		const response = await fetch(url);
-		const html = await response.text();
+		console.log(response.text)
+		const $ = cheerio.load(response.text); // Load the HTML content using Cheerio
 
-		// Load HTML content using cheerio
-		const $ = cheerio.load(html);
+		// Extract the title and description
+		const title = $('.mhy-article-page__title h1').text();
+		// const description = $('.mhy-article-page__content p').first().text();
+		const description = title;
 
-		// Extract title from the page
-		const title = $('div.mhy-article-page__title h1').text().trim();
-
-		// Extract description/content
-		const description = $('div.mhy-article-page__content').text().trim();
-
-		// Return the response
+		// Return the extracted data
 		return {
-			statusCode: 200,
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({
+			title,
+			description,
+			originalUrl: url,
+			embed: {
 				title,
 				description,
-				originalUrl: url,
-				embed: {
-					title: title,
-					description: description.length > 200 ? description.substring(0, 200) + '...' : description,
-					url: url,
-				},
-			}),
+				url: url
+			}
 		};
 	} catch (error) {
-		console.error(error);
-		return {
-			statusCode: 500,
-			body: JSON.stringify({ error: 'Failed to fetch Hoyolab article' }),
-		};
+		console.error('Error fetching article:', error);
+		return { title: '', description: '', originalUrl: url, embed: { title: '', description: '', url: url } };
 	}
+}
+
+module.exports.handler = async (event, context) => {
+	const articleId = event.queryStringParameters.q; // Get the article ID (e.g., 34755631)
+	const articleUrl = `https://www.hoyolab.com/article/${articleId}`; // Construct the URL for the article
+
+	// Fetch the article content
+	const articleContent = await fetchArticleContent(articleUrl);
+
+	return {
+		statusCode: 200,
+		body: JSON.stringify(articleContent), // Return the extracted data as JSON
+	};
 };
