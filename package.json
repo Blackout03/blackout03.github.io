@@ -19,6 +19,6 @@
   "homepage": "https://github.com/Blackout03/blackout03.github.io#readme",
   "dependencies": {
     "jsdom": "^25.0.1",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^2.7.0"
   }
 }
