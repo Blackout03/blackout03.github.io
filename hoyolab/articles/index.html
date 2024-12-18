@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hoyolab Article Redirect</title>
+
+	<!-- Default meta tags -->
+	<meta property="og:title" content="Redirecting to Hoyolab..." id="og-title">
+	<meta property="og:description" content="Fetching article details..." id="og-description">
+	<meta property="og:url" content="" id="og-url">
+</head>
+<body>
+<h1>Redirecting...</h1>
+<p>Please wait while we fetch the article details.</p>
+<script>
+	(async () => {
+		// Extract article ID from the query parameter
+		const params = new URLSearchParams(window.location.search);
+		const articleId = params.get('q');
+
+		if (!articleId) {
+			document.body.innerHTML = "<h1>Error: No article ID provided.</h1>";
+			return;
+		}
+
+		// Fetch the article details from Hoyolab
+		const hoyolabUrl = `https://www.hoyolab.com/article/${articleId}`;
+		try {
+			const response = await fetch(hoyolabUrl, { method: 'GET', mode: 'cors' });
+			const html = await response.text();
+
+			// Parse the HTML to extract the title and content
+			const parser = new DOMParser();
+			const doc = parser.parseFromString(html, 'text/html');
+			const title = doc.querySelector('meta[property="og:title"]')?.getAttribute('content') || "Hoyolab Article";
+			const description = doc.querySelector('meta[property="og:description"]')?.getAttribute('content') || "Click to read the full article.";
+
+			// Update meta tags dynamically
+			document.getElementById('og-title').setAttribute('content', title);
+			document.getElementById('og-description').setAttribute('content', description);
+			document.getElementById('og-url').setAttribute('content', hoyolabUrl);
+
+			// Redirect to the Hoyolab page
+			window.location.href = hoyolabUrl;
+		} catch (error) {
+			console.error("Failed to fetch Hoyolab article:", error);
+			document.body.innerHTML = "<h1>Error: Failed to fetch article details.</h1>";
+		}
+	})();
+</script>
+</body>
+</html>
