@@ -176,7 +176,7 @@ function checkJsonData() {
 						const isUpcoming = lastRerun.startDate === "upcoming" && lastRerun.endDate === "upcoming";
 
 						if (isUpcoming && reruns.length > 1) {
-							rerunInfo = createDiv('rerun-info', '', `Release: ${lastRerun.endDate}`)
+							rerunInfo = createDiv('rerun-info', '', `Release: ${lastRerun.startDate}`)
 							rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 							upcomingRun = createDiv('upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version} `)
 
@@ -194,12 +194,12 @@ function checkJsonData() {
 								previousRun = createDiv('rerun-status', '', `<span>${timeSince}<br>${daysSince}</span>`)
 							}
 						} else if (isUpcoming) {
-							rerunInfo = createDiv('rerun-info', '', `Release: ${lastRerun.endDate}`)
+							rerunInfo = createDiv('rerun-info', '', `Release: ${lastRerun.startDate}`)
 							rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 							upcomingRun = createDiv('upcoming-rerun-status', `Upcoming Rerun: ${lastRerun.version}`)
 
 						} else {
-							rerunInfo = createDiv('rerun-info', '', `Release: ${lastRerun.endDate}`)
+							rerunInfo = createDiv('rerun-info', '', `Release: ${lastRerun.startDate}`)
 							rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${lastRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
 							const daysUntilStart = calculateDaysUntil(startDate);
 							upcomingRerun = `Upcoming Release: ${startDate.toLocaleDateString()} (in ${daysUntilStart} days)`;
@@ -207,8 +207,10 @@ function checkJsonData() {
 							if (reruns.length > 1) {
 								const previousRerun = reruns[reruns.length - 2];
 								const previousRerunEndDate = new Date(previousRerun.endDate);
+								const previousWishType = previousRerun.wishType === "chronicled" ? "Chronicled Wish" : "Event Wish";
+								const previousWishTypeColor = previousRerun.wishType === "chronicled" ? "chronicled-wish" : "event-wish";
 								rerunInfo = createDiv('rerun-info', '', `Previous Banner: (${previousRerun.startDate}) - (${previousRerun.endDate})`)
-								rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type ${wishTypeColor}">[${wishType}]</div>`)
+								rerunVersionInfo = createSpan('rerun-version-info', '', `[Version ${previousRerun.version}] <div class="wish-type ${previousWishTypeColor}">[${previousWishType}]</div>`)
 								const daysSincePreviousRerun = calculateDaysSince(previousRerunEndDate);
 								const timeSincePreviousRerun = calculateMonthsAndDaysSince(previousRerunEndDate);
 

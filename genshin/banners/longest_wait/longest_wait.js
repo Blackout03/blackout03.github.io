@@ -1,7 +1,7 @@
 ﻿// Function to find the 3 longest gaps without a banner
 function findLongestGaps(data) {
 	const excludedCharacters = new Set([
-		"Keqing", "Tighnari", "Dehya", "Amber", "Kaeya",
+		"Tighnari", "Dehya", "Amber", "Kaeya",
 		"Lisa", "Jean", "Diluc", "Mona"
 	]);
 
