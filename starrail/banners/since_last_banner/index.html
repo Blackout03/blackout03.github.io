@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Honkai: Star Rail Character Rerun Tracker</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="../../../css/home-icon.css">
+	<link rel="stylesheet" href="../base.css">
+	<link rel="stylesheet" href="since_last_banner.css">
+</head>
+<body>
+<a href="https://blackout03.github.io/" class="home-icon">
+	<i class="fas fa-home"></i>
+</a>
+<div class="container">
+	<h1>Honkai: Star Rail Character Rerun Tracker</h1>
+
+	<div class="sorting">
+		<!-- Sorting dropdown -->
+		<label for="sortOptions">Sort by:</label>
+		<select id="sortOptions">
+			<option value="default">Default</option>
+			<option value="longest">Longest</option>
+			<option value="shortest">Shortest</option>
+			<option value="alphabetical">Alphabetical</option>
+			<option value="alphabetical-zyx">Reverse Alphabetical</option>
+			<option value="release-earliest">Release Earliest</option>
+			<option value="release-latest">Release Latest</option>
+			<option value="random">Random</option>
+			<option value="most-reruns">Most Reruns</option>
+			<option value="least-reruns">Least Reruns</option>
+			<option value="element">Element</option>
+			<option value="upcoming">Upcoming</option>
+		</select>
+
+		<!-- Element filter dropdown -->
+		<label for="typeFilter">Filter by Type:</label>
+		<div id="typeFilter">
+			<label><input type="checkbox" value="fire"> Fire</label>
+			<label><input type="checkbox" value="ice"> Ice</label>
+			<label><input type="checkbox" value="imaginary"> Imaginary</label>
+			<label><input type="checkbox" value="lightning"> Lightning</label>
+			<label><input type="checkbox" value="physical"> Physical</label>
+			<label><input type="checkbox" value="quantum"> Quantum</label>
+			<label><input type="checkbox" value="wind"> Wind</label>
+		</div>
+
+		<!-- Weapon filter dropdown -->
+		<label for="pathFilter">Filter by Path:</label>
+		<div id="pathFilter">
+			<label><input type="checkbox" value="abundance"> Abundance</label>
+			<label><input type="checkbox" value="destruction"> Destruction</label>
+			<label><input type="checkbox" value="erudition"> Erudition</label>
+			<label><input type="checkbox" value="harmony"> Harmony</label>
+			<label><input type="checkbox" value="nihility"> Nihility</label>
+			<label><input type="checkbox" value="preservation"> Preservation</label>
+			<label><input type="checkbox" value="the hunt"> The Hunt</label>
+		</div>
+
+		<!-- Star filter dropdown -->
+		<label for="starFilter">Filter by Star Level:</label>
+		<div id="starFilter">
+			<label><input type="checkbox" value=4> 4 Stars</label>
+			<label><input type="checkbox" value=5> 5 Stars</label>
+		</div>
+	</div>
+
+	<div id="character-list">
+		<!-- Character rerun information will be displayed here -->
+	</div>
+</div>
+<script src="../common.js"></script>
+<script src="since_last_banner.js"></script>
+</body>
+</html>

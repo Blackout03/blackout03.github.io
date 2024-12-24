@@ -1,0 +1,1374 @@
+{
+  "characters": [
+    {
+      "name": "March 7th",
+      "star": 4,
+      "type": "Ice",
+      "path": "Preservation",
+      "reruns": [
+        {
+          "startDate": "2023-05-17",
+          "endDate": "2023-06-06",
+          "version": "1.0"
+        },
+        {
+          "startDate": "2023-08-30",
+          "endDate": "2023-09-20",
+          "version": "1.3"
+        },
+        {
+          "startDate": "2023-12-27",
+          "endDate": "2024-01-17",
+          "version": "1.6"
+        },
+        {
+          "startDate": "2024-05-08",
+          "endDate": "2024-05-29",
+          "version": "2.2"
+        },
+        {
+          "startDate": "2024-11-13",
+          "endDate": "2024-12-03",
+          "version": "2.6"
+        }
+      ],
+      "materials": [
+        {
+          "ascension": [
+            {
+              "enemyDrop": [
+                {
+                  "enemyName": "",
+                  "itemName1": "",
+                  "itemName2": "",
+                  "itemName3": ""
+                }
+              ],
+              "stagnantShadowDrop": [
+                {
+                  "stagnantShadowName": "",
+                  "itemName": ""
+                }
+              ]
+            }
+          ],
+          "traces": [
+            {
+              "enemyDrop": [
+                {
+                  "enemyName": "",
+                  "itemName1": "",
+                  "itemName2": "",
+                  "itemName3": ""
+                }
+              ],
+              "calyxDrop": [
+                {
+                  "calyxName": "",
+                  "itemName1": "",
+                  "itemName2": "",
+                  "itemName3": ""
+                }
+              ],
+              "echoOfWarDrop": [
+                {
+                  "echoOfWarName": "",
+                  "itemName": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dan Heng",
+      "star": 4,
+      "type": "Wind",
+      "path": "The Hunt",
+      "reruns": [
+        {
+          "startDate": "2023-06-07",
+          "endDate": "2023-06-28",
+          "version": "1.1"
+        },
+        {
+          "startDate": "2023-11-15",
+          "endDate": "2023-12-06",
+          "version": "1.5"
+        },
+        {
+          "startDate": "2024-03-27",
+          "endDate": "2024-04-17",
+          "version": "2.1"
+        }
+      ],
+      "materials": [
+        {
+          "ascension": [
+            {
+              "enemyDrop": [
+                {
+                  "enemyName": "Fragmentum Monsters",
+                  "itemName1": "Extinguished Core",
+                  "itemName2": "Glimmering Core",
+                  "itemName3": "Squirming Core"
+                }
+              ],
+              "stagnantShadowDrop": [
+                {
+                  "stagnantShadowName": "Shape of Gust",
+                  "itemName": "Storm Eye"
+                }
+              ]
+            }
+          ],
+          "traces": [
+            {
+              "enemyDrop": [
+                {
+                  "enemyName": "Fragmentum Monsters",
+                  "itemName1": "Extinguished Core",
+                  "itemName2": "Glimmering Core",
+                  "itemName3": "Squirming Core"
+                }
+              ],
+              "calyxDrop": [
+                {
+                  "calyxName": "Bud of The Hunt (Outlying Snow Plains)",
+                  "itemName1": "Arrow of the Beast Hunter",
+                  "itemName2": "Arrow of the Demon Slayer",
+                  "itemName3": "Arrow of the Starchaser"
+                }
+              ],
+              "echoOfWarDrop": [
+                {
+                  "echoOfWarName": "Destruction's Beginning",
+                  "itemName": "Destroyer's Final Road"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Himeko",
+      "star": 5,
+      "type": "Fire",
+      "path": "Erudition",
+      "reruns": []
+    },
+    {
+      "name": "Welt",
+      "star": 5,
+      "type": "Imaginary",
+      "path": "Nihility",
+      "reruns": []
+    },
+    {
+      "name": "Arlan",
+      "star": 4,
+      "type": "Lightning",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2023-07-19",
+          "endDate": "2023-08-09",
+          "version": "1.2"
+        },
+        {
+          "startDate": "2023-11-15",
+          "endDate": "2023-12-06",
+          "version": "1.5"
+        },
+        {
+          "startDate": "2024-08-21",
+          "endDate": "2024-09-09",
+          "version": "2.4"
+        },
+        {
+          "startDate": "2024-12-04",
+          "endDate": "2024-12-25",
+          "version": "2.7"
+        }
+      ]
+    },
+    {
+      "name": "Asta",
+      "star": 4,
+      "type": "Fire",
+      "path": "Harmony",
+      "reruns": [
+        {
+          "startDate": "2023-06-07",
+          "endDate": "2023-06-28",
+          "version": "1.1"
+        },
+        {
+          "startDate": "2023-08-30",
+          "endDate": "2023-09-20",
+          "version": "1.3"
+        },
+        {
+          "startDate": "2023-12-06",
+          "endDate": "2023-12-26",
+          "version": "1.5"
+        },
+        {
+          "startDate": "2024-07-10",
+          "endDate": "2024-07-30",
+          "version": "2.3"
+        },
+        {
+          "startDate": "2024-09-10",
+          "endDate": "2024-10-02",
+          "version": "2.5"
+        }
+      ]
+    },
+    {
+      "name": "Herta",
+      "star": 4,
+      "type": "Ice",
+      "path": "Erudition",
+      "reruns": []
+    },
+    {
+      "name": "Bronya",
+      "star": 5,
+      "type": "Wind",
+      "path": "Harmony",
+      "reruns": []
+    },
+    {
+      "name": "Serval",
+      "star": 4,
+      "type": "Lightning",
+      "path": "Erudition",
+      "reruns": [
+        {
+          "startDate": "2023-06-07",
+          "endDate": "2023-06-28",
+          "version": "1.1"
+        },
+        {
+          "startDate": "2023-08-09",
+          "endDate": "2023-08-29",
+          "version": "1.2"
+        },
+        {
+          "startDate": "2023-11-15",
+          "endDate": "2023-12-06",
+          "version": "1.5"
+        },
+        {
+          "startDate": "2024-04-17",
+          "endDate": "2024-05-07",
+          "version": "2.1"
+        },
+        {
+          "startDate": "2024-07-10",
+          "endDate": "2024-07-30",
+          "version": "2.3"
+        }
+      ]
+    },
+    {
+      "name": "Gepard",
+      "star": 5,
+      "type": "Ice",
+      "path": "Preservation",
+      "reruns": []
+    },
+    {
+      "name": "Natasha",
+      "star": 4,
+      "type": "Physical",
+      "path": "Abundance",
+      "reruns": [
+        {
+          "startDate": "2023-04-25",
+          "endDate": "2023-05-17",
+          "version": "1.0"
+        },
+        {
+          "startDate": "2023-07-19",
+          "endDate": "2023-08-09",
+          "version": "1.2"
+        },
+        {
+          "startDate": "2024-01-17",
+          "endDate": "2024-02-05",
+          "version": "1.6"
+        },
+        {
+          "startDate": "2024-07-10",
+          "endDate": "2024-07-30",
+          "version": "2.3"
+        },
+        {
+          "startDate": "2024-10-02",
+          "endDate": "2024-10-22",
+          "version": "2.5"
+        }
+      ]
+    },
+    {
+      "name": "Pela",
+      "star": 4,
+      "type": "Ice",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2023-04-25",
+          "endDate": "2023-05-17",
+          "version": "1.0"
+        },
+        {
+          "startDate": "2023-06-28",
+          "endDate": "2023-07-18",
+          "version": "1.1"
+        },
+        {
+          "startDate": "2023-09-20",
+          "endDate": "2023-10-10",
+          "version": "1.3"
+        },
+        {
+          "startDate": "2024-03-27",
+          "endDate": "2024-04-17",
+          "version": "2.1"
+        },
+        {
+          "startDate": "2024-05-29",
+          "endDate": "2024-06-18",
+          "version": "2.2"
+        },
+        {
+          "startDate": "2024-11-13",
+          "endDate": "2024-12-03",
+          "version": "2.6"
+        }
+      ]
+    },
+    {
+      "name": "Clara",
+      "star": 5,
+      "type": "Physical",
+      "path": "Destruction",
+      "reruns": []
+    },
+    {
+      "name": "Sampo",
+      "star": 4,
+      "type": "Wind",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2023-08-09",
+          "endDate": "2023-08-29",
+          "version": "1.2"
+        },
+        {
+          "startDate": "2023-10-11",
+          "endDate": "2023-10-27",
+          "version": "1.4"
+        },
+        {
+          "startDate": "2024-02-29",
+          "endDate": "2024-03-26",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-11-13",
+          "endDate": "2024-12-03",
+          "version": "2.6"
+        }
+      ]
+    },
+    {
+      "name": "Hook",
+      "star": 4,
+      "type": "Fire",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2023-04-25",
+          "endDate": "2023-05-17",
+          "version": "1.0"
+        },
+        {
+          "startDate": "2023-09-20",
+          "endDate": "2023-10-10",
+          "version": "1.3"
+        },
+        {
+          "startDate": "2024-01-17",
+          "endDate": "2024-02-05",
+          "version": "1.6"
+        },
+        {
+          "startDate": "2024-05-29",
+          "endDate": "2024-06-18",
+          "version": "2.2"
+        },
+        {
+          "startDate": "2024-08-21",
+          "endDate": "2024-09-09",
+          "version": "2.4"
+        }
+      ]
+    },
+    {
+      "name": "Qingque",
+      "star": 4,
+      "type": "Quantum",
+      "path": "Erudition",
+      "reruns": [
+        {
+          "startDate": "2023-06-28",
+          "endDate": "2023-07-18",
+          "version": "1.1"
+        },
+        {
+          "startDate": "2023-10-11",
+          "endDate": "2023-10-27",
+          "version": "1.4"
+        },
+        {
+          "startDate": "2024-02-29",
+          "endDate": "2024-03-26",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-12-04",
+          "endDate": "2024-12-25",
+          "version": "2.7"
+        }
+      ]
+    },
+    {
+      "name": "Tingyun",
+      "star": 4,
+      "type": "Lightning",
+      "path": "Harmony",
+      "reruns": [
+        {
+          "startDate": "2023-05-17",
+          "endDate": "2023-06-06",
+          "version": "1.0"
+        },
+        {
+          "startDate": "2023-10-11",
+          "endDate": "2023-10-27",
+          "version": "1.4"
+        },
+        {
+          "startDate": "2023-12-27",
+          "endDate": "2024-01-17",
+          "version": "1.6"
+        },
+        {
+          "startDate": "2024-02-06",
+          "endDate": "2024-02-29",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-12-04",
+          "endDate": "2024-12-25",
+          "version": "2.7"
+        }
+      ]
+    },
+    {
+      "name": "Sushang",
+      "star": 4,
+      "type": "Physical",
+      "path": "The Hunt",
+      "reruns": [
+        {
+          "startDate": "2023-05-17",
+          "endDate": "2023-06-06",
+          "version": "1.0"
+        },
+        {
+          "startDate": "2023-07-19",
+          "endDate": "2023-08-09",
+          "version": "1.2"
+        },
+        {
+          "startDate": "2023-10-27",
+          "endDate": "2023-11-14",
+          "version": "1.4"
+        },
+        {
+          "startDate": "2024-01-17",
+          "endDate": "2024-02-05",
+          "version": "1.6"
+        }
+      ]
+    },
+    {
+      "name": "Yukong",
+      "star": 4,
+      "type": "Imaginary",
+      "path": "Harmony",
+      "reruns": [
+        {
+          "startDate": "2023-06-28",
+          "endDate": "2023-07-18",
+          "version": "1.1"
+        },
+        {
+          "startDate": "2023-08-30",
+          "endDate": "2023-09-20",
+          "version": "1.3"
+        },
+        {
+          "startDate": "2024-07-31",
+          "endDate": "2024-08-21",
+          "version": "2.4"
+        },
+        {
+          "startDate": "2024-10-23",
+          "endDate": "2024-11-13",
+          "version": "2.6"
+        },
+        {
+          "startDate": "2024-12-25",
+          "endDate": "2025-01-14",
+          "version": "2.7"
+        }
+      ]
+    },
+    {
+      "name": "Yanqing",
+      "star": 5,
+      "type": "Ice",
+      "path": "The Hunt",
+      "reruns": []
+    },
+    {
+      "name": "Bailu",
+      "star": 5,
+      "type": "Lightning",
+      "path": "Abundance",
+      "reruns": []
+    },
+    {
+      "name": "Seele",
+      "star": 5,
+      "type": "Quantum",
+      "path": "The Hunt",
+      "reruns": [
+        {
+          "startDate": "2023-04-25",
+          "endDate": "2023-05-17",
+          "version": "1.0"
+        },
+        {
+          "startDate": "2023-10-27",
+          "endDate": "2023-11-14",
+          "version": "1.4"
+        }
+      ]
+    },
+    {
+      "name": "Jing Yuan",
+      "star": 5,
+      "type": "Lightning",
+      "path": "Erudition",
+      "reruns": [
+        {
+          "startDate": "2023-05-17",
+          "endDate": "2023-06-06",
+          "version": "1.0"
+        },
+        {
+          "startDate": "2024-02-29",
+          "endDate": "2024-03-26",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-12-04",
+          "endDate": "2024-12-25",
+          "version": "2.7"
+        }
+      ]
+    },
+    {
+      "name": "Silver Wolf",
+      "star": 5,
+      "type": "Quantum",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2023-06-07",
+          "endDate": "2023-06-28",
+          "version": "1.1"
+        },
+        {
+          "startDate": "2023-12-06",
+          "endDate": "2023-12-26",
+          "version": "1.5"
+        },
+        {
+          "__startDate": "2025-02-05",
+          "__endDate": "2025-02-25",
+          "__version": "3.0"
+        }
+      ]
+    },
+    {
+      "name": "Luocha",
+      "star": 5,
+      "type": "Imaginary",
+      "path": "Abundance",
+      "reruns": [
+        {
+          "startDate": "2023-06-28",
+          "endDate": "2023-07-18",
+          "version": "1.1"
+        },
+        {
+          "startDate": "2024-03-27",
+          "endDate": "2024-04-17",
+          "version": "2.1"
+        }
+      ]
+    },
+    {
+      "name": "Blade",
+      "star": 5,
+      "type": "Wind",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2023-07-19",
+          "endDate": "2023-08-09",
+          "version": "1.2"
+        },
+        {
+          "startDate": "2023-12-27",
+          "endDate": "2024-01-17",
+          "version": "1.6"
+        }
+      ]
+    },
+    {
+      "name": "Kafka",
+      "star": 5,
+      "type": "Lightning",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2023-08-09",
+          "endDate": "2023-08-29",
+          "version": "1.2"
+        },
+        {
+          "startDate": "2024-01-17",
+          "endDate": "2024-02-05",
+          "version": "1.6"
+        },
+        {
+          "startDate": "2024-09-10",
+          "endDate": "2024-10-02",
+          "version": "2.5"
+        }
+      ]
+    },
+    {
+      "name": "Luka",
+      "star": 4,
+      "type": "Fire",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2023-08-09",
+          "endDate": "2023-08-29",
+          "version": "1.2"
+        },
+        {
+          "startDate": "2023-10-27",
+          "endDate": "2023-11-14",
+          "version": "1.4"
+        },
+        {
+          "startDate": "2024-04-17",
+          "endDate": "2024-05-07",
+          "version": "2.1"
+        },
+        {
+          "startDate": "2024-05-29",
+          "endDate": "2024-06-18",
+          "version": "2.2"
+        },
+        {
+          "startDate": "2024-09-10",
+          "endDate": "2024-10-02",
+          "version": "2.5"
+        }
+      ]
+    },
+    {
+      "name": "Dan Heng • Imbibitor Lunae",
+      "star": 5,
+      "type": "Imaginary",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2023-08-30",
+          "endDate": "2023-09-20",
+          "version": "1.3"
+        },
+        {
+          "startDate": "2024-02-06",
+          "endDate": "2024-02-29",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-10-23",
+          "endDate": "2024-11-13",
+          "version": "2.6"
+        }
+      ]
+    },
+    {
+      "name": "Fu Xuan",
+      "star": 5,
+      "type": "Quantum",
+      "path": "Preservation",
+      "reruns": [
+        {
+          "startDate": "2023-09-20",
+          "endDate": "2023-10-10",
+          "version": "1.3"
+        },
+        {
+          "startDate": "2024-05-29",
+          "endDate": "2024-06-18",
+          "version": "2.2"
+        }
+      ]
+    },
+    {
+      "name": "Lynx",
+      "star": 4,
+      "type": "Quantum",
+      "path": "Abundance",
+      "reruns": [
+        {
+          "startDate": "2023-09-20",
+          "endDate": "2023-10-10",
+          "version": "1.3"
+        },
+        {
+          "startDate": "2023-12-06",
+          "endDate": "2023-12-26",
+          "version": "1.5"
+        },
+        {
+          "startDate": "2024-04-17",
+          "endDate": "2024-05-07",
+          "version": "2.1"
+        },
+        {
+          "startDate": "2024-07-31",
+          "endDate": "2024-08-21",
+          "version": "2.4"
+        },
+        {
+          "startDate": "2024-10-23",
+          "endDate": "2024-11-13",
+          "version": "2.6"
+        }
+      ]
+    },
+    {
+      "name": "Jingliu",
+      "star": 5,
+      "type": "Ice",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2023-10-11",
+          "endDate": "2023-10-27",
+          "version": "1.4"
+        },
+        {
+          "startDate": "2024-04-17",
+          "endDate": "2024-05-07",
+          "version": "2.1"
+        }
+      ]
+    },
+    {
+      "name": "Topaz & Numby",
+      "star": 5,
+      "type": "Pyro",
+      "path": "The Hunt",
+      "reruns": [
+        {
+          "startDate": "2023-10-27",
+          "endDate": "2023-11-14",
+          "version": "1.4"
+        },
+        {
+          "startDate": "2024-05-08",
+          "endDate": "2024-05-29",
+          "version": "2.2"
+        },
+        {
+          "startDate": "2024-10-02",
+          "endDate": "2024-10-22",
+          "version": "2.5"
+        }
+      ]
+    },
+    {
+      "name": "Guinaifen",
+      "star": 4,
+      "type": "Fire",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2023-10-27",
+          "endDate": "2023-11-14",
+          "version": "1.4"
+        },
+        {
+          "startDate": "2024-02-06",
+          "endDate": "2024-02-29",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-08-21",
+          "endDate": "2024-09-09",
+          "version": "2.4"
+        },
+        {
+          "startDate": "2024-10-02",
+          "endDate": "2024-10-22",
+          "version": "2.5"
+        }
+      ]
+    },
+    {
+      "name": "Huohuo",
+      "star": 5,
+      "type": "Wind",
+      "path": "Abundance",
+      "reruns": [
+        {
+          "startDate": "2023-11-15",
+          "endDate": "2023-12-06",
+          "version": "1.5"
+        },
+        {
+          "startDate": "2024-07-31",
+          "endDate": "2024-08-21",
+          "version": "2.4"
+        }
+      ]
+    },
+    {
+      "name": "Argenti",
+      "star": 5,
+      "type": "Physical",
+      "path": "Erudtition",
+      "reruns": [
+        {
+          "startDate": "2023-12-06",
+          "endDate": "2023-12-26",
+          "version": "1.5"
+        },
+        {
+          "startDate": "2024-07-10",
+          "endDate": "2024-07-30",
+          "version": "2.3"
+        }
+      ]
+    },
+    {
+      "name": "Hanya",
+      "star": 4,
+      "type": "Physical",
+      "path": "Harmony",
+      "reruns": [
+        {
+          "startDate": "2023-12-06",
+          "endDate": "2023-12-26",
+          "version": "1.5"
+        },
+        {
+          "startDate": "2024-02-29",
+          "endDate": "2024-03-26",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-05-08",
+          "endDate": "2024-05-29",
+          "version": "2.2"
+        },
+        {
+          "startDate": "2024-07-31",
+          "endDate": "2024-08-21",
+          "version": "2.4"
+        }
+      ]
+    },
+    {
+      "name": "Ruan Mei",
+      "star": 5,
+      "type": "Ice",
+      "path": "Harmony",
+      "reruns": [
+        {
+          "startDate": "2023-12-27",
+          "endDate": "2024-01-17",
+          "version": "1.6"
+        },
+        {
+          "startDate": "2024-06-19",
+          "endDate": "2024-07-10",
+          "version": "2.3"
+        }
+      ]
+    },
+    {
+      "name": "Xueyi",
+      "star": 4,
+      "type": "Quantum",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2023-12-27",
+          "endDate": "2024-01-17",
+          "version": "1.6"
+        },
+        {
+          "startDate": "2024-05-08",
+          "endDate": "2024-05-29",
+          "version": "2.2"
+        },
+        {
+          "startDate": "2024-06-19",
+          "endDate": "2024-07-10",
+          "version": "2.3"
+        },
+        {
+          "startDate": "2024-10-23",
+          "endDate": "2024-11-13",
+          "version": "2.6"
+        }
+      ]
+    },
+    {
+      "name": "Dr. Ratio",
+      "star": 5,
+      "type": "Imaginary",
+      "path": "The Hunt",
+      "reruns": [
+        {
+          "startDate": "2024-01-17",
+          "endDate": "2024-02-05",
+          "version": "1.6"
+        }
+      ]
+    },
+    {
+      "name": "Black Swan",
+      "star": 5,
+      "type": "Wind",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2024-02-06",
+          "endDate": "2024-02-29",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-09-10",
+          "endDate": "2024-10-02",
+          "version": "2.5"
+        }
+      ]
+    },
+    {
+      "name": "Misha",
+      "star": 4,
+      "type": "Ice",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2024-02-06",
+          "endDate": "2024-02-29",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-06-19",
+          "endDate": "2024-07-10",
+          "version": "2.3"
+        },
+        {
+          "startDate": "2024-10-02",
+          "endDate": "2024-10-22",
+          "version": "2.5"
+        },
+        {
+          "startDate": "2024-12-25",
+          "endDate": "2025-01-14",
+          "version": "2.7"
+        }
+      ]
+    },
+    {
+      "name": "Sparkle",
+      "star": 5,
+      "type": "Quantum",
+      "path": "Harmony",
+      "reruns": [
+        {
+          "startDate": "2024-02-29",
+          "endDate": "2024-03-26",
+          "version": "2.0"
+        },
+        {
+          "startDate": "2024-08-21",
+          "endDate": "2024-09-09",
+          "version": "2.4"
+        }
+      ]
+    },
+    {
+      "name": "Acheron",
+      "star": 5,
+      "type": "Lightning",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2024-03-27",
+          "endDate": "2024-04-17",
+          "version": "2.1"
+        },
+        {
+          "startDate": "2024-11-13",
+          "endDate": "2024-12-03",
+          "version": "2.6"
+        }
+      ]
+    },
+    {
+      "name": "Gallagher",
+      "star": 4,
+      "type": "Fire",
+      "path": "Abundance",
+      "reruns": [
+        {
+          "startDate": "2024-03-27",
+          "endDate": "2024-04-17",
+          "version": "2.1"
+        },
+        {
+          "startDate": "2024-06-19",
+          "endDate": "2024-07-10",
+          "version": "2.3"
+        },
+        {
+          "startDate": "2024-12-25",
+          "endDate": "2025-01-14",
+          "version": "2.7"
+        }
+      ]
+    },
+    {
+      "name": "Aventurine",
+      "star": 5,
+      "type": "Imaginary",
+      "path": "Preservation",
+      "reruns": [
+        {
+          "startDate": "2024-04-17",
+          "endDate": "2024-05-07",
+          "version": "2.1"
+        },
+        {
+          "startDate": "2024-11-13",
+          "endDate": "2024-12-03",
+          "version": "2.6"
+        }
+      ]
+    },
+    {
+      "name": "Robin",
+      "star": 5,
+      "type": "Physical",
+      "path": "Harmony",
+      "reruns": [
+        {
+          "startDate": "2024-05-08",
+          "endDate": "2024-05-29",
+          "version": "2.2"
+        },
+        {
+          "startDate": "2024-09-10",
+          "endDate": "2024-10-02",
+          "version": "2.5"
+        },
+        {
+          "__startDate": "2025-02-05",
+          "__endDate": "2025-02-25",
+          "__version": "3.0"
+        }
+      ]
+    },
+    {
+      "name": "Boothill",
+      "star": 5,
+      "type": "Physical",
+      "path": "The Hunt",
+      "reruns": [
+        {
+          "startDate": "2024-05-29",
+          "endDate": "2024-06-18",
+          "version": "2.2"
+        },
+        {
+          "__startDate": "2025-02-05",
+          "__endDate": "2025-02-25",
+          "__version": "3.0"
+        }
+      ]
+    },
+    {
+      "name": "Firefly",
+      "star": 5,
+      "type": "Fire",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2024-06-19",
+          "endDate": "2024-07-10",
+          "version": "2.3"
+        },
+        {
+          "startDate": "2024-12-25",
+          "endDate": "2025-01-14",
+          "version": "2.7"
+        }
+      ],
+      "materials": [
+        {
+          "ascension": [
+            {
+              "enemyDrop": [
+                {
+                  "enemyName": "Memory Zone Memes",
+                  "itemName1": "Tatters of Thought",
+                  "itemName2": "Fragments of Impression",
+                  "itemName3": "Shards of Desires"
+                }
+              ],
+              "stagnantShadowDrop": [
+                {
+                  "stagnantShadowName": "Shape of Ire",
+                  "itemName": "Raging Heart"
+                }
+              ]
+            }
+          ],
+          "traces": [
+            {
+              "enemyDrop": [
+                {
+                  "enemyName": "Memory Zone Memes",
+                  "itemName1": "Tatters of Thought",
+                  "itemName2": "Fragments of Impression",
+                  "itemName3": "Shards of Desires"
+                }
+              ],
+              "calyxDrop": [
+                {
+                  "calyxName": "Bud of Destruction (Scalegorge Waterscape)",
+                  "itemName1": "Borisin Teeth",
+                  "itemName2": "Lupitoxin Sawteeth",
+                  "itemName3": "Moon Rage Fang"
+                }
+              ],
+              "echoOfWarDrop": [
+                {
+                  "echoOfWarName": "Salutations of Ashen Dreams",
+                  "itemName": "Lost Echo of the Shared Wish"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jade",
+      "star": 5,
+      "type": "Quantum",
+      "path": "Erudition",
+      "reruns": [
+        {
+          "startDate": "2024-07-10",
+          "endDate": "2024-07-30",
+          "version": "2.3"
+        },
+        {
+          "__startDate": "2025-01-15",
+          "__endDate": "2025-02-05",
+          "__version": "3.0"
+        }
+      ]
+    },
+    {
+      "name": "Yunli",
+      "star": 5,
+      "type": "Physical",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2024-07-31",
+          "endDate": "2024-08-21",
+          "version": "2.4"
+        }
+      ]
+    },
+    {
+      "name": "Jiaoqiu",
+      "star": 5,
+      "type": "Fire",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2024-08-21",
+          "endDate": "2024-09-09",
+          "version": "2.4"
+        }
+      ]
+    },
+    {
+      "name": "Feixiao",
+      "star": 5,
+      "type": "Wind",
+      "path": "The Hunt",
+      "reruns": [
+        {
+          "startDate": "2024-09-10",
+          "endDate": "2024-10-02",
+          "version": "2.5"
+        },
+        {
+          "__startDate": "2025-01-15",
+          "__endDate": "2025-02-05",
+          "__version": "3.0"
+        }
+      ]
+    },
+    {
+      "name": "Moze",
+      "star": 4,
+      "type": "Lightning",
+      "path": "The Hunt",
+      "reruns": [
+        {
+          "startDate": "2024-09-10",
+          "endDate": "2024-10-02",
+          "version": "2.5"
+        }
+      ]
+    },
+    {
+      "name": "Lingsha",
+      "star": 5,
+      "type": "Fire",
+      "path": "Abundance",
+      "reruns": [
+        {
+          "startDate": "2024-10-02",
+          "endDate": "2024-10-22",
+          "version": "2.5"
+        },
+        {
+          "__startDate": "2025-01-15",
+          "__endDate": "2025-02-05",
+          "__version": "3.0"
+        }
+      ]
+    },
+    {
+      "name": "Rappa",
+      "star": 5,
+      "type": "Imaginary",
+      "path": "Erudition",
+      "reruns": [
+        {
+          "startDate": "2024-10-23",
+          "endDate": "2024-11-13",
+          "version": "2.6"
+        }
+      ]
+    },
+    {
+      "name": "Sunday",
+      "star": 5,
+      "type": "Imaginary",
+      "path": "Harmony",
+      "reruns": [
+        {
+          "startDate": "2024-12-04",
+          "endDate": "2024-12-25",
+          "version": "2.7"
+        }
+      ]
+    },
+    {
+      "name": "Fugue",
+      "star": 5,
+      "type": "Fire",
+      "path": "Nihility",
+      "reruns": [
+        {
+          "startDate": "2024-12-25",
+          "endDate": "2025-01-14",
+          "version": "2.7"
+        }
+      ]
+    },
+    {
+      "name": "The Herta",
+      "star": 5,
+      "type": "Ice",
+      "path": "Erudition",
+      "reruns": [
+        {
+          "__startDate": "2025-01-15",
+          "__endDate": "2025-02-05",
+          "phase": "upcoming",
+          "version": "3.0",
+          "banner": "upcoming"
+        }
+      ]
+    },
+    {
+      "name": "Aglaea",
+      "star": 5,
+      "type": "Imaginary",
+      "path": "Remembrance",
+      "reruns": [
+        {
+          "__startDate": "2025-02-05",
+          "__endDate": "2025-02-25",
+          "phase": "upcoming",
+          "version": "3.0",
+          "banner": "upcoming"
+        }
+      ]
+    }
+  ]
+}

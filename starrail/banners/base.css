@@ -1,0 +1,79 @@
+﻿body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+}
+
+.character-image {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 15px; /* Adds space between image and name */
+}
+
+/* Style for 5-star characters images */
+.five-star-image {
+	background-image: linear-gradient(
+			0deg,
+			#de9552 0%,
+			#9a6d43 100%
+	);
+}
+
+/* Style for Special 5-star characters images */
+.special-star-image {
+	background-image: linear-gradient(
+			0deg,
+			#da4f55 0%,
+			#af5155 100%
+	);
+}
+
+/* Style for 4-star characters images */
+.four-star-image {
+	background-image: linear-gradient(
+			0deg,
+			#917ab1 0%,
+			#6c6192 100%
+	);
+}
+
+/* Style for ???-star characters images */
+.unknown-star-image {
+	background-image: linear-gradient(
+			0deg,
+			#a4a4a4 0%,
+			#76787c 100%
+	);
+}
+
+/* Style for 5-star characters */
+.five-star {
+	color: #d2945f;
+	font-weight: bolder;
+}
+
+/* Style for 4-star characters */
+.four-star {
+	color: #8a6bbb;
+}
+
+/* Style for ???-star characters */
+.unknown-star {
+	color: #888;
+}
+
+/* Container for each character's image and name */
+.character-entry {
+	display: flex;
+	align-items: center;
+	gap: 0.35em; /* Space between image and name */
+}

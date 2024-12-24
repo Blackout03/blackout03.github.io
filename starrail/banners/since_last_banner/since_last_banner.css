@@ -69,20 +69,6 @@
 	text-align: left;
 }
 
-.wish-type {
-	font-size: 1em;
-	font-weight: bold;
-	display: inline;
-}
-
-.event-wish {
-	color: #ff6347;
-}
-
-.chronicled-wish {
-	color: #6347ff;
-}
-
 .rerun-status,
 .time-since,
 .days-since {
@@ -100,6 +86,15 @@
 	font-weight: bold;
 	text-align: left;
 	width: 450px;
+}
+
+.ongoing-version,
+.upcoming-version {
+	font-size: 0.75em;
+	color: #888;
+	font-weight: normal;
+	text-align: right;
+	padding-right: 1.5em;
 }
 
 .character-details {
@@ -155,8 +150,8 @@ select:focus {
 
 /* Element filter checkboxes styling */
 #starFilter,
-#elementFilter,
-#weaponFilter {
+#typeFilter,
+#pathFilter {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
@@ -164,8 +159,8 @@ select:focus {
 }
 
 #starFilter label,
-#elementFilter label,
-#weaponFilter label {
+#typeFilter label,
+#pathFilter label {
 	display: flex;
 	align-items: center;
 	background-color: #f9f9f9;
@@ -177,14 +172,14 @@ select:focus {
 }
 
 #starFilter label:hover,
-#elementFilter label:hover,
-#weaponFilter label:hover {
+#typeFilter label:hover,
+#pathFilter label:hover {
 	background-color: #f1f1f1;
 }
 
 #starFilter input[type="checkbox"],
-#elementFilter input[type="checkbox"],
-#weaponFilter input[type="checkbox"] {
+#typeFilter input[type="checkbox"],
+#pathFilter input[type="checkbox"] {
 	margin-right: 8px;
 	transform: scale(1.2);
 	cursor: pointer;

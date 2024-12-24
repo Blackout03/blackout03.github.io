@@ -24,19 +24,19 @@ h1 {
 }
 
 .character {
-	font-size: 0.9em;
+	font-size: 1.35em;
 	display: flex;
 	flex-direction: column;
 	border: 3px solid #bbb;
 	background-color: #777;
 	padding: 10px;
 	border-radius: 5px;
-	width: 21.678rem;
+	width: 45rem;
 }
 
 .character h2 {
 	color: #fff;
-	margin: 0 0 10px;
+	margin: -5px 0 8px;
 }
 
 .materials ul {
@@ -44,14 +44,8 @@ h1 {
 	padding: 0;
 }
 
-.materials li {
-	margin-bottom: 10px;
-	display: flex;
-	align-items: center;
-}
-
-.weapon-image,
-.element-image {
+.path-image,
+.type-image {
 	width: 50px;
 	height: 50px;
 }
@@ -82,8 +76,8 @@ h1 {
 
 .item-number {
 	position: absolute;
-	top: -0.375em;
-	left: 1.125em;
+	top: -0.275em;
+	left: 1.575em;
 	background-color: rgba(0, 0, 0, 0.35);
 	color: white;
 	border-radius: 50%;
@@ -162,14 +156,102 @@ h1 {
 	);
 }
 
-.geo-traveler-talent-books {
-	width: 15.555em
+.enemy-div {
+	text-align: center;
+	margin-bottom: 10px;
 }
 
-.geo-traveler-weekly-boss {
-	width: 5.7495em
+.enemy-image {
+	width: 85px; /* Adjust size for bigger enemy images */
+	height: auto;
 }
 
-.geo-traveler-enemy-drop {
-	width: 10.195em
+.enemy-drops-div {
+	display: flex;
+	flex-direction: column;
+}
+
+.item-image {
+	width: 50px; /* Adjust size for enemy drops */
+	margin-right: 10px; /* Spacing between image and name */
+}
+
+.materials-main-text {
+	font-size: 1.1em;
+	font-weight: bolder;
+}
+
+.ascension-materials > div > li,
+.trace-materials > div > li {
+	padding: 10px 0;
+}
+
+.materials-secondary-text {
+	font-size: 0.75em;
+	font-weight: bold;
+}
+
+.item-name {
+	font-size: 0.6em; /* Adjust for smaller text */
+	top: -1em;
+	position: relative;
+}
+
+.materials li {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.materials-stagnant-shadow-text {
+	font-size: 0.6em;
+	font-weight: bold;
+	flex-direction: column;
+}
+
+div > li.stagnant-shadow-list {
+	flex-direction: column;
+	text-align: left;
+	align-items: normal;
+}
+
+.stagnant-shadow-item {
+	padding: 10px 0;
+}
+
+.materials-calyx-text {
+	font-size: 0.6em;
+	font-weight: bold;
+	flex-direction: column;
+}
+
+div > li.calyx-list {
+	flex-direction: column;
+	text-align: left;
+	align-items: normal;
+}
+
+.calyx-item {
+	padding: 10px 0;
+}
+
+.materials-echo-of-war-text {
+	font-size: 0.6em;
+	font-weight: bold;
+	flex-direction: column;
+}
+
+div > li.echo-of-war-list {
+	flex-direction: column;
+	text-align: left;
+	align-items: normal;
+}
+
+.echo-of-war-item {
+	padding: 10px 0;
+}
+
+.materials {
+	display: flex;
+	justify-content: space-around;
 }

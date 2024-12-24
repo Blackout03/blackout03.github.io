@@ -1,0 +1,131 @@
+﻿h1 {
+	top: 0.25em;
+	position: static;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+}
+
+th {
+	background-color: #f4f4f4;
+}
+
+td {
+	background-color: #fafafa;
+}
+
+th[colspan] {
+	background-color: #e0e0e0;
+}
+
+/* Style for character images */
+.character-image {
+	width: 50px;
+	height: 50px;
+	margin-right: 0;
+}
+
+/* Ensure table layout is consistent */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+/* Sticky first header row */
+thead .corner {
+	background-color: #e0e0e0;
+	position: sticky;
+	top: -2px;
+	left: -1px;
+	z-index: 6; /* Ensure it is above other content */
+}
+
+/* Sticky first header row */
+thead .version {
+	position: sticky;
+	top: -1px;
+	z-index: 5; /* Ensure it is above other content */
+}
+
+/* Sticky second header row */
+thead .phase {
+	position: sticky;
+	top: 37px; /* Height of the first row */
+	z-index: 4; /* Ensure it is above other content */
+}
+
+/* Sticky leftmost column */
+tbody td:first-child {
+	position: sticky;
+	left: -1px;
+	background: #f4f4f4; /* Background to cover content behind */
+	z-index: 1; /* Ensure it is above other content */
+	min-width: max-content;
+}
+
+/* Add some styling for visibility */
+thead th, tbody td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+}
+
+/* Optional: Add some padding and background color to distinguish sticky headers and columns */
+thead th {
+	background-color: #f4f4f4;
+}
+
+.checkmark {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color: #ddd; /* Default color */
+	border-radius: 50%;
+	position: relative;
+}
+
+.checkmark::before {
+	content: '✔';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 24px;
+}
+
+.event-wish {
+	background-color: #ff6347;
+}
+
+.upcoming-wish {
+	background-color: #666;
+}
+
+.upcoming-wish.checkmark::before {
+	content: '?';
+	position: absolute;
+	top: 52.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.before-release {
+	background-color: #333;
+}
+
+.upcoming-version {
+	background-color: #ccc;
+}
+

@@ -6,7 +6,7 @@ function isUpcomingDate(dateString) {
 
 // Function to create a checkmark element with color based on wishType
 function createCheckmark(wishType) {
-	const span = createSpan(['checkmark', wishType === 'chronicled' ? 'chronicled-wish' : wishType === 'upcoming' ? 'upcoming-wish' : 'event-wish']);
+	const span = createSpan(['checkmark', wishType === 'upcoming' ? 'upcoming-wish' : 'event-wish']);
 	return span;
 }
 
@@ -54,7 +54,7 @@ function checkJsonData() {
 			function createCharacterImage(character) {
 				const characterName = getImageId(character.name, imageData);
 				const img = createImage(['character-image', character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image']);
-				img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
+				img.src = `https://homdgcat.wiki/images/avataricon/avatar/${characterName}.png`;
 				img.alt = `${character.name} avatar`;
 				img.title = `${character.name}`;
 				return img;
@@ -219,9 +219,12 @@ function checkJsonData() {
 									if (phaseRerun) {
 										const checkmark = createCheckmark(phaseRerun.wishType);
 										phaseCell.appendChild(checkmark);
-									} else {
+									} else if (phase[0].startDate === "upcoming") {
 										const questionmark = createCheckmark('upcoming');
 										phaseCell.appendChild(questionmark);
+									} else {
+										phaseCell.classList.add('before-release');
+										phaseCell.classList.remove('upcoming-version');
 									}
 								} else {
 									phaseCell.classList.add('before-release');

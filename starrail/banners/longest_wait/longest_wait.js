@@ -1,15 +1,9 @@
 ﻿// Function to find the 3 longest gaps without a banner
 function findLongestGaps(data) {
-	const excludedCharacters = new Set([
-		"Tighnari", "Dehya", "Amber", "Kaeya",
-		"Lisa", "Jean", "Diluc", "Mona"
-	]);
-
 	const gaps = [];
 	const currentDate = new Date(); // Get the current date as a Date object
 
 	data.characters
-		.filter(character => !excludedCharacters.has(character.name))
 		.forEach(character => {
 			const reruns = character.reruns
 				// Filter out upcoming banners (future start dates)
@@ -96,7 +90,7 @@ Promise.all([
 			const characterName = getImageId(gap.character);
 
 			const img = createImage('character-image');
-			img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
+			img.src = `https://homdgcat.wiki/images/avataricon/avatar/${characterName}.png`;
 			img.alt = `${gap.character} avatar`;
 			img.title = `${gap.character}`;
 			img.classList.add(gap.star === 5 ? 'five-star-image' : gap.star === 4 ? 'four-star-image' : 'unknown-star-image');
