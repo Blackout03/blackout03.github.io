@@ -1317,6 +1317,12 @@
           "endDate": "2024-09-17",
           "version": "5.0",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-01-01",
+          "endDate": "2025-01-21",
+          "version": "5.3",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -2170,6 +2176,12 @@
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2025-01-01",
+          "endDate": "2025-01-21",
+          "version": "5.3",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -2851,6 +2863,12 @@
           "startDate": "2024-06-25",
           "endDate": "2024-07-16",
           "version": "4.7",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2025-01-21",
+          "endDate": "2025-02-11",
+          "version": "5.3",
           "wishType": "event"
         }
       ],
@@ -5998,6 +6016,12 @@
           "endDate": "2024-10-08",
           "version": "5.0",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-01-21",
+          "endDate": "2025-02-11",
+          "version": "5.3",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -6505,6 +6529,12 @@
           "endDate": "2024-09-17",
           "version": "5.0",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-01-01",
+          "endDate": "2025-01-21",
+          "version": "5.3",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -6844,7 +6874,7 @@
           "weeklyBoss": [
             {
               "bossName": "Lord of Eroded Primal Flame",
-              "itemName": "AbyssDrop1"
+              "itemName": "Eroded Horn"
             }
           ],
           "talentBooks": [
@@ -6948,7 +6978,7 @@
           "weeklyBoss": [
             {
               "bossName": "Lord of Eroded Primal Flame",
-              "itemName": "AbyssDrop2"
+              "itemName": "Eroded Sunfire"
             }
           ],
           "talentBooks": [
