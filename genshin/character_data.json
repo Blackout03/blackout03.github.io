@@ -6906,6 +6906,7 @@
       "star": 5,
       "element": "Pyro",
       "weapon": "Claymore",
+      "birthday": "08-28",
       "reruns": [
         {
           "startDate": "2025-01-01",
@@ -6958,6 +6959,7 @@
       "star": 5,
       "element": "Cryo",
       "weapon": "Catalyst",
+      "birthday": "01-20",
       "reruns": [
         {
           "startDate": "2025-01-01",
@@ -7010,6 +7012,7 @@
       "star": 4,
       "element": "Anemo",
       "weapon": "Catalyst",
+      "birthday": "01-06",
       "reruns": [
         {
           "startDate": "2025-01-21",
@@ -7052,6 +7055,59 @@
           "localSpecialty": [
             {
               "itemName": "Clearwater Jade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mizuki",
+      "star": 5,
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "birthday": "03-16",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.4",
+          "phase": "upcoming",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "enemyDrop": [
+            {
+              "enemyName": "Nobushi",
+              "shortItemName": "Handguard",
+              "itemName1": "Old Handguard",
+              "itemName2": "Kageuchi Handguard",
+              "itemName3": "Famed Handguard"
+            }
+          ],
+          "normalBoss": [
+            {
+              "bossName": "Wayward Hermetic Spiritspeaker",
+              "itemName": "Talisman of the Enigmatic Land"
+            }
+          ],
+          "weeklyBoss": [
+            {
+              "bossName": "The Knave",
+              "itemName": "Fading Candle"
+            }
+          ],
+          "talentBooks": [
+            {
+              "shortItemName": "Transience",
+              "teachingsName": "Teachings of Transience",
+              "guideName": "Guide of Transience",
+              "philosophiesName": "Philosophies of Transience"
+            }
+          ],
+          "localSpecialty": [
+            {
+              "itemName": "Sea Ganoderma"
             }
           ]
         }
