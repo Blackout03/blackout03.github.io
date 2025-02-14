@@ -1,53 +1,55 @@
-﻿/* Dark theme */
+﻿/* Font size variables */
+:root {
+	--font-size-base: 0.8em;
+	--font-size-character: 1.45em;
+	--font-size-materials-main: 1.3em;
+	--font-size-materials-secondary: 0.9em;
+	--font-size-item-number: 14px;
+	--font-size-item-name: 0.625em;
+	--image-size-enemy: 70px;
+	--image-size-item: 45px;
+}
+
+/* Dark theme */
 body {
 	font-family: Arial, sans-serif;
+	font-size: var(--font-size-base);
 	background-color: #888;
 	color: #fff;
 	margin: 0;
-	padding: 2em;
+	padding: 1em;
 }
 
 bold {
 	font-weight: bold;
 }
 
-h1 {
-	color: #f3f3f3;
-	text-align: center;
-}
-
 .character-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 20px;
+	gap: 15px;
 }
 
 .character {
-	font-size: 0.9em;
+	font-size: var(--font-size-character);
 	display: flex;
 	flex-direction: column;
 	border: 3px solid #bbb;
 	background-color: #777;
 	padding: 10px;
 	border-radius: 5px;
-	width: 21.678rem;
+	transition: width 0.3s ease-in-out;
 }
 
 .character h2 {
 	color: #fff;
-	margin: 0 0 10px;
+	margin: -5px 0 8px;
 }
 
 .materials ul {
 	list-style-type: none;
 	padding: 0;
-}
-
-.materials li {
-	margin-bottom: 10px;
-	display: flex;
-	align-items: center;
 }
 
 .weapon-image,
@@ -64,17 +66,6 @@ h1 {
 	border-radius: 50%;
 }
 
-.enemy-image {
-	width: 50px;
-	height: 50px;
-	margin-right: 0.75em;
-}
-
-.item-image {
-	width: 40px;
-	height: 40px;
-}
-
 .item-wrapper {
 	 position: relative;
 	 display: inline-block;
@@ -82,19 +73,21 @@ h1 {
 
 .item-number {
 	position: absolute;
-	top: -0.375em;
-	left: 1.125em;
+	top: -0.275em;
+	left: 1.575em;
 	background-color: rgba(0, 0, 0, 0.35);
 	color: white;
 	border-radius: 50%;
 	padding: 2px 6px;
-	font-size: 14px;
+	font-size: var(--font-size-item-number);
 }
 
 .details {
 	display: flex;
 	flex-direction: row;
+	transition: flex-direction 0.3s ease-in-out;
 	justify-content: flex-start;
+	margin-bottom: 1em;
 }
 .details-right {
 	padding: 1em 0.5em;
@@ -162,14 +155,127 @@ h1 {
 	);
 }
 
-.geo-traveler-talent-books {
-	width: 15.555em
+.enemy-div {
+	text-align: center;
+	margin-bottom: 10px;
 }
 
-.geo-traveler-weekly-boss {
-	width: 5.7495em
+.enemy-image {
+	width: var(--image-size-enemy); /* Adjust size for bigger enemy images */
+	height: auto;
+	margin-right: 0.75em;
 }
 
-.geo-traveler-enemy-drop {
-	width: 10.195em
+.enemy-drops-div {
+	display: flex;
+	flex-direction: column;
+}
+
+.item-image {
+	width: var(--image-size-item);
+}
+
+.item-image.gem-image {
+	margin-left: -0.25em;
+}
+
+.materials-main-text {
+	font-size: var(--font-size-materials-main);
+	font-weight: bolder;
+}
+
+.ascension-materials > div > li,
+.talent-materials > div > li {
+	padding: 10px 0;
+}
+
+.materials-secondary-text {
+	font-size: var(--font-size-materials-secondary);
+	font-weight: bold;
+}
+
+.item-name {
+	font-size: var(--font-size-item-name);
+	top: -1.1em;
+	position: relative;
+}
+
+.item-name.item-name-gem {
+	top: -0.4em;
+}
+
+.item-name.item-name-local-specialty {
+	top: -0.1em;
+	left: 0.1em;
+}
+
+.materials li {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.materials-stagnant-shadow-text {
+	font-size: var(--font-size-item-name);
+	font-weight: bold;
+	flex-direction: column;
+}
+
+div > li.stagnant-shadow-list {
+	flex-direction: column;
+	text-align: left;
+	align-items: normal;
+}
+
+.stagnant-shadow-item {
+	padding: 10px 0;
+}
+
+.materials-calyx-text {
+	font-size: var(--font-size-item-name);
+	font-weight: bold;
+	flex-direction: column;
+}
+
+div > li.calyx-list {
+	flex-direction: column;
+	text-align: left;
+	align-items: normal;
+}
+
+.calyx-item {
+	padding: 10px 0;
+}
+
+.materials-weekly-boss-text {
+	font-size: var(--font-size-item-name);
+	font-weight: bold;
+	flex-direction: column;
+}
+
+div > li.weekly-boss-list {
+	flex-direction: column;
+	text-align: left;
+	align-items: normal;
+}
+
+.weekly-boss-item {
+	padding: 10px 0;
+}
+
+.materials {
+	display: flex;
+	justify-content: space-around;
+}
+
+.enemy-div.geo-enemy-div {
+	margin-bottom: -1.1em;
+}
+
+.enemy-div.geo-enemy-div2 {
+	margin-bottom: -0.4em;
+}
+
+.talent-book-entry.geo-talent-book-entry {
+	margin-bottom: -1.1em;
 }

@@ -1,0 +1,48 @@
+﻿/* General table styling */
+#character-table {
+	display: table;
+	justify-self: center;
+	width: 80%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#character-table th, #character-table td {
+	padding: 30px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+#character-table .weapon-image, #character-table .element-image {
+	display: inline-block;
+	margin: 2px;
+}
+
+/* Spacing between columns */
+#character-table th, #character-table td {
+	padding: 15px 20px;
+}
+
+#character-table th {
+	font-size: 16px;
+	background-color: #777;
+	border: #555 2px solid;
+}
+
+#character-table td {
+	vertical-align: middle;
+	background-color: #fff;
+}
+
+.weapon-image,
+.element-image {
+	width: 50px;
+	height: 50px;
+}
+
+.character-image {
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+}

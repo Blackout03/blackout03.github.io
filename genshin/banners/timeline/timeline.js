@@ -2,20 +2,20 @@
 function checkJsonData() {
 	Promise.all([
 		fetch('../../character_data.json').then(response => response.json()),
-		fetch('../../image_data.json').then(response => response.json())
+		fetch('../../image_mapping_data.json').then(response => response.json())
 	])
-		.then(([characterData, imageData]) => {
+		.then(([characterData, imageMappingData]) => {
 			const urlParams = new URLSearchParams(window.location.search);
 			const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
 
-			// Helper function to get image ID from imageData.json or fallback to itemName
-			function getImageId(itemName, imageData) {
-				return imageData[itemName] || itemName;
+			// Helper function to get image ID from imageMappingData.json or fallback to itemName
+			function getImageId(itemName, imageMappingData) {
+				return imageMappingData[itemName] || itemName;
 			}
 
 			// Function to create an image element for a character
 			function createCharacterImage(character) {
-				const characterName = getImageId(character.name, imageData);
+				const characterName = getImageId(character.name, imageMappingData);
 				const img =
 					createImage(['character-image', character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
 						`https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`,

@@ -70,18 +70,18 @@ function findLongestGaps(data) {
 
 Promise.all([
 	fetch('../../character_data.json').then(response => response.json()),
-	fetch('../../image_data.json').then(response => response.json())
+	fetch('../../image_mapping_data.json').then(response => response.json())
 ])
-	.then(([characterData, imageData]) => {
+	.then(([characterData, imageMappingData]) => {
 		const container = document.getElementById('longest-gaps');
 		container.innerHTML = '';
 
 		let currentBannerNumber = 1;  // Start with banner number 1
 		let previousGap = null;       // Keep track of the previous gap length
 
-		// Helper function to get image ID from imageData.json or fallback to itemName
+		// Helper function to get image ID from imageMappingData.json or fallback to itemName
 		function getImageId(itemName) {
-			return imageData[itemName] || itemName;
+			return imageMappingData[itemName] || itemName;
 		}
 
 		const longestGaps = findLongestGaps(characterData);

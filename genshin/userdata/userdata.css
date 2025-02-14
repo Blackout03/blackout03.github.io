@@ -1,0 +1,141 @@
+﻿/* General Reset and Body Styling */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f9f9f9;
+	color: #333;
+	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	min-height: 100vh;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: #2a2a2a;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 1.8rem;
+	color: #2a2a2a;
+	border-bottom: 2px solid #007acc;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+}
+
+#characters-section,
+#weapons-section {
+	flex: 1;
+	min-width: 280px;
+	max-width: 550px;
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	overflow: hidden;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 12px;
+	background-color: #f4f4f4;
+	border-radius: 8px;
+	padding: 8px 12px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+	background-color: #e6f7ff;
+}
+
+li img {
+	width: 50px;
+	height: 50px;
+	margin-right: 15px;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
+	background-color: white; /* Ensuring the image background is clean */
+}
+
+li img:hover {
+	transform: scale(1.1);
+}
+
+.item-link {
+	text-decoration: none;
+	color: #007acc;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+.item-link:hover {
+	color: #005999;
+}
+
+/* Star Rating Backgrounds */
+.five-star-image {
+	border: 2px solid gold;
+}
+
+.four-star-image {
+	border: 2px solid purple;
+}
+
+.special-star-image {
+	border: 2px solid crimson;
+}
+
+.three-star-image {
+	border: 2px solid #56a85b;
+}
+
+.unknown-star-image {
+	border: 2px solid gray;
+}
+
+/* Styling for loading text and fallback */
+#characters-container,
+#weapons-container {
+	text-align: center;
+	font-size: 1.2rem;
+	color: #999;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#characters-section,
+	#weapons-section {
+		width: 100%;
+		max-width: 600px;
+	}
+}

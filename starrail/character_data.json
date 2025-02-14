@@ -614,9 +614,9 @@
           "version": "1.5"
         },
         {
-          "__startDate": "2025-02-05",
-          "__endDate": "2025-02-25",
-          "__version": "3.0"
+          "startDate": "2025-02-05",
+          "endDate": "2025-02-25",
+          "version": "3.0"
         }
       ]
     },
@@ -870,6 +870,11 @@
           "startDate": "2024-07-31",
           "endDate": "2024-08-21",
           "version": "2.4"
+        },
+        {
+          "startDate": "2025-03-18",
+          "endDate": "2025-04-08",
+          "version": "3.1"
         }
       ]
     },
@@ -1118,9 +1123,9 @@
           "version": "2.5"
         },
         {
-          "__startDate": "2025-02-05",
-          "__endDate": "2025-02-25",
-          "__version": "3.0"
+          "startDate": "2025-02-05",
+          "endDate": "2025-02-25",
+          "version": "3.0"
         }
       ]
     },
@@ -1136,9 +1141,9 @@
           "version": "2.2"
         },
         {
-          "__startDate": "2025-02-05",
-          "__endDate": "2025-02-25",
-          "__version": "3.0"
+          "startDate": "2025-02-05",
+          "endDate": "2025-02-25",
+          "version": "3.0"
         }
       ]
     },
@@ -1220,9 +1225,9 @@
           "version": "2.3"
         },
         {
-          "__startDate": "2025-01-15",
-          "__endDate": "2025-02-05",
-          "__version": "3.0"
+          "startDate": "2025-01-15",
+          "endDate": "2025-02-05",
+          "version": "3.0"
         }
       ]
     },
@@ -1236,6 +1241,11 @@
           "startDate": "2024-07-31",
           "endDate": "2024-08-21",
           "version": "2.4"
+        },
+        {
+          "startDate": "2025-02-26",
+          "endDate": "2025-03-18",
+          "version": "3.1"
         }
       ]
     },
@@ -1264,9 +1274,9 @@
           "version": "2.5"
         },
         {
-          "__startDate": "2025-01-15",
-          "__endDate": "2025-02-05",
-          "__version": "3.0"
+          "startDate": "2025-01-15",
+          "endDate": "2025-02-05",
+          "version": "3.0"
         }
       ]
     },
@@ -1295,9 +1305,9 @@
           "version": "2.5"
         },
         {
-          "__startDate": "2025-01-15",
-          "__endDate": "2025-02-05",
-          "__version": "3.0"
+          "startDate": "2025-01-15",
+          "endDate": "2025-02-05",
+          "version": "3.0"
         }
       ]
     },
@@ -1347,11 +1357,9 @@
       "path": "Erudition",
       "reruns": [
         {
-          "__startDate": "2025-01-15",
-          "__endDate": "2025-02-05",
-          "phase": "upcoming",
-          "version": "3.0",
-          "banner": "upcoming"
+          "startDate": "2025-01-15",
+          "endDate": "2025-02-05",
+          "version": "3.0"
         }
       ]
     },
@@ -1362,10 +1370,64 @@
       "path": "Remembrance",
       "reruns": [
         {
-          "__startDate": "2025-02-05",
-          "__endDate": "2025-02-25",
+          "startDate": "2025-02-05",
+          "endDate": "2025-02-25",
+          "version": "3.0"
+        }
+      ]
+    },
+    {
+      "name": "Tribbie",
+      "star": 5,
+      "type": "Quantum",
+      "path": "Harmony",
+      "reruns": [
+        {
+          "startDate": "2025-02-26",
+          "endDate": "2025-03-18",
+          "version": "3.1"
+        }
+      ]
+    },
+    {
+      "name": "Mydei",
+      "star": 5,
+      "type": "Imaginary",
+      "path": "Destruction",
+      "reruns": [
+        {
+          "startDate": "2025-03-18",
+          "endDate": "2025-04-08",
+          "version": "3.1"
+        }
+      ]
+    },
+    {
+      "name": "Castorice",
+      "star": 5,
+      "type": "Quantum",
+      "path": "Remembrance",
+      "reruns": [
+        {
+          "__startDate": "2025-04-09",
+          "__endDate": "2025-04-29",
           "phase": "upcoming",
-          "version": "3.0",
+          "version": "3.2",
+          "banner": "upcoming"
+        }
+      ]
+    },
+    {
+      "name": "Anaxa",
+      "star": 5,
+      "type": "Wind",
+      "path": "Erudition",
+      "reruns": [
+        {
+          "__startDate": "2025-04-29",
+          "__endDate": "2025-05-20",
+          "phase": "upcoming",
+          "version": "3.2",
           "banner": "upcoming"
         }
       ]

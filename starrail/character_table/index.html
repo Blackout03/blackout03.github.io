@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Character Materials</title>
+	<title>Star Rail Character Table</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" href="../../css/menu-icon.css">
-	<link rel="stylesheet" href="character_info.css">
+	<link rel="stylesheet" href="../banners/base.css">
+	<link rel="stylesheet" href="character_table.css">
 </head>
 <body>
 <!-- Home Button (Top-Left Corner) -->
@@ -22,22 +23,32 @@
 <!-- Settings Menu (Hidden by default) -->
 <div id="settings-menu" class="settings-menu">
 	<label>
-		Choose Traveler:
-		<select id="traveler-select">
-			<option value="male">Male Traveler</option>
-			<option value="female">Female Traveler</option>
+		Choose Trailblazer:
+		<select id="trailblazer-select">
+			<option value="male">Male Trailblazer</option>
+			<option value="female">Female Trailblazer</option>
 		</select>
 	</label>
 	<label>
-		Side-by-Side Layout
-		<input type="checkbox" id="layoutToggle">
+		Include Upcoming?
+		<input type="checkbox" id="includeUpcomingToggle">
 	</label>
 </div>
 
-<h1>Character Materials</h1>
-<div id="charactersContainer" class="character-container"></div>
+<h1>Star Rail Character Table</h1>
+
+<table id="character-table">
+	<thead>
+	<tr>
+		<!-- Version columns will be inserted here -->
+	</tr>
+	</thead>
+	<tbody>
+	<!-- Character rows will be inserted here -->
+	</tbody>
+</table>
 <script src="../banners/common.js"></script>
-<script src="character_info.js"></script>
+<script src="character_table.js"></script>
 <script src="../settings.js"></script>
 </body>
 </html>

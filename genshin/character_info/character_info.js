@@ -31,8 +31,8 @@ function createCharacterImage(character, characterName) {
 		createImage(['character-image', character.star === 5 && character.starType ? 'special-star-image' : character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
 			`https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`,
 			`${character.name} avatar`,
-			character.name)
-	characterImageLink.appendChild(characterImage)
+			`${getCharacterName(character.name, character.element)}`);
+	characterImageLink.appendChild(characterImage);
 	return characterImageLink;
 }
 
@@ -103,16 +103,25 @@ function createNumberedItemImage(classNames = [], src = '', alt = '', number = '
 // Function to fetch character data from JSON file
 Promise.all([
 	fetch('../character_data.json').then(response => response.json()),
-	fetch('../image_data.json').then(response => response.json())
+	fetch('../image_mapping_data.json').then(response => response.json()),
+	fetch('../material_mapping_data.json').then(response => response.json())
 ])
-	.then(([characterData, imageData]) => {
+	.then(([characterData, imageMappingData, materialMappingData]) => {
 		const charactersContainer = document.getElementById('charactersContainer');
 		const urlParams = new URLSearchParams(window.location.search);
 		const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
 
-		// Helper function to get image ID from imageData.json or fallback to itemName
+		// Helper function to get image ID from imageMappingData.json or fallback to itemName
 		function getImageId(itemName) {
-			return imageData[itemName] || itemName;
+			if (itemName === "Traveler") {
+				// Get the traveler setting from localStorage, defaulting to 'female' if not set
+				const traveler = localStorage.getItem('traveler') || 'female';
+				// Return the appropriate image name based on the traveler setting
+				return traveler === 'female' ? 'PlayerGirl' : 'PlayerBoy';
+			}
+
+			// Fallback to the image mapping data for other items
+			return imageMappingData[itemName] || itemName;
 		}
 
 		characterData.characters
@@ -176,708 +185,965 @@ Promise.all([
 					const materialsDiv = document.createElement('div');
 					materialsDiv.classList.add('materials');
 
+					// Get the layout setting from localStorage, defaulting to 'column' if not set
+					const layout = localStorage.getItem('layout') || 'column';
+					if (layout === "row") {
+						materialsDiv.style.flexDirection = 'row';
+						materialsDiv.style.paddingLeft = '0';
+						characterDiv.style.width = '44rem'
+					} else if (layout === "column") {
+						materialsDiv.style.flexDirection = 'column';
+						materialsDiv.style.paddingLeft = '1em';
+						characterDiv.style.width = '24rem'
+					}
+
+					const ascensionDiv = createDiv('ascension-div');
+					const talentsDiv = createDiv('talents-div');
+
 					// Append materials details
 					character.materials.forEach(material => {
-						// Create a list for materials
-						const materialList = document.createElement('ul');
-
 						// Display Enemy Drops materials with image if they exist
-						if (material.enemyDrop) {
-							const enemyDrop = material.enemyDrop[0];
-							const enemyDropItem = document.createElement('li');
+						if (material.ascension) {
+							const ascensionHeader = createSpan('materials-main-text', 'Ascension:')
+							ascensionDiv.appendChild(ascensionHeader);
 
-							let enemyImage, dropImage1, dropImage2, dropImage3;
+							material.ascension.forEach(ascension => {
+								const ascensionList = createDiv('ascension-materials');
 
-							if (material.enemyDrop2) {
-								enemyImage =
-									createImage(['enemy-image'],
-										`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(enemyDrop.enemyName)}.png`,
-										enemyDrop.enemyName);
-								dropImage1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName1)}.png`,
-										enemyDrop.itemName1,
-										18);
-								dropImage2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName2)}.png`,
-										enemyDrop.itemName2,
-										30);
-								dropImage3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName3)}.png`,
-										enemyDrop.itemName3,
-										36);
-							} else {
-								enemyImage =
-									createImage(['enemy-image'],
-										`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(enemyDrop.enemyName)}.png`,
-										enemyDrop.enemyName);
-								dropImage1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName1)}.png`,
-										enemyDrop.itemName1,
-										36);
-								dropImage2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName2)}.png`,
-										enemyDrop.itemName2,
-										96);
-								dropImage3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName3)}.png`,
-										enemyDrop.itemName3,
-										129);
-							}
+								if (ascension.enemyDrop) {
+									// Fetch the enemy drop data from materialMappingData
+									const enemyDropData = materialMappingData[ascension.enemyDrop];
 
-							const enemyImageLink =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}`);
-							const dropImage1Link =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName1}`);
-							const dropImage2Link =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName2}`);
-							const dropImage3Link =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName3}`);
+									if (enemyDropData) {
+										// Create a div for the enemy drop
+										const enemyDropDiv = document.createElement('div');
+										const enemyHeader = createSpan('materials-secondary-text', 'Enemy Drop:');
+										enemyDropDiv.appendChild(enemyHeader);
 
-							enemyImageLink.appendChild(enemyImage);
-							dropImage1Link.appendChild(dropImage1);
-							dropImage2Link.appendChild(dropImage2);
-							dropImage3Link.appendChild(dropImage3);
-							enemyDropItem.appendChild(enemyImageLink);
-							enemyDropItem.appendChild(dropImage1Link);
-							enemyDropItem.appendChild(dropImage2Link);
-							enemyDropItem.appendChild(dropImage3Link);
-							const enemyDropItemText =
-								createDiv(['item-text', 'enemy-drop-text'], '',
-									`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}"><bold>${enemyDrop.enemyName}</bold>:</a><br>
-										${enemyDrop.shortItemName}`);
-							enemyDropItem.appendChild(enemyDropItemText);
-							materialList.appendChild(enemyDropItem);
+										// Create a div for the enemy
+										const enemyDiv = document.createElement('div');
+										enemyDiv.classList.add('enemy-div');
+
+										// Add enemy image
+										const enemyImage = createImage(
+											'enemy-image',
+											`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(enemyDropData.enemyName)}.png`,
+											enemyDropData.enemyName
+										);
+										const enemyImageLink =
+											createLink(['item-link'],
+												`https://genshin-impact.fandom.com/wiki/${enemyDropData.enemyName}`);
+										enemyImageLink.appendChild(enemyImage);
+										enemyDiv.appendChild(enemyImageLink);
+
+										// Create a div for all enemy drops
+										const enemyDropsDiv = createDiv('enemy-drops-div');
+
+										// Define base quantities for each star level case
+										let quantities = [18, 30, 36]; // 5-star
+
+										// Add each enemy drop
+										['itemName1', 'itemName2', 'itemName3'].forEach((key, index) => {
+											const dropDiv = document.createElement('span');
+											dropDiv.classList.add('drop-div');
+
+											// Add drop image
+											const dropImage = createNumberedItemImage(
+												'item-image',
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDropData[key])}.png`,
+												`${enemyDropData[key]} (x${quantities[index]})`,
+												quantities[index]
+											);
+											const dropImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${enemyDropData[key]}`);
+
+											// Add drop name
+											const itemName = document.createElement('span');
+											itemName.classList.add('item-name');
+											itemName.textContent = `${enemyDropData[key]} (x${quantities[index]})`;
+											const itemNameLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${enemyDropData[key]}`);
+
+											dropImageLink.appendChild(dropImage);
+											dropDiv.appendChild(dropImageLink);
+											itemNameLink.appendChild(itemName);
+											dropDiv.appendChild(itemNameLink);
+
+											enemyDropsDiv.appendChild(dropDiv);
+										});
+
+										const dropItem = document.createElement('li');
+										dropItem.appendChild(enemyDiv);
+										dropItem.appendChild(enemyDropsDiv);
+
+										enemyDropDiv.appendChild(dropItem);
+										ascensionList.appendChild(enemyDropDiv);
+									} else {
+										console.error(`No data found for enemy drop: ${ascension.enemyDrop}`);
+									}
+								}
+
+								if (ascension.normalBossDrop) {
+									// Fetch the normal boss drop data from materialMappingData
+									const normalBossDropData = materialMappingData[ascension.normalBossDrop];
+
+									if (normalBossDropData) {
+										// Create a div for the normal boss
+										const normalBossDiv = document.createElement('div');
+										const enemyHeader = createSpan('materials-secondary-text', 'Normal Boss Drop:');
+										normalBossDiv.appendChild(enemyHeader);
+
+										// Create a div for the enemy
+										const enemyDiv = document.createElement('div');
+										enemyDiv.classList.add('enemy-div');
+
+										// Add enemy image
+										const enemyImage = createImage(
+											'enemy-image',
+											`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(normalBossDropData.bossName)}.png`,
+											normalBossDropData.bossName
+										);
+										const enemyImageLink =
+											createLink(['item-link'],
+												`https://genshin-impact.fandom.com/wiki/${normalBossDropData.bossName}`);
+										enemyImageLink.appendChild(enemyImage);
+										enemyDiv.appendChild(enemyImageLink);
+
+										// Create a div for all enemy drops
+										const enemyDropsDiv = document.createElement('div');
+										enemyDropsDiv.classList.add('enemy-drops-div');
+
+										const dropDiv = document.createElement('span');
+										dropDiv.classList.add('drop-div');
+
+										// Add normal boss drop image
+										const dropImage = createNumberedItemImage(
+											'item-image',
+											`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(normalBossDropData.itemName)}.png`,
+											`${normalBossDropData.itemName} (x46)`,
+											46
+										);
+										const dropImageLink =
+											createLink(['item-link'],
+												`https://genshin-impact.fandom.com/wiki/${normalBossDropData.itemName}`);
+
+										// Add normal boss drop name
+										const dropName = document.createElement('span');
+										dropName.classList.add('item-name');
+										dropName.textContent = `${normalBossDropData.itemName.replace('Artificed Spare Clockwork Component', 'Clockwork Component')} (x18)`;
+										const dropNameLink =
+											createLink(['item-link'],
+												`https://genshin-impact.fandom.com/wiki/${normalBossDropData.itemName}`);
+
+										dropImageLink.appendChild(dropImage);
+										dropDiv.appendChild(dropImageLink);
+										dropNameLink.appendChild(dropName);
+										dropDiv.appendChild(dropNameLink);
+
+										enemyDropsDiv.appendChild(dropDiv);
+
+										const dropItem = document.createElement('li');
+										dropItem.appendChild(enemyDiv);
+										dropItem.appendChild(enemyDropsDiv);
+
+										normalBossDiv.appendChild(dropItem);
+										ascensionList.appendChild(normalBossDiv);
+									} else {
+										console.error(`No data found for normal boss drop: ${ascension.normalBossDrop}`);
+									}
+								}
+
+								if (ascension.elementalGem) {
+									// Fetch the elemental gem data from materialMappingData
+									const elementalGemData = materialMappingData[ascension.elementalGem];
+
+									if (elementalGemData) {
+										// Create a div for the elemental gem
+										const elementalGemDiv = createDiv();
+										const gemHeader = createSpan('materials-secondary-text', 'Elemental Gem:');
+										elementalGemDiv.appendChild(gemHeader);
+
+										// Create a container for the items
+										const gemsContainer = document.createElement('li');
+
+										// Function to create a gem entry
+										const createGemEntry = (star, gemName, count) => {
+											const gemDiv = document.createElement('div');
+											gemDiv.classList.add('gem-entry');
+
+											const gemImage = createNumberedItemImage(
+												['item-image', 'gem-image'],
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(gemName)}.png`,
+												gemName,
+												count
+											);
+											const gemLink = createLink(
+												['item-link', 'inline-text'],
+												`https://genshin-impact.fandom.com/wiki/${gemName}`
+											);
+
+											gemLink.appendChild(gemImage);
+											gemDiv.appendChild(gemLink);
+
+											return gemDiv;
+										};
+
+										// Add the elemental gem entries for each tier
+										const gemEntries = [
+											createGemEntry('2star', elementalGemData.star2, 1),
+											createGemEntry('3star', elementalGemData.star3, 9),
+											createGemEntry('4star', elementalGemData.star4, 9),
+											createGemEntry('5star', elementalGemData.star5, 6)
+										];
+
+										// Append each gem entry to the gems container
+										gemEntries.forEach(gemEntry => {
+											if (gemEntry) gemsContainer.appendChild(gemEntry);
+										});
+
+										// Add drop name
+										const itemName = createSpan(['item-name', 'item-name-gem']);
+										itemName.textContent = `${ascension.elementalGem}`;
+										const itemNameLink =
+											createLink(['item-link'],
+												`https://genshin-impact.fandom.com/wiki/${ascension.elementalGem}`);
+
+
+										itemNameLink.appendChild(itemName);
+										gemsContainer.appendChild(itemNameLink);
+
+										elementalGemDiv.appendChild(gemsContainer);
+										ascensionList.appendChild(elementalGemDiv);
+									} else {
+										console.error(`No data found for enemy drop: ${ascension.elementalGem}`);
+									}
+								}
+
+								if (ascension.localSpecialty) {
+									// Create a div for the local specialty
+									const localSpecialtyDiv = createDiv();
+									const localSpecialtyHeader = createSpan('materials-secondary-text', 'Local Specialty:');
+									localSpecialtyDiv.appendChild(localSpecialtyHeader);
+
+									// Create a container for the items
+									const localSpecialtyContainer = document.createElement('li');
+
+									const localSpecialtyImage = createNumberedItemImage(
+										['item-image', 'gem-image'],
+										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(ascension.localSpecialty)}.png`,
+										ascension.localSpecialty,
+										168
+									);
+									const localSpecialtyLink = createLink(
+										['item-link'],
+										`https://genshin-impact.fandom.com/wiki/${ascension.localSpecialty}`
+									);
+
+									localSpecialtyLink.appendChild(localSpecialtyImage);
+									localSpecialtyContainer.appendChild(localSpecialtyLink);
+
+									// Add drop name
+									const itemName = createSpan(['item-name', 'item-name-local-specialty']);
+									itemName.textContent = `${ascension.localSpecialty} (x168)`;
+									const itemNameLink =
+										createLink(['item-link'],
+											`https://genshin-impact.fandom.com/wiki/${ascension.localSpecialty}`);
+
+
+									itemNameLink.appendChild(itemName);
+									localSpecialtyContainer.appendChild(itemNameLink);
+
+									localSpecialtyDiv.appendChild(localSpecialtyContainer);
+									ascensionList.appendChild(localSpecialtyDiv);
+								}
+
+								ascensionDiv.appendChild(ascensionList)
+							});
+						}
+						if (material.talents) {
+							const talentsHeader = createSpan('materials-main-text', 'Talents:')
+							talentsDiv.appendChild(talentsHeader);
+
+							material.talents.forEach(talents => {
+								const talentsList = document.createElement('div');
+								talentsList.classList.add('talent-materials');
+
+								if (talents.enemyDrop) {
+									if (character.name === 'Traveler' && character.element === 'Geo') {
+										// Fetch the enemy drop data from materialMappingData
+										const enemyDropData = materialMappingData[talents.enemyDrop];
+										const enemyDrop2Data = materialMappingData[talents.enemyDrop2];
+
+										// Create a div for the enemy drop
+										const enemyDropDiv = document.createElement('div');
+										const enemyHeader = createSpan('materials-secondary-text', 'Enemy Drop:');
+										enemyDropDiv.appendChild(enemyHeader);
+
+										if (enemyDropData) {
+											// Create a div for the enemy
+											const enemyDiv = document.createElement('div');
+											enemyDiv.classList.add('enemy-div');
+
+											// Add enemy image
+											const enemyImage = createImage(
+												'enemy-image',
+												`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(enemyDropData.enemyName)}.png`,
+												enemyDropData.enemyName
+											);
+											const enemyImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${enemyDropData.enemyName}`);
+											enemyImageLink.appendChild(enemyImage);
+											enemyDiv.appendChild(enemyImageLink);
+
+											// Create a div for all enemy drops
+											const enemyDropsDiv = createDiv('enemy-drops-div');
+
+											// Define base quantities for each star level case
+											let quantities = [6, 22, 31];
+
+											// Add each enemy drop
+											['itemName1', 'itemName2', 'itemName3'].forEach((key, index) => {
+												const dropDiv = createSpan('drop-div');
+
+												// Add drop image
+												const dropImage = createNumberedItemImage(
+													'item-image',
+													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDropData[key])}.png`,
+													`${enemyDropData[key]} (x${quantities[index]})`,
+													quantities[index]
+												);
+												const dropImageLink =
+													createLink(['item-link'],
+														`https://genshin-impact.fandom.com/wiki/${enemyDropData[key]}`);
+
+												// Add drop name
+												const itemName = document.createElement('span');
+												itemName.classList.add('item-name');
+												itemName.textContent = `${enemyDropData[key]} (x${quantities[index]})`;
+												const itemNameLink =
+													createLink(['item-link'],
+														`https://genshin-impact.fandom.com/wiki/${enemyDropData[key]}`);
+
+												dropImageLink.appendChild(dropImage);
+												dropDiv.appendChild(dropImageLink);
+												itemNameLink.appendChild(itemName);
+												dropDiv.appendChild(itemNameLink);
+
+												enemyDropsDiv.appendChild(dropDiv);
+											});
+
+											const dropItem = document.createElement('li');
+											dropItem.appendChild(enemyDiv);
+											dropItem.appendChild(enemyDropsDiv);
+
+											enemyDropDiv.appendChild(dropItem);
+										} else {
+											console.error(`No data found for enemy drop: ${talent.enemyDrop}`);
+										}
+
+										if (enemyDrop2Data) {
+											// Create a div for the enemy
+											const enemy2Div = document.createElement('div');
+											enemy2Div.classList.add('enemy-div');
+
+											// Add enemy image
+											const enemy2Image = createImage(
+												'enemy-image',
+												`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(enemyDrop2Data.enemyName)}.png`,
+												enemyDrop2Data.enemyName
+											);
+											const enemy2ImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${enemyDrop2Data.enemyName}`);
+											enemy2ImageLink.appendChild(enemy2Image);
+											enemy2Div.appendChild(enemy2ImageLink);
+
+											// Create a div for all enemy drops
+											const enemyDrops2Div = createDiv('enemy-drops-div');
+
+											// Define base quantities for each star level case
+											let quantities = [12, 44, 62];
+
+											// Add each enemy drop
+											['itemName1', 'itemName2', 'itemName3'].forEach((key, index) => {
+												const drop2Div = createSpan('drop-div');
+
+												// Add drop image
+												const drop2Image = createNumberedItemImage(
+													'item-image',
+													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop2Data[key])}.png`,
+													`${enemyDrop2Data[key]} (x${quantities[index]})`,
+													quantities[index]
+												);
+												const drop2ImageLink =
+													createLink(['item-link'],
+														`https://genshin-impact.fandom.com/wiki/${enemyDrop2Data[key]}`);
+
+												// Add drop name
+												const item2Name = document.createElement('span');
+												item2Name.classList.add('item-name');
+												item2Name.textContent = `${enemyDrop2Data[key]} (x${quantities[index]})`;
+												const item2NameLink =
+													createLink(['item-link'],
+														`https://genshin-impact.fandom.com/wiki/${enemyDrop2Data[key]}`);
+
+												drop2ImageLink.appendChild(drop2Image);
+												drop2Div.appendChild(drop2ImageLink);
+												item2NameLink.appendChild(item2Name);
+												drop2Div.appendChild(item2NameLink);
+
+												enemyDrops2Div.appendChild(drop2Div);
+											});
+
+											const dropItem2 = document.createElement('li');
+											dropItem2.appendChild(enemy2Div);
+											dropItem2.appendChild(enemyDrops2Div);
+
+											enemyDropDiv.appendChild(dropItem2);
+										} else {
+											console.error(`No data found for enemy drop: ${talents.enemyDrop2}`);
+										}
+
+										talentsList.appendChild(enemyDropDiv);
+									} else {
+										// Fetch the enemy drop data from materialMappingData
+										const enemyDropData = materialMappingData[talents.enemyDrop];
+
+										// Create a div for the enemy drop
+										const enemyDropDiv = document.createElement('div');
+										const enemyHeader = createSpan('materials-secondary-text', 'Enemy Drop:');
+										enemyDropDiv.appendChild(enemyHeader);
+
+										if (enemyDropData) {
+											// Create a div for the enemy
+											const enemyDiv = document.createElement('div');
+											enemyDiv.classList.add('enemy-div');
+
+											// Add enemy image
+											const enemyImage = createImage(
+												'enemy-image',
+												`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(enemyDropData.enemyName)}.png`,
+												enemyDropData.enemyName
+											);
+											const enemyImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${enemyDropData.enemyName}`);
+											enemyImageLink.appendChild(enemyImage);
+											enemyDiv.appendChild(enemyImageLink);
+
+											// Create a div for all enemy drops
+											const enemyDropsDiv = document.createElement('div');
+											enemyDropsDiv.classList.add('enemy-drops-div');
+
+											// Define base quantities for each star level case
+											let quantities = [18, 66, 93];
+
+											// Add each enemy drop
+											['itemName1', 'itemName2', 'itemName3'].forEach((key, index) => {
+												const dropDiv = createSpan('drop-div');
+
+												// Add drop image
+												const dropImage = createNumberedItemImage(
+													'item-image',
+													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDropData[key])}.png`,
+													`${enemyDropData[key]} (x${quantities[index]})`,
+													quantities[index]
+												);
+												const dropImageLink =
+													createLink(['item-link'],
+														`https://genshin-impact.fandom.com/wiki/${enemyDropData[key]}`);
+
+												// Add drop name
+												const itemName = document.createElement('span');
+												itemName.classList.add('item-name');
+												itemName.textContent = `${enemyDropData[key]} (x${quantities[index]})`;
+												const itemNameLink =
+													createLink(['item-link'],
+														`https://genshin-impact.fandom.com/wiki/${enemyDropData[key]}`);
+
+												dropImageLink.appendChild(dropImage);
+												dropDiv.appendChild(dropImageLink);
+												itemNameLink.appendChild(itemName);
+												dropDiv.appendChild(itemNameLink);
+
+												enemyDropsDiv.appendChild(dropDiv);
+											});
+
+											const dropItem = document.createElement('li');
+											dropItem.appendChild(enemyDiv);
+											dropItem.appendChild(enemyDropsDiv);
+
+											enemyDropDiv.appendChild(dropItem);
+										} else {
+											console.error(`No data found for enemy drop: ${talents.enemyDrop}`);
+										}
+
+										talentsList.appendChild(enemyDropDiv);
+									}
+								}
+
+								if (talents.weeklyBossDrop) {
+									if (character.name === 'Traveler' && character.element === 'Pyro') {
+										// Create a div for the weekly boss
+										const weeklyBossDiv = document.createElement('div');
+										const enemyHeader = createSpan('materials-secondary-text', 'Weekly Boss Drop:');
+										weeklyBossDiv.appendChild(enemyHeader);
+
+										// Create a container for the items
+										const weeklyBossDropContainer = createElement('li');
+
+										const weeklyBossDropImage = createNumberedItemImage(
+											['item-image', 'gem-image'],
+											`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talents.weeklyBossDrop)}.png`,
+											talents.weeklyBossDrop,
+											12
+										);
+										const weeklyBossDropLink = createLink(
+											['item-link'],
+											`https://genshin-impact.fandom.com/wiki/${talents.weeklyBossDrop}`
+										);
+
+										weeklyBossDropLink.appendChild(weeklyBossDropImage);
+										weeklyBossDropContainer.appendChild(weeklyBossDropLink);
+
+										// Add drop name
+										const itemName = createSpan(['item-name', 'item-name-local-specialty']);
+										itemName.textContent = `${talents.weeklyBossDrop} (x12)`;
+										const itemNameLink =
+											createLink(['item-link'],
+												`https://genshin-impact.fandom.com/wiki/${talents.weeklyBossDrop}`);
+
+
+										itemNameLink.appendChild(itemName);
+										weeklyBossDropContainer.appendChild(itemNameLink);
+
+
+										weeklyBossDiv.appendChild(weeklyBossDropContainer);
+										talentsList.appendChild(weeklyBossDiv);
+									} else if (character.name === 'Traveler' && character.element === 'Geo') {
+										// Fetch the weekly boss drop data from materialMappingData
+										const weeklyBossDropData = materialMappingData[talents.weeklyBossDrop];
+										const weeklyBoss2DropData = materialMappingData[talents.weeklyBossDrop2];
+
+										if (weeklyBossDropData && weeklyBoss2DropData) {
+											// Create a div for the weekly boss
+											const weeklyBossDiv = document.createElement('div');
+											const enemyHeader = createSpan('materials-secondary-text', 'Weekly Boss Drop:');
+											weeklyBossDiv.appendChild(enemyHeader);
+
+											// Create a div for the enemy
+											const enemyDiv = createDiv(['enemy-div', 'geo-enemy-div']);
+
+											// Add enemy image
+											const enemyImage = createImage(
+												'enemy-image',
+												`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(weeklyBossDropData.bossName)}.png`,
+												weeklyBossDropData.bossName
+											);
+											const enemyImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${weeklyBossDropData.bossName}`);
+											enemyImageLink.appendChild(enemyImage);
+											enemyDiv.appendChild(enemyImageLink);
+
+											// Create a div for all enemy drops
+											const enemyDropsDiv = createDiv('enemy-drops-div');
+
+											const dropDiv = createSpan('drop-div');
+
+											// Add weekly boss drop image
+											const dropImage = createNumberedItemImage(
+												'item-image',
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBossDropData.itemName)}.png`,
+												`${weeklyBossDropData.itemName} (x6)`,
+												6
+											);
+											const dropImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${weeklyBossDropData.itemName}`);
+
+											// Add weekly boss drop name
+											const dropName = document.createElement('span');
+											dropName.classList.add('item-name');
+											dropName.textContent = `${weeklyBossDropData.itemName} (x6)`;
+											const dropNameLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${weeklyBossDropData.itemName}`);
+
+											dropImageLink.appendChild(dropImage);
+											dropDiv.appendChild(dropImageLink);
+											dropNameLink.appendChild(dropName);
+											dropDiv.appendChild(dropNameLink);
+
+											enemyDropsDiv.appendChild(dropDiv);
+
+											const dropItem = document.createElement('li');
+											dropItem.appendChild(enemyDiv);
+											dropItem.appendChild(enemyDropsDiv);
+
+											// Create a div for the enemy
+											const enemy2Div = createDiv(['enemy-div', 'geo-enemy-div2']);
+
+											// Add enemy image
+											const enemy2Image = createImage(
+												'enemy-image',
+												`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(weeklyBoss2DropData.bossName)}.png`,
+												weeklyBoss2DropData.bossName
+											);
+											const enemy2ImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${weeklyBoss2DropData.bossName}`);
+											enemy2ImageLink.appendChild(enemy2Image);
+											enemy2Div.appendChild(enemy2ImageLink);
+
+											// Create a div for all enemy drops
+											const enemyDrops2Div = createDiv('enemy-drops-div');
+
+											const drop2Div = createSpan('drop-div');
+
+											// Add weekly boss drop image
+											const drop2Image = createNumberedItemImage(
+												'item-image',
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBoss2DropData.itemName)}.png`,
+												`${weeklyBoss2DropData.itemName} (x12)`,
+												12
+											);
+											const drop2ImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${weeklyBoss2DropData.itemName}`);
+
+											// Add weekly boss drop name
+											const drop2Name = document.createElement('span');
+											drop2Name.classList.add('item-name');
+											drop2Name.textContent = `${weeklyBoss2DropData.itemName} (x12)`;
+											const drop2NameLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${weeklyBoss2DropData.itemName}`);
+
+											drop2ImageLink.appendChild(drop2Image);
+											drop2Div.appendChild(drop2ImageLink);
+											drop2NameLink.appendChild(drop2Name);
+											drop2Div.appendChild(drop2NameLink);
+
+											enemyDrops2Div.appendChild(drop2Div);
+
+											const drop2Item = document.createElement('li');
+											drop2Item.appendChild(enemy2Div);
+											drop2Item.appendChild(enemyDrops2Div);
+
+											weeklyBossDiv.appendChild(dropItem);
+											weeklyBossDiv.appendChild(drop2Item);
+											talentsList.appendChild(weeklyBossDiv);
+										} else {
+											console.error(`No data found for weekly boss drop: ${talents.weeklyBossDrop}`);
+										}
+									} else {
+										// Fetch the weekly boss drop data from materialMappingData
+										const weeklyBossDropData = materialMappingData[talents.weeklyBossDrop];
+
+										if (weeklyBossDropData) {
+											// Create a div for the weekly boss
+											const weeklyBossDiv = document.createElement('div');
+											const enemyHeader = createSpan('materials-secondary-text', 'Weekly Boss Drop:');
+											weeklyBossDiv.appendChild(enemyHeader);
+
+											// Create a div for the enemy
+											const enemyDiv = document.createElement('div');
+											enemyDiv.classList.add('enemy-div');
+
+											// Add enemy image
+											const enemyImage = createImage(
+												'enemy-image',
+												`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(weeklyBossDropData.bossName)}.png`,
+												weeklyBossDropData.bossName
+											);
+											const enemyImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${weeklyBossDropData.bossName}`);
+											enemyImageLink.appendChild(enemyImage);
+											enemyDiv.appendChild(enemyImageLink);
+
+											// Create a div for all enemy drops
+											const enemyDropsDiv = document.createElement('div');
+											enemyDropsDiv.classList.add('enemy-drops-div');
+
+											const dropDiv = document.createElement('span');
+											dropDiv.classList.add('drop-div');
+
+											// Add weekly boss drop image
+											const dropImage = createNumberedItemImage(
+												'item-image',
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBossDropData.itemName)}.png`,
+												`${weeklyBossDropData.itemName} (x18)`,
+												18
+											);
+											const dropImageLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${weeklyBossDropData.itemName}`);
+
+											// Add weekly boss drop name
+											const dropName = document.createElement('span');
+											dropName.classList.add('item-name');
+											dropName.textContent = `${weeklyBossDropData.itemName} (x18)`;
+											const dropNameLink =
+												createLink(['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${weeklyBossDropData.itemName}`);
+
+											dropImageLink.appendChild(dropImage);
+											dropDiv.appendChild(dropImageLink);
+											dropNameLink.appendChild(dropName);
+											dropDiv.appendChild(dropNameLink);
+
+											enemyDropsDiv.appendChild(dropDiv);
+
+											const dropItem = document.createElement('li');
+											dropItem.appendChild(enemyDiv);
+											dropItem.appendChild(enemyDropsDiv);
+
+											weeklyBossDiv.appendChild(dropItem);
+											talentsList.appendChild(weeklyBossDiv);
+										} else {
+											console.error(`No data found for weekly boss drop: ${talents.weeklyBossDrop}`);
+										}
+									}
+								}
+
+								if (talents.talentBooks) {
+									const talentBooksData = materialMappingData[talents.talentBooks];
+
+									if (talentBooksData) {
+										console.log(talents.talentBooks)
+										console.log(talentBooksData)
+										// Create a div for the talent books
+										const talentBookDiv = createDiv();
+										const talentBookHeader = createSpan('materials-secondary-text', 'Talent Books:');
+										talentBookDiv.appendChild(talentBookHeader);
+
+										// Function to create a single book entry
+										const createTalentBookEntry = (type, tier, count) => {
+											if (talentBooksData && talentBooksData[tier]) {
+												const entryDiv = createDiv(['talent-book-entry']);
+
+												const bookImage = createNumberedItemImage(
+													['item-image', 'talent-book-image'],
+													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(imageMappingData[talentBooksData[tier]])}.png`,
+													talentBooksData[tier],
+													count
+												);
+
+												const bookLink = createLink(
+													['item-link'],
+													`https://genshin-impact.fandom.com/wiki/${talentBooksData[tier].replace(/\s+/g, '_')}`
+												);
+
+												bookLink.appendChild(bookImage);
+												entryDiv.appendChild(bookLink);
+
+												return entryDiv;
+											}
+											return null;
+										};
+
+										// Add all talent book entries to the container
+										const entries = [
+											createTalentBookEntry('teachings', 'teachings', 9),
+											createTalentBookEntry('guide', 'guide', 63),
+											createTalentBookEntry('philosophies', 'philosophies', 114),
+										];
+
+										const bookList = document.createElement('li');
+
+										entries.forEach(entry => {
+											if (entry) bookList.appendChild(entry);
+										});
+
+										talentBookDiv.appendChild(bookList);
+
+										talentsList.appendChild(talentBookDiv);
+									} else {
+										console.error(`No data found for talent books: ${talents.talentBooks}`);
+									}
+								}
+
+								if (talents.travelerTalentBooks) {
+									if (character.name === 'Traveler' && character.element === 'Geo') {
+										// Create a div for the talent books
+										const talentBookDiv = createDiv();
+										const talentBookHeader = createSpan('materials-secondary-text', 'Talent Books:');
+										talentBookDiv.appendChild(talentBookHeader);
+
+										// Iterate over travelerTalentBooks to extract and map the data
+										talents.travelerTalentBooks.forEach(talentBook => {
+											// Function to create a single book entry
+											const createTalentBookEntry = (type, tier, count) => {
+												const data = materialMappingData[talentBook[type]];
+												if (data && data[tier]) {
+													const entryDiv = createDiv(['talent-book-entry', 'geo-talent-book-entry']);
+
+													const bookImage = createNumberedItemImage(
+														['item-image', 'talent-book-image'],
+														`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(imageMappingData[data[tier]])}.png`,
+														data[tier],
+														count
+													);
+
+													const bookLink = createLink(
+														['item-link'],
+														`https://genshin-impact.fandom.com/wiki/${data[tier].replace(/\s+/g, '_')}`
+													);
+
+													bookLink.appendChild(bookImage);
+													entryDiv.appendChild(bookLink);
+
+													return entryDiv;
+												}
+												return null;
+											};
+
+											// Add all talent book entries to the container
+											const entries = [
+												createTalentBookEntry('teachings', 'teachings', 3),
+												createTalentBookEntry('guide1', 'guide', 11),
+												createTalentBookEntry('guide2', 'guide', 4),
+												createTalentBookEntry('guide3', 'guide', 6),
+												createTalentBookEntry('philosophies1', 'philosophies', 20),
+												createTalentBookEntry('philosophies2', 'philosophies', 6),
+												createTalentBookEntry('philosophies3', 'philosophies', 12)
+											];
+
+											const bookList = document.createElement('li');
+
+											entries.forEach(entry => {
+												if (entry) bookList.appendChild(entry);
+											});
+
+											talentBookDiv.appendChild(bookList);
+										});
+
+										// Iterate over travelerTalentBooks2 to extract and map the data
+										talents.travelerTalentBooks2.forEach(talentBook2 => {
+											// Function to create a single book entry
+											const createTalentBook2Entry = (type, tier, count) => {
+												const data = materialMappingData[talentBook2[type]];
+												if (data && data[tier]) {
+													const entry2Div = createDiv(['talent-book-entry']);
+
+													const book2Image = createNumberedItemImage(
+														['item-image', 'talent-book-image'],
+														`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(imageMappingData[data[tier]])}.png`,
+														data[tier],
+														count
+													);
+
+													const book2Link = createLink(
+														['item-link'],
+														`https://genshin-impact.fandom.com/wiki/${data[tier].replace(/\s+/g, '_')}`
+													);
+
+													book2Link.appendChild(book2Image);
+													entry2Div.appendChild(book2Link);
+
+													return entry2Div;
+												}
+												return null;
+											};
+
+											// Add all talent book entries to the container
+											const entries = [
+												createTalentBook2Entry('teachings', 'teachings', 6),
+												createTalentBook2Entry('guide1', 'guide', 22),
+												createTalentBook2Entry('guide2', 'guide', 8),
+												createTalentBook2Entry('guide3', 'guide', 12),
+												createTalentBook2Entry('philosophies1', 'philosophies', 40),
+												createTalentBook2Entry('philosophies2', 'philosophies', 12),
+												createTalentBook2Entry('philosophies3', 'philosophies', 24)
+											];
+
+											const bookList2 = document.createElement('li');
+
+											entries.forEach(entry => {
+												if (entry) bookList2.appendChild(entry);
+											});
+
+											talentBookDiv.appendChild(bookList2);
+										});
+										talentsList.appendChild(talentBookDiv);
+									} else {
+										// Create a div for the talent books
+										const talentBookDiv = createDiv();
+										const talentBookHeader = createSpan('materials-secondary-text', 'Talent Books:');
+										talentBookDiv.appendChild(talentBookHeader);
+
+										// Iterate over travelerTalentBooks to extract and map the data
+										talents.travelerTalentBooks.forEach(talentBook => {
+											// Function to create a single book entry
+											const createTalentBookEntry = (type, tier, count) => {
+												const data = materialMappingData[talentBook[type]];
+												if (data && data[tier]) {
+													const entryDiv = document.createElement('div');
+													entryDiv.classList.add('talent-book-entry');
+
+													const bookImage = createNumberedItemImage(
+														['item-image', 'talent-book-image'],
+														`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(imageMappingData[data[tier]])}.png`,
+														data[tier],
+														count
+													);
+
+													const bookLink = createLink(
+														['item-link'],
+														`https://genshin-impact.fandom.com/wiki/${data[tier].replace(/\s+/g, '_')}`
+													);
+
+													bookLink.appendChild(bookImage);
+													entryDiv.appendChild(bookLink);
+
+													return entryDiv;
+												}
+												return null;
+											};
+
+											// Add all talent book entries to the container
+											const entries = [
+												createTalentBookEntry('teachings', 'teachings', 9),
+												createTalentBookEntry('guide1', 'guide', 33),
+												createTalentBookEntry('guide2', 'guide', 12),
+												createTalentBookEntry('guide3', 'guide', 18),
+												createTalentBookEntry('philosophies1', 'philosophies', 60),
+												createTalentBookEntry('philosophies2', 'philosophies', 18),
+												createTalentBookEntry('philosophies3', 'philosophies', 36)
+											];
+
+											const bookList = document.createElement('li');
+
+											entries.forEach(entry => {
+												if (entry) bookList.appendChild(entry);
+											});
+
+											talentBookDiv.appendChild(bookList);
+										});
+										talentsList.appendChild(talentBookDiv);
+									}
+								}
+
+								talentsDiv.appendChild(talentsList)
+							});
 						}
 
-						// Display Enemy Drops materials with image if they exist
-						if (material.enemyDrop2) {
-							const enemyDrop = material.enemyDrop2[0];
-							const enemyDropItem = document.createElement('li');
+						// Append materials div to character div
+						materialsDiv.appendChild(ascensionDiv);
+						materialsDiv.appendChild(talentsDiv);
 
-							if (character.name === "Traveler" && character.element === "Geo") {
-								const enemyImage =
-									createImage(['enemy-image'],
-										`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(enemyDrop.enemyName)}.png`,
-										enemyDrop.enemyName);
-								const dropImage1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName1)}.png`,
-										enemyDrop.itemName1,
-										6);
-								const dropImage2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName2)}.png`,
-										enemyDrop.itemName2,
-										22);
-								const dropImage3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName3)}.png`,
-										enemyDrop.itemName3,
-										31);
-								const enemy2Image =
-									createImage(['enemy-image'],
-										`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(enemyDrop.enemy2Name)}.png`,
-										enemyDrop.enemy2Name);
-								const drop2Image1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.item2Name1)}.png`,
-										enemyDrop.item2Name1,
-										12);
-								const drop2Image2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.item2Name2)}.png`,
-										enemyDrop.item2Name2,
-										44);
-								const drop2Image3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.item2Name3)}.png`,
-										enemyDrop.item2Name3,
-										62);
+						characterDiv.appendChild(materialsDiv);
 
-								const enemyImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}`);
-								const dropImage1Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName1}`);
-								const dropImage2Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName2}`);
-								const dropImage3Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName3}`);
-								const enemy2ImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.enemy2Name}`);
-								const drop2Image1Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.item2Name1}`);
-								const drop2Image2Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.item2Name2}`);
-								const drop2Image3Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.item2Name3}`);
-
-								const row1 = createSpan('row1');
-								const row2 = createSpan('row2');
-								const div = createDiv(['geo-traveler-enemy-drop']);
-								enemyImageLink.appendChild(enemyImage);
-								dropImage1Link.appendChild(dropImage1);
-								dropImage2Link.appendChild(dropImage2);
-								dropImage3Link.appendChild(dropImage3);
-								enemy2ImageLink.appendChild(enemy2Image);
-								drop2Image1Link.appendChild(drop2Image1);
-								drop2Image2Link.appendChild(drop2Image2);
-								drop2Image3Link.appendChild(drop2Image3);
-								row1.appendChild(enemyImageLink);
-								row1.appendChild(dropImage1Link);
-								row1.appendChild(dropImage2Link);
-								row1.appendChild(dropImage3Link);
-								row1.appendChild(enemy2ImageLink);
-								row1.appendChild(drop2Image1Link);
-								row1.appendChild(drop2Image2Link);
-								row1.appendChild(drop2Image3Link);
-								div.appendChild(row1);
-								div.appendChild(row2);
-								enemyDropItem.appendChild(div);
-								const enemyDropItemText =
-									createDiv(['item-text', 'enemy-drop-text'], '',
-										`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}"><bold>${enemyDrop.enemyName}</bold>:</a><br>
-										${enemyDrop.shortItemName}<br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemy2Name}"><bold>${enemyDrop.enemy2Name}</bold>:</a><br>
-										${enemyDrop.shortItem2Name}`);
-								enemyDropItem.appendChild(enemyDropItemText);
-							} else {
-								const enemyImage =
-									createImage(['enemy-image'],
-										`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(enemyDrop.enemyName)}.png`,
-										enemyDrop.enemyName);
-								const dropImage1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName1)}.png`,
-										enemyDrop.itemName1,
-										18);
-								const dropImage2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName2)}.png`,
-										enemyDrop.itemName2,
-										66);
-								const dropImage3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop.itemName3)}.png`,
-										enemyDrop.itemName3,
-										93);
-
-								const enemyImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}`);
-								const dropImage1Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName1}`);
-								const dropImage2Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName2}`);
-								const dropImage3Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${enemyDrop.itemName3}`);
-
-								enemyImageLink.appendChild(enemyImage);
-								dropImage1Link.appendChild(dropImage1);
-								dropImage2Link.appendChild(dropImage2);
-								dropImage3Link.appendChild(dropImage3);
-								enemyDropItem.appendChild(enemyImageLink);
-								enemyDropItem.appendChild(dropImage1Link);
-								enemyDropItem.appendChild(dropImage2Link);
-								enemyDropItem.appendChild(dropImage3Link);
-								const enemyDropItemText =
-									createDiv(['item-text', 'enemy-drop-text'], '',
-										`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${enemyDrop.enemyName}"><bold>${enemyDrop.enemyName}</bold>:</a><br>
-										${enemyDrop.shortItemName}`);
-								enemyDropItem.appendChild(enemyDropItemText);
-							}
-
-							materialList.appendChild(enemyDropItem);
-						}
-
-						// Display Normal Boss materials with image if they exist
-						if (material.normalBoss) {
-							const normalBoss = material.normalBoss[0];
-							const normalBossItem = document.createElement('li');
-
-							const normalBossImage =
-								createImage(['enemy-image'],
-									`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(normalBoss.bossName)}.png`,
-									normalBoss.bossName);
-							const itemImage =
-								createNumberedItemImage('item-image',
-									`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(normalBoss.itemName)}.png`,
-									normalBoss.itemName,
-									46);
-
-							const normalBossImageLink =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${normalBoss.bossName}`);
-							const itemImageLink =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${normalBoss.itemName}`);
-
-							normalBossImageLink.appendChild(normalBossImage);
-							itemImageLink.appendChild(itemImage);
-							normalBossItem.appendChild(normalBossImageLink);
-							normalBossItem.appendChild(itemImageLink);
-							const normalBossItemText =
-								createDiv(['item-text', 'normal-boss-text'], '',
-									`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${normalBoss.bossName}"><bold>${normalBoss.bossName.replace('Algorithm of Semi-Intransient Matrix of Overseer Network', 'ASIMON').replace('Secret Source Automaton', 'Secret Source')}</bold>:</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${normalBoss.itemName}">${normalBoss.itemName.replace('Artificed Spare Clockwork Component', 'Clockwork Component')}</a>`);
-							normalBossItem.appendChild(normalBossItemText);
-							materialList.appendChild(normalBossItem);
-						}
-
-						// Display Weekly Boss materials with image if they exist
-						if (material.weeklyBoss) {
-							const weeklyBoss = material.weeklyBoss[0];
-							const weeklyBossItem = document.createElement('li');
-
-							if (character.name === "Traveler" && character.element === "Geo") {
-								const weeklyBossImage =
-									createImage(['enemy-image'],
-										`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(weeklyBoss.bossName)}.png`,
-										weeklyBoss.bossName);
-								const itemImage =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBoss.itemName)}.png`,
-										weeklyBoss.itemName,
-										6);
-								const weeklyBoss2Image =
-									createImage(['enemy-image'],
-										`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(weeklyBoss.boss2Name)}.png`,
-										weeklyBoss.boss2Name);
-								const item2Image =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBoss.item2Name)}.png`,
-										weeklyBoss.item2Name,
-										18);
-
-								const weeklyBossImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${weeklyBoss.bossName}`);
-								const itemImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${weeklyBoss.itemName}`);
-								const weeklyBoss2ImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${weeklyBoss.boss2Name}`);
-								const item2ImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${weeklyBoss.item2Name}`);
-
-								const row1 = createSpan('row1');
-								const row2 = createSpan('row2');
-								const div = createDiv(['geo-traveler-weekly-boss']);
-								weeklyBossImageLink.appendChild(weeklyBossImage);
-								itemImageLink.appendChild(itemImage);
-								weeklyBoss2ImageLink.appendChild(weeklyBoss2Image);
-								item2ImageLink.appendChild(item2Image);
-								row1.appendChild(weeklyBossImageLink);
-								row1.appendChild(itemImageLink);
-								row2.appendChild(weeklyBoss2ImageLink);
-								row2.appendChild(item2ImageLink);
-								div.appendChild(row1);
-								div.appendChild(row2);
-								weeklyBossItem.appendChild(div);
-								const weeklyBossItemText =
-									createDiv(['item-text', 'weekly-boss-text'], '',
-										`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.bossName}"><bold>${weeklyBoss.bossName.replace(' (Weekly Boss)', '').replace(' Dvalin', '')}</bold>:</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.itemName}">${weeklyBoss.itemName}</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.boss2Name}"><bold>${weeklyBoss.boss2Name.replace(' (Weekly Boss)', '').replace(' Dvalin', '')}</bold>:</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.item2Name}">${weeklyBoss.item2Name}</a>`);
-								weeklyBossItem.appendChild(weeklyBossItemText);
-							} else if (character.name === "Traveler" && character.element === "Pyro") {
-								const itemImage =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBoss.itemName)}.png`,
-										weeklyBoss.itemName,
-										12);
-
-								const itemImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${weeklyBoss.itemName}`);
-
-								const row1 = createSpan('row1');
-								const row2 = createSpan('row2');
-								const div = createDiv(['pyro-traveler-weekly-boss']);
-								itemImageLink.appendChild(itemImage);
-								div.appendChild(itemImageLink);
-								weeklyBossItem.appendChild(div);
-								const weeklyBossItemText =
-									createDiv(['item-text', 'weekly-boss-text'], '',
-										`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.itemName}">${weeklyBoss.itemName}</a>`);
-								weeklyBossItem.appendChild(weeklyBossItemText);
-							} else {
-								const weeklyBossImage =
-									createImage(['enemy-image'],
-										`https://homdgcat.wiki/homdgcat-res/monster/${getImageId(weeklyBoss.bossName)}.png`,
-										weeklyBoss.bossName);
-								const itemImage =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBoss.itemName)}.png`,
-										weeklyBoss.itemName,
-										18);
-
-								const weeklyBossImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${weeklyBoss.bossName}`);
-								const itemImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${weeklyBoss.itemName}`);
-
-								weeklyBossImageLink.appendChild(weeklyBossImage);
-								itemImageLink.appendChild(itemImage);
-								weeklyBossItem.appendChild(weeklyBossImageLink);
-								weeklyBossItem.appendChild(itemImageLink);
-								const weeklyBossItemText =
-									createDiv(['item-text', 'weekly-boss-text'], '',
-										`<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.bossName}"><bold>${weeklyBoss.bossName.replace(' (Weekly Boss)', '').replace(' Dvalin', '')}</bold>:</a><br>
-										<a class="item-link" href="https://genshin-impact.fandom.com/wiki/${weeklyBoss.itemName}">${weeklyBoss.itemName}</a>`);
-								weeklyBossItem.appendChild(weeklyBossItemText);
-							}
-
-							materialList.appendChild(weeklyBossItem);
-						}
-
-						// Display Talent Books materials with image if they exist
-						if (material.talentBooks) {
-							const talentBooks = material.talentBooks[0];
-							const talentBooksItem = document.createElement('li');
-
-							const teachingsImage =
-								createNumberedItemImage('item-image',
-									`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.teachingsName)}.png`,
-									talentBooks.teachingsName,
-									9);
-							const guideImage =
-								createNumberedItemImage('item-image',
-									`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guideName)}.png`,
-									talentBooks.guideName,
-									63);
-							const philosophiesImage =
-								createNumberedItemImage('item-image',
-									`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophiesName)}.png`,
-									talentBooks.philosophiesName,
-									114);
-
-							const teachingsImageLink =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${talentBooks.teachingsName}`);
-							const guideImageLink =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${talentBooks.guideName}`);
-							const philosophiesImageLink =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophiesName}`);
-
-							teachingsImageLink.appendChild(teachingsImage);
-							guideImageLink.appendChild(guideImage);
-							philosophiesImageLink.appendChild(philosophiesImage);
-							talentBooksItem.appendChild(teachingsImageLink);
-							talentBooksItem.appendChild(guideImageLink);
-							talentBooksItem.appendChild(philosophiesImageLink);
-							const talentBooksItemLink =
-								createLink(['item-link'],
-									'https://genshin-impact.fandom.com/wiki/' + talentBooks.shortItemName + '_Books');
-							const talentBooksItemText =
-								createDiv(['item-text', 'talent-books-text'], '',
-									`<bold>Talent Books</bold>: ${talentBooks.shortItemName}`);
-							talentBooksItemLink.appendChild(talentBooksItemText);
-							talentBooksItem.appendChild(talentBooksItemLink);
-							materialList.appendChild(talentBooksItem);
-						}
-
-						// Display Talent Books for Traveler materials with image if they exist
-						if (material.travelerTalentBooks) {
-							const talentBooks = material.travelerTalentBooks[0];
-							const talentBooksItem = document.createElement('li');
-
-							if (character.element === "Geo") {
-								const teachingsImage =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.teachingsName)}.png`,
-										talentBooks.teachingsName,
-										3);
-								const guideImage1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guideName1)}.png`,
-										talentBooks.guideName1,
-										11);
-								const guideImage2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guideName2)}.png`,
-										talentBooks.guideName2,
-										4);
-								const guideImage3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guideName3)}.png`,
-										talentBooks.guideName3,
-										6);
-								const philosophiesImage1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophiesName1)}.png`,
-										talentBooks.philosophiesName1,
-										20);
-								const philosophiesImage2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophiesName2)}.png`,
-										talentBooks.philosophiesName2,
-										6);
-								const philosophiesImage3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophiesName3)}.png`,
-										talentBooks.philosophiesName3,
-										12);
-								const teachings2Image =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.teachings2Name)}.png`,
-										talentBooks.teachings2Name,
-										6);
-								const guide2Image1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guide2Name1)}.png`,
-										talentBooks.guide2Name1,
-										22);
-								const guide2Image2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guide2Name2)}.png`,
-										talentBooks.guide2Name2,
-										8);
-								const guide2Image3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guide2Name3)}.png`,
-										talentBooks.guide2Name3,
-										12);
-								const philosophies2Image1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophies2Name1)}.png`,
-										talentBooks.philosophies2Name1,
-										40);
-								const philosophies2Image2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophies2Name2)}.png`,
-										talentBooks.philosophies2Name2,
-										12);
-								const philosophies2Image3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophies2Name3)}.png`,
-										talentBooks.philosophies2Name3,
-										24);
-
-								const teachingsImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.teachingsName}`);
-								const guideImage1Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.guideName1}`);
-								const guideImage2Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.guideName2}`);
-								const guideImage3Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.guideName3}`);
-								const philosophiesImage1Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophiesName1}`);
-								const philosophiesImage2Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophiesName2}`);
-								const philosophiesImage3Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophiesName3}`);
-								const teachings2ImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.teachings2Name}`);
-								const guide2Image1Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.guide2Name1}`);
-								const guide2Image2Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.guide2Name2}`);
-								const guide2Image3Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.guide2Name3}`);
-								const philosophies2Image1Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophies2Name1}`);
-								const philosophies2Image2Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophies2Name2}`);
-								const philosophies2Image3Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophies2Name3}`);
-
-								const row1 = createSpan('row1');
-								const row2 = createSpan('row2');
-								const div = createDiv(['geo-traveler-talent-books']);
-								teachingsImageLink.appendChild(teachingsImage);
-								guideImage1Link.appendChild(guideImage1);
-								guideImage2Link.appendChild(guideImage2);
-								guideImage3Link.appendChild(guideImage3);
-								philosophiesImage1Link.appendChild(philosophiesImage1);
-								philosophiesImage2Link.appendChild(philosophiesImage2);
-								philosophiesImage3Link.appendChild(philosophiesImage3);
-								teachings2ImageLink.appendChild(teachings2Image);
-								guide2Image1Link.appendChild(guide2Image1);
-								guide2Image2Link.appendChild(guide2Image2);
-								guide2Image3Link.appendChild(guide2Image3);
-								philosophies2Image1Link.appendChild(philosophies2Image1);
-								philosophies2Image2Link.appendChild(philosophies2Image2);
-								philosophies2Image3Link.appendChild(philosophies2Image3);
-								row1.appendChild(teachingsImageLink);
-								row1.appendChild(guideImage1Link);
-								row1.appendChild(guideImage2Link);
-								row1.appendChild(guideImage3Link);
-								row1.appendChild(philosophiesImage1Link);
-								row1.appendChild(philosophiesImage2Link);
-								row1.appendChild(philosophiesImage3Link);
-								row2.appendChild(teachings2ImageLink);
-								row2.appendChild(guide2Image1Link);
-								row2.appendChild(guide2Image2Link);
-								row2.appendChild(guide2Image3Link);
-								row2.appendChild(philosophies2Image1Link);
-								row2.appendChild(philosophies2Image2Link);
-								row2.appendChild(philosophies2Image3Link);
-								div.appendChild(row1);
-								div.appendChild(row2);
-								talentBooksItem.appendChild(div);
-							} else {
-								const teachingsImage =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.teachingsName)}.png`,
-										talentBooks.teachingsName,
-										9);
-								const guideImage1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guideName1)}.png`,
-										talentBooks.guideName1,
-										33);
-								const guideImage2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guideName2)}.png`,
-										talentBooks.guideName2,
-										12);
-								const guideImage3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.guideName3)}.png`,
-										talentBooks.guideName3,
-										18);
-								const philosophiesImage1 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophiesName1)}.png`,
-										talentBooks.philosophiesName1,
-										60);
-								const philosophiesImage2 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophiesName2)}.png`,
-										talentBooks.philosophiesName2,
-										18);
-								const philosophiesImage3 =
-									createNumberedItemImage('item-image',
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talentBooks.philosophiesName3)}.png`,
-										talentBooks.philosophiesName3,
-										36);
-
-								const teachingsImageLink =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.teachingsName}`);
-								const guideImage1Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.guideName1}`);
-								const guideImage2Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.guideName2}`);
-								const guideImage3Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.guideName3}`);
-								const philosophiesImage1Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophiesName1}`);
-								const philosophiesImage2Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophiesName2}`);
-								const philosophiesImage3Link =
-									createLink(['item-link'],
-										`https://genshin-impact.fandom.com/wiki/${talentBooks.philosophiesName3}`);
-
-								teachingsImageLink.appendChild(teachingsImage);
-								guideImage1Link.appendChild(guideImage1);
-								guideImage2Link.appendChild(guideImage2);
-								guideImage3Link.appendChild(guideImage3);
-								philosophiesImage1Link.appendChild(philosophiesImage1);
-								philosophiesImage2Link.appendChild(philosophiesImage2);
-								philosophiesImage3Link.appendChild(philosophiesImage3);
-								talentBooksItem.appendChild(teachingsImageLink);
-								talentBooksItem.appendChild(guideImage1Link);
-								talentBooksItem.appendChild(guideImage2Link);
-								talentBooksItem.appendChild(guideImage3Link);
-								talentBooksItem.appendChild(philosophiesImage1Link);
-								talentBooksItem.appendChild(philosophiesImage2Link);
-								talentBooksItem.appendChild(philosophiesImage3Link);
-							}
-
-							const talentBooksItemText =
-								createDiv(['item-text', 'talent-books-text'], '',
-									`<bold>Talent Books</bold>`);
-							talentBooksItem.appendChild(talentBooksItemText);
-							materialList.appendChild(talentBooksItem);
-						}
-
-						// Display Local Specialty with image if it exists
-						if (material.localSpecialty) {
-							const localSpecialty = material.localSpecialty[0];
-							const localSpecialtyItem = document.createElement('li');
-
-							const localSpecialtyImage =
-								createNumberedItemImage('item-image',
-									`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(localSpecialty.itemName)}.png`,
-									localSpecialty.itemName,
-									168);
-
-							const localSpecialtyImageLink =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${localSpecialty.itemName}`);
-
-							localSpecialtyImageLink.appendChild(localSpecialtyImage);
-							localSpecialtyItem.appendChild(localSpecialtyImageLink);
-							const localSpecialtyItemLink =
-								createLink(['item-link'],
-									`https://genshin-impact.fandom.com/wiki/${localSpecialty.itemName}`);
-							const localSpecialtyItemText =
-								createDiv(['item-text', 'local-specialty-text'], '',
-									`<bold>Local Specialty</bold>: ${localSpecialty.itemName}`);
-							localSpecialtyItemLink.appendChild(localSpecialtyItemText);
-							localSpecialtyItem.appendChild(localSpecialtyItemLink);
-							materialList.appendChild(localSpecialtyItem);
-						}
-
-						// Append material list to materials div
-						materialsDiv.appendChild(materialList);
-					});
-
-					// Append materials div to character div
-					characterDiv.appendChild(materialsDiv);
-
-					// Append character div to container
-					charactersContainer.appendChild(characterDiv);
+						// Append character div to container
+						charactersContainer.appendChild(characterDiv);
+					})
 				}
-			});
+			})
 	})
 	.catch(error => console.error('Error fetching character data:', error));
+

@@ -1,0 +1,61 @@
+﻿/* Style for the home icon */
+.home-icon {
+	position: absolute;
+	top: 0.5em;
+	left: 0.5em;
+	font-size: 48px;
+	color: #000;
+	text-decoration: none;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-icon i {
+	pointer-events: none;
+}
+
+/* Settings Button (Top-Right Corner) */
+.settings-btn {		
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	font-size: 48px;
+	color: #000;
+	text-decoration: none;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	cursor:pointer;
+}
+
+.settings-btn i {
+	pointer-events: none;
+}
+
+/* Settings Menu */
+.settings-menu {
+	position: absolute;
+	top: 5.75em;
+	right: 1.75em;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 20px;
+	display: none; /* Hidden by default */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	z-index: 999;
+}
+
+.settings-menu select {
+	margin-top: 10px;
+}
+
+/* Optional: Add styles for when the menu is open */
+.settings-menu.open {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}

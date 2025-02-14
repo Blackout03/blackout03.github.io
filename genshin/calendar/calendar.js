@@ -29,9 +29,9 @@ function createCharacterImage(character, characterName) {
 // Function to fetch character data from JSON files
 Promise.all([
 	fetch('../character_data.json').then(response => response.json()),
-	fetch('../image_data.json').then(response => response.json())
+	fetch('../image_mapping_data.json').then(response => response.json())
 ])
-	.then(([characterData, imageData]) => {
+	.then(([characterData, imageMappingData]) => {
 		console.log(characterData);
 		let data = characterData.characters;
 		// Organize characters by birthday
@@ -44,9 +44,9 @@ Promise.all([
 			birthdayMap[birthday].push(character);
 		});
 
-		// Helper function to get image ID from imageData.json or fallback to itemName
+		// Helper function to get image ID from imageMappingData.json or fallback to itemName
 		function getImageId(itemName) {
-			return imageData[itemName] || itemName;
+			return imageMappingData[itemName] || itemName;
 		}
 
 		// Create calendar structure

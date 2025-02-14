@@ -38,13 +38,6 @@ function createCharacterImage(character, characterName) {
 
 // Function to create an image element for the character's path type
 function createPathImage(path) {
-	// const pathIcons = {
-	// 	"Destruction": "Destruction",
-	// 	"Catalyst": "Skill_A_Catalyst_MD",
-	// 	"Claymore": "Skill_A_04",
-	// 	"Polearm": "Skill_A_03",
-	// 	"Sword": "Skill_A_01"
-	// };
 	const pathImageLink =
 		createLink(['item-link'],
 			`https://honkai-star-rail.fandom.com/wiki/${path}`);
@@ -58,15 +51,6 @@ function createPathImage(path) {
 
 // Function to create an image element for the character's element type
 function createTypeImage(type) {
-	// const typeIcons = {
-	// 	"Fire": "Fire",
-	// 	"Ice": "Ice",
-	// 	"Imaginary": "Imaginary",
-	// 	"Lightning": "Lightning",
-	// 	"Physical": "Physical",
-	// 	"Quantum": "Quantum",
-	// 	"Wind": "Wind"
-	// };
 	const typeImageLink =
 		createLink(['item-link'],
 			`https://honkai-star-rail.fandom.com/wiki/${type}`);
@@ -103,16 +87,16 @@ function createNumberedItemImage(classNames = [], src = '', alt = '', number = '
 // Function to fetch character data from JSON file
 Promise.all([
 	fetch('../character_data.json').then(response => response.json()),
-	fetch('../image_data.json').then(response => response.json())
+	fetch('../image_mapping_data.json').then(response => response.json())
 ])
-	.then(([characterData, imageData]) => {
+	.then(([characterData, imageMappingData]) => {
 		const charactersContainer = document.getElementById('charactersContainer');
 		const urlParams = new URLSearchParams(window.location.search);
 		const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
 
-		// Helper function to get image ID from imageData.json or fallback to itemName
+		// Helper function to get image ID from imageMappingData.json or fallback to itemName
 		function getImageId(itemName) {
-			return imageData[itemName] || itemName;
+			return imageMappingData[itemName] || itemName;
 		}
 
 		characterData.characters

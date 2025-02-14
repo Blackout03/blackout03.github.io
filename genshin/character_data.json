@@ -13,44 +13,28 @@
       "reruns": [],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Brilliant Diamond",
+              "localSpecialty": "Windwheel Aster"
             }
           ],
-          "enemyDrop2": [
+          "talents": [
             {
-              "enemyName": "Samachurl",
-              "shortItemName": "Scroll",
-              "itemName1": "Divining Scroll",
-              "itemName2": "Sealed Scroll",
-              "itemName3": "Forbidden Curse Scroll"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Sigh"
-            }
-          ],
-          "travelerTalentBooks": [
-            {
-              "teachingsName": "Teachings of Freedom",
-              "guideName1": "Guide of Resistance",
-              "guideName2": "Guide of Ballad",
-              "guideName3": "Guide of Freedom",
-              "philosophiesName1": "Philosophies of Ballad",
-              "philosophiesName2": "Philosophies of Freedom",
-              "philosophiesName3": "Philosophies of Resistance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Windwheel Aster"
+              "enemyDrop": "Samachurl Materials",
+              "weeklyBossDrop": "Dvalin's Sigh",
+              "travelertalentBooks": [
+                {
+                  "teachings": "Freedom",
+                  "guide1": "Resistance",
+                  "guide2": "Ballad",
+                  "guide3": "Freedom",
+                  "philosophies1": "Ballad",
+                  "philosophies2": "Freedom",
+                  "philosophies3": "Resistance"
+                }
+              ]
             }
           ]
         }
@@ -64,58 +48,41 @@
       "reruns": [],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Brilliant Diamond",
+              "localSpecialty": "Windwheel Aster"
             }
           ],
-          "enemyDrop2": [
+          "talents": [
             {
-              "enemyName": "Samachurl",
-              "shortItemName": "Scroll",
-              "itemName1": "Divining Scroll",
-              "itemName2": "Sealed Scroll",
-              "itemName3": "Forbidden Curse Scroll",
-              "enemy2Name": "Hilichurl Shooter",
-              "shortItem2Name": "Arrowhead",
-              "item2Name1": "Firm Arrowhead",
-              "item2Name2": "Sharp Arrowhead",
-              "item2Name3": "Weathered Arrowhead"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Sigh",
-              "boss2Name": "Andrius",
-              "item2Name": "Tail of Boreas"
-            }
-          ],
-          "travelerTalentBooks": [
-            {
-              "teachingsName": "Teachings of Freedom",
-              "guideName1": "Guide of Resistance",
-              "guideName2": "Guide of Ballad",
-              "guideName3": "Guide of Freedom",
-              "philosophiesName1": "Philosophies of Ballad",
-              "philosophiesName2": "Philosophies of Freedom",
-              "philosophiesName3": "Philosophies of Resistance",
-              "teachings2Name": "Teachings of Prosperity",
-              "guide2Name1": "Guide of Diligence",
-              "guide2Name2": "Guide of Gold",
-              "guide2Name3": "Guide of Prosperity",
-              "philosophies2Name1": "Philosophies of Prosperity",
-              "philosophies2Name2": "Philosophies of Gold",
-              "philosophies2Name3": "Philosophies of Diligence"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Windwheel Aster"
+              "enemyDrop": "Samachurl Materials",
+              "enemyDrop2": "Hilichurl Shooter Materials",
+              "weeklyBossDrop": "Dvalin's Sigh",
+              "weeklyBossDrop2": "Tail of Boreas",
+              "travelertalentBooks": [
+                {
+                  "teachings": "Freedom",
+                  "guide1": "Resistance",
+                  "guide2": "Ballad",
+                  "guide3": "Freedom",
+                  "philosophies1": "Ballad",
+                  "philosophies2": "Freedom",
+                  "philosophies3": "Resistance"
+                }
+              ],
+              "travelertalentBooks2": [
+                {
+                  "teachings": "Prosperity",
+                  "guide1": "Diligence",
+                  "guide2": "Gold",
+                  "guide3": "Prosperity",
+                  "philosophies1": "Prosperity",
+                  "philosophies2": "Gold",
+                  "philosophies3": "Diligence"
+                }
+              ]
             }
           ]
         }
@@ -129,44 +96,28 @@
       "reruns": [],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Brilliant Diamond",
+              "localSpecialty": "Windwheel Aster"
             }
           ],
-          "enemyDrop2": [
+          "talents": [
             {
-              "enemyName": "Nobushi",
-              "shortItemName": "Handguard",
-              "itemName1": "Old Handguard",
-              "itemName2": "Kageuchi Handguard",
-              "itemName3": "Famed Handguard"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Azhdaha (Weekly Boss)",
-              "itemName": "Dragon Lord's Crown"
-            }
-          ],
-          "travelerTalentBooks": [
-            {
-              "teachingsName": "Teachings of Transience",
-              "guideName1": "Guide of Elegance",
-              "guideName2": "Guide of Light",
-              "guideName3": "Guide of Transience",
-              "philosophiesName1": "Philosophies of Light",
-              "philosophiesName2": "Philosophies of Transience",
-              "philosophiesName3": "Philosophies of Elegance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Windwheel Aster"
+              "enemyDrop": "Nobushi Materials",
+              "weeklyBossDrop": "Dragon Lord's Crown",
+              "travelertalentBooks": [
+                {
+                  "teachings": "Transience",
+                  "guide1": "Elegance",
+                  "guide2": "Light",
+                  "guide3": "Transience",
+                  "philosophies1": "Light",
+                  "philosophies2": "Transience",
+                  "philosophies3": "Elegance"
+                }
+              ]
             }
           ]
         }
@@ -180,44 +131,28 @@
       "reruns": [],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Brilliant Diamond",
+              "localSpecialty": "Windwheel Aster"
             }
           ],
-          "enemyDrop2": [
+          "talents": [
             {
-              "enemyName": "Fungi",
-              "shortItemName": "Spores",
-              "itemName1": "Fungal Spores",
-              "itemName2": "Luminescent Pollen",
-              "itemName3": "Crystalline Cyst Dust"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "Mudra of the Malefic General"
-            }
-          ],
-          "travelerTalentBooks": [
-            {
-              "teachingsName": "Teachings of Admonition",
-              "guideName1": "Guide of Ingenuity",
-              "guideName2": "Guide of Praxis",
-              "guideName3": "Guide of Admonition",
-              "philosophiesName1": "Philosophies of Praxis",
-              "philosophiesName2": "Philosophies of Admonition",
-              "philosophiesName3": "Philosophies of Ingenuity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Windwheel Aster"
+              "enemyDrop": "Fungus Materials",
+              "weeklyBossDrop": "Mudra of the Malefic General",
+              "travelertalentBooks": [
+                {
+                  "teachings": "Admonition",
+                  "guide1": "Ingenuity",
+                  "guide2": "Praxis",
+                  "guide3": "Admonition",
+                  "philosophies1": "Praxis",
+                  "philosophies2": "Admonition",
+                  "philosophies3": "Ingenuity"
+                }
+              ]
             }
           ]
         }
@@ -231,44 +166,28 @@
       "reruns": [],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Brilliant Diamond",
+              "localSpecialty": "Windwheel Aster"
             }
           ],
-          "enemyDrop2": [
+          "talents": [
             {
-              "enemyName": "Fontemer Aberrants",
-              "shortItemName": "Pearl",
-              "itemName1": "Transoceanic Pearl",
-              "itemName2": "Transoceanic Chunk",
-              "itemName3": "Xenchromatic Crystal"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Worldspan Fern"
-            }
-          ],
-          "travelerTalentBooks": [
-            {
-              "teachingsName": "Teachings of Equity",
-              "guideName1": "Guide of Justice",
-              "guideName2": "Guide of Order",
-              "guideName3": "Guide of Equity",
-              "philosophiesName1": "Philosophies of Order",
-              "philosophiesName2": "Philosophies of Equity",
-              "philosophiesName3": "Philosophies of Justice"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Windwheel Aster"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "weeklyBossDrop": "Worldspan Fern",
+              "travelertalentBooks": [
+                {
+                  "teachings": "Equity",
+                  "guide1": "Justice",
+                  "guide2": "Order",
+                  "guide3": "Equity",
+                  "philosophies1": "Order",
+                  "philosophies2": "Equity",
+                  "philosophies3": "Justice"
+                }
+              ]
             }
           ]
         }
@@ -282,44 +201,28 @@
       "reruns": [],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Brilliant Diamond",
+              "localSpecialty": "Windwheel Aster"
             }
           ],
-          "enemyDrop2": [
+          "talents": [
             {
-              "enemyName": "Sauroform Tribal Warriors",
-              "shortItemName": "Whistle",
-              "itemName1": "Sentry's Wooden Whistle",
-              "itemName2": "Warrior's Metal Whistle",
-              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "",
-              "itemName": "The Cornerstone of Stars and Flames"
-            }
-          ],
-          "travelerTalentBooks": [
-            {
-              "teachingsName": "Teachings of Contention",
-              "guideName1": "Guide of Kindling",
-              "guideName2": "Guide of Conflict",
-              "guideName3": "Guide of Contention",
-              "philosophiesName1": "Philosophies of Conflict",
-              "philosophiesName2": "Philosophies of Contention",
-              "philosophiesName3": "Philosophies of Kindling"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Windwheel Aster"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "weeklyBossDrop": "The Cornerstone of Stars and Flames",
+              "travelertalentBooks": [
+                {
+                  "teachings": "Contention",
+                  "guide1": "Kindling",
+                  "guide2": "Conflict",
+                  "guide3": "Contention",
+                  "philosophies1": "Conflict",
+                  "philosophies2": "Contention",
+                  "philosophies3": "Kindling"
+                }
+              ]
             }
           ]
         }
@@ -341,38 +244,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl Shooter",
-              "shortItemName": "Arrowhead",
-              "itemName1": "Firm Arrowhead",
-              "itemName2": "Sharp Arrowhead",
-              "itemName3": "Weathered Arrowhead"
+              "enemyDrop": "Hilichurl Shooter Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Everflame Seed",
+              "localSpecialty": "Small Lamp Grass"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Pyro Regisvine",
-              "itemName": "Everflame Seed"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Sigh"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Freedom",
-              "teachingsName": "Teachings of Freedom",
-              "guideName": "Guide of Freedom",
-              "philosophiesName": "Philosophies of Freedom"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Small Lamp Grass"
+              "enemyDrop": "Hilichurl Shooter Materials",
+              "weeklyBossDrop": "Dvalin's Sigh",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -394,38 +278,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Treasure Hoarders",
-              "shortItemName": "Insignia",
-              "itemName1": "Treasure Hoarder Insignia",
-              "itemName2": "Silver Raven Insignia",
-              "itemName3": "Golden Raven Insignia"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Hoarfrost Core",
+              "localSpecialty": "Calla Lily"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Cryo Regisvine",
-              "itemName": "Hoarfrost Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Spirit Locket of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ballad",
-              "teachingsName": "Teachings of Ballad",
-              "guideName": "Guide of Ballad",
-              "philosophiesName": "Philosophies of Ballad"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Calla Lily"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "weeklyBossDrop": "Spirit Locket of Boreas",
+              "talentBooks": "Ballad"
             }
           ]
         }
@@ -447,38 +312,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Slimes",
-              "shortItemName": "Slime",
-              "itemName1": "Slime Condensate",
-              "itemName2": "Slime Secretions",
-              "itemName3": "Slime Concentrate"
+              "enemyDrop": "Slime Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Lightning Prism",
+              "localSpecialty": "Valberry"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Electro Hypostasis",
-              "itemName": "Lightning Prism"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Claw"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ballad",
-              "teachingsName": "Teachings of Ballad",
-              "guideName": "Guide of Ballad",
-              "philosophiesName": "Philosophies of Ballad"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Valberry"
+              "enemyDrop": "Slime Materials",
+              "weeklyBossDrop": "Dvalin's Claw",
+              "talentBooks": "Ballad"
             }
           ]
         }
@@ -566,38 +412,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Samachurl",
-              "shortItemName": "Scroll",
-              "itemName1": "Divining Scroll",
-              "itemName2": "Sealed Scroll",
-              "itemName3": "Forbidden Curse Scroll"
+              "enemyDrop": "Samachurl Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Cleansing Heart",
+              "localSpecialty": "Philanemo Mushroom"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Rhodeia of Loch",
-              "itemName": "Cleansing Heart"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Ring of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Freedom",
-              "teachingsName": "Teachings of Freedom",
-              "guideName": "Guide of Freedom",
-              "philosophiesName": "Philosophies of Freedom"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Philanemo Mushroom"
+              "enemyDrop": "Samachurl Materials",
+              "weeklyBossDrop": "Ring of Boreas",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -661,38 +488,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Lightning Prism",
+              "localSpecialty": "Wolfhook"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Electro Hypostasis",
-              "itemName": "Lightning Prism"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Claw"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Resistance",
-              "teachingsName": "Teachings of Resistance",
-              "guideName": "Guide of Resistance",
-              "philosophiesName": "Philosophies of Resistance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Wolfhook"
+              "enemyDrop": "Hilichurl Materials",
+              "weeklyBossDrop": "Dvalin's Claw",
+              "talentBooks": "Resistance"
             }
           ]
         }
@@ -776,42 +584,29 @@
           "endDate": "2025-02-11",
           "version": "5.3",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2025-02-12",
+          "endDate": "2025-03-04",
+          "version": "5.4",
+          "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Slime Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Everflame Seed",
+              "localSpecialty": "Jueyun Chili"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Pyro Regisvine",
-              "itemName": "Everflame Seed"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Claw"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Diligence",
-              "teachingsName": "Teachings of Diligence",
-              "guideName": "Guide of Diligence",
-              "philosophiesName": "Philosophies of Diligence"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Jueyun Chili"
+              "enemyDrop": "Slime Materials",
+              "weeklyBossDrop": "Dvalin's Claw",
+              "talentBooks": "Diligence"
             }
           ]
         }
@@ -887,38 +682,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Treasure Hoarders",
-              "shortItemName": "Insignia",
-              "itemName1": "Treasure Hoarder Insignia",
-              "itemName2": "Silver Raven Insignia",
-              "itemName3": "Golden Raven Insignia"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Lightning Prism",
+              "localSpecialty": "Noctilucous Jade"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Electro Hypostasis",
-              "itemName": "Lightning Prism"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Sigh"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Gold",
-              "teachingsName": "Teachings of Gold",
-              "guideName": "Guide of Gold",
-              "philosophiesName": "Philosophies of Gold"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Noctilucous Jade"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "weeklyBossDrop": "Dvalin's Sigh",
+              "talentBooks": "Gold"
             }
           ]
         }
@@ -1006,38 +782,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Cleansing Heart",
+              "localSpecialty": "Silk Flower"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Rhodeia of Loch",
-              "itemName": "Cleansing Heart"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Tail of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Gold",
-              "teachingsName": "Teachings of Gold",
-              "guideName": "Guide of Gold",
-              "philosophiesName": "Philosophies of Gold"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Silk Flower"
+              "enemyDrop": "Hilichurl Materials",
+              "weeklyBossDrop": "Tail of Boreas",
+              "talentBooks": "Gold"
             }
           ]
         }
@@ -1113,38 +870,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fatui Skirmishers",
-              "shortItemName": "Insignia",
-              "itemName1": "Recruit's Insignia",
-              "itemName2": "Sergeant's Insignia",
-              "itemName3": "Lieutenant's Insignia"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Basalt Pillar",
+              "localSpecialty": "Glaze Lily"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Geo Hypostasis",
-              "itemName": "Basalt Pillar"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Spirit Locket of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Prosperity",
-              "teachingsName": "Teachings of Prosperity",
-              "guideName": "Guide of Prosperity",
-              "philosophiesName": "Philosophies of Prosperity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Glaze Lily"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "weeklyBossDrop": "Spirit Locket of Boreas",
+              "talentBooks": "Prosperity"
             }
           ]
         }
@@ -1220,38 +958,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl Shooter",
-              "shortItemName": "Arrowhead",
-              "itemName1": "Firm Arrowhead",
-              "itemName2": "Sharp Arrowhead",
-              "itemName3": "Weathered Arrowhead"
+              "enemyDrop": "Hilichurl Shooter Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Lightning Prism",
+              "localSpecialty": "Small Lamp Grass"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Electro Hypostasis",
-              "itemName": "Lightning Prism"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Spirit Locket of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ballad",
-              "teachingsName": "Teachings of Ballad",
-              "guideName": "Guide of Ballad",
-              "philosophiesName": "Philosophies of Ballad"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Small Lamp Grass"
+              "enemyDrop": "Hilichurl Shooter Materials",
+              "weeklyBossDrop": "Spirit Locket of Boreas",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -1351,38 +1070,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Treasure Hoarders",
-              "shortItemName": "Insignia",
-              "itemName1": "Treasure Hoarder Insignia",
-              "itemName2": "Silver Raven Insignia",
-              "itemName3": "Golden Raven Insignia"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Everflame Seed",
+              "localSpecialty": "Windwheel Aster"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Pyro Regisvine",
-              "itemName": "Everflame Seed"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Plume"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Resistance",
-              "teachingsName": "Teachings of Resistance",
-              "guideName": "Guide of Resistance",
-              "philosophiesName": "Philosophies of Resistance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Windwheel Aster"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "weeklyBossDrop": "Dvalin's Plume",
+              "talentBooks": "Resistance"
             }
           ]
         }
@@ -1464,38 +1164,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Basalt Pillar",
+              "localSpecialty": "Valberry"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Geo Hypostasis",
-              "itemName": "Basalt Pillar"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Claw"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Resistance",
-              "teachingsName": "Teachings of Resistance",
-              "guideName": "Guide of Resistance",
-              "philosophiesName": "Philosophies of Resistance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Valberry"
+              "enemyDrop": "Hilichurl Materials",
+              "weeklyBossDrop": "Dvalin's Claw",
+              "talentBooks": "Resistance"
             }
           ]
         }
@@ -1561,42 +1242,29 @@
           "endDate": "2025-02-11",
           "version": "5.3",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2025-03-04",
+          "endDate": "2025-03-25",
+          "version": "5.4",
+          "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Hoarfrost Core",
+              "localSpecialty": "Cor Lapis"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Cryo Regisvine",
-              "itemName": "Hoarfrost Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Sigh"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Diligence",
-              "teachingsName": "Teachings of Diligence",
-              "guideName": "Guide of Diligence",
-              "philosophiesName": "Philosophies of Diligence"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Cor Lapis"
+              "enemyDrop": "Hilichurl Materials",
+              "weeklyBossDrop": "Dvalin's Sigh",
+              "talentBooks": "Diligence"
             }
           ]
         }
@@ -1678,38 +1346,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Whopperflower",
-              "shortItemName": "Nectar",
-              "itemName1": "Whopperflower Nectar",
-              "itemName2": "Shimmering Nectar",
-              "itemName3": "Energy Nectar"
+              "enemyDrop": "Whopperflower Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Hurricane Seed",
+              "localSpecialty": "Windwheel Aster"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Anemo Hypostasis",
-              "itemName": "Hurricane Seed"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Spirit Locket of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Freedom",
-              "teachingsName": "Teachings of Freedom",
-              "guideName": "Guide of Freedom",
-              "philosophiesName": "Philosophies of Freedom"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Windwheel Aster"
+              "enemyDrop": "Whopperflower Materials",
+              "weeklyBossDrop": "Spirit Locket of Boreas",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -1731,38 +1380,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Hurricane Seed",
+              "localSpecialty": "Dandelion Seed"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Anemo Hypostasis",
-              "itemName": "Hurricane Seed"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Plume"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Resistance",
-              "teachingsName": "Teachings of Resistance",
-              "guideName": "Guide of Resistance",
-              "philosophiesName": "Philosophies of Resistance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Dandelion Seed"
+              "enemyDrop": "Hilichurl Materials",
+              "weeklyBossDrop": "Dvalin's Plume",
+              "talentBooks": "Resistance"
             }
           ]
         }
@@ -1784,38 +1414,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fatui Skirmishers",
-              "shortItemName": "Insignia",
-              "itemName1": "Recruit's Insignia",
-              "itemName2": "Sergeant's Insignia",
-              "itemName3": "Lieutenant's Insignia"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Everflame Seed",
+              "localSpecialty": "Small Lamp Grass"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Pyro Regisvine",
-              "itemName": "Everflame Seed"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Stormterror Dvalin",
-              "itemName": "Dvalin's Plume"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Resistance",
-              "teachingsName": "Teachings of Resistance",
-              "guideName": "Guide of Resistance",
-              "philosophiesName": "Philosophies of Resistance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Small Lamp Grass"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "weeklyBossDrop": "Dvalin's Plume",
+              "talentBooks": "Resistance"
             }
           ]
         }
@@ -1837,38 +1448,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Samachurl",
-              "shortItemName": "Scroll",
-              "itemName1": "Divining Scroll",
-              "itemName2": "Sealed Scroll",
-              "itemName3": "Forbidden Curse Scroll"
+              "enemyDrop": "Samachurl Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Hoarfrost Core",
+              "localSpecialty": "Violetgrass"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Cryo Regisvine",
-              "itemName": "Hoarfrost Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Tail of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Prosperity",
-              "teachingsName": "Teachings of Prosperity",
-              "guideName": "Guide of Prosperity",
-              "philosophiesName": "Philosophies of Prosperity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Violetgrass"
+              "enemyDrop": "Samachurl Materials",
+              "weeklyBossDrop": "Tail of Boreas",
+              "talentBooks": "Prosperity"
             }
           ]
         }
@@ -1890,38 +1482,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Whopperflower",
-              "shortItemName": "Nectar",
-              "itemName1": "Whopperflower Nectar",
-              "itemName2": "Shimmering Nectar",
-              "itemName3": "Energy Nectar"
+              "enemyDrop": "Whopperflower Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Cleansing Heart",
+              "localSpecialty": "Philanemo Mushroom"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Rhodeia of Loch",
-              "itemName": "Cleansing Heart"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Ring of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Resistance",
-              "teachingsName": "Teachings of Resistance",
-              "guideName": "Guide of Resistance",
-              "philosophiesName": "Philosophies of Resistance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Philanemo Mushroom"
+              "enemyDrop": "Whopperflower Materials",
+              "weeklyBossDrop": "Ring of Boreas",
+              "talentBooks": "Resistance"
             }
           ]
         }
@@ -1949,38 +1522,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Whopperflower",
-              "shortItemName": "Nectar",
-              "itemName1": "Whopperflower Nectar",
-              "itemName2": "Shimmering Nectar",
-              "itemName3": "Energy Nectar"
+              "enemyDrop": "Whopperflower Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Lightning Prism",
+              "localSpecialty": "Cor Lapis"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Electro Hypostasis",
-              "itemName": "Lightning Prism"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Ring of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Prosperity",
-              "teachingsName": "Teachings of Prosperity",
-              "guideName": "Guide of Prosperity",
-              "philosophiesName": "Philosophies of Prosperity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Cor Lapis"
+              "enemyDrop": "Whopperflower Materials",
+              "weeklyBossDrop": "Ring of Boreas",
+              "talentBooks": "Prosperity"
             }
           ]
         }
@@ -2026,38 +1580,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Slime Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Hurricane Seed",
+              "localSpecialty": "Cecilia"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Anemo Hypostasis",
-              "itemName": "Hurricane Seed"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Tail of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ballad",
-              "teachingsName": "Teachings of Ballad",
-              "guideName": "Guide of Ballad",
-              "philosophiesName": "Philosophies of Ballad"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Cecilia"
+              "enemyDrop": "Slime Materials",
+              "weeklyBossDrop": "Tail of Boreas",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -2103,38 +1638,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Samachurl",
-              "shortItemName": "Scroll",
-              "itemName1": "Divining Scroll",
-              "itemName2": "Sealed Scroll",
-              "itemName3": "Forbidden Curse Scroll"
+              "enemyDrop": "Samachurl Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Everflame Seed",
+              "localSpecialty": "Philanemo Mushroom"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Pyro Regisvine",
-              "itemName": "Everflame Seed"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Andrius",
-              "itemName": "Ring of Boreas"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Freedom",
-              "teachingsName": "Teachings of Freedom",
-              "guideName": "Guide of Freedom",
-              "philosophiesName": "Philosophies of Freedom"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Philanemo Mushroom"
+              "enemyDrop": "Samachurl Materials",
+              "weeklyBossDrop": "Ring of Boreas",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -2216,38 +1732,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl Shooter",
-              "shortItemName": "Arrowhead",
-              "itemName1": "Firm Arrowhead",
-              "itemName2": "Sharp Arrowhead",
-              "itemName3": "Weathered Arrowhead"
+              "enemyDrop": "Hilichurl Shooter Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Hoarfrost Core",
+              "localSpecialty": "Calla Lily"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Cryo Regisvine",
-              "itemName": "Hoarfrost Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Childe",
-              "itemName": "Shard of a Foul Legacy"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Freedom",
-              "teachingsName": "Teachings of Freedom",
-              "guideName": "Guide of Freedom",
-              "philosophiesName": "Philosophies of Freedom"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Calla Lily"
+              "enemyDrop": "Hilichurl Shooter Materials",
+              "weeklyBossDrop": "Shard of a Foul Legacy",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -2299,38 +1796,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fatui Skirmishers",
-              "shortItemName": "Insignia",
-              "itemName1": "Recruit's Insignia",
-              "itemName2": "Sergeant's Insignia",
-              "itemName3": "Lieutenant's Insignia"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Cleansing Heart",
+              "localSpecialty": "Starconch"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Rhodeia of Loch",
-              "itemName": "Cleansing Heart"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Childe",
-              "itemName": "Shard of a Foul Legacy"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Freedom",
-              "teachingsName": "Teachings of Freedom",
-              "guideName": "Guide of Freedom",
-              "philosophiesName": "Philosophies of Freedom"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Starconch"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "weeklyBossDrop": "Shard of a Foul Legacy",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -2406,38 +1884,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Treasure Hoarders",
-              "shortItemName": "Insignia",
-              "itemName1": "Treasure Hoarder Insignia",
-              "itemName2": "Silver Raven Insignia",
-              "itemName3": "Golden Raven Insignia"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Everflame Seed",
+              "localSpecialty": "Violetgrass"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Pyro Regisvine",
-              "itemName": "Everflame Seed"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Childe",
-              "itemName": "Tusk of Monoceros Caeli"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Gold",
-              "teachingsName": "Teachings of Gold",
-              "guideName": "Guide of Gold",
-              "philosophiesName": "Philosophies of Gold"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Violetgrass"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "weeklyBossDrop": "Tusk of Monoceros Caeli",
+              "talentBooks": "Gold"
             }
           ]
         }
@@ -2489,38 +1948,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Slime Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Basalt Pillar",
+              "localSpecialty": "Cor Lapis"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Geo Hypostasis",
-              "itemName": "Basalt Pillar"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Childe",
-              "itemName": "Tusk of Monoceros Caeli"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Gold",
-              "teachingsName": "Teachings of Gold",
-              "guideName": "Guide of Gold",
-              "philosophiesName": "Philosophies of Gold"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Cor Lapis"
+              "enemyDrop": "Slime Materials",
+              "weeklyBossDrop": "Tusk of Monoceros Caeli",
+              "talentBooks": "Gold"
             }
           ]
         }
@@ -2560,38 +2000,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Samachurl",
-              "shortItemName": "Scroll",
-              "itemName1": "Divining Scroll",
-              "itemName2": "Sealed Scroll",
-              "itemName3": "Forbidden Curse Scroll"
+              "enemyDrop": "Samachurl Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Basalt Pillar",
+              "localSpecialty": "Cecilia"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Geo Hypostasis",
-              "itemName": "Basalt Pillar"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Childe",
-              "itemName": "Tusk of Monoceros Caeli"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ballad",
-              "teachingsName": "Teachings of Ballad",
-              "guideName": "Guide of Ballad",
-              "philosophiesName": "Philosophies of Ballad"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Cecilia"
+              "enemyDrop": "Samachurl Materials",
+              "weeklyBossDrop": "Tusk of Monoceros Caeli",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -2637,38 +2058,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Whopperflower",
-              "shortItemName": "Nectar",
-              "itemName1": "Whopperflower Nectar",
-              "itemName2": "Shimmering Nectar",
-              "itemName3": "Energy Nectar"
+              "enemyDrop": "Whopperflower Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Hoarfrost Core",
+              "localSpecialty": "Qingxin"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Cryo Regisvine",
-              "itemName": "Hoarfrost Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Childe",
-              "itemName": "Shadow of the Warrior"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Diligence",
-              "teachingsName": "Teachings of Diligence",
-              "guideName": "Guide of Diligence",
-              "philosophiesName": "Philosophies of Diligence"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Qingxin"
+              "enemyDrop": "Whopperflower Materials",
+              "weeklyBossDrop": "Shadow of the Warrior",
+              "talentBooks": "Diligence"
             }
           ]
         }
@@ -2720,38 +2122,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Slime Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Juvenile Jade",
+              "localSpecialty": "Qingxin"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Primo Geovishap",
-              "itemName": "Juvenile Jade"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Childe",
-              "itemName": "Shadow of the Warrior"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Prosperity",
-              "teachingsName": "Teachings of Prosperity",
-              "guideName": "Guide of Prosperity",
-              "philosophiesName": "Philosophies of Prosperity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Qingxin"
+              "enemyDrop": "Slime Materials",
+              "weeklyBossDrop": "Shadow of the Warrior",
+              "talentBooks": "Prosperity"
             }
           ]
         }
@@ -2762,7 +2145,7 @@
       "star": 5,
       "element": "Pyro",
       "weapon": "Polearm",
-      "birthday": "06-09",
+      "birthday": "07-15",
       "reruns": [
         {
           "startDate": "2021-03-02",
@@ -2797,38 +2180,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Whopperflower",
-              "shortItemName": "Nectar",
-              "itemName1": "Whopperflower Nectar",
-              "itemName2": "Shimmering Nectar",
-              "itemName3": "Energy Nectar"
+              "enemyDrop": "Whopperflower Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Juvenile Jade",
+              "localSpecialty": "Silk Flower"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Primo Geovishap",
-              "itemName": "Juvenile Jade"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Childe",
-              "itemName": "Shard of a Foul Legacy"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Diligence",
-              "teachingsName": "Teachings of Diligence",
-              "guideName": "Guide of Diligence",
-              "philosophiesName": "Philosophies of Diligence"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Silk Flower"
+              "enemyDrop": "Whopperflower Materials",
+              "weeklyBossDrop": "Shard of a Foul Legacy",
+              "talentBooks": "Diligence"
             }
           ]
         }
@@ -2910,38 +2274,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fatui Skirmishers",
-              "shortItemName": "Insignia",
-              "itemName1": "Recruit's Insignia",
-              "itemName2": "Sergeant's Insignia",
-              "itemName3": "Lieutenant's Insignia"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Hoarfrost Core",
+              "localSpecialty": "Valberry"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Cryo Regisvine",
-              "itemName": "Hoarfrost Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Childe",
-              "itemName": "Shadow of the Warrior"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ballad",
-              "teachingsName": "Teachings of Ballad",
-              "guideName": "Guide of Ballad",
-              "philosophiesName": "Philosophies of Ballad"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Valberry"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "weeklyBossDrop": "Shadow of the Warrior",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -3017,38 +2362,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Treasure Hoarders",
-              "shortItemName": "Insignia",
-              "itemName1": "Treasure Hoarder Insignia",
-              "itemName2": "Silver Raven Insignia",
-              "itemName3": "Golden Raven Insignia"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Juvenile Jade",
+              "localSpecialty": "Noctilucous Jade"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Primo Geovishap",
-              "itemName": "Juvenile Jade"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Azhdaha (Weekly Boss)",
-              "itemName": "Bloodjade Branch"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Gold",
-              "teachingsName": "Teachings of Gold",
-              "guideName": "Guide of Gold",
-              "philosophiesName": "Philosophies of Gold"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Noctilucous Jade"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "weeklyBossDrop": "Bloodjade Branch",
+              "talentBooks": "Gold"
             }
           ]
         }
@@ -3088,38 +2414,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Crystalline Bloom",
+              "localSpecialty": "Dandelion Seed"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Cryo Hypostasis",
-              "itemName": "Crystalline Bloom"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Azhdaha (Weekly Boss)",
-              "itemName": "Dragon Lord's Crown"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Resistance",
-              "teachingsName": "Teachings of Resistance",
-              "guideName": "Guide of Resistance",
-              "philosophiesName": "Philosophies of Resistance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Dandelion Seed"
+              "enemyDrop": "Hilichurl Materials",
+              "weeklyBossDrop": "Dragon Lord's Crown",
+              "talentBooks": "Resistance"
             }
           ]
         }
@@ -3165,38 +2472,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Treasure Hoarders",
-              "shortItemName": "Insignia",
-              "itemName1": "Treasure Hoarder Insignia",
-              "itemName2": "Silver Raven Insignia",
-              "itemName3": "Golden Raven Insignia"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Marionette Core",
+              "localSpecialty": "Sea Ganoderma"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Maguu Kenki",
-              "itemName": "Marionette Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Azhdaha (Weekly Boss)",
-              "itemName": "Gilded Scale"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Diligence",
-              "teachingsName": "Teachings of Diligence",
-              "guideName": "Guide of Diligence",
-              "philosophiesName": "Philosophies of Diligence"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sea Ganoderma"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "weeklyBossDrop": "Gilded Scale",
+              "talentBooks": "Diligence"
             }
           ]
         }
@@ -3236,38 +2524,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Nobushi",
-              "shortItemName": "Handguard",
-              "itemName1": "Old Handguard",
-              "itemName2": "Kageuchi Handguard",
-              "itemName3": "Famed Handguard"
+              "enemyDrop": "Nobushi Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Perpetual Heart",
+              "localSpecialty": "Sakura Bloom"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Perpetual Mechanical Array",
-              "itemName": "Perpetual Heart"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Azhdaha (Weekly Boss)",
-              "itemName": "Bloodjade Branch"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Elegance",
-              "teachingsName": "Teachings of Elegance",
-              "guideName": "Guide of Elegance",
-              "philosophiesName": "Philosophies of Elegance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sakura Bloom"
+              "enemyDrop": "Nobushi Materials",
+              "weeklyBossDrop": "Bloodjade Branch",
+              "talentBooks": "Elegance"
             }
           ]
         }
@@ -3315,42 +2584,29 @@
           "endDate": "2023-09-26",
           "version": "4.0",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-02-12",
+          "endDate": "2025-03-04",
+          "version": "5.4",
+          "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Whopperflower",
-              "shortItemName": "Nectar",
-              "itemName1": "Whopperflower Nectar",
-              "itemName2": "Shimmering Nectar",
-              "itemName3": "Energy Nectar"
+              "enemyDrop": "Whopperflower Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Marionette Core",
+              "localSpecialty": "Crystal Marrow"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Maguu Kenki",
-              "itemName": "Marionette Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Azhdaha (Weekly Boss)",
-              "itemName": "Gilded Scale"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Light",
-              "teachingsName": "Teachings of Light",
-              "guideName": "Guide of Light",
-              "philosophiesName": "Philosophies of Light"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Crystal Marrow"
+              "enemyDrop": "Whopperflower Materials",
+              "weeklyBossDrop": "Gilded Scale",
+              "talentBooks": "Light"
             }
           ]
         }
@@ -3396,38 +2652,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Samachurl",
-              "shortItemName": "Scroll",
-              "itemName1": "Divining Scroll",
-              "itemName2": "Sealed Scroll",
-              "itemName3": "Forbidden Curse Scroll"
+              "enemyDrop": "Samachurl Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Smoldering Pearl",
+              "localSpecialty": "Naku Weed"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Pyro Hypostasis",
-              "itemName": "Smoldering Pearl"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Azhdaha (Weekly Boss)",
-              "itemName": "Dragon Lord's Crown"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Transience",
-              "teachingsName": "Teachings of Transience",
-              "guideName": "Guide of Transience",
-              "philosophiesName": "Philosophies of Transience"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Naku Weed"
+              "enemyDrop": "Samachurl Materials",
+              "weeklyBossDrop": "Dragon Lord's Crown",
+              "talentBooks": "Transience"
             }
           ]
         }
@@ -3443,38 +2680,19 @@
       "reruns": [],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Specter Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Crystalline Bloom",
+              "localSpecialty": "Crystal Marrow"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Cryo Hypostasis",
-              "itemName": "Crystalline Bloom"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "La Signora",
-              "itemName": "Molten Moment"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Freedom",
-              "teachingsName": "Teachings of Freedom",
-              "guideName": "Guide of Freedom",
-              "philosophiesName": "Philosophies of Freedom"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Crystal Marrow"
+              "enemyDrop": "Specter Materials",
+              "weeklyBossDrop": "Molten Moment",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -3520,38 +2738,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Storm Beads",
+              "localSpecialty": "Dendrobium"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Thunder Manifestation",
-              "itemName": "Storm Beads"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "La Signora",
-              "itemName": "Ashen Heart"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Elegance",
-              "teachingsName": "Teachings of Elegance",
-              "guideName": "Guide of Elegance",
-              "philosophiesName": "Philosophies of Elegance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Dendrobrium"
+              "enemyDrop": "Hilichurl Materials",
+              "weeklyBossDrop": "Ashen Heart",
+              "talentBooks": "Elegance"
             }
           ]
         }
@@ -3597,38 +2796,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Nobushi",
-              "shortItemName": "Handguard",
-              "itemName1": "Old Handguard",
-              "itemName2": "Kageuchi Handguard",
-              "itemName3": "Famed Handguard"
+              "enemyDrop": "Nobushi Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Storm Beads",
+              "localSpecialty": "Amakumo Fruit"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Thunder Manifestation",
-              "itemName": "Storm Beads"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "La Signora",
-              "itemName": "Molten Moment"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Light",
-              "teachingsName": "Teachings of Light",
-              "guideName": "Guide of Light",
-              "philosophiesName": "Philosophies of Light"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Amakumo Fruit"
+              "enemyDrop": "Nobushi Materials",
+              "weeklyBossDrop": "Molten Moment",
+              "talentBooks": "Light"
             }
           ]
         }
@@ -3668,38 +2848,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Specter Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Dew of Repudiation",
+              "localSpecialty": "Sango Pearl"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Hydro Hypostasis",
-              "itemName": "Dew of Repudiation"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "La Signora",
-              "itemName": "Hellfire Butterfly"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Transience",
-              "teachingsName": "Teachings of Transience",
-              "guideName": "Guide of Transience",
-              "philosophiesName": "Philosophies of Transience"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sango Pearl"
+              "enemyDrop": "Specter Materials",
+              "weeklyBossDrop": "Hellfire Butterfly",
+              "talentBooks": "Transience"
             }
           ]
         }
@@ -3763,38 +2924,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Treasure Hoarders",
-              "shortItemName": "Insignia",
-              "itemName1": "Treasure Hoarder Insignia",
-              "itemName2": "Silver Raven Insignia",
-              "itemName3": "Golden Raven Insignia"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Smoldering Pearl",
+              "localSpecialty": "Fluorescent Fungus"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Pyro Hypostasis",
-              "itemName": "Smoldering Pearl"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "La Signora",
-              "itemName": "Hellfire Butterfly"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Transience",
-              "teachingsName": "Teachings of Transience",
-              "guideName": "Guide of Transience",
-              "philosophiesName": "Philosophies of Transience"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Fluorescent Fungus"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "weeklyBossDrop": "Hellfire Butterfly",
+              "talentBooks": "Transience"
             }
           ]
         }
@@ -3830,42 +2972,29 @@
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-02-12",
+          "endDate": "2025-03-04",
+          "version": "5.4",
+          "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Specter Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Perpetual Heart",
+              "localSpecialty": "Sango Pearl"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Perpetual Mechanical Array",
-              "itemName": "Perpetual Heart"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "La Signora",
-              "itemName": "Molten Moment"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Light",
-              "teachingsName": "Teachings of Light",
-              "guideName": "Guide of Light",
-              "philosophiesName": "Philosophies of Light"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sango Pearl"
+              "enemyDrop": "Specter Materials",
+              "weeklyBossDrop": "Molten Moment",
+              "talentBooks": "Light"
             }
           ]
         }
@@ -3905,38 +3034,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Slime Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Riftborn Regalia",
+              "localSpecialty": "Onikabuto"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Golden Wolflord",
-              "itemName": "Riftborn Regalia"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "La Signora",
-              "itemName": "Ashen Heart"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Elegance",
-              "teachingsName": "Teachings of Elegance",
-              "guideName": "Guide of Elegance",
-              "philosophiesName": "Philosophies of Elegance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Onikabuto"
+              "enemyDrop": "Slime Materials",
+              "weeklyBossDrop": "Ashen Heart",
+              "talentBooks": "Elegance"
             }
           ]
         }
@@ -3994,38 +3104,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl",
-              "shortItemName": "Mask",
-              "itemName1": "Damaged Mask",
-              "itemName2": "Stained Mask",
-              "itemName3": "Ominous Mask"
+              "enemyDrop": "Hilichurl Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Riftborn Regalia",
+              "localSpecialty": "Glaze Lily"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Golden Wolflord",
-              "itemName": "Riftborn Regalia"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "La Signora",
-              "itemName": "Ashen Heart"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Diligence",
-              "teachingsName": "Teachings of Diligence",
-              "guideName": "Guide of Diligence",
-              "philosophiesName": "Philosophies of Diligence"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Glaze Lily"
+              "enemyDrop": "Hilichurl Materials",
+              "weeklyBossDrop": "Ashen Heart",
+              "talentBooks": "Diligence"
             }
           ]
         }
@@ -4059,38 +3150,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Whopperflower",
-              "shortItemName": "Nectar",
-              "itemName1": "Whopperflower Nectar",
-              "itemName2": "Shimmering Nectar",
-              "itemName3": "Energy Nectar"
+              "enemyDrop": "Whopperflower Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Dragonheir's False Fin",
+              "localSpecialty": "Qingxin"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Coral Defenders",
-              "itemName": "Dragonheir's False Fin"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "La Signora",
-              "itemName": "Hellfire Butterfly"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Prosperity",
-              "teachingsName": "Teachings of Prosperity",
-              "guideName": "Guide of Prosperity",
-              "philosophiesName": "Philosophies of Prosperity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Qingxin"
+              "enemyDrop": "Whopperflower Materials",
+              "weeklyBossDrop": "Hellfire Butterfly",
+              "talentBooks": "Prosperity"
             }
           ]
         }
@@ -4130,38 +3202,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Nobushi",
-              "shortItemName": "Handguard",
-              "itemName1": "Old Handguard",
-              "itemName2": "Kageuchi Handguard",
-              "itemName3": "Famed Handguard"
+              "enemyDrop": "Nobushi Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Dragonheir's False Fin",
+              "localSpecialty": "Sea Ganoderma"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Coral Defenders",
-              "itemName": "Dragonheir's False Fin"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "The Meaning of Aeons"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Light",
-              "teachingsName": "Teachings of Light",
-              "guideName": "Guide of Light",
-              "philosophiesName": "Philosophies of Light"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sea Ganoderma"
+              "enemyDrop": "Nobushi Materials",
+              "weeklyBossDrop": "The Meaning of Aeons",
+              "talentBooks": "Light"
             }
           ]
         }
@@ -4195,38 +3248,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Nobushi",
-              "shortItemName": "Handguard",
-              "itemName1": "Old Handguard",
-              "itemName2": "Kageuchi Handguard",
-              "itemName3": "Famed Handguard"
+              "enemyDrop": "Nobushi Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Dew of Repudiation",
+              "localSpecialty": "Sakura Bloom"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Hydro Hypostasis",
-              "itemName": "Dew of Repudiation"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "Mudra of the Malefic General"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Elegance",
-              "teachingsName": "Teachings of Elegance",
-              "guideName": "Guide of Elegance",
-              "philosophiesName": "Philosophies of Elegance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sakura Bloom"
+              "enemyDrop": "Nobushi Materials",
+              "weeklyBossDrop": "Mudra of the Malefic General",
+              "talentBooks": "Elegance"
             }
           ]
         }
@@ -4266,38 +3300,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fatui Skirmishers",
-              "shortItemName": "Insignia",
-              "itemName1": "Recruit's Insignia",
-              "itemName2": "Sergeant's Insignia",
-              "itemName3": "Lieutenant's Insignia"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Runic Fang",
+              "localSpecialty": "Starconch"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Ruin Serpent",
-              "itemName": "Runic Fang"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Azhdaha (Weekly Boss)",
-              "itemName": "Gilded Scale"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Prosperity",
-              "teachingsName": "Teachings of Prosperity",
-              "guideName": "Guide of Prosperity",
-              "philosophiesName": "Philosophies of Prosperity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Starconch"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "weeklyBossDrop": "Gilded Scale",
+              "talentBooks": "Prosperity"
             }
           ]
         }
@@ -4343,38 +3358,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Specter Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Runic Fang",
+              "localSpecialty": "Naku Weed"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Ruin Serpent",
-              "itemName": "Runic Fang"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "Tears of the Calamitous God"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Elegance",
-              "teachingsName": "Teachings of Elegance",
-              "guideName": "Guide of Elegance",
-              "philosophiesName": "Philosophies of Elegance"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Naku Weed"
+              "enemyDrop": "Specter Materials",
+              "weeklyBossDrop": "Tears of the Calamitous God",
+              "talentBooks": "Elegance"
             }
           ]
         }
@@ -4414,38 +3410,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Treasure Hoarders",
-              "shortItemName": "Insignia",
-              "itemName1": "Treasure Hoarder Insignia",
-              "itemName2": "Silver Raven Insignia",
-              "itemName3": "Golden Raven Insignia"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Runic Fang",
+              "localSpecialty": "Onikabuto"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Ruin Serpent",
-              "itemName": "Runic Fang"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "The Meaning of Aeons"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Transience",
-              "teachingsName": "Teachings of Transience",
-              "guideName": "Guide of Transience",
-              "philosophiesName": "Philosophies of Transience"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Onikabuto"
+              "enemyDrop": "Treasure Hoarder Materials",
+              "weeklyBossDrop": "The Meaning of Aeons",
+              "talentBooks": "Transience"
             }
           ]
         }
@@ -4485,38 +3462,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Hilichurl Shooter",
-              "shortItemName": "Arrowhead",
-              "itemName1": "Firm Arrowhead",
-              "itemName2": "Sharp Arrowhead",
-              "itemName3": "Weathered Arrowhead"
+              "enemyDrop": "Hilichurl Shooter Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Majestic Hooked Beak",
+              "localSpecialty": "Rukkhashava Mushrooms"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Jadeplume Terrorshroom",
-              "itemName": "Majestic Hooked Beak"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "Tears of the Calamitous God"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Praxis",
-              "teachingsName": "Teachings of Praxis",
-              "guideName": "Guide of Praxis",
-              "philosophiesName": "Philosophies of Praxis"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Rukkhashava Mushrooms"
+              "enemyDrop": "Hilichurl Shooter Materials",
+              "weeklyBossDrop": "Tears of the Calamitous God",
+              "talentBooks": "Praxis"
             }
           ]
         }
@@ -4538,38 +3496,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fungi",
-              "shortItemName": "Spores",
-              "itemName1": "Fungal Spores",
-              "itemName2": "Luminescent Pollen",
-              "itemName3": "Crystalline Cyst Dust"
+              "enemyDrop": "Fungus Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Majestic Hooked Beak",
+              "localSpecialty": "Nilotpala Lotus"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Jadeplume Terrorshroom",
-              "itemName": "Majestic Hooked Beak"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "The Meaning of Aeons"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Admonition",
-              "teachingsName": "Teachings of Admonition",
-              "guideName": "Guide of Admonition",
-              "philosophiesName": "Philosophies of Admonition"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Nilotpala Lotus"
+              "enemyDrop": "Fungus Materials",
+              "weeklyBossDrop": "The Meaning of Aeons",
+              "talentBooks": "Admonition"
             }
           ]
         }
@@ -4615,38 +3554,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "The Eremites Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Thunderclap Fruitcore",
+              "localSpecialty": "Kalpalata Lotus"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Electro Regisvine",
-              "itemName": "Thunderclap Fruitcore"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Azhdaha (Weekly Boss)",
-              "itemName": "Bloodjade Branch"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ingenuity",
-              "teachingsName": "Teachings of Ingenuity",
-              "guideName": "Guide of Ingenuity",
-              "philosophiesName": "Philosophies of Ingenuity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Kalpalata Lotus"
+              "enemyDrop": "The Eremites Materials",
+              "weeklyBossDrop": "Bloodjade Branch",
+              "talentBooks": "Ingenuity"
             }
           ]
         }
@@ -4686,38 +3606,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "The Eremites Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Light Guiding Tetrahedron",
+              "localSpecialty": "Henna Berry"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Algorithm of Semi-Intransient Matrix of Overseer Network",
-              "itemName": "Light Guarding Tetrahedron"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "Tears of the Calamitous God"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Admonition",
-              "teachingsName": "Teachings of Admonition",
-              "guideName": "Guide of Admonition",
-              "philosophiesName": "Philosophies of Admonition"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Henna Berry"
+              "enemyDrop": "The Eremites Materials",
+              "weeklyBossDrop": "Tears of the Calamitous God",
+              "talentBooks": "Admonition"
             }
           ]
         }
@@ -4751,38 +3652,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Samachurl",
-              "shortItemName": "Scroll",
-              "itemName1": "Divining Scroll",
-              "itemName2": "Sealed Scroll",
-              "itemName3": "Forbidden Curse Scroll"
+              "enemyDrop": "Samachurl Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Thunderclap Fruitcore",
+              "localSpecialty": "Scarab"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Electro Regisvine",
-              "itemName": "Thunderclap Fruitcore"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "Mudra of the Malefic General"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Admonition",
-              "teachingsName": "Teachings of Admonition",
-              "guideName": "Guide of Admonition",
-              "philosophiesName": "Philosophies of Admonition"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Scarab"
+              "enemyDrop": "Samachurl Materials",
+              "weeklyBossDrop": "Mudra of the Malefic General",
+              "talentBooks": "Admonition"
             }
           ]
         }
@@ -4816,38 +3698,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fungi",
-              "shortItemName": "Spores",
-              "itemName1": "Fungal Spores",
-              "itemName2": "Luminescent Pollen",
-              "itemName3": "Crystalline Cyst Dust"
+              "enemyDrop": "Fungus Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Perpetual Caliber",
+              "localSpecialty": "Padisarah"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Aeonblight Drake",
-              "itemName": "Perpetual Caliber"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Magatsu Mitake Narukami no Mikoto",
-              "itemName": "Tears of the Calamitous God"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Praxis",
-              "teachingsName": "Teachings of Praxis",
-              "guideName": "Guide of Praxis",
-              "philosophiesName": "Philosophies of Praxis"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Padisarah"
+              "enemyDrop": "Fungus Materials",
+              "weeklyBossDrop": "Tears of the Calamitous God",
+              "talentBooks": "Praxis"
             }
           ]
         }
@@ -4887,38 +3750,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fungi",
-              "shortItemName": "Spores",
-              "itemName1": "Fungal Spores",
-              "itemName2": "Luminescent Pollen",
-              "itemName3": "Crystalline Cyst Dust"
+              "enemyDrop": "Fungus Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Quelled Creeper",
+              "localSpecialty": "Kalpalata Lotus"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Dendro Hypostasis",
-              "itemName": "Quelled Creeper"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Puppet Strings"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ingenuity",
-              "teachingsName": "Teachings of Ingenuity",
-              "guideName": "Guide of Ingenuity",
-              "philosophiesName": "Philosophies of Ingenuity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Kalpalata Lotus"
+              "enemyDrop": "Fungus Materials",
+              "weeklyBossDrop": "Puppet Strings",
+              "talentBooks": "Ingenuity"
             }
           ]
         }
@@ -4952,38 +3796,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Samachurl Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Perpetual Caliber",
+              "localSpecialty": "Nilotpala Lotus"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Aeonblight Drake",
-              "itemName": "Perpetual Caliber"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Mirror of Mushin"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ingenuity",
-              "teachingsName": "Teachings of Ingenuity",
-              "guideName": "Guide of Ingenuity",
-              "philosophiesName": "Philosophies of Ingenuity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Nilotpala Lotus"
+              "enemyDrop": "Samachurl Materials",
+              "weeklyBossDrop": "Mirror of Mushin",
+              "talentBooks": "Ingenuity"
             }
           ]
         }
@@ -5023,38 +3848,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "The Eremites Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Light Guiding Tetrahedron",
+              "localSpecialty": "Henna Berry"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Algorithm of Semi-Intransient Matrix of Overseer Network",
-              "itemName": "Light Guarding Tetrahedron"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Puppet Strings"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Admonition",
-              "teachingsName": "Teachings of Admonition",
-              "guideName": "Guide of Admonition",
-              "philosophiesName": "Philosophies of Admonition"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Henna Berry"
+              "enemyDrop": "The Eremites Materials",
+              "weeklyBossDrop": "Puppet Strings",
+              "talentBooks": "Admonition"
             }
           ]
         }
@@ -5088,38 +3894,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Nobushi",
-              "shortItemName": "Handguard",
-              "itemName1": "Old Handguard",
-              "itemName2": "Kageuchi Handguard",
-              "itemName3": "Famed Handguard"
+              "enemyDrop": "Nobushi Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Perpetual Caliber",
+              "localSpecialty": "Rukkhashava Mushrooms"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Aeonblight Drake",
-              "itemName": "Perpetual Caliber"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Daka's Bell"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Praxis",
-              "teachingsName": "Teachings of Praxis",
-              "guideName": "Guide of Praxis",
-              "philosophiesName": "Philosophies of Praxis"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Rukkhashava Mushrooms"
+              "enemyDrop": "Nobushi Materials",
+              "weeklyBossDrop": "Daka's Bell",
+              "talentBooks": "Praxis"
             }
           ]
         }
@@ -5165,38 +3952,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Slime Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Quelled Creeper",
+              "localSpecialty": "Jueyun Chili"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Dendro Hypostasis",
-              "itemName": "Quelled Creeper"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Daka's Bell"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Diligence",
-              "teachingsName": "Teachings of Diligence",
-              "guideName": "Guide of Diligence",
-              "philosophiesName": "Philosophies of Diligence"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Jueyun Chili"
+              "enemyDrop": "Slime Materials",
+              "weeklyBossDrop": "Daka's Bell",
+              "talentBooks": "Diligence"
             }
           ]
         }
@@ -5230,38 +3998,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "The Eremites Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Pseudo-Stamens",
+              "localSpecialty": "Sand Grease Pupa"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Setekh Wenut",
-              "itemName": "Pseudo-Stamens"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Mirror of Mushin"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ingenuity",
-              "teachingsName": "Teachings of Ingenuity",
-              "guideName": "Guide of Ingenuity",
-              "philosophiesName": "Philosophies of Ingenuity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sand Grease Pupa"
+              "enemyDrop": "The Eremites Materials",
+              "weeklyBossDrop": "Mirror of Mushin",
+              "talentBooks": "Ingenuity"
             }
           ]
         }
@@ -5283,38 +4032,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "The Eremites Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Light Guiding Tetrahedron",
+              "localSpecialty": "Sand Grease Pupa"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Algorithm of Semi-Intransient Matrix of Overseer Network",
-              "itemName": "Light Guarding Tetrahedron"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Puppet Strings"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Praxis",
-              "teachingsName": "Teachings of Praxis",
-              "guideName": "Guide of Praxis",
-              "philosophiesName": "Philosophies of Praxis"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sand Grease Pupa"
+              "enemyDrop": "The Eremites Materials",
+              "weeklyBossDrop": "Puppet Strings",
+              "talentBooks": "Praxis"
             }
           ]
         }
@@ -5344,42 +4074,29 @@
           "endDate": "2024-04-02",
           "version": "4.5",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2025-03-04",
+          "endDate": "2025-03-25",
+          "version": "5.4",
+          "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fatui Skirmishers",
-              "shortItemName": "Insignia",
-              "itemName1": "Recruit's Insignia",
-              "itemName2": "Sergeant's Insignia",
-              "itemName3": "Lieutenant's Insignia"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Pseudo-Stamens",
+              "localSpecialty": "Wolfhook"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Setekh Wenut",
-              "itemName": "Pseudo-Stamens"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Mirror of Mushin"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ballad",
-              "teachingsName": "Teachings of Ballad",
-              "guideName": "Guide of Ballad",
-              "philosophiesName": "Philosophies of Ballad"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Wolfhook"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "weeklyBossDrop": "Mirror of Mushin",
+              "talentBooks": "Freedom"
             }
           ]
         }
@@ -5407,38 +4124,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fungi",
-              "shortItemName": "Spores",
-              "itemName1": "Fungal Spores",
-              "itemName2": "Luminescent Pollen",
-              "itemName3": "Crystalline Cyst Dust"
+              "enemyDrop": "Fungus Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Quelled Creeper",
+              "localSpecialty": "Mourning Flower"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Dendro Hypostasis",
-              "itemName": "Quelled Creeper"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Primordial Greenbloom"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Ingenuity",
-              "teachingsName": "Teachings of Ingenuity",
-              "guideName": "Guide of Ingenuity",
-              "philosophiesName": "Philosophies of Ingenuity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Mourning Flower"
+              "enemyDrop": "Fungus Materials",
+              "weeklyBossDrop": "Primordial Greenbloom",
+              "talentBooks": "Ingenuity"
             }
           ]
         }
@@ -5478,38 +4176,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fungi",
-              "shortItemName": "Spores",
-              "itemName1": "Fungal Spores",
-              "itemName2": "Luminescent Pollen",
-              "itemName3": "Crystalline Cyst Dust"
+              "enemyDrop": "Fungus Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Evergloom Ring",
+              "localSpecialty": "Violetgrass"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Iniquitous Baptist",
-              "itemName": "Evergloom Ring"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Worldspan Fern"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Gold",
-              "teachingsName": "Teachings of Gold",
-              "guideName": "Guide of Gold",
-              "philosophiesName": "Philosophies of Gold"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Violetgrass"
+              "enemyDrop": "Fungus Materials",
+              "weeklyBossDrop": "Worldspan Fern",
+              "talentBooks": "Gold"
             }
           ]
         }
@@ -5543,38 +4222,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Specter Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Evergloom Ring",
+              "localSpecialty": "Amakumo Fruit"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Iniquitous Baptist",
-              "itemName": "Evergloom Ring"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Everamber"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Transience",
-              "teachingsName": "Teachings of Transience",
-              "guideName": "Guide of Transience",
-              "philosophiesName": "Philosophies of Transience"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Amakumo Fruit"
+              "enemyDrop": "Specter Materials",
+              "weeklyBossDrop": "Everamber",
+              "talentBooks": "Transience"
             }
           ]
         }
@@ -5602,38 +4262,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fatui Skirmishers",
-              "shortItemName": "Insignia",
-              "itemName1": "Recruit's Insignia",
-              "itemName2": "Sergeant's Insignia",
-              "itemName3": "Lieutenant's Insignia"
+              "enemyDrop": "Clockwork Meka Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Artificed Spare Clockwork Component — Coppelia",
+              "localSpecialty": "Lumidouce Bell"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component - Coppelia"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Everamber"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Order",
-              "teachingsName": "Teachings of Order",
-              "guideName": "Guide of Order",
-              "philosophiesName": "Philosophies of Order"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Lumidouce Bell"
+              "enemyDrop": "Clockwork Meka Materials",
+              "weeklyBossDrop": "Everamber",
+              "talentBooks": "Order"
             }
           ]
         }
@@ -5667,38 +4308,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Emperor's Resolution",
+              "localSpecialty": "Rainbow Rose"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Emperor of Fire and Iron",
-              "itemName": "Emperor's Resolution"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Primordial Greenbloom"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Equity",
-              "teachingsName": "Teachings of Equity",
-              "guideName": "Guide of Equity",
-              "philosophiesName": "Philosophies of Equity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Rainbow Rose"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "weeklyBossDrop": "Primordial Greenbloom",
+              "talentBooks": "Equity"
             }
           ]
         }
@@ -5726,38 +4348,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fontemer Aberrants",
-              "shortItemName": "Pearl",
-              "itemName1": "Transoceanic Pearl",
-              "itemName2": "Transoceanic Chunk",
-              "itemName3": "Xenchromatic Crystal"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Artificed Spare Clockwork Component — Coppelius",
+              "localSpecialty": "Romaritime Flower"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component - Coppelius"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Worldspan Fern"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Justice",
-              "teachingsName": "Teachings of Justice",
-              "guideName": "Guide of Justice",
-              "philosophiesName": "Philosophies of Justice"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Romaritime Flower"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "weeklyBossDrop": "Worldspan Fern",
+              "talentBooks": "Justice"
             }
           ]
         }
@@ -5791,38 +4394,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fontemer Aberrants",
-              "shortItemName": "Pearl",
-              "itemName1": "Transoceanic Pearl",
-              "itemName2": "Transoceanic Chunk",
-              "itemName3": "Xenchromatic Crystal"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Fontemer Unihorn",
+              "localSpecialty": "Lumitoile"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Millennial Pearl Seahorse",
-              "itemName": "Fontemer Unihorn"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Everamber"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Equity",
-              "teachingsName": "Teachings of Equity",
-              "guideName": "Guide of Equity",
-              "philosophiesName": "Philosophies of Equity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Lumitoile"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "weeklyBossDrop": "Everamber",
+              "talentBooks": "Equity"
             }
           ]
         }
@@ -5840,42 +4424,29 @@
           "endDate": "2023-11-07",
           "version": "4.1",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-03-04",
+          "endDate": "2025-03-25",
+          "version": "5.4",
+          "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Clockwork Meka Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "\"Tourbillon Device\"",
+              "localSpecialty": "Subdetection Unit"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Prototype Cal. Breguet",
-              "itemName": "\"Tourbillon Device\""
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Primordial Greenbloom"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Order",
-              "teachingsName": "Teachings of Order",
-              "guideName": "Guide of Order",
-              "philosophiesName": "Philosophies of Order"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Subdetection Unit"
+              "enemyDrop": "Clockwork Meka Materials",
+              "weeklyBossDrop": "Primordial Greenbloom",
+              "talentBooks": "Order"
             }
           ]
         }
@@ -5893,42 +4464,29 @@
           "endDate": "2023-11-28",
           "version": "4.2",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-03-04",
+          "endDate": "2025-03-25",
+          "version": "5.4",
+          "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Clockwork Meka Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "\"Tourbillon Device\"",
+              "localSpecialty": "Beryl Conch"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Prototype Cal. Breguet",
-              "itemName": "\"Tourbillon Device\""
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Silk String"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Justice",
-              "teachingsName": "Teachings of Justice",
-              "guideName": "Guide of Justice",
-              "philosophiesName": "Philosophies of Justice"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Beryl Conch"
+              "enemyDrop": "Clockwork Meka Materials",
+              "weeklyBossDrop": "Lightless Silk String",
+              "talentBooks": "Justice"
             }
           ]
         }
@@ -5952,42 +4510,29 @@
           "endDate": "2024-07-16",
           "version": "4.7",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-03-04",
+          "endDate": "2025-03-25",
+          "version": "5.4",
+          "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Whopperflower",
-              "shortItemName": "Nectar",
-              "itemName1": "Whopperflower Nectar",
-              "itemName2": "Shimmering Nectar",
-              "itemName3": "Energy Nectar"
+              "enemyDrop": "Whopperflower Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Water That Failed To Transcend",
+              "localSpecialty": "Lakelight Lily"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Hydro Tulpa",
-              "itemName": "Water That Failed To Transcend"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Mass"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Justice",
-              "teachingsName": "Teachings of Justice",
-              "guideName": "Guide of Justice",
-              "philosophiesName": "Philosophies of Justice"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Lakelight Lily"
+              "enemyDrop": "Whopperflower Materials",
+              "weeklyBossDrop": "Lightless Mass",
+              "talentBooks": "Justice"
             }
           ]
         }
@@ -6015,38 +4560,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fontemer Aberrants",
-              "shortItemName": "Pearl",
-              "itemName1": "Transoceanic Pearl",
-              "itemName2": "Transoceanic Chunk",
-              "itemName3": "Xenchromatic Crystal"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Artificed Spare Clockwork Component — Coppelius",
+              "localSpecialty": "Spring of the First Dewdrop"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component - Coppelius"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Silk String"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Equity",
-              "teachingsName": "Teachings of Equity",
-              "guideName": "Guide of Equity",
-              "philosophiesName": "Philosophies of Equity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Spring of the First Dewdrop"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "weeklyBossDrop": "Lightless Silk String",
+              "talentBooks": "Equity"
             }
           ]
         }
@@ -6080,38 +4606,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Clockwork Meka Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Fontemer Unihorn",
+              "localSpecialty": "Lumidouce Bell"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Millennial Pearl Seahorse",
-              "itemName": "Fontemer Unihorn"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Eye of the Maelstrom"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Order",
-              "teachingsName": "Teachings of Order",
-              "guideName": "Guide of Order",
-              "philosophiesName": "Philosophies of Order"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Lumidouce Bell"
+              "enemyDrop": "Clockwork Meka Materials",
+              "weeklyBossDrop": "Lightless Eye of the Maelstrom",
+              "talentBooks": "Order"
             }
           ]
         }
@@ -6145,38 +4652,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Slime Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Emperor's Resolution",
+              "localSpecialty": "Starconch"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Emperor of Fire and Iron",
-              "itemName": "Emperor's Resolution"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Mass"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Prosperity",
-              "teachingsName": "Teachings of Prosperity",
-              "guideName": "Guide of Prosperity",
-              "philosophiesName": "Philosophies of Prosperity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Starconch"
+              "enemyDrop": "Slime Materials",
+              "weeklyBossDrop": "Lightless Mass",
+              "talentBooks": "Prosperity"
             }
           ]
         }
@@ -6198,38 +4686,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Samachurl",
-              "shortItemName": "Scroll",
-              "itemName1": "Divining Scroll",
-              "itemName2": "Sealed Scroll",
-              "itemName3": "Forbidden Curse Scroll"
+              "enemyDrop": "Samachurl Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Cloudseam Scale",
+              "localSpecialty": "Clearwater Jade"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Solitary Suanni",
-              "itemName": "Cloudseam Scale"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Eye of the Maelstrom"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Gold",
-              "teachingsName": "Teachings of Gold",
-              "guideName": "Guide of Gold",
-              "philosophiesName": "Philosophies of Gold"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Clearwater Jade"
+              "enemyDrop": "Samachurl Materials",
+              "weeklyBossDrop": "Lightless Eye of the Maelstrom",
+              "talentBooks": "Gold"
             }
           ]
         }
@@ -6257,38 +4726,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Specter Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Artificed Spare Clockwork Component — Coppelia",
+              "localSpecialty": "Dendrobium"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Icewind Suite",
-              "itemName": "Artificed Spare Clockwork Component - Coppelia"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Silk String"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Light",
-              "teachingsName": "Teachings of Light",
-              "guideName": "Guide of Light",
-              "philosophiesName": "Philosophies of Light"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Dendrobrium"
+              "enemyDrop": "Specter Materials",
+              "weeklyBossDrop": "Lightless Silk String",
+              "talentBooks": "Light"
             }
           ]
         }
@@ -6316,38 +4766,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fatui Skirmishers",
-              "shortItemName": "Insignia",
-              "itemName1": "Recruit's Insignia",
-              "itemName2": "Sergeant's Insignia",
-              "itemName3": "Lieutenant's Insignia"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Fragment of a Golden Melody",
+              "localSpecialty": "Rainbow Rose"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "\"Statue of Marble and Brass\"",
-              "itemName": "Fragment of a Golden Melody"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "The Knave",
-              "itemName": "Fading Candle"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Order",
-              "teachingsName": "Teachings of Order",
-              "guideName": "Guide of Order",
-              "philosophiesName": "Philosophies of Order"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Rainbow Rose"
+              "enemyDrop": "Fatui Skirmisher Materials",
+              "weeklyBossDrop": "Fading Candle",
+              "talentBooks": "Order"
             }
           ]
         }
@@ -6375,38 +4806,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "The Eremites Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Cloudseam Scale",
+              "localSpecialty": "Trishiraite"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Solitary Suanni",
-              "itemName": "Cloudseam Scale"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Daka's Bell"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Praxis",
-              "teachingsName": "Teachings of Praxis",
-              "guideName": "Guide of Praxis",
-              "philosophiesName": "Philosophies of Praxis"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Trishiraite"
+              "enemyDrop": "The Eremites Materials",
+              "weeklyBossDrop": "Daka's Bell",
+              "talentBooks": "Praxis"
             }
           ]
         }
@@ -6434,38 +4846,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fontemer Aberrants",
-              "shortItemName": "Pearl",
-              "itemName1": "Transoceanic Pearl",
-              "itemName2": "Transoceanic Chunk",
-              "itemName3": "Xenchromatic Crystal"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Fontemer Unihorn",
+              "localSpecialty": "Lumitoile"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Millennial Pearl Seahorse",
-              "itemName": "Fontemer Unihorn"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Guardian of Apep's Oasis",
-              "itemName": "Everamber"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Justice",
-              "teachingsName": "Teachings of Justice",
-              "guideName": "Guide of Justice",
-              "philosophiesName": "Philosophies of Justice"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Lumitoile"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "weeklyBossDrop": "Everamber",
+              "talentBooks": "Justice"
             }
           ]
         }
@@ -6483,42 +4876,29 @@
           "endDate": "2024-07-16",
           "version": "4.7",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-02-12",
+          "endDate": "2025-03-04",
+          "version": "5.4",
+          "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Fontemer Aberrants",
-              "shortItemName": "Pearl",
-              "itemName1": "Transoceanic Pearl",
-              "itemName2": "Transoceanic Chunk",
-              "itemName3": "Xenchromatic Crystal"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Water That Failed To Transcend",
+              "localSpecialty": "Romaritime Flower"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Hydro Tulpa",
-              "itemName": "Water That Failed To Transcend"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Eye of the Maelstrom"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Equity",
-              "teachingsName": "Teachings of Equity",
-              "guideName": "Guide of Equity",
-              "philosophiesName": "Philosophies of Equity"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Romaritime Flower"
+              "enemyDrop": "Fontemer Aberrant Materials",
+              "weeklyBossDrop": "Lightless Eye of the Maelstrom",
+              "talentBooks": "Equity"
             }
           ]
         }
@@ -6540,38 +4920,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "",
-              "shortItemName": "",
-              "itemName1": "",
-              "itemName2": "",
-              "itemName3": ""
+              "enemyDrop": "Clockwork Meka Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Fragment of a Golden Melody",
+              "localSpecialty": "Lakelight Lily"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "\"Statue of Marble and Brass\"",
-              "itemName": "Fragment of a Golden Melody"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "The Knave",
-              "itemName": "Silken Feather"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Order",
-              "teachingsName": "Teachings of Order",
-              "guideName": "Guide of Order",
-              "philosophiesName": "Philosophies of Order"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Lakelight Lily"
+              "enemyDrop": "Clockwork Meka Materials",
+              "weeklyBossDrop": "Silken Feather",
+              "talentBooks": "Order"
             }
           ]
         }
@@ -6599,38 +4960,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Sauroform Tribal Warriors",
-              "shortItemName": "Whistle",
-              "itemName1": "Sentry's Wooden Whistle",
-              "itemName2": "Warrior's Metal Whistle",
-              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Overripe Flamegranate",
+              "localSpecialty": "Quenepa Berry"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Kongamato",
-              "itemName": "Overripe Flamegranate"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "The Knave",
-              "itemName": "Fading Candle"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "",
-              "teachingsName": "Teachings of Conflict",
-              "guideName": "Guide of Conflict",
-              "philosophiesName": "Philosophies of Conflict"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Quenepa Berry"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "weeklyBossDrop": "Fading Candle",
+              "talentBooks": "Conflict"
             }
           ]
         }
@@ -6652,38 +4994,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Sauroform Tribal Warriors",
-              "shortItemName": "Whistle",
-              "itemName1": "Sentry's Wooden Whistle",
-              "itemName2": "Warrior's Metal Whistle",
-              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "elementalGem": "Varunada Lazurite",
+              "normalBossDrop": "Mark of the Binding Blessing",
+              "localSpecialty": "Sprayfeather Gill"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Holawaqa Ngoubou",
-              "itemName": "Mark of the Binding Blessing"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Mass"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Contention",
-              "teachingsName": "Teachings of Contention",
-              "guideName": "Guide of Contention",
-              "philosophiesName": "Philosophies of Contention"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sprayfeather Gill"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "weeklyBossDrop": "Lightless Mass",
+              "talentBooks": "Contention"
             }
           ]
         }
@@ -6705,38 +5028,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Natlan Saurians",
-              "shortItemName": "Saurian Fang",
-              "itemName1": "Juvenile Fang",
-              "itemName2": "Seasoned Fang",
-              "itemName3": "Tyrant's Fang"
+              "enemyDrop": "Natlan Saurian Materials",
+              "elementalGem": "Nagadus Emerald",
+              "normalBossDrop": "Overripe Flamegranate",
+              "localSpecialty": "Saurian Claw Succulent"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Kongamato",
-              "itemName": "Overripe Flamegranate"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "The Knave",
-              "itemName": "Denial and Judgment"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Kindling",
-              "teachingsName": "Teachings of Kindling",
-              "guideName": "Guide of Kindling",
-              "philosophiesName": "Philosophies of Kindling"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Saurian Claw Succulent"
+              "enemyDrop": "Natlan Saurian Materials",
+              "weeklyBossDrop": "Denial and Judgment",
+              "talentBooks": "Kindling"
             }
           ]
         }
@@ -6758,38 +5062,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Sauroform Tribal Warriors",
-              "shortItemName": "Whistle",
-              "itemName1": "Sentry's Wooden Whistle",
-              "itemName2": "Warrior's Metal Whistle",
-              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "elementalGem": "Prithiva Topaz",
+              "normalBossDrop": "Gold-Inscribed Secret Source Core",
+              "localSpecialty": "Brilliant Chrysanthemum"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Secret Source Automaton: Configuration Device",
-              "itemName": "Gold-Inscribed Secret Source Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Everlasting Lord of Arcane Wisdom",
-              "itemName": "Mirror of Mushin"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Kindling",
-              "teachingsName": "Teachings of Kindling",
-              "guideName": "Guide of Kindling",
-              "philosophiesName": "Philosophies of Kindling"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Brilliant Chrysanthemum"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "weeklyBossDrop": "Mirror of Mushin",
+              "talentBooks": "Kindling"
             }
           ]
         }
@@ -6811,38 +5096,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Natlan Saurians",
-              "shortItemName": "Saurian Fang",
-              "itemName1": "Juvenile Fang",
-              "itemName2": "Seasoned Fang",
-              "itemName3": "Tyrant's Fang"
+              "enemyDrop": "Natlan Saurian Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Mark of the Binding Blessing",
+              "localSpecialty": "Glowing Mushroom"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Holawaqa Ngoubou",
-              "itemName": "Mark of the Binding Blessing"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "All-Devouring Narwhal",
-              "itemName": "Lightless Silk String"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Kindling",
-              "teachingsName": "Teachings of Kindling",
-              "guideName": "Guide of Kindling",
-              "philosophiesName": "Philosophies of Kindling"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Glowing Mushroom"
+              "enemyDrop": "Natlan Saurian Materials",
+              "weeklyBossDrop": "Lightless Silk String",
+              "talentBooks": "Kindling"
             }
           ]
         }
@@ -6864,38 +5130,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Natlan Saurians",
-              "shortItemName": "Saurian Fang",
-              "itemName1": "Juvenile Fang",
-              "itemName2": "Seasoned Fang",
-              "itemName3": "Tyrant's Fang"
+              "enemyDrop": "Natlan Saurian Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Ensnaring Gaze",
+              "localSpecialty": "Withering Purpurbloom"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Tenebrous Papilla",
-              "itemName": "Ensnaring Gaze"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "The Knave",
-              "itemName": "Silken Feather"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Conflict",
-              "teachingsName": "Teachings of Conflict",
-              "guideName": "Guide of Conflict",
-              "philosophiesName": "Philosophies of Conflict"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Withering Purpurbloom"
+              "enemyDrop": "Natlan Saurian Materials",
+              "weeklyBossDrop": "Silken Feather",
+              "talentBooks": "Conflict"
             }
           ]
         }
@@ -6917,38 +5164,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Sauroform Tribal Warriors",
-              "shortItemName": "Whistle",
-              "itemName1": "Sentry's Wooden Whistle",
-              "itemName2": "Warrior's Metal Whistle",
-              "itemName3": "Saurian-Crowned Warrior's Golden Whistle"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "elementalGem": "Agnidus Agate",
+              "normalBossDrop": "Gold-Inscribed Secret Source Core",
+              "localSpecialty": "Withering Purpurbloom"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Secret Source Automaton: Configuration Device",
-              "itemName": "Gold-Inscribed Secret Source Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Lord of Eroded Primal Flame",
-              "itemName": "Eroded Horn"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Contention",
-              "teachingsName": "Teachings of Contention",
-              "guideName": "Guide of Contention",
-              "philosophiesName": "Philosophies of Contention"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Withering Purpurbloom"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "weeklyBossDrop": "Eroded Horn",
+              "talentBooks": "Contention"
             }
           ]
         }
@@ -6970,38 +5198,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Natlan Saurians",
-              "shortItemName": "Saurian Fang",
-              "itemName1": "Juvenile Fang",
-              "itemName2": "Seasoned Fang",
-              "itemName3": "Tyrant's Fang"
+              "enemyDrop": "Natlan Saurian Materials",
+              "elementalGem": "Shivada Jade",
+              "normalBossDrop": "Talisman of the Enigmatic Land",
+              "localSpecialty": "Quenepa Berry"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Wayward Hermetic Spiritspeaker",
-              "itemName": "Talisman of the Enigmatic Land"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "The Knave",
-              "itemName": "Denial and Judgment"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Conflict",
-              "teachingsName": "Teachings of Conflict",
-              "guideName": "Guide of Conflict",
-              "philosophiesName": "Philosophies of Conflict"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Quenepa Berry"
+              "enemyDrop": "Natlan Saurian Materials",
+              "weeklyBossDrop": "Denial and Judgment",
+              "talentBooks": "Conflict"
             }
           ]
         }
@@ -7023,38 +5232,19 @@
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Whopperflower",
-              "shortItemName": "Nectar",
-              "itemName1": "Whopperflower Nectar",
-              "itemName2": "Shimmering Nectar",
-              "itemName3": "Energy Nectar"
+              "enemyDrop": "Whopperflower Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Gold-Inscribed Secret Source Core",
+              "localSpecialty": "Clearwater Jade"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Secret Source Automaton: Configuration Device",
-              "itemName": "Gold-Inscribed Secret Source Core"
-            }
-          ],
-          "weeklyBoss": [
-            {
-              "bossName": "Lord of Eroded Primal Flame",
-              "itemName": "Eroded Sunfire"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Diligence",
-              "teachingsName": "Teachings of Diligence",
-              "guideName": "Guide of Diligence",
-              "philosophiesName": "Philosophies of Diligence"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Clearwater Jade"
+              "enemyDrop": "Whopperflower Materials",
+              "weeklyBossDrop": "Eroded Sunfire",
+              "talentBooks": "Diligence"
             }
           ]
         }
@@ -7068,46 +5258,95 @@
       "birthday": "03-16",
       "reruns": [
         {
-          "banner": "upcoming",
+          "startDate": "2025-02-12",
+          "endDate": "2025-03-04",
           "version": "5.4",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "ascension": [
+            {
+              "enemyDrop": "Nobushi Materials",
+              "elementalGem": "Vayuda Turquoise",
+              "normalBossDrop": "Talisman of the Enigmatic Land",
+              "localSpecialty": "Sea Ganoderma"
+            }
+          ],
+          "talents": [
+            {
+              "enemyDrop": "Nobushi Materials",
+              "weeklyBossDrop": "Fading Candle",
+              "talentBooks": "Transience"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Iansan",
+      "star": 4,
+      "element": "Electro",
+      "weapon": "Polearm",
+      "birthday": "",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.5",
           "phase": "upcoming",
           "wishType": "event"
         }
       ],
       "materials": [
         {
-          "enemyDrop": [
+          "ascension": [
             {
-              "enemyName": "Nobushi",
-              "shortItemName": "Handguard",
-              "itemName1": "Old Handguard",
-              "itemName2": "Kageuchi Handguard",
-              "itemName3": "Famed Handguard"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Ensnaring Gaze",
+              "localSpecialty": "Dracolite"
             }
           ],
-          "normalBoss": [
+          "talents": [
             {
-              "bossName": "Wayward Hermetic Spiritspeaker",
-              "itemName": "Talisman of the Enigmatic Land"
+              "enemyDrop": "Sauroform Tribal Warrior Materials",
+              "weeklyBossDrop": "Denial and Judgment",
+              "talentBooks": "Contention"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Varesa",
+      "star": 5,
+      "element": "Electro",
+      "weapon": "Catalyst",
+      "birthday": "",
+      "reruns": [
+        {
+          "banner": "upcoming",
+          "version": "5.5",
+          "phase": "upcoming",
+          "wishType": "event"
+        }
+      ],
+      "materials": [
+        {
+          "ascension": [
+            {
+              "enemyDrop": "Natlan Saurian Materials",
+              "elementalGem": "Vajrada Amethyst",
+              "normalBossDrop": "Sparkless Statue Core",
+              "localSpecialty": "Skysplit Gembloom"
             }
           ],
-          "weeklyBoss": [
+          "talents": [
             {
-              "bossName": "The Knave",
-              "itemName": "Fading Candle"
-            }
-          ],
-          "talentBooks": [
-            {
-              "shortItemName": "Transience",
-              "teachingsName": "Teachings of Transience",
-              "guideName": "Guide of Transience",
-              "philosophiesName": "Philosophies of Transience"
-            }
-          ],
-          "localSpecialty": [
-            {
-              "itemName": "Sea Ganoderma"
+              "enemyDrop": "Natlan Saurian Materials",
+              "weeklyBossDrop": "Eroded Scale-Feather",
+              "talentBooks": "Conflict"
             }
           ]
         }

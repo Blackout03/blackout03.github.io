@@ -102,15 +102,15 @@ function clearCharacterList() {
 function checkJsonData() {
 	Promise.all([
 		fetch('../../character_data.json').then(response => response.json()),
-		fetch('../../image_data.json').then(response => response.json())
+		fetch('../../image_mapping_data.json').then(response => response.json())
 	])
-		.then(([characterData, imageData]) => {
+		.then(([characterData, imageMappingData]) => {
 			const urlParams = new URLSearchParams(window.location.search);
 			const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
 
-			// Helper function to get image ID from imageData.json or fallback to itemName
-			function getImageId(itemName, imageData) {
-				return imageData[itemName] || itemName;
+			// Helper function to get image ID from imageMappingData.json or fallback to itemName
+			function getImageId(itemName, imageMappingData) {
+				return imageMappingData[itemName] || itemName;
 			}
 
 			clearCharacterList(); // Clear the list before updating
@@ -138,7 +138,7 @@ function checkJsonData() {
 					const now = new Date();
 					const daysSinceLastRerun = calculateDaysSince(lastRerun.endDate);
 					const timeSinceLastRerun = calculateMonthsAndDaysSince(lastRerun.endDate);
-					const characterName = getImageId(character.name, imageData);
+					const characterName = getImageId(character.name, imageMappingData);
 					const wishType = lastRerun.wishType === "chronicled" ? "Chronicled Wish" : "Event Wish";
 
 					const card = createDiv('character-card');
