@@ -191,6 +191,11 @@
           "startDate": "2024-12-04",
           "endDate": "2024-12-25",
           "version": "2.7"
+        },
+        {
+          "startDate": "2025-03-18",
+          "endDate": "2025-04-08",
+          "version": "3.1"
         }
       ]
     },
@@ -224,6 +229,11 @@
           "startDate": "2024-09-10",
           "endDate": "2024-10-02",
           "version": "2.5"
+        },
+        {
+          "startDate": "2025-01-15",
+          "endDate": "2025-02-05",
+          "version": "3.0"
         }
       ]
     },
@@ -311,6 +321,16 @@
           "startDate": "2024-10-02",
           "endDate": "2024-10-22",
           "version": "2.5"
+        },
+        {
+          "startDate": "2025-01-15",
+          "endDate": "2025-02-05",
+          "version": "3.0"
+        },
+        {
+          "startDate": "2025-03-18",
+          "endDate": "2025-04-08",
+          "version": "3.1"
         }
       ]
     },
@@ -417,6 +437,11 @@
           "startDate": "2024-08-21",
           "endDate": "2024-09-09",
           "version": "2.4"
+        },
+        {
+          "startDate": "2025-02-26",
+          "endDate": "2025-03-18",
+          "version": "3.1"
         }
       ]
     },
@@ -478,6 +503,11 @@
           "startDate": "2024-12-04",
           "endDate": "2024-12-25",
           "version": "2.7"
+        },
+        {
+          "startDate": "2025-02-05",
+          "endDate": "2025-02-25",
+          "version": "3.0"
         }
       ]
     },
@@ -506,6 +536,11 @@
           "startDate": "2024-01-17",
           "endDate": "2024-02-05",
           "version": "1.6"
+        },
+        {
+          "startDate": "2025-02-05",
+          "endDate": "2025-02-25",
+          "version": "3.0"
         }
       ]
     },
@@ -783,6 +818,11 @@
           "startDate": "2024-10-23",
           "endDate": "2024-11-13",
           "version": "2.6"
+        },
+        {
+          "startDate": "2025-02-26",
+          "endDate": "2025-03-18",
+          "version": "3.1"
         }
       ]
     },
@@ -807,7 +847,7 @@
     {
       "name": "Topaz & Numby",
       "star": 5,
-      "type": "Pyro",
+      "type": "Fire",
       "path": "The Hunt",
       "reruns": [
         {
@@ -852,6 +892,11 @@
           "startDate": "2024-10-02",
           "endDate": "2024-10-22",
           "version": "2.5"
+        },
+        {
+          "startDate": "2025-02-26",
+          "endDate": "2025-03-18",
+          "version": "3.1"
         }
       ]
     },
@@ -921,6 +966,11 @@
           "startDate": "2024-07-31",
           "endDate": "2024-08-21",
           "version": "2.4"
+        },
+        {
+          "startDate": "2025-02-05",
+          "endDate": "2025-02-25",
+          "version": "3.0"
         }
       ]
     },
@@ -967,6 +1017,11 @@
           "startDate": "2024-10-23",
           "endDate": "2024-11-13",
           "version": "2.6"
+        },
+        {
+          "startDate": "2025-03-18",
+          "endDate": "2025-04-08",
+          "version": "3.1"
         }
       ]
     },
@@ -1290,6 +1345,11 @@
           "startDate": "2024-09-10",
           "endDate": "2024-10-02",
           "version": "2.5"
+        },
+        {
+          "startDate": "2025-01-15",
+          "endDate": "2025-02-05",
+          "version": "3.0"
         }
       ]
     },
