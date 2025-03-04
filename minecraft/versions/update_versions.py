@@ -6,6 +6,10 @@ import os
 URL = 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json'
 VERSIONS_FILE = 'version_data.json'
 
+# Get the full path of the version file
+full_path = os.path.abspath(VERSIONS_FILE)
+print(f"Full path of version file: {full_path}")
+
 # Fetch the version manifest data
 response = requests.get(URL)
 data = response.json()
@@ -38,7 +42,7 @@ sorted_versions = dict(
 )
 
 # Convert to JSON and write back to file
-with open(VERSIONS_FILE, 'w') as file:
+with open(VERSIONS_FILE, 'w', encoding="utf-8") as file:
 	json.dump(sorted_versions, file, indent=4)
 
 print("version_data.json has been updated.")
