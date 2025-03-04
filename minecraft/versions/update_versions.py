@@ -38,7 +38,7 @@ sorted_versions = dict(
 )
 
 # Convert to JSON and write back to file
-with open(versions_file, 'w') as file:
+with open(VERSIONS_FILE, 'w') as file:
 	json.dump(sorted_versions, file, indent=4)
 
 print("version_data.json has been updated.")
