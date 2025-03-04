@@ -96,7 +96,7 @@ Promise.all([
 			const characterName = getImageId(gap.character);
 
 			const img = createImage('character-image');
-			img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
+			img.src = `https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`;
 			img.alt = `${gap.character} avatar`;
 			img.title = `${gap.character}`;
 			img.classList.add(gap.star === 5 ? 'five-star-image' : gap.star === 4 ? 'four-star-image' : 'unknown-star-image');

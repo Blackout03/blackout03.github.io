@@ -54,7 +54,7 @@ function checkJsonData() {
 			function createCharacterImage(character) {
 				const characterName = getImageId(character.name, imageMappingData);
 				const img = createImage(['character-image', character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image']);
-				img.src = `https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`;
+				img.src = `https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`;
 				img.alt = `${character.name} avatar`;
 				img.title = `${character.name}`;
 				return img;

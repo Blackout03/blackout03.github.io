@@ -17,7 +17,7 @@
 	const urlParams = new URLSearchParams(window.location.search);
 	const versionParam = urlParams.get('version');
 
-	fetch('version_data.json')
+	fetch('../../minecraft_version_data.json')
 		.then(response => response.json())
 		.then(data => {
 			const releaseDate = getVersionDate(versionParam, data);

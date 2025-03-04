@@ -49,7 +49,7 @@ if (!userId) {
 				'character-image',
 				character.rarity === 5 && character.special ? 'special-star-image' : character.rarity === 5 ? 'five-star-image' : 'four-star-image',
 			],
-			`https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`,
+			`https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`,
 			`${character.name} avatar`,
 			character.name
 		);

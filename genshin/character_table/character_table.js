@@ -36,7 +36,7 @@ function createWeaponImage(weapon) {
 			`https://genshin-impact.fandom.com/wiki/${weapon}`);
 	const weaponImage =
 		createImage('weapon-image',
-			`https://homdgcat.wiki/homdgcat-res/AvatarSkill/${weaponIcons[weapon]}.png`,
+			`https://api.hakush.in/gi/UI/${weaponIcons[weapon]}.webp`,
 			weapon);
 	weaponImageLink.appendChild(weaponImage)
 	return weaponImageLink;
@@ -58,7 +58,7 @@ function createElementImage(element) {
 			`https://genshin-impact.fandom.com/wiki/${element}`);
 	const elementImage =
 		createImage('element-image',
-			`https://homdgcat.wiki/homdgcat-res/Csxylic/${elementIcons[element]}.png`,
+			`https://api.hakush.in/gi/UI/${element}.webp`,
 			element);
 	elementImageLink.appendChild(elementImage)
 	return elementImageLink;
@@ -87,7 +87,7 @@ function checkJsonData() {
 						`https://genshin-impact.fandom.com/wiki/${getCharacterName(character.name, character.element)}`);
 				const characterImage =
 					createImage(['character-image', character.star === 5 && character.starType ? 'special-star-image' : character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
-						`https://homdgcat.wiki/homdgcat-res/Avatar/UI_AvatarIcon_${characterName}.png`,
+						`https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`,
 						`${character.name} avatar`,
 						`${getCharacterName(character.name, character.element)}`);
 				characterImageLink.appendChild(characterImage);
