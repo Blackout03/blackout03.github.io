@@ -8,86 +8,126 @@
 	<link rel="stylesheet" href="version.css" />
 </head>
 <body>
+<!-- Home Button (Top-Left Corner) -->
 <a href="https://blackout03.github.io/" class="home-icon">
 	<i class="fas fa-home"></i>
 </a>
+
+<!-- Settings Button (Top-Right Corner) -->
+<a id="settings-btn" class="settings-btn">
+	<i class="fas fa-cogs"></i>
+</a>
+
+<!-- Settings Menu (Hidden by default) -->
+<div id="settings-menu" class="settings-menu">
+	<!-- Minecraft Version Dropdown -->
+	<label>
+		Select Minecraft Version:
+		<select id="version-select">
+			<!-- Options will be added dynamically -->
+		</select>
+	</label>
+</div>
+
 <div class="version_text_div"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.28.5/date_fns.min.js"></script>
 <script>
+	const versionSelect = document.getElementById('version-select');
 	const urlParams = new URLSearchParams(window.location.search);
-	const versionParam = urlParams.get('version');
+	let versionParam = urlParams.get('version');
 
-	fetch('../../minecraft_version_data.json')
+	// Fetch version data
+	fetch('../../minecraft_Version_data.json')
 		.then(response => response.json())
 		.then(data => {
-			const releaseDate = getVersionDate(versionParam, data);
+			// Populate version dropdown dynamically
+			const versions = Object.keys(data);
+			versions.forEach(version => {
+				const option = document.createElement('option');
+				option.value = version;
+				option.textContent = version;
+				versionSelect.appendChild(option);
+			});
 
-			if (releaseDate) {
-				const currentDate = new Date();
-				const oldDate = new Date(releaseDate);
-
-				const diff = dateFns.differenceInDays(currentDate, oldDate)
-
-				const diffYears = dateFns.differenceInYears(currentDate, oldDate);
-				const remainingDays = diff - dateFns.differenceInDays(dateFns.addYears(oldDate, diffYears), oldDate);
-
-				const diffMonths = dateFns.differenceInMonths(currentDate, dateFns.addYears(oldDate, diffYears));
-				const remainingDaysInMonths = remainingDays - dateFns.differenceInDays(dateFns.addMonths(oldDate, diffMonths), oldDate);
-
-				let years = diffYears;
-				let months = diffMonths;
-				let days = remainingDaysInMonths;
-				
-				if (days < 0) {
-					days = 0;
-				}
-
-				if (years !== 0 || months !== 0 || days !== 0) {
-					const result = [];
-					if (years !== 0) {
-						result.push(`${years} year${years !== 1 ? 's' : ''}`);
-					}
-					if (months !== 0) {
-						result.push(`${months} month${months !== 1 ? 's' : ''}`);
-					}
-					if (days !== 0) {
-						result.push(`${days} day${days !== 1 ? 's' : ''}`);
-					}
-					let diffResult = result.join(', ');
-					if (days !== 0) {
-						diffResult = diffResult.replace(/,\s([^,]+)$/, ' and $1');
-					}
-
-					const text = `It has been ${diffResult} since Minecraft Java Edition ${versionParam} was (maybe) released on ${oldDate.toDateString()}.`;
-
-					const p = document.createElement('p');
-					p.appendChild(document.createTextNode(text));
-					document.querySelector(".version_text_div").appendChild(p)
-				} else {
-					const text = `Minecraft Java Edition ${versionParam} was (maybe) released today.`
-
-					const p = document.createElement('p');
-					p.appendChild(document.createTextNode(text));
-					document.querySelector(".version_text_div").appendChild(p)
-				}
+			// Set the default version
+			if (versionParam) {
+				versionSelect.value = versionParam;
 			} else {
-				const errorMessage = "This version was not found in my database of versions.";
-
-				const p = document.createElement('p');
-				p.appendChild(document.createTextNode(errorMessage));
-				document.querySelector(".version_text_div").appendChild(p)
+				versionSelect.value = versions[versions.length - 1];  // Default to the last version if no URL param
 			}
+
+			// Fetch and display data for the selected version
+			const releaseDate = data[versionSelect.value];
+			displayVersionInfo(releaseDate, versionSelect.value);
+
+			// Update content when the user selects a different version
+			versionSelect.addEventListener('change', () => {
+				versionParam = versionSelect.value;
+				const newReleaseDate = data[versionParam];
+				displayVersionInfo(newReleaseDate, versionParam);
+			});
 		})
 		.catch(error => {
-			console.error("Error fetching version data:", error)
-		})
+			console.error("Error fetching version data:", error);
+		});
 
-	function getVersionDate(version, data) {
-		if (version in data) {
-			return new Date(data[version]);
+	// Display version info (like the previous script you had)
+	function displayVersionInfo(releaseDate, version) {
+		if (releaseDate) {
+			// Get current date and time in Sweden (Europe/Stockholm timezone)
+			const currentDate = new Date(new Intl.DateTimeFormat('en-US', {
+				timeZone: 'Europe/Stockholm'
+			}).format(new Date()));
+
+			// Convert releaseDate to a JavaScript Date object (assuming releaseDate is a valid date string)
+			const oldDate = new Date(releaseDate);
+
+			// Calculate the differences
+			const diff = dateFns.differenceInDays(currentDate, oldDate);
+			const diffYears = dateFns.differenceInYears(currentDate, oldDate);
+			const remainingDays = diff - dateFns.differenceInDays(dateFns.addYears(oldDate, diffYears), oldDate);
+			const diffMonths = dateFns.differenceInMonths(currentDate, dateFns.addYears(oldDate, diffYears));
+			const remainingDaysInMonths = remainingDays - dateFns.differenceInDays(dateFns.addMonths(oldDate, diffMonths), oldDate);
+
+			let years = diffYears;
+			let months = diffMonths;
+			let days = remainingDaysInMonths;
+
+			if (days < 0) {
+				days = 0;
+			}
+
+			const result = [];
+			if (years !== 0) {
+				result.push(`${years} year${years !== 1 ? 's' : ''}`);
+			}
+			if (months !== 0) {
+				result.push(`${months} month${months !== 1 ? 's' : ''}`);
+			}
+			if (days !== 0) {
+				result.push(`${days} day${days !== 1 ? 's' : ''}`);
+			}
+
+			let diffResult = result.join(', ');
+			if (days !== 0) {
+				diffResult = diffResult.replace(/,\s([^,]+)$/, ' and $1');
+			}
+
+			const text = `It has been ${diffResult} since Minecraft Java Edition ${version} was released on ${oldDate.toDateString()}.`;
+
+			const p = document.createElement('p');
+			p.appendChild(document.createTextNode(text));
+			document.querySelector(".version_text_div").innerHTML = ''; // Clear previous text
+			document.querySelector(".version_text_div").appendChild(p);
+		} else {
+			const errorMessage = "This version was not found in my database of versions.";
+			const p = document.createElement('p');
+			p.appendChild(document.createTextNode(errorMessage));
+			document.querySelector(".version_text_div").innerHTML = ''; // Clear previous text
+			document.querySelector(".version_text_div").appendChild(p);
 		}
-		return null;
 	}
 </script>
+<script src="../settings.js"></script>
 </body>
 </html>
