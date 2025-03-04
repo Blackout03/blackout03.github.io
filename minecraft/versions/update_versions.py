@@ -4,7 +4,7 @@ import os
 
 # URL of the version manifest
 URL = 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json'
-VERSIONS_FILE = 'versions.json'
+VERSIONS_FILE = 'version_data.json'
 
 # Fetch the version manifest data
 response = requests.get(URL)
