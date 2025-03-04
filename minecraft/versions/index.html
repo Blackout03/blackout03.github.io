@@ -37,7 +37,7 @@
 	let versionParam = urlParams.get('version');
 
 	// Fetch version data
-	fetch('../../minecraft_Version_data.json')
+	fetch('../../minecraft_version_data.json')
 		.then(response => response.json())
 		.then(data => {
 			// Populate version dropdown dynamically
