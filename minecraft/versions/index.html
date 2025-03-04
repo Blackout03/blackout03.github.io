@@ -74,21 +74,28 @@
 	// Display version info (like the previous script you had)
 	function displayVersionInfo(releaseDate, version) {
 		if (releaseDate) {
-			// Get current date and time in Sweden (Europe/Stockholm timezone)
-			const currentDate = new Date(new Intl.DateTimeFormat('en-US', {
-				timeZone: 'Europe/Stockholm'
-			}).format(new Date()));
+			// Get current date and time in Sweden (Europe/Stockholm)
+			const stockholmTime = new Date().toLocaleString("en-US", {
+				timeZone: "Europe/Stockholm",
+			});
+			// Convert it to a Date object
+			const currentDate = new Date(stockholmTime);
 
-			// Convert releaseDate to a JavaScript Date object (assuming releaseDate is a valid date string)
-			const oldDate = new Date(releaseDate);
+			// Get release date and time in Sweden (Europe/Stockholm)
+			const stockholmReleaseTime = new Date(releaseDate).toLocaleString("en-US", {
+				timeZone: "Europe/Stockholm",
+			});
+			// Convert it to a Date object
+			const oldDate = new Date(stockholmReleaseTime);
 
 			// Calculate the differences
 			const diff = dateFns.differenceInDays(currentDate, oldDate);
+
 			const diffYears = dateFns.differenceInYears(currentDate, oldDate);
 			const remainingDays = diff - dateFns.differenceInDays(dateFns.addYears(oldDate, diffYears), oldDate);
 			const diffMonths = dateFns.differenceInMonths(currentDate, dateFns.addYears(oldDate, diffYears));
 			const remainingDaysInMonths = remainingDays - dateFns.differenceInDays(dateFns.addMonths(oldDate, diffMonths), oldDate);
-
+			
 			let years = diffYears;
 			let months = diffMonths;
 			let days = remainingDaysInMonths;
@@ -97,34 +104,35 @@
 				days = 0;
 			}
 
-			const result = [];
-			if (years !== 0) {
-				result.push(`${years} year${years !== 1 ? 's' : ''}`);
-			}
-			if (months !== 0) {
-				result.push(`${months} month${months !== 1 ? 's' : ''}`);
-			}
-			if (days !== 0) {
-				result.push(`${days} day${days !== 1 ? 's' : ''}`);
-			}
+			if (years !== 0 || months !== 0 || days !== 0) {
+				const result = [];
+				if (years !== 0) {
+					result.push(`${years} year${years !== 1 ? 's' : ''}`);
+				}
+				if (months !== 0) {
+					result.push(`${months} month${months !== 1 ? 's' : ''}`);
+				}
+				if (days !== 0) {
+					result.push(`${days} day${days !== 1 ? 's' : ''}`);
+				}
+				let diffResult = result.join(', ');
+				if (days !== 0) {
+					diffResult = diffResult.replace(/,\s([^,]+)$/, ' and $1');
+				}
 
-			let diffResult = result.join(', ');
-			if (days !== 0) {
-				diffResult = diffResult.replace(/,\s([^,]+)$/, ' and $1');
-			}
+				const text = `It has been ${diffResult} since Minecraft Java Edition ${version} was released on ${oldDate.toDateString()}.`;
 
-			const text = `It has been ${diffResult} since Minecraft Java Edition ${version} was released on ${oldDate.toDateString()}.`;
+				const p = document.createElement('p');
+				p.appendChild(document.createTextNode(text));
+				document.querySelector(".version_text_div").innerHTML = ''; // Clear previous text
+				document.querySelector(".version_text_div").appendChild(p);
+			}
+		} else {
+			const text = `Minecraft Java Edition ${versionParam} was (maybe) released today.`
 
 			const p = document.createElement('p');
 			p.appendChild(document.createTextNode(text));
-			document.querySelector(".version_text_div").innerHTML = ''; // Clear previous text
-			document.querySelector(".version_text_div").appendChild(p);
-		} else {
-			const errorMessage = "This version was not found in my database of versions.";
-			const p = document.createElement('p');
-			p.appendChild(document.createTextNode(errorMessage));
-			document.querySelector(".version_text_div").innerHTML = ''; // Clear previous text
-			document.querySelector(".version_text_div").appendChild(p);
+			document.querySelector(".version_text_div").appendChild(p)
 		}
 	}
 </script>
