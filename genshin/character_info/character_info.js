@@ -108,8 +108,7 @@ Promise.all([
 ])
 	.then(([characterData, imageMappingData, materialMappingData]) => {
 		const charactersContainer = document.getElementById('charactersContainer');
-		const urlParams = new URLSearchParams(window.location.search);
-		const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
+		const includeUpcomingCharacters = localStorage.getItem('includeUpcoming') === 'true'; // Check if it's the string 'true'
 
 		// Helper function to get image ID from imageMappingData.json or fallback to itemName
 		function getImageId(itemName) {

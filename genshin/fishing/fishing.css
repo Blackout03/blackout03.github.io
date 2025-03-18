@@ -1,0 +1,95 @@
+﻿body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+#fishSelector {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.fish {
+	width: 80px;
+	height: 80px;
+	border-radius: 20%;
+	border: 2px solid transparent;
+	cursor: pointer;
+	transition: border 0.3s ease-in-out;
+}
+
+.fish:hover, .selected {
+	border: 3px solid #444;
+}
+
+#locations {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px;
+	text-align: left;
+	margin-top: 20px;
+	max-width: 100%;
+}
+
+.location {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-radius: 5px;
+	background: #f9f9f9;
+}
+
+.location h2 {
+	margin: 0;
+}
+
+.time {
+	font-weight: bold;
+	color: #555;
+}
+
+.fish-container {
+	display: flex;
+	gap: 10px;
+	margin-top: 5px;
+	flex-wrap: wrap;
+}
+
+.fish-box {
+	position: relative;
+	width: 70px;
+	height: 70px;
+}
+
+.fish-box img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.fish-box .bait-icon {
+	position: absolute;
+	top: -10px;
+	right: -15px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 1px;
+}
+
+/* Ensure no more than 3 columns */
+@media (min-width: 900px) {
+	#locations {
+		grid-template-columns: repeat(3, 1fr); /* Ensure a maximum of 3 columns */
+	}
+}

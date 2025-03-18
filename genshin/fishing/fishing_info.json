@@ -1,0 +1,127 @@
+﻿{
+  "Cider Lake (1)": {
+    "Day": [
+      "Medaka",
+      "Aizen Medaka",
+      "Akai Maou",
+      "Tea-Colored Shirakodai",
+      "Pufferfish",
+      "Bitter Pufferfish"
+    ],
+    "Night": [
+      "Medaka",
+      "Aizen Medaka",
+      "Venomspine Fish",
+      "Pufferfish",
+      "Bitter Pufferfish"
+    ],
+    "Display Limit": "5",
+    "Total Fish": "10-11"
+  },
+  "Cider Lake (2)": {
+    "Day": [
+      "Aizen Medaka",
+      "Crystalfish",
+      "Rusty Koi",
+      "Tea-Colored Shirakodai"
+    ],
+    "Night": [
+      "Aizen Medaka",
+      "Venomspine Fish",
+      "Rusty Koi"
+    ],
+    "Display Limit": "4",
+    "Total Fish": "10"
+  },
+  "Dawn Winery": {
+    "Day": [
+      "Aizen Medaka",
+      "Akai Maou",
+      "Tea-Colored Shirakodai",
+      "Pufferfish",
+      "Bitter Pufferfish"
+    ],
+    "Night": [
+      "Aizen Medaka",
+      "Venomspine Fish",
+      "Dawncatcher",
+      "Pufferfish",
+      "Bitter Pufferfish"
+    ],
+    "Display Limit": "5",
+    "Total Fish": "11"
+  },
+  "Dragonspine": {
+    "Day": [
+      "Medaka",
+      "Tea-Colored Shirakodai"
+    ],
+    "Night": [
+      "Medaka",
+      "Venomspine Fish",
+      "Snowstrider"
+    ],
+    "Display Limit": "4",
+    "Total Fish": "8"
+  },
+  "Stormbearer Mountains": {
+    "Day": [
+      "Medaka",
+      "Aizen Medaka",
+      "Crystalfish",
+      "Golden Koi",
+      "Tea-Colored Shirakodai"
+    ],
+    "Night": [
+      "Medaka",
+      "Aizen Medaka",
+      "Dawncatcher",
+      "Venomspine Fish",
+      "Golden Koi"
+    ],
+    "Display Limit": "4",
+    "Total Fish": "6"
+  },
+  "Stormterror's Lair (1)": {
+    "Day": [
+      "Medaka",
+      "Aizen Medaka",
+      "Tea-Colored Shirakodai"
+    ],
+    "Night": [
+      "Medaka",
+      "Aizen Medaka",
+      "Dawncatcher"
+    ],
+    "Display Limit": "4",
+    "Total Fish": "4-6"
+  },
+  "Stormterror's Lair (2)": {
+    "Day": [
+      "Medaka",
+      "Aizen Medaka",
+      "Crystalfish"
+    ],
+    "Night": [
+      "Medaka",
+      "Aizen Medaka",
+      "Dawncatcher"
+    ],
+    "Display Limit": "4",
+    "Total Fish": "6"
+  },
+  "Windrise": {
+    "Day": [
+      "Medaka",
+      "Aizen Medaka",
+      "Tea-Colored Shirakodai"
+    ],
+    "Night": [
+      "Medaka",
+      "Aizen Medaka",
+      "Venomspine Fish"
+    ],
+    "Display Limit": "4",
+    "Total Fish": "6"
+  }
+}

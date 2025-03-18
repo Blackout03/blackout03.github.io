@@ -67,16 +67,23 @@ function createElementImage(element) {
 // Combined event listener for both dropdowns
 function checkJsonData() {
 	Promise.all([
-		fetch('../character_data.json').then(response => response.json()),
-		fetch('../image_mapping_data.json').then(response => response.json())
+		fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/character_data.json').then(response => response.json()),
+		fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/image_mapping_data.json').then(response => response.json())
 	])
 		.then(([characterData, imageMappingData]) => {
-			const urlParams = new URLSearchParams(window.location.search);
-			const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
+			const includeUpcomingCharacters = localStorage.getItem('includeUpcoming') === 'true'; // Check if it's the string 'true'
 
 			// Helper function to get image ID from imageMappingData.json or fallback to itemName
 			function getImageId(itemName, imageMappingData) {
-				return imageMappingData[itemName] || itemName;
+				if (itemName === "Traveler") {
+					// Get the traveler setting from localStorage, defaulting to 'female' if not set
+					const traveler = localStorage.getItem('traveler') || 'female';
+					// Return the appropriate image name based on the traveler setting
+					return traveler === 'female' ? 'PlayerGirl' : 'PlayerBoy';
+				}
+
+				// Fallback to the image mapping data for other items
+				return imageMappingData.Characters[itemName] || itemName;
 			}
 
 			// Function to create an image element for a character
@@ -140,8 +147,8 @@ function checkJsonData() {
 					if (a.star !== 5 && b.star === 5) return 1;
 					// Then sort by star type (special-star) if both are 5-star
 					if (a.star === 5 && b.star === 5) {
-						if (a.starType && !b.starType) return -1;
-						if (!a.starType && b.starType) return 1;
+						if (a.star && !b.star) return -1;
+						if (!a.star && b.star) return 1;
 					}
 					// Sort 4-stars after 5-stars
 					if (a.star === 4 && b.star === 4) return 0;
