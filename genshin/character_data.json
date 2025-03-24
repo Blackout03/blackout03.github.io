@@ -678,6 +678,12 @@
           "endDate": "2025-02-11",
           "version": "5.3",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2025-04-15",
+          "endDate": "2025-05-06",
+          "version": "5.5",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -1576,6 +1582,12 @@
           "endDate": "2023-11-07",
           "version": "4.1",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-04-15",
+          "endDate": "2025-05-06",
+          "version": "5.5",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -2358,6 +2370,12 @@
           "endDate": "2025-02-11",
           "version": "5.3",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2025-04-15",
+          "endDate": "2025-05-06",
+          "version": "5.5",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -3844,6 +3862,12 @@
           "endDate": "2024-06-04",
           "version": "4.6",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-04-15",
+          "endDate": "2025-05-06",
+          "version": "5.5",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -4602,6 +4626,12 @@
           "endDate": "2025-02-11",
           "version": "5.3",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-03-26",
+          "endDate": "2025-04-15",
+          "version": "5.5",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -4648,6 +4678,12 @@
           "endDate": "2025-02-11",
           "version": "5.3",
           "wishType": "chronicled"
+        },
+        {
+          "startDate": "2025-03-26",
+          "endDate": "2025-04-15",
+          "version": "5.5",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -4681,6 +4717,12 @@
           "startDate": "2024-01-31",
           "endDate": "2024-02-20",
           "version": "4.4",
+          "wishType": "event"
+        },
+        {
+          "startDate": "2025-03-26",
+          "endDate": "2025-04-15",
+          "version": "5.5",
           "wishType": "event"
         }
       ],
@@ -5058,6 +5100,12 @@
           "endDate": "2024-10-29",
           "version": "5.1",
           "wishType": "event"
+        },
+        {
+          "startDate": "2025-04-15",
+          "endDate": "2025-05-06",
+          "version": "5.5",
+          "wishType": "event"
         }
       ],
       "materials": [
@@ -5292,9 +5340,9 @@
       "birthday": "08-08",
       "reruns": [
         {
-          "banner": "upcoming",
+          "startDate": "2025-03-26",
+          "endDate": "2025-04-15",
           "version": "5.5",
-          "phase": "upcoming",
           "wishType": "event"
         }
       ],
@@ -5326,9 +5374,9 @@
       "birthday": "11-15",
       "reruns": [
         {
-          "banner": "upcoming",
+          "startDate": "2025-03-26",
+          "endDate": "2025-04-15",
           "version": "5.5",
-          "phase": "upcoming",
           "wishType": "event"
         }
       ],
