@@ -28,7 +28,13 @@
 		const baitData = await baitResponse.json();
 
 		// Extract fish image mappings
-		const fishImageMap = mappingData.Monsters.Animals;
+		const fishImageMap = {};
+		for (const section of Object.values(mappingData.Monsters)) {
+			Object.assign(fishImageMap, section);
+		}
+		// Add manual mapping for Secret Source Scout Keeper
+		fishImageMap["Secret Source Scout Sweeper"] = "UI_ItemIcon_131045";
+		console.log(fishImageMap)
 
 		// Reverse bait mapping (Fish → Bait)
 		const fishToBait = {};
