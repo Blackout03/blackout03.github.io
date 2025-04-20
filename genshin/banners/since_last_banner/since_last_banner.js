@@ -101,16 +101,31 @@ function clearCharacterList() {
 // Combined event listener for both dropdowns
 function checkJsonData() {
 	Promise.all([
-		fetch('../../character_data.json').then(response => response.json()),
-		fetch('../../image_mapping_data.json').then(response => response.json())
+		fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/character_data.json').then(response => response.json()),
+		fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/image_mapping_data.json').then(response => response.json())
 	])
 		.then(([characterData, imageMappingData]) => {
-			const urlParams = new URLSearchParams(window.location.search);
-			const includeUpcomingCharacters = urlParams.has('includeUpcoming'); // Check if '?upcoming' is in the URL
+			const includeUpcomingCharacters = localStorage.getItem('includeUpcoming') === 'true'; // Check if it's the string 'true'
 
 			// Helper function to get image ID from imageMappingData.json or fallback to itemName
 			function getImageId(itemName, imageMappingData) {
-				return imageMappingData[itemName] || itemName;
+				// Fallback to the image mapping data for other items
+				return imageMappingData.Characters[itemName] || itemName;
+			}
+
+			// Function to create an image element for a character
+			function createCharacterImage(character) {
+				const characterName = getImageId(character.name, imageMappingData);
+				const characterImageLink =
+					createLink(['item-link'],
+						`https://genshin-impact.fandom.com/wiki/${character.name}`);
+				const characterImage =
+					createImage(['character-image', character.star === 5 && character.starType ? 'special-star-image' : character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
+						`https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`,
+						`${character.name} avatar`,
+						character.name);
+				characterImageLink.appendChild(characterImage);
+				return characterImageLink;
 			}
 
 			clearCharacterList(); // Clear the list before updating
@@ -138,16 +153,11 @@ function checkJsonData() {
 					const now = new Date();
 					const daysSinceLastRerun = calculateDaysSince(lastRerun.endDate);
 					const timeSinceLastRerun = calculateMonthsAndDaysSince(lastRerun.endDate);
-					const characterName = getImageId(character.name, imageMappingData);
 					const wishType = lastRerun.wishType === "chronicled" ? "Chronicled Wish" : "Event Wish";
 
 					const card = createDiv('character-card');
 
-					const img = createImage('character-image');
-					img.src = `https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`;
-					img.alt = `${character.name} avatar`;
-					img.title = `${character.name}`;
-					img.classList.add(character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image');
+					const img = createCharacterImage(character);
 
 					const details = createDiv('character-details');
 					const name = createSpan('character-name', character.name);

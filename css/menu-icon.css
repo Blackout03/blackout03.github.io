@@ -1,6 +1,6 @@
 ﻿/* Style for the home icon */
 .home-icon {
-	position: absolute;
+	position: fixed;
 	top: 0.5em;
 	left: 0.5em;
 	font-size: 48px;
@@ -12,13 +12,17 @@
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+h1 {
+	padding: 0.25em !important;
+}
+
 .home-icon i {
 	pointer-events: none;
 }
 
 /* Settings Button (Top-Right Corner) */
-.settings-btn {		
-	position: absolute;
+.settings-btn {
+	position: fixed;
 	top: 0.5em;
 	right: 0.5em;
 	font-size: 48px;
@@ -37,7 +41,7 @@
 
 /* Settings Menu */
 .settings-menu {
-	position: absolute;
+	position: fixed;
 	top: 5.75em;
 	right: 1.75em;
 	color: #000;

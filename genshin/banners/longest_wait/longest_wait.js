@@ -50,10 +50,9 @@ function findLongestGaps(data) {
 	// Sort gaps in descending order and get the top 10
 	gaps.sort((a, b) => b.gap - a.gap);
 
-	// Get 'top' value from the query parameter, default to 10
-	const urlParams = new URLSearchParams(window.location.search);
-	const isOngoing = urlParams.has('ongoing');
-	const top = parseInt(urlParams.get('top')) || 10;
+	// Get settings from localStorage
+	const isOngoing = localStorage.getItem('isOngoing') === 'true';
+	const top = parseInt(localStorage.getItem('top') || '10');
 
 	// Filter for ongoing banners if ?ongoing is in the URL
 	let filteredGaps;
@@ -75,8 +74,8 @@ function findLongestGaps(data) {
 }
 
 Promise.all([
-	fetch('../../character_data.json').then(response => response.json()),
-	fetch('../../image_mapping_data.json').then(response => response.json())
+	fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/character_data.json').then(response => response.json()),
+	fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/image_mapping_data.json').then(response => response.json())
 ])
 	.then(([characterData, imageMappingData]) => {
 		const container = document.getElementById('longest-gaps');
@@ -87,7 +86,23 @@ Promise.all([
 
 		// Helper function to get image ID from imageMappingData.json or fallback to itemName
 		function getImageId(itemName) {
-			return imageMappingData[itemName] || itemName;
+			// Fallback to the image mapping data for other items
+			return imageMappingData.Characters[itemName] || itemName;
+		}
+
+		// Function to create an image element for a character
+		function createCharacterImage(character) {
+			const characterName = getImageId(character.character, imageMappingData);
+			const characterImageLink =
+				createLink(['item-link'],
+					`https://genshin-impact.fandom.com/wiki/${character.character}`);
+			const characterImage =
+				createImage(['character-image', character.star === 5 && character.starType ? 'special-star-image' : character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
+					`https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`,
+					`${character.character} avatar`,
+					character.character);
+			characterImageLink.appendChild(characterImage);
+			return characterImageLink;
 		}
 
 		const longestGaps = findLongestGaps(characterData);
@@ -95,11 +110,7 @@ Promise.all([
 			const gapElement = createDiv('gap-item');
 			const characterName = getImageId(gap.character);
 
-			const img = createImage('character-image');
-			img.src = `https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`;
-			img.alt = `${gap.character} avatar`;
-			img.title = `${gap.character}`;
-			img.classList.add(gap.star === 5 ? 'five-star-image' : gap.star === 4 ? 'four-star-image' : 'unknown-star-image');
+			const img = createCharacterImage(gap);
 
 			// Increment the banner number only if the current gap length is different from the previous one
 			if (previousGap !== null && gap.gap !== previousGap) {

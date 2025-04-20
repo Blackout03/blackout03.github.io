@@ -9,12 +9,53 @@
 	<link rel="stylesheet" href="calendar.css">
 </head>
 <body>
+<!-- Home Button (Top-Left Corner) -->
 <a href="https://blackout03.github.io/" class="home-icon">
 	<i class="fas fa-home"></i>
 </a>
+
+<!-- Settings Button (Top-Right Corner) -->
+<a id="settings-btn" class="settings-btn">
+	<i class="fas fa-cogs"></i>
+</a>
+
+<!-- Settings Menu (Hidden by default) -->
+<div id="settings-menu" class="settings-menu">
+	<label>
+		Choose Traveler:
+		<select id="traveler-select">
+			<option value="male">Male Traveler</option>
+			<option value="female">Female Traveler</option>
+		</select>
+	</label>
+	<label>
+		Your Birthday:
+		<select id="birthdayMonth">
+			<option value="01">January</option>
+			<option value="02">February</option>
+			<option value="03">March</option>
+			<option value="04">April</option>
+			<option value="05">May</option>
+			<option value="06">June</option>
+			<option value="07">July</option>
+			<option value="08">August</option>
+			<option value="09">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select>
+		<select id="birthdayDay"></select>
+	</label>
+	<label>
+		Include Upcoming?
+		<input type="checkbox" id="includeUpcomingToggle">
+	</label>
+</div>
+
 <h1>Character Birthday Calendar</h1>
 <div id="calendar"></div>
 <script src="../banners/common.js"></script>
 <script src="calendar.js"></script>
+<script src="../settings.js"></script>
 </body>
 </html>

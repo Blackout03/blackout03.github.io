@@ -102,16 +102,16 @@ function createNumberedItemImage(classNames = [], src = '', alt = '', number = '
 
 // Function to fetch character data from JSON file
 Promise.all([
-	fetch('../character_data.json').then(response => response.json()),
-	fetch('../image_mapping_data.json').then(response => response.json()),
-	fetch('../material_mapping_data.json').then(response => response.json())
+	fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/character_data.json').then(response => response.json()),
+	fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/image_mapping_data.json').then(response => response.json()),
+	fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/material_mapping_data.json').then(response => response.json())
 ])
 	.then(([characterData, imageMappingData, materialMappingData]) => {
 		const charactersContainer = document.getElementById('charactersContainer');
 		const includeUpcomingCharacters = localStorage.getItem('includeUpcoming') === 'true'; // Check if it's the string 'true'
 
 		// Helper function to get image ID from imageMappingData.json or fallback to itemName
-		function getImageId(itemName) {
+		function getCharacterImageId(itemName) {
 			if (itemName === "Traveler") {
 				// Get the traveler setting from localStorage, defaulting to 'female' if not set
 				const traveler = localStorage.getItem('traveler') || 'female';
@@ -120,7 +120,52 @@ Promise.all([
 			}
 
 			// Fallback to the image mapping data for other items
-			return imageMappingData[itemName] || itemName;
+			return imageMappingData.Characters[itemName] || itemName;
+		}
+
+		function getMonsterImageId(itemName) {
+			for (const category of Object.values(imageMappingData.Monsters)) {
+				if (itemName in category) {
+					return category[itemName];
+				}
+			}
+			// Fallback: return the input name if no match is found
+			return itemName;
+		}
+
+		function getItemImageId(itemName) {
+			for (const category of Object.values(imageMappingData.Items)) {
+				if (itemName in category) {
+					return category[itemName];
+				}
+			}
+			// Fallback: return the input name if no match is found
+			return itemName;
+		}
+
+		function getDisplayBossName(bossName) {
+			switch (bossName) {
+				case "Stormterror":
+					return "Stormterror Dvalin";
+				case "Lupus Boreas, Dominator of Wolves":
+					return "Andrius";
+				case "Childe P1":
+					return "Childe";
+				case "Azhdaha":
+					return "Azhdaha (Weekly Boss)";
+				case "Shouki no Kami P1":
+					return "Shouki no Kami";
+				case "Gosoythoth":
+					return "Lord of Eroded Primal Fire";
+				case "Pyro Primo Geovishap":
+					return "Primo Geovishap";
+				case "Oceanid":
+					return "Rhodeia of Loch";
+				case "Iniquitous Baptist - Invoker of Flame, Frost, and Fulmination":
+					return "Iniquitous Baptist";
+				default:
+					return bossName;
+			}
 		}
 
 		characterData.characters
@@ -141,7 +186,7 @@ Promise.all([
 					const detailsDiv = document.createElement('div');
 					detailsDiv.classList.add('details');
 
-					const characterImageName = getImageId(character.name);
+					const characterImageName = getCharacterImageId(character.name);
 
 					// Append character image
 					const characterImage = createCharacterImage(character, characterImageName);
@@ -160,8 +205,7 @@ Promise.all([
 					detailsRightDiv.appendChild(characterNameLink);
 
 					// Create a div for weapon and element icons
-					const iconsDiv = document.createElement('div');
-					iconsDiv.classList.add('icons');
+					const iconsDiv = createDiv('icons');
 
 					// Append weapon image
 					const weaponImage = createWeaponImage(character.weapon);
@@ -226,7 +270,7 @@ Promise.all([
 										// Add enemy image
 										const enemyImage = createImage(
 											'enemy-image',
-											`https://api.hakush.in/gi/UI/${getImageId(enemyDropData.enemyName)}.webp`,
+											`https://api.hakush.in/gi/UI/${getMonsterImageId(enemyDropData.enemyName)}.webp`,
 											enemyDropData.enemyName
 										);
 										const enemyImageLink =
@@ -249,7 +293,7 @@ Promise.all([
 											// Add drop image
 											const dropImage = createNumberedItemImage(
 												'item-image',
-												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDropData[key])}.png`,
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(enemyDropData[key])}.png`,
 												`${enemyDropData[key]} (x${quantities[index]})`,
 												quantities[index]
 											);
@@ -301,12 +345,12 @@ Promise.all([
 										// Add enemy image
 										const enemyImage = createImage(
 											'enemy-image',
-											normalBossDropData.bossName === "Coral Defenders" ? `../images/UI_MonsterIcon_Drake_Deepsea_TwinBossFight.webp` : `https://api.hakush.in/gi/UI/${getImageId(normalBossDropData.bossName)}.webp`,
-											normalBossDropData.bossName
+											normalBossDropData.bossName === "Coral Defenders" ? `../images/UI_MonsterIcon_Drake_Deepsea_TwinBossFight.webp` : `https://api.hakush.in/gi/UI/${getMonsterImageId(normalBossDropData.bossName)}.webp`,
+											getDisplayBossName(normalBossDropData.bossName)
 										);
 										const enemyImageLink =
 											createLink(['item-link'],
-												`https://genshin-impact.fandom.com/wiki/${normalBossDropData.bossName}`);
+												`https://genshin-impact.fandom.com/wiki/${getDisplayBossName(normalBossDropData.bossName)}`);
 										enemyImageLink.appendChild(enemyImage);
 										enemyDiv.appendChild(enemyImageLink);
 
@@ -320,7 +364,7 @@ Promise.all([
 										// Add normal boss drop image
 										const dropImage = createNumberedItemImage(
 											'item-image',
-											`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(normalBossDropData.itemName)}.png`,
+											`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(normalBossDropData.itemName)}.png`,
 											`${normalBossDropData.itemName} (x46)`,
 											46
 										);
@@ -374,7 +418,7 @@ Promise.all([
 
 											const gemImage = createNumberedItemImage(
 												['item-image', 'gem-image'],
-												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(gemName)}.png`,
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(gemName)}.png`,
 												gemName,
 												count
 											);
@@ -431,7 +475,7 @@ Promise.all([
 
 									const localSpecialtyImage = createNumberedItemImage(
 										['item-image', 'gem-image'],
-										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(ascension.localSpecialty)}.png`,
+										`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(ascension.localSpecialty)}.png`,
 										ascension.localSpecialty,
 										168
 									);
@@ -488,7 +532,7 @@ Promise.all([
 											// Add enemy image
 											const enemyImage = createImage(
 												'enemy-image',
-												`https://api.hakush.in/gi/UI/${getImageId(enemyDropData.enemyName)}.webp`,
+												`https://api.hakush.in/gi/UI/${getMonsterImageId(enemyDropData.enemyName)}.webp`,
 												enemyDropData.enemyName
 											);
 											const enemyImageLink =
@@ -510,7 +554,7 @@ Promise.all([
 												// Add drop image
 												const dropImage = createNumberedItemImage(
 													'item-image',
-													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDropData[key])}.png`,
+													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(enemyDropData[key])}.png`,
 													`${enemyDropData[key]} (x${quantities[index]})`,
 													quantities[index]
 												);
@@ -551,7 +595,7 @@ Promise.all([
 											// Add enemy image
 											const enemy2Image = createImage(
 												'enemy-image',
-												`https://api.hakush.in/gi/UI/${getImageId(enemyDrop2Data.enemyName)}.webp`,
+												`https://api.hakush.in/gi/UI/${getMonsterImageId(enemyDrop2Data.enemyName)}.webp`,
 												enemyDrop2Data.enemyName
 											);
 											const enemy2ImageLink =
@@ -573,7 +617,7 @@ Promise.all([
 												// Add drop image
 												const drop2Image = createNumberedItemImage(
 													'item-image',
-													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDrop2Data[key])}.png`,
+													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(enemyDrop2Data[key])}.png`,
 													`${enemyDrop2Data[key]} (x${quantities[index]})`,
 													quantities[index]
 												);
@@ -624,7 +668,7 @@ Promise.all([
 											// Add enemy image
 											const enemyImage = createImage(
 												'enemy-image',
-												`https://api.hakush.in/gi/UI/${getImageId(enemyDropData.enemyName)}.webp`,
+												`https://api.hakush.in/gi/UI/${getMonsterImageId(enemyDropData.enemyName)}.webp`,
 												enemyDropData.enemyName
 											);
 											const enemyImageLink =
@@ -647,7 +691,7 @@ Promise.all([
 												// Add drop image
 												const dropImage = createNumberedItemImage(
 													'item-image',
-													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(enemyDropData[key])}.png`,
+													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(enemyDropData[key])}.png`,
 													`${enemyDropData[key]} (x${quantities[index]})`,
 													quantities[index]
 												);
@@ -696,7 +740,7 @@ Promise.all([
 
 										const weeklyBossDropImage = createNumberedItemImage(
 											['item-image', 'gem-image'],
-											`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(talents.weeklyBossDrop)}.png`,
+											`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(talents.weeklyBossDrop)}.png`,
 											talents.weeklyBossDrop,
 											12
 										);
@@ -739,12 +783,12 @@ Promise.all([
 											// Add enemy image
 											const enemyImage = createImage(
 												'enemy-image',
-												`https://api.hakush.in/gi/UI/${getImageId(weeklyBossDropData.bossName)}.webp`,
-												weeklyBossDropData.bossName
+												`https://api.hakush.in/gi/UI/${getMonsterImageId(weeklyBossDropData.bossName)}.webp`,
+												getDisplayBossName(weeklyBossDropData.bossName)
 											);
 											const enemyImageLink =
 												createLink(['item-link'],
-													`https://genshin-impact.fandom.com/wiki/${weeklyBossDropData.bossName}`);
+													`https://genshin-impact.fandom.com/wiki/${getDisplayBossName(weeklyBossDropData.bossName)}`);
 											enemyImageLink.appendChild(enemyImage);
 											enemyDiv.appendChild(enemyImageLink);
 
@@ -756,7 +800,7 @@ Promise.all([
 											// Add weekly boss drop image
 											const dropImage = createNumberedItemImage(
 												'item-image',
-												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBossDropData.itemName)}.png`,
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(weeklyBossDropData.itemName)}.png`,
 												`${weeklyBossDropData.itemName} (x6)`,
 												6
 											);
@@ -789,12 +833,12 @@ Promise.all([
 											// Add enemy image
 											const enemy2Image = createImage(
 												'enemy-image',
-												`https://api.hakush.in/gi/UI/${getImageId(weeklyBoss2DropData.bossName)}.webp`,
-												weeklyBoss2DropData.bossName
+												`https://api.hakush.in/gi/UI/${getMonsterImageId(weeklyBoss2DropData.bossName)}.webp`,
+												getDisplayBossName(weeklyBoss2DropData.bossName)
 											);
 											const enemy2ImageLink =
 												createLink(['item-link'],
-													`https://genshin-impact.fandom.com/wiki/${weeklyBoss2DropData.bossName}`);
+													`https://genshin-impact.fandom.com/wiki/${getDisplayBossName(weeklyBoss2DropData.bossName)}`);
 											enemy2ImageLink.appendChild(enemy2Image);
 											enemy2Div.appendChild(enemy2ImageLink);
 
@@ -806,7 +850,7 @@ Promise.all([
 											// Add weekly boss drop image
 											const drop2Image = createNumberedItemImage(
 												'item-image',
-												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBoss2DropData.itemName)}.png`,
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(weeklyBoss2DropData.itemName)}.png`,
 												`${weeklyBoss2DropData.itemName} (x12)`,
 												12
 											);
@@ -856,12 +900,12 @@ Promise.all([
 											// Add enemy image
 											const enemyImage = createImage(
 												'enemy-image',
-												`https://api.hakush.in/gi/UI/${getImageId(weeklyBossDropData.bossName)}.webp`,
-												weeklyBossDropData.bossName
+												`https://api.hakush.in/gi/UI/${getMonsterImageId(weeklyBossDropData.bossName)}.webp`,
+												getDisplayBossName(weeklyBossDropData.bossName)
 											);
 											const enemyImageLink =
 												createLink(['item-link'],
-													`https://genshin-impact.fandom.com/wiki/${weeklyBossDropData.bossName}`);
+													`https://genshin-impact.fandom.com/wiki/${getDisplayBossName(weeklyBossDropData.bossName)}`);
 											enemyImageLink.appendChild(enemyImage);
 											enemyDiv.appendChild(enemyImageLink);
 
@@ -875,7 +919,7 @@ Promise.all([
 											// Add weekly boss drop image
 											const dropImage = createNumberedItemImage(
 												'item-image',
-												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(weeklyBossDropData.itemName)}.png`,
+												`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(weeklyBossDropData.itemName)}.png`,
 												`${weeklyBossDropData.itemName} (x18)`,
 												18
 											);
@@ -914,8 +958,6 @@ Promise.all([
 									const talentBooksData = materialMappingData[talents.talentBooks];
 
 									if (talentBooksData) {
-										console.log(talents.talentBooks)
-										console.log(talentBooksData)
 										// Create a div for the talent books
 										const talentBookDiv = createDiv();
 										const talentBookHeader = createSpan('materials-secondary-text', 'Talent Books:');
@@ -928,7 +970,7 @@ Promise.all([
 
 												const bookImage = createNumberedItemImage(
 													['item-image', 'talent-book-image'],
-													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(imageMappingData[talentBooksData[tier]])}.png`,
+													`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(talentBooksData[tier])}.png`,
 													talentBooksData[tier],
 													count
 												);
@@ -984,7 +1026,7 @@ Promise.all([
 
 													const bookImage = createNumberedItemImage(
 														['item-image', 'talent-book-image'],
-														`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(imageMappingData[data[tier]])}.png`,
+														`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(data[tier])}.png`,
 														data[tier],
 														count
 													);
@@ -1032,7 +1074,7 @@ Promise.all([
 
 													const book2Image = createNumberedItemImage(
 														['item-image', 'talent-book-image'],
-														`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(imageMappingData[data[tier]])}.png`,
+														`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(data[tier])}.png`,
 														data[tier],
 														count
 													);
@@ -1087,7 +1129,7 @@ Promise.all([
 
 													const bookImage = createNumberedItemImage(
 														['item-image', 'talent-book-image'],
-														`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getImageId(imageMappingData[data[tier]])}.png`,
+														`https://homdgcat.wiki/homdgcat-res/Mat/UI_ItemIcon_${getItemImageId(data[tier])}.png`,
 														data[tier],
 														count
 													);

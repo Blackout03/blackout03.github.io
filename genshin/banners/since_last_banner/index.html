@@ -10,12 +10,26 @@
 	<link rel="stylesheet" href="since_last_banner.css">
 </head>
 <body>
+<!-- Home Button (Top-Left Corner) -->
 <a href="https://blackout03.github.io/" class="home-icon">
 	<i class="fas fa-home"></i>
 </a>
-<div class="container">
-	<h1>Genshin Character Rerun Tracker</h1>
 
+<!-- Settings Button (Top-Right Corner) -->
+<a id="settings-btn" class="settings-btn">
+	<i class="fas fa-cogs"></i>
+</a>
+
+<!-- Settings Menu (Hidden by default) -->
+<div id="settings-menu" class="settings-menu">
+	<label>
+		Include Upcoming?
+		<input type="checkbox" id="includeUpcomingToggle">
+	</label>
+</div>
+
+<h1>Genshin Character Rerun Tracker</h1>
+<div class="container">
 	<div class="sorting">
 		<!-- Sorting dropdown -->
 		<label for="sortOptions">Sort by:</label>
@@ -70,5 +84,6 @@
 </div>
 <script src="../common.js"></script>
 <script src="since_last_banner.js"></script>
+<script src="../../settings.js"></script>
 </body>
 </html>

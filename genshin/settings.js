@@ -10,7 +10,6 @@ window.onload = function() {
 	if (travelerSelect) {
 		const savedTraveler = localStorage.getItem('traveler') || 'female'; // Default to 'female' if no saved setting
 		travelerSelect.value = savedTraveler;
-		updateTraveler(savedTraveler);
 	}
 
 	const layoutToggle = document.getElementById('layoutToggle');
@@ -24,6 +23,65 @@ window.onload = function() {
 		const savedIncludeUpcoming = localStorage.getItem('includeUpcoming') || 'false'; // Default to 'false' if no saved setting
 		includeUpcomingToggle.checked = savedIncludeUpcoming === 'true';
 	}
+
+	const ongoingToggle = document.getElementById('ongoingToggle');
+	if (ongoingToggle) {
+		const savedIsOngoing = localStorage.getItem('isOngoing') || 'true'; // Default to 'true' if no saved setting
+		ongoingToggle.checked = savedIsOngoing === 'true';
+	}
+
+	const topLengthInput = document.getElementById('topLengthInput');
+	if (topLengthInput) {
+		const savedTop = localStorage.getItem('top') || '10'; // Default to '10' if no saved setting
+		topLengthInput.value = savedTop;
+	}
+
+	const birthdayMonth = document.getElementById('birthdayMonth');
+	const birthdayDay = document.getElementById('birthdayDay');
+
+	const daysInMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+	function updateDayOptions(month, selectedDay = null) {
+		const days = daysInMonth[month];
+		birthdayDay.innerHTML = '';
+		for (let i = 1; i <= days; i++) {
+			const option = document.createElement('option');
+			const dayStr = i.toString().padStart(2, '0');
+			option.value = dayStr;
+			option.textContent = dayStr;
+			if (selectedDay && i === parseInt(selectedDay)) {
+				option.selected = true;
+			}
+			birthdayDay.appendChild(option);
+		}
+	}
+
+	if (birthdayMonth && birthdayDay) {
+		const savedBirthday = localStorage.getItem('birthday') || '01-01';
+		const [savedMonth, savedDay] = savedBirthday.split('-');
+
+		birthdayMonth.value = savedMonth;
+		updateDayOptions(parseInt(savedMonth) - 1, savedDay);
+
+		birthdayMonth.addEventListener('change', () => {
+			const newMonthIndex = parseInt(birthdayMonth.value) - 1;
+			const currentDay = parseInt(birthdayDay.value);
+			const maxDay = daysInMonth[newMonthIndex];
+			const validDay = Math.min(currentDay, maxDay).toString().padStart(2, '0');
+
+			updateDayOptions(newMonthIndex, validDay);
+
+			const newDate = `${birthdayMonth.value}-${validDay}`;
+			localStorage.setItem('birthday', newDate);
+			location.reload();
+		});
+
+		birthdayDay.addEventListener('change', () => {
+			const newDate = `${birthdayMonth.value}-${birthdayDay.value}`;
+			localStorage.setItem('birthday', newDate);
+			location.reload();
+		});
+	}
 };
 
 // Update the traveler when the user selects a new option
@@ -32,18 +90,11 @@ if (travelerSelect) {
 	travelerSelect.addEventListener('change', function() {
 		const selectedTraveler = this.value;
 		localStorage.setItem('traveler', selectedTraveler);
-		updateTraveler(selectedTraveler);
 
 		// Reload the page after changing the traveler setting
 		location.reload();
 	});
 }
-
-// Function to update the traveler display
-function updateTraveler(traveler) {
-	console.log(`Traveler set to: ${traveler}`); // Example output, replace with actual implementation
-}
-
 
 
 // Save layout preference and apply it
@@ -64,20 +115,32 @@ if (layoutToggle) {
 	});
 }
 
-// Function to update the includeUpcoming display
-function updateIncludeUpcoming(includeUpcoming) {
-	console.log(`includeUpcoming set to: ${includeUpcoming}`); // Example output, replace with actual implementation
-}
-
 // Save includeUpcoming preference and apply it
 const includeUpcomingToggle = document.getElementById('includeUpcomingToggle');
 if (includeUpcomingToggle) {
 	includeUpcomingToggle.addEventListener('change', () => {
 		const includeUpcoming = includeUpcomingToggle.checked ? 'true' : 'false';
 		localStorage.setItem('includeUpcoming', includeUpcoming);
-		updateIncludeUpcoming(includeUpcoming);
 
 		// Reload the page after changing the includeUpcoming setting
+		location.reload();
+	});
+}
+
+//  Save isOngoing preference and apply it
+const ongoingToggle = document.getElementById('ongoingToggle');
+if (ongoingToggle) {
+	ongoingToggle.addEventListener('change', () => {
+		localStorage.setItem('isOngoing', ongoingToggle.checked ? 'true' : 'false');
+		location.reload();
+	});
+}
+
+// Save topLength preference and apply it
+const topLengthInput = document.getElementById('topLengthInput');
+if (topLengthInput) {
+	topLengthInput.addEventListener('change', () => {
+		localStorage.setItem('top', topLengthInput.value);
 		location.reload();
 	});
 }

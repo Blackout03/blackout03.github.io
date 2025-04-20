@@ -28,25 +28,54 @@ function createCharacterImage(character, characterName) {
 
 // Function to fetch character data from JSON files
 Promise.all([
-	fetch('../character_data.json').then(response => response.json()),
-	fetch('../image_mapping_data.json').then(response => response.json())
+	fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/character_data.json').then(response => response.json()),
+	fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/image_mapping_data.json').then(response => response.json())
 ])
 	.then(([characterData, imageMappingData]) => {
-		console.log(characterData);
+		const includeUpcomingCharacters = localStorage.getItem('includeUpcoming') === 'true'; // Check if it's the string 'true'
+		const userBirthday = localStorage.getItem('birthday'); // User's Birthday.
+
+
 		let data = characterData.characters;
 		// Organize characters by birthday
 		const birthdayMap = {};
-		data.forEach(character => {
-			const birthday = character.birthday; // format: mm-dd
-			if (!birthdayMap[birthday]) {
-				birthdayMap[birthday] = [];
-			}
-			birthdayMap[birthday].push(character);
-		});
+		data
+			.filter(character => {
+				// If '?upcoming' is present, include all characters
+				if (includeUpcomingCharacters) return true;
+				// Only include characters that do not have an upcoming banner and have a version field in reruns
+				return character.reruns.some(rerun => rerun.version) &&
+					!character.reruns.some(rerun => rerun.banner === 'upcoming');
+			})
+			.forEach(character => {
+				const birthday = character.birthday; // format: mm-dd
+				if (!birthdayMap[birthday]) {
+					birthdayMap[birthday] = [];
+				}
+				birthdayMap[birthday].push(character);
+			});
 
 		// Helper function to get image ID from imageMappingData.json or fallback to itemName
 		function getImageId(itemName) {
-			return imageMappingData[itemName] || itemName;
+			if (itemName === "Traveler") {
+				// Get the traveler setting from localStorage, defaulting to 'female' if not set
+				const traveler = localStorage.getItem('traveler') || 'female';
+				// Return the appropriate image name based on the traveler setting
+				return traveler === 'female' ? 'PlayerGirl' : 'PlayerBoy';
+			}
+
+			// Fallback to the image mapping data for other items
+			return imageMappingData.Characters[itemName] || itemName;
+		}
+
+		if (userBirthday) {
+			if (!birthdayMap[userBirthday]) {
+				birthdayMap[userBirthday] = [];
+			}
+			birthdayMap[userBirthday].push({
+				name: 'Traveler',
+				star: 5
+			});
 		}
 
 		// Create calendar structure

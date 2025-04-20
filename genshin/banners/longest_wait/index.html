@@ -13,13 +13,36 @@
 <a href="https://blackout03.github.io/" class="home-icon">
 	<i class="fas fa-home"></i>
 </a>
+<!-- Home Button (Top-Left Corner) -->
+<a href="https://blackout03.github.io/" class="home-icon">
+	<i class="fas fa-home"></i>
+</a>
+
+<!-- Settings Button (Top-Right Corner) -->
+<a id="settings-btn" class="settings-btn">
+	<i class="fas fa-cogs"></i>
+</a>
+
+<!-- Settings Menu (Hidden by default) -->
+<div id="settings-menu" class="settings-menu">
+	<label>
+		Is Ongoing?
+		<input type="checkbox" id="ongoingToggle">
+	</label>
+	<label>
+		Top Length:
+		<input type="number" id="topLengthInput" value="10" min="1">
+	</label>
+</div>
+
+<h1>Top 10 Longest Periods Between Banners</h1>
 <div class="container">
-	<h1>Top 10 Longest Periods Between Banners</h1>
 	<div id="longest-gaps">
 		<!-- Top 10 longest banner gaps will be displayed here -->
 	</div>
 </div>
 <script src="../common.js"></script>
 <script src="longest_wait.js"></script>
+<script src="../../settings.js"></script>
 </body>
 </html>
