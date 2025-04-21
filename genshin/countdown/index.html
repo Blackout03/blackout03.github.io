@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Version Countdown and Drip Marketing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../../css/menu-icon.css">
+  <link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+<!-- Home Button (Top-Left Corner) -->
+<a href="https://blackout03.github.io/" class="home-icon">
+  <i class="fas fa-home"></i>
+</a>
+
+<!-- Settings Button (Top-Right Corner) -->
+<a id="settings-btn" class="settings-btn">
+  <i class="fas fa-cogs"></i>
+</a>
+
+<!-- Settings Menu (Hidden by default) -->
+<div id="settings-menu" class="settings-menu">
+  <label>
+    Include Upcoming?
+    <input type="checkbox" id="includeUpcomingToggle">
+  </label>
+</div>
+
+<h1>Genshin Impact Countdown</h1>
+<div class="container">
+  <!-- Countdown Section -->
+  <div id="countdown" class="section">
+    <!-- Version Countdown -->
+    <div id="version-timer"></div>
+
+    <!-- Drip-Marketed Characters -->
+    <div id="drip-characters">
+      <h3>Upcoming Characters</h3>
+      <div class="character-gallery"></div>
+    </div>
+  </div>
+
+
+  <!-- Drip Marketing Countdown Section -->
+  <div id="drip-countdown" class="section"></div>
+
+  <!-- Special Program Countdown Section -->
+  <div id="special-program-countdown" class="section"></div>
+  
+  <div id="beta-countdown" class="section"></div>
+
+  <!-- Version History Section -->
+  <div id="version-history" class="section">
+    <h2>Version History</h2>
+    <table id="version-table">
+      <thead>
+      <tr>
+        <th>Version</th>
+        <th>Release Date</th>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="countdown.js" defer></script>
+<script src="../settings.js"></script>
+</body>
+</html>
