@@ -93,6 +93,14 @@ function getSpecialProgramDate(versionDate) {
 	return specialProgramDate;
 }
 
+function getDevDiscussionDate(versionDate) {
+	const devDiscussionDate = new Date(versionDate);
+	devDiscussionDate.setUTCDate(devDiscussionDate.getUTCDate() - 14);
+
+	devDiscussionDate.setUTCHours(2, 30, 0, 0); // 12:00 UTC = 20:00 CST
+	return devDiscussionDate;
+}
+
 function displayCountdown(versionInfo, schedule) {
 	const timerDiv = document.getElementById('version-timer');
 
@@ -194,6 +202,41 @@ function displaySpecialProgramCountdown(schedule) {
 
 	updateSpecialProgramCountdown();
 	setInterval(updateSpecialProgramCountdown, 1000);
+}
+
+function displayDevDiscussionCountdown(schedule) {
+	const devDiscussionCountdownDiv = document.getElementById('dev-discussion-countdown');
+	let currentIndex = schedule.length - 2;
+	let currentVersion = schedule[currentIndex];
+	let devDiscussionDate = getDevDiscussionDate(currentVersion.date);
+
+	function updateDevDiscussionCountdown() {
+		const now = new Date();
+		const diff = devDiscussionDate - now;
+
+		if (diff <= 0) {
+			const nextVersion = getNextVersion(parseFloat(currentVersion.version));
+			const nextVersionInfo = schedule.find(v => parseFloat(v.version) === nextVersion);
+			if (nextVersionInfo) {
+				currentVersion = nextVersionInfo;
+				devDiscussionDate = getDevDiscussionDate(currentVersion.date);
+			}
+			return;
+		}
+
+		let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+		let hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+		let minutes = Math.floor((diff / (1000 * 60)) % 60);
+		let seconds = Math.floor((diff / 1000) % 60);
+
+		devDiscussionCountdownDiv.innerHTML = `
+			<p>Next Developer Discussion: <strong>${currentVersion.version}</strong></p>
+			<p>Airs in: <strong>${days}d ${hours}h ${minutes}m ${seconds}s</strong></p>
+		`;
+	}
+
+	updateDevDiscussionCountdown();
+	setInterval(updateDevDiscussionCountdown, 1000);
 }
 
 function displayBetaCountdown(versionInfo, schedule) {
@@ -321,6 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		displayCountdown(upcoming, schedule);
 		displayDripMarketingCountdown(schedule);
 		displaySpecialProgramCountdown(schedule);
+		displayDevDiscussionCountdown(schedule);
 		displayBetaCountdown(upcoming, schedule);
 
 		populateTable(schedule);
