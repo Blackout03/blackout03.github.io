@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Columbina Savings Tracker</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="../../../css/menu-icon.css">
+	<link rel="stylesheet" href="binasavings.css">
+</head>
+<body>
+<!-- Home Button (Top-Left Corner) -->
+<a href="https://blackout03.github.io/" class="home-icon">
+	<i class="fas fa-home"></i>
+</a>
+
+<div class="container">
+	<h1>Columbina Savings Tracker</h1>
+
+	<div class="input-section">
+		<label for="constellation">Constellation Level:</label>
+		<select id="constellation">
+			<option value="c0">C0</option>
+			<option value="c1">C1</option>
+			<option value="c2">C2</option>
+			<option value="c3">C3</option>
+			<option value="c4">C4</option>
+			<option value="c5">C5</option>
+			<option value="c6">C6</option>
+		</select>
+
+		<label for="refinement">Refinement Level:</label>
+		<select id="refinement">
+			<option value="r0">R0</option>
+			<option value="r1">R1</option>
+			<option value="r2">R2</option>
+			<option value="r3">R3</option>
+			<option value="r4">R4</option>
+			<option value="r5">R5</option>
+		</select>
+
+		<div class="input-row">
+			<div class="input-group">
+				<label for="primogems">Current Primogems:</label>
+				<input type="number" id="primogems" min="0" placeholder="Enter your current primos">
+			</div>
+			<div class="input-group">
+				<label for="fates">Current Fates:</label>
+				<input type="number" id="fates" min="0" placeholder="Enter your current fates">
+			</div>
+		</div>
+
+		<div class="progress-container">
+			<div class="progress-bar" id="progress-bar">
+				<span id="progress-label">0%</span>
+			</div>
+			<div id="progress-stats">0 / 0</div>
+		</div>
+	</div>
+
+	<div id="results"></div>
+
+	<div class="dates-section">
+		<h2>Upcoming Dates</h2>
+		<ul id="dates-list" class="dates-list"></ul>
+	</div>
+</div>
+<footer class="footer">
+	Inspired by <a href="https://github.com/Lemomation/binasavings" target="_blank">binasavings</a>
+</footer>
+<script src="binasavings.js"></script>
+</body>
+</html>
