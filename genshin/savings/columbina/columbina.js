@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const results = document.getElementById("results");
 
 	// Load saved data
-	const saved = JSON.parse(localStorage.getItem("binaSavings")) || {};
+	const saved = JSON.parse(localStorage.getItem("columbinaSavings")) || {};
 	if (saved.constellation) constellation.value = saved.constellation;
 	if (saved.refinement) refinement.value = saved.refinement;
 	if (saved.primogems) primogems.value = saved.primogems;
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		results.textContent = `You have ${currentPrimos} primogems and ${currentFates} fates (${totalPrimogemValue} total value). You need ${totalNeeded} primogems for C${constVal[1]} and R${refVal[1]}. You are ${percentage}% of the way there.`;
 
 		// Save to local storage
-		localStorage.setItem("binaSavings", JSON.stringify({
+		localStorage.setItem("columbinaSavings", JSON.stringify({
 			constellation: constVal,
 			refinement: refVal,
 			primogems: currentPrimos,
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// Load and display JSON dates
-	fetch("binasavings.json")
+	fetch("columbina.json")
 		.then(res => res.json())
 		.then(data => {
 			const datesList = document.getElementById("dates-list");
@@ -130,6 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		})
 		.catch(err => {
-			console.error("Failed to load binasavings.json", err);
+			console.error("Failed to load columbina.json", err);
 		});
 });
