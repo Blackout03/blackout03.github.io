@@ -103,16 +103,21 @@ document.addEventListener("DOMContentLoaded", () => {
 			Object.entries(data).forEach(([key, value]) => {
 				const li = document.createElement("li");
 
-				let dateDisplay = value;
+				let dateDisplay = value.replace("_guess", "").replace("_sus", "");
+				const isGuess = value.endsWith("_guess");
+				const isSus = value.endsWith("_sus");
 
-				if (value.toLowerCase() !== "unknown") {
+				if (dateDisplay.toLowerCase() !== "unknown") {
 					const today = new Date();
-					const target = new Date(`${value}T00:00:00+08:00`);
+					const target = new Date(`${dateDisplay}T00:00:00+08:00`);
 					const diffTime = target - today;
 					console.log("China Target (parsed ISO):", target);
 					console.log("China today (parsed ISO):", today);
 					console.log("China diffTime (parsed ISO):", diffTime);
 					const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+					if (isGuess) dateDisplay += " (guesstimate)";
+					if (isSus) dateDisplay += " (sus leaks)";
 
 					if (diffDays > 1) {
 						dateDisplay += ` (${diffDays} days remaining)`;
