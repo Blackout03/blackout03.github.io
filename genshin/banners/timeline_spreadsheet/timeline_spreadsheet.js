@@ -86,18 +86,32 @@ function checkJsonData() {
 							if (!versionPhases[rerun.version]) {
 								versionPhases[rerun.version] = [];
 							}
+
+							// Skip adding upcoming phase if it's a leak and upcoming is not enabled
+							if (rerun.phase === "upcoming" && rerun.info === "leak" && !includeUpcomingCharacters) return;
+
 							// Check for duplicates before adding a phase
 							const isDuplicate = versionPhases[rerun.version].some(phase =>
-								phase[0] === rerun.startDate && phase[1] === rerun.endDate && phase[3] === rerun.phase
+								phase[0] === rerun.startDate &&
+								phase[1] === rerun.endDate &&
+								phase[3] === rerun.phase
 							);
 
 							// Only add the phase if it's not a duplicate
 							if (!isDuplicate) {
-								versionPhases[rerun.version].push([rerun.startDate, rerun.endDate, rerun.version, rerun.phase]);
+								versionPhases[rerun.version].push([
+									rerun.startDate,
+									rerun.endDate,
+									rerun.version,
+									rerun.phase
+								]);
 							}
 						});
 					}
-			});
+				});
+
+			// Log collected phases before sorting
+			console.log("Before sorting phases (versionPhases):", versionPhases);
 
 			// Sort phases for each version by the start date
 			Object.keys(versionPhases).forEach(version => {
@@ -107,6 +121,9 @@ function checkJsonData() {
 					return (startDateA && startDateB) ? startDateA.getTime() - startDateB.getTime() : 0;
 				});
 			});
+
+			// Log after sorting by date
+			console.log("After sorting by start date (versionPhases):", versionPhases);
 
 			// Sort phases for each version by phase number (last element in each array)
 			Object.keys(versionPhases).forEach(version => {
@@ -119,6 +136,9 @@ function checkJsonData() {
 					return phaseA - phaseB;
 				});
 			});
+
+			// Log after sorting by phase number
+			console.log("After sorting by phase number (versionPhases):", versionPhases);
 
 			const versionArray = Object.keys(versionPhases).sort();
 
@@ -135,12 +155,24 @@ function checkJsonData() {
 				// Only add the version column if there's a valid rerun for this version
 				if (versionHasValidRerun) {
 					const versionTh = createElement('th', 'version', `Version ${version}`);
-					versionTh.colSpan = versionPhases[version].length;
+
+					// Separate normal phases and upcoming phases
+					const normalPhases = versionPhases[version].filter(phase => phase[3] !== 'upcoming');
+					const upcomingPhases = versionPhases[version].filter(phase => phase[3] === 'upcoming');
+
+					// Set colspan to total phases count
+					versionTh.colSpan = normalPhases.length + upcomingPhases.length;
 					headerRow.appendChild(versionTh);
 
-					versionPhases[version].forEach((phase, index) => {
-						const phaseTh = createElement('th', 'phase', phase[3] === 'upcoming' ? `Phase ???` : phase[3] !== undefined ? `Phase ${phase[3]}` : `Phase ${index + 1}`);
+					// Add normal phases first with numbered labels
+					normalPhases.forEach((phase, index) => {
+						const phaseTh = createElement('th', 'phase', '', `Phase<br>${index + 1}`);
+						phaseRow.appendChild(phaseTh);
+					});
 
+					// Then add the upcoming phases with "Phase ???"
+					upcomingPhases.forEach(() => {
+						const phaseTh = createElement('th', 'phase', '', `Phase<br>???`);
 						phaseRow.appendChild(phaseTh);
 					});
 				}
@@ -155,6 +187,81 @@ function checkJsonData() {
 				const bFirstBanner = b.reruns.length > 0 ? new Date(b.reruns[0].startDate) : new Date();
 				return aFirstBanner - bFirstBanner;
 			});
+
+			// Initialize elapsedTime and maxElapsedTime
+			let elapsedTime = 0;
+			const maxElapsedTime = 20; // Maximum elapsed time for gradient
+
+			function createPhaseCell(character, phase, version) {
+				const rerunDates = character.reruns.map(rerun => ({
+					start: new Date(rerun.startDate),
+					end: new Date(rerun.endDate),
+					banner: rerun.banner,
+					version: rerun.version
+				}));
+				
+				const phaseCell = createElement('td');
+				const phaseStartDate = safeParseDate(phase[0]);
+				const phaseEndDate = safeParseDate(phase[1]);
+
+				const versionReruns = character.reruns.filter(rerun => rerun.version === version);
+
+				// Find the matching rerun for this phase, similar to your existing logic
+				const phaseRerun = versionReruns.find(rerun => {
+					const phaseStart = safeParseDate(rerun.startDate);
+					const phaseEnd = safeParseDate(rerun.endDate);
+					const validPhaseStart = safeParseDate(phase[0]);
+					const validPhaseEnd = safeParseDate(phase[1]);
+
+					if (phase[3] === "upcoming") {
+						return (rerun.phase && rerun.phase === phase[3]) || phase[3] === undefined;
+					}
+
+					return phaseStart && phaseEnd && validPhaseStart && validPhaseEnd &&
+						phaseStart.toISOString() === validPhaseStart.toISOString() &&
+						phaseEnd.toISOString() === validPhaseEnd.toISOString();
+				});
+
+
+				// If this phase is before the first run, make it dark grey
+				if (rerunDates[0].banner === "upcoming") {
+					if (version === rerunDates[0].version) {
+						phaseCell.classList.add('upcoming-version');
+						if (phaseRerun) {
+							const checkmark = createCheckmark(phaseRerun.wishType);
+							phaseCell.appendChild(checkmark);
+						} else {
+							const questionmark = createCheckmark('upcoming');
+							phaseCell.appendChild(questionmark);
+						}
+					} else {
+						phaseCell.classList.add('before-release');
+					}
+					row.appendChild(phaseCell);
+					return;
+				} else if ((phaseStartDate < rerunDates[0].start && !(phase[0] === "upcoming"))) {
+					if (phase[3] === "upcoming") {
+						phaseCell.classList.add('upcoming-version');
+						const checkmark = createCheckmark(phaseRerun?.wishType || 'upcoming');
+						phaseCell.appendChild(checkmark);
+					} else {
+						phaseCell.classList.add('before-release');
+					}
+				} else if (phaseRerun) {
+					const checkmark = createCheckmark(phaseRerun.wishType);
+					phaseCell.appendChild(checkmark);
+
+					// Reset elapsedTime after each rerun
+					elapsedTime = 0;
+				} else {
+					phaseCell.classList.add(`${elapsedTime}`);
+					phaseCell.style.backgroundColor = calculateCharacterGradientColor(elapsedTime, maxElapsedTime);
+					elapsedTime++;
+					phaseCell.textContent = `${elapsedTime}`; // Display elapsedTime
+				}
+
+				return phaseCell;
+			}
 
 			// Create rows for each character
 			const tbody = table.querySelector('tbody');
@@ -180,82 +287,22 @@ function checkJsonData() {
 					version: rerun.version
 				}));
 
-				// Initialize elapsedTime and maxElapsedTime
-				let elapsedTime = 0;
-				const maxElapsedTime = 20; // Maximum elapsed time for gradient
+				versionArray.forEach(version => {// Separate phases into normal and upcoming like header
+					const normalPhases = versionPhases[version].filter(phase => phase[3] !== 'upcoming');
+					const upcomingPhases = versionPhases[version].filter(phase => phase[3] === 'upcoming');
 
-				versionArray.forEach(version => {
-					// Check if any character has a rerun with a valid startDate and endDate for this version
-					const versionHasValidRerun = characters.some(character => {
-						return character.reruns.some(rerun => rerun.version === version && ((rerun.startDate && rerun.endDate) || rerun.banner === "upcoming"));
+					// Output normal phases first
+					normalPhases.forEach(phase => {
+						const phaseCell = createPhaseCell(character, phase, version);
+						row.appendChild(phaseCell);
 					});
 
-					// Only add the version column if there's a valid rerun for this version
-					if (versionHasValidRerun) {
-						const versionReruns = character.reruns.filter(rerun => rerun.version === version);
-						versionPhases[version].forEach((phase) => {
-							const phaseCell = createElement('td');
-							const phaseStartDate = safeParseDate(phase[0]);
-							const phaseEndDate = safeParseDate(phase[1]);
+					// Then output upcoming phases
+					upcomingPhases.forEach(phase => {
+						const phaseCell = createPhaseCell(character, phase, version);
+						row.appendChild(phaseCell);
+					});
 
-							// Check for a rerun in this phase
-							const phaseRerun = versionReruns.find(rerun => {
-								const phaseStart = safeParseDate(rerun.startDate);
-								const phaseEnd = safeParseDate(rerun.endDate);
-								const validPhaseStart = safeParseDate(phase[0]);
-								const validPhaseEnd = safeParseDate(phase[1]);
-
-								// Check if it's an upcoming phase
-								if (phase[3] === "upcoming") {
-									// Only match if the phase is set and matches
-									return (rerun.phase && (rerun.phase === phase[3]) || phase[3] === undefined);
-								}
-
-								return phase[3] === "upcoming" || phaseStart && phaseEnd && validPhaseStart && validPhaseEnd &&
-									phaseStart.toISOString() === validPhaseStart.toISOString() &&
-									phaseEnd.toISOString() === validPhaseEnd.toISOString();
-							});
-
-							// If this phase is before the first run, make it dark grey
-							if (rerunDates[0].banner === "upcoming") {
-								if (version === rerunDates[0].version) {
-									phaseCell.classList.add('upcoming-version');
-									if (phaseRerun) {
-										const checkmark = createCheckmark(phaseRerun.wishType);
-										phaseCell.appendChild(checkmark);
-									} else {
-										const questionmark = createCheckmark('upcoming');
-										phaseCell.appendChild(questionmark);
-									}
-								} else {
-									phaseCell.classList.add('before-release');
-								}
-								row.appendChild(phaseCell);
-								return;
-							} else if ((phaseStartDate < rerunDates[0].start && !(phase[0] === "upcoming"))) {
-								if (phase[3] === "upcoming") {
-									phaseCell.classList.add('upcoming-version')
-									const questionmark = createCheckmark('upcoming');
-									phaseCell.appendChild(questionmark);
-								} else {
-									phaseCell.classList.add('before-release');
-								}
-							} else if (phaseRerun) {
-								const checkmark = createCheckmark(phaseRerun.wishType);
-								phaseCell.appendChild(checkmark);
-
-								// Reset elapsedTime after each rerun
-								elapsedTime = 0;
-							} else {
-								phaseCell.classList.add(`${elapsedTime}`);
-								phaseCell.style.backgroundColor = calculateCharacterGradientColor(elapsedTime, maxElapsedTime);
-								elapsedTime++;
-								phaseCell.textContent = `${elapsedTime}`; // Display elapsedTime
-							}
-
-							row.appendChild(phaseCell);
-						});
-					}
 				});
 				tbody.appendChild(row);
 			});

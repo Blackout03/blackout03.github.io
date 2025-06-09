@@ -1,5 +1,6 @@
 ﻿/* Style for the home icon */
 .home-icon {
+	z-index: 1000; /* Ensure it is above other content */
 	position: fixed;
 	top: 0.5em;
 	left: 0.5em;
@@ -22,6 +23,7 @@ h1 {
 
 /* Settings Button (Top-Right Corner) */
 .settings-btn {
+	z-index: 1000; /* Ensure it is above other content */
 	position: fixed;
 	top: 0.5em;
 	right: 0.5em;
@@ -41,6 +43,7 @@ h1 {
 
 /* Settings Menu */
 .settings-menu {
+	z-index: 1000; /* Ensure it is above other content */
 	position: fixed;
 	top: 5.75em;
 	right: 1.75em;

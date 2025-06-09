@@ -63,27 +63,48 @@ function checkJsonData() {
 
 			// Create a combined list of all reruns with character data
 			const reruns = [];
+			const upcomingCharacterGroups = {};
+
 			characterData.characters
-				.filter(character => {
-					// If '?upcoming' is present, include all characters
-					if (includeUpcomingCharacters) return true;
-					// Only include characters that do not have an upcoming banner and have a version field in reruns
-					return character.reruns.some(rerun => rerun.version) &&
-						!character.reruns.some(rerun => rerun.banner === 'upcoming');
-				})
 				.forEach(character => {
-					if (character.name === "Traveler") return
-					character.reruns.forEach(rerun => {
-						reruns.push({
-							name: character.name,
-							startDate: rerun.startDate,
-							endDate: rerun.endDate,
-							version: rerun.version,
-							wishType: rerun.wishType,
-							star: character.star,
-							phase: rerun.phase || null // Add phase, use null if it doesn't exist
+					if (character.name === "Traveler") return;
+
+					character.reruns
+						.filter(r => r.banner === 'upcoming')
+						.forEach(rerun => {
+							const info = rerun.info || character.info || 'leak'; // default to leak if missing
+							const shouldShow = info === "official" || (info === "leak" && includeUpcomingCharacters);
+							if (!shouldShow) return;
+
+							const version = rerun.version || 'Unknown';
+							if (!upcomingCharacterGroups[version]) {
+								upcomingCharacterGroups[version] = [];
+							}
+							upcomingCharacterGroups[version].push({
+								name: character.name,
+								star: character.star,
+								version,
+								wishType: rerun.wishType || 'event'
+							});
 						});
-					});
+
+					// Handle known rerun banners
+					const hasValidRerun = character.reruns.some(rerun => rerun.version && rerun.banner !== 'upcoming');
+					if (hasValidRerun) {
+						character.reruns
+							.filter(rerun => rerun.version && rerun.banner !== 'upcoming')
+							.forEach(rerun => {
+								reruns.push({
+									name: character.name,
+									startDate: rerun.startDate,
+									endDate: rerun.endDate,
+									version: rerun.version,
+									wishType: rerun.wishType,
+									star: character.star,
+									phase: rerun.phase || null
+								});
+							});
+					}
 				});
 
 			// Sort reruns by startDate and endDate
@@ -190,6 +211,33 @@ function checkJsonData() {
 					bannerEntry.appendChild(bannerDetails);
 					timeline.appendChild(bannerEntry);
 				}
+			});
+
+			// Append upcoming character groups *after* the known reruns of the version
+			Object.entries(upcomingCharacterGroups).forEach(([version, characters]) => {
+				const bannerEntry = createDiv('banner-entry');
+
+				const characterNameContainer = createCharacterNameContainer({
+					characters: characters.map(c => ({ name: c.name, star: c.star }))
+				});
+				bannerEntry.appendChild(characterNameContainer);
+
+				// Wish type based on first character or default
+				const wishTypeText = characters[0]?.wishType === 'event' ? '[Event Wish]' : '[Chronicled Wish]';
+				const wishTypeClass = characters[0]?.wishType === 'event' ? 'event-wish' : 'chronicled-wish';
+				const wishType = createDiv(['wish-type', wishTypeClass], wishTypeText);
+				bannerEntry.appendChild(wishType);
+
+				const bannerDetails = createDiv('banner-details');
+
+				const upcomingBanner = createSpan('upcoming-banner', `Upcoming Characters in ${version}`);
+				bannerDetails.appendChild(upcomingBanner);
+
+				const versionSpan = createSpan('', `Version: ${version}`);
+				bannerDetails.appendChild(versionSpan);
+
+				bannerEntry.appendChild(bannerDetails);
+				timeline.appendChild(bannerEntry);
 			});
 		})
 		.catch(error => console.error('Error loading JSON:', error));

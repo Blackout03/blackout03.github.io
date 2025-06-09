@@ -3,9 +3,34 @@
 	position: static;
 }
 
-table {
+/* Container div to center and constrain the table */
+.table-container {
+	max-width: calc(100vw * 0.95);
+	max-height: calc(100vh * 0.95);
+	/* centers horizontally */
+	margin: 2em auto;
+	overflow-x: auto;        /* horizontal scroll if needed */
+	overflow-y: auto;     /* no vertical scroll */
+	box-sizing: border-box;  /* include padding/border in width */
+	border: 2px solid #ccc;  /* optional, for visual boundary */
+
+	/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+	scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none;  /* IE and Edge */
+}
+
+.table-container::-webkit-scrollbar {
+	display: none;  /* Safari and Chrome */
+}
+
+/* Optional: Make table width fit content */
+.table-container table {
 	width: 100%;
+	height: 100%;
 	border-collapse: collapse;
+	min-width: max-content; /* prevents shrinking smaller than content */
+	min-height: max-content; /* prevents shrinking smaller than content */
+	border: none;
 }
 
 th, td {
@@ -33,18 +58,12 @@ th[colspan] {
 	margin-right: 0;
 }
 
-/* Ensure table layout is consistent */
-table {
-	width: 100%;
-	border-collapse: collapse;
-}
-
 /* Sticky first header row */
 thead .corner {
 	background-color: #e0e0e0;
 	position: sticky;
-	top: -2px;
-	left: -1px;
+	top: -1px;
+	left: 0;
 	z-index: 6; /* Ensure it is above other content */
 }
 
@@ -58,14 +77,14 @@ thead .version {
 /* Sticky second header row */
 thead .phase {
 	position: sticky;
-	top: 37px; /* Height of the first row */
+	top: 33px; /* Height of the first row */
 	z-index: 4; /* Ensure it is above other content */
 }
 
 /* Sticky leftmost column */
 tbody td:first-child {
 	position: sticky;
-	left: -1px;
+	left: 0;
 	background: #f4f4f4; /* Background to cover content behind */
 	z-index: 1; /* Ensure it is above other content */
 	min-width: max-content;
@@ -131,5 +150,13 @@ thead th {
 
 .upcoming-version {
 	background-color: #ccc;
+}
+
+.home-icon {
+	position: absolute;
+}
+
+.settings-btn {
+	position: absolute;
 }
 
