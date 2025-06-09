@@ -162,8 +162,14 @@ function checkJsonData() {
 					if (row) {
 						const cell = row.querySelector(`td:nth-child(${elements.indexOf(character.element) + 2})`);
 						if (cell) {
+							let grid = cell.querySelector('.character-grid');
+							if (!grid) {
+								grid = document.createElement('div');
+								grid.className = 'character-grid';
+								cell.appendChild(grid);
+							}
 							const characterImage = createCharacterImage(character);
-							cell.appendChild(characterImage);
+							grid.appendChild(characterImage);
 						}
 					}
 				});
