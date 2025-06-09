@@ -13,19 +13,6 @@
 	31   // December
 ];
 
-function createCharacterImage(character, characterName) {
-	const characterImageLink =
-		createLink(['item-link'],
-			`https://genshin-impact.fandom.com/wiki/${characterName}`);
-	const characterImage =
-		createImage(['character-image', character.star === 5 && character.starType ? 'special-star-image' : character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
-			`https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`,
-			`${character.name} avatar`,
-			character.name)
-	characterImageLink.appendChild(characterImage)
-	return characterImageLink;
-}
-
 // Function to fetch character data from JSON files
 Promise.all([
 	fetch('https://raw.githubusercontent.com/Blackout-Webhooks-Actions/GameData/refs/heads/main/character_data.json').then(response => response.json()),
@@ -68,6 +55,20 @@ Promise.all([
 			return imageMappingData.Characters[itemName] || itemName;
 		}
 
+		function createCharacterImage(character) {
+			const characterName = getImageId(character.name, imageMappingData);
+			const characterImageLink =
+				createLink(['item-link'],
+					`https://genshin-impact.fandom.com/wiki/${character.name}`);
+			const characterImage =
+				createImage(['character-image', character.star === 5 && character.starType ? 'special-star-image' : character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
+					`https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`,
+					`${character.name} avatar`,
+					character.name)
+			characterImageLink.appendChild(characterImage)
+			return characterImageLink;
+		}
+
 		if (userBirthday) {
 			if (!birthdayMap[userBirthday]) {
 				birthdayMap[userBirthday] = [];
@@ -103,8 +104,7 @@ Promise.all([
 				if (birthdayMap[dateString]) {
 
 					birthdayMap[dateString].forEach(character => {
-						const characterImageName = getImageId(character.name);
-						const img = createCharacterImage(character, characterImageName);
+						const img = createCharacterImage(character);
 						characterContainer.appendChild(img);
 					});
 				}
