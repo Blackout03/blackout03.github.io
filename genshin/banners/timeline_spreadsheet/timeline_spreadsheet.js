@@ -237,8 +237,6 @@ function checkJsonData() {
 					} else {
 						phaseCell.classList.add('before-release');
 					}
-					row.appendChild(phaseCell);
-					return;
 				} else if ((phaseStartDate < rerunDates[0].start && !(phase[0] === "upcoming"))) {
 					if (phase[3] === "upcoming") {
 						phaseCell.classList.add('upcoming-version');
