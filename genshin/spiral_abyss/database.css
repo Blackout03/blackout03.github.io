@@ -1,0 +1,1157 @@
+header {
+    display: none;
+}
+
+h3 {
+    margin: 0px auto 10px;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+h3 span {
+    position: relative;
+}
+
+h3 span {
+    color: #fff;
+}
+
+h3 .subtitle {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-style: normal;
+    margin-bottom: -20px;
+}
+
+h3 a {
+    color: #df903b;
+}
+
+h3 .tlsub {
+    margin-bottom: 15px;
+    font-style: normal;
+    cursor: pointer;
+    display: block;
+}
+
+h3 .links {
+    font-style: normal;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+container {
+    display: block;
+}
+
+.dl_button {
+    margin-top: 15px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1.5px solid black;
+    font-weight: normal;
+}
+
+.content {
+    padding: 20px;
+    background-color: #fff;
+    min-height: 600px;
+}
+
+.schedule {
+    margin-bottom: 10px;
+}
+
+.schedule,
+.generation {
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.schedule schedule {
+    display: block;
+    width: calc((100% - 50px) / 5);
+    text-align: center;
+    padding: 10px 0px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.schedule schedule.active {
+    background-color: rgb(37, 69, 186);
+    color: #fff;
+}
+
+.generation schedule {
+    display: block;
+    width: calc((100% - 30px) / 3);
+    text-align: center;
+    padding: 10px 0px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.activeg {
+    background-color: rgb(37, 69, 186);
+    color: #fff;
+}
+
+.generation {
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 16px;
+}
+
+.result h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 0;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.result h4 span {
+    font-size: 25px;
+}
+
+.result h4 em {
+    font-size: 16px;
+    font-style: normal;
+}
+
+.a_select {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.a_select span {
+    width: 46%;
+    text-align: center;
+    margin: 1%;
+    border: 1px solid #333;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.a_select span.active {
+    background-color: rgb(37, 69, 186);
+    color: #fff;
+}
+
+.p_b>div {
+    margin: 15px 0 25px;
+    line-height: 32px;
+    font-size: 16px;
+}
+
+.p_b_ul {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    font-size: 14px;
+    list-style-type: none;
+}
+
+.p_b_ul>li {
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 10px 2px;
+    width: calc(100% - 4px);
+}
+
+.p_h .eachets {
+    height: 500px;
+    min-width: 900px;
+    transform: rotateX(180deg);
+}
+
+.p_h {
+    margin-top: 30px;
+    overflow-x: scroll;
+    transform: rotateX(180deg);
+}
+
+.p_h::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+}
+
+.p_b_ul::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+}
+
+.s_w_f {
+    display: flex;
+    justify-content: space-between;
+}
+
+.s_w_f li {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.s_w_f li span em {
+    font-style: normal;
+}
+
+.buffer_pop {
+    display: flex;
+    overflow-x: scroll;
+    min-width: 700px;
+}
+
+.buffer_poplayer popbody::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+.buffer_poplayer popbody::-webkit-scrollbar:vertical {
+    display: none;
+}
+
+.buffer_pop>li {
+    width: 33.3%;
+    padding: 10px;
+}
+
+.buffer_pop ol li {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.buffer_pop ol li img {
+    height: 30px;
+    vertical-align: top;
+    text-align: center;
+    width: 28px;
+    object-fit: contain;
+}
+
+.buffer_pop ol span {
+    margin-left: 10px;
+}
+
+.buffer_pop ol .buffer_desc {
+    width: calc(100% - 80px);
+    line-height: 20px;
+}
+
+.buffer_poplayer popdialog {
+    background-color: #000;
+    color: #fff;
+}
+
+.cond_pop h6 {
+    font-size: 20px;
+}
+
+.cond_pop li {
+    line-height: 26px;
+}
+
+.a_floor {
+    margin: 10px 0;
+}
+
+.a_floor h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+.a_floor>ul>li {
+    position: relative;
+    flex: 1;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #000;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.a_floor h6 {
+    text-align: center;
+    line-height: 26px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.a_floor_button {
+    display: flex;
+    justify-content: center;
+    margin: 6px 0px 23px;
+    height: 35px;
+}
+
+.version-choose {
+    margin: 0 15px;
+}
+
+.a_floor .up_low {
+    display: flex;
+    flex-direction: column; /* stack upper and lower */
+    gap: 10px; /* optional spacing */
+    flex: 1; /* makes upper and lower equal height */
+}
+
+.up_low > div {
+    flex: 1; /* makes upper and lower equal height */
+}
+
+.a_floor>ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* ensures all items start at same top line */
+    position: relative; /* needed for pseudo-elements */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.up_low>div {
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+    height: 750px;
+}
+
+.up_low .upper {
+    border-right: 0;
+    border-top: 1px solid #5932ad;
+    border-bottom: 1px solid #5932ad;
+    padding-bottom: 10px;
+    align-items: stretch;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    align-items: stretch; /* space between items */
+}
+
+ul li {
+    display: flex;
+    flex-direction: column; /* stack upper on top, lower on bottom */
+    justify-content: space-between; /* keeps top at top, bottom at bottom */
+    border: 1px solid #ccc; /* optional, for visibility */
+    padding: 10px;
+    min-height: 100px; /* ensures space for top & bottom */
+}
+
+.f_l {
+    margin-right: 10px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.f_r {
+    margin-left: 10px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.v_r, .v_l {
+    font-weight: bold;
+    font-size: 37px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.u_l_g span {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.ver_text {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 220px;
+    border: 1.5px solid black;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.ver_text p {
+    font-weight: bold;
+    text-align: center;
+}
+
+.ver_text_name {
+    font-size: 18px;
+    margin: 5px;
+}
+
+.ver_text_time {
+    font-size: 14px;
+    margin: 5px;
+}
+
+.u_l_g span i,
+.affix_s_h i,
+.weav_hover i {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    font-style: normal;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 200px;
+    z-index: 1001;
+    display: none;
+}
+
+.affix_s_h i {
+    left: -100px;
+    bottom: calc(100% + 8px);
+}
+
+.u_l_g span i,
+.weav_hover i {
+    left: 0px;
+    bottom: calc(100% + 1px);
+}
+
+.u_l_w {
+    padding: 25px 10px 0px 20px;
+}
+
+.u_l_g {
+    padding: 17px 10px 3px 15px;
+}
+
+.u_l_w ol {
+    padding: 10px 0;
+}
+
+.u_l_w ol li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.u_l_w monster {
+    display: flex;
+    justify-content: space-between;
+}
+
+.u_l_w monster img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 7px;
+    position: relative;
+    top: -2px;
+}
+
+.u_l_w monster a {
+    color: #333;
+    display: inline-block;
+}
+
+.a_floor em,
+.a_floor i {
+    font-style: normal;
+}
+
+.affix_s_h {
+    position: relative;
+    margin-left: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.weav_hover {
+    position: relative;
+    cursor: pointer;
+}
+
+.need_header popheader,
+.yuhengcup popheader,
+.buffer_poplayer popheader {
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.need_header popbody {
+    background: #27363e;
+    color: #eeeeee;
+    line-height: 27px;
+}
+
+.a_floor_button button {
+    height: auto;
+    padding: 5px 13px 5px 13px;
+}
+
+.monster-name-ast {
+    display: none;
+}
+
+.scroller {
+    overflow-x: hidden !important;
+}
+
+.lrhp {
+    position: relative;
+    top: -1.4px;
+}
+
+.ui, .pos {
+    margin-top: 10px;
+    height: max-content;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 16px;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.showtop_2 {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+moster {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+moster a {
+    padding: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+
+.monster_card {
+    padding: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: block
+}
+
+.acc {
+    position: relative;
+    max-width: 97%;
+}
+
+i.affix_hover {
+    width: 270px;
+    position: absolute;
+    bottom: calc(100% + 1px);
+    left: 0px;
+    background-color: #000;
+    color: #fff;
+    font-style: normal;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 200px;
+    z-index: 1001;
+    display: none;
+}
+
+.monster_card::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+}
+
+.monicon_container {
+    vertical-align: middle;
+    position: relative;
+    width: max-content;
+    margin: auto;
+    text-align: center;
+}
+
+.monbelow {
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.monbelow span {
+    white-space: nowrap;
+}
+
+.monicon {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.monicon_num {
+    position: absolute;
+    background-color: #fff;
+    z-index: 1000;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Arial';
+    top: -5px;
+    right: -3px;
+    height: 17px;
+    width: 12px;
+    line-height: 17px;
+    font-size: 14px;
+}
+
+.monicon_mark {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    background-color: #fff;
+    z-index: 1000;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 17px;
+    font-size: 17px;
+    font-family: 'Arial';
+}
+
+.monicon_mark_ {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    background-color: #fff;
+    z-index: 1001;
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100%;
+    font-size: calc(100% - 1px);
+    font-family: 'Arial';
+}
+
+.monright {
+    max-width: calc(100% - 53px);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.monright span {
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.mon_hover_affix, .mon_hover_name {
+    text-align: center;
+    width: 100%;
+}
+
+.acc_hover {
+    position: absolute;
+    display: none;
+    z-index: 1002;
+    width: 500px;
+    left: calc(50% - 250px);
+    top: calc(75%);
+}
+
+.acc_hover_ {
+    background-color: white;
+    padding: 12px;
+    border: 2px solid;
+    border-radius: 8px;
+    width: max-content;
+    margin: auto;
+}
+
+.monnote {
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+section>span,
+section>schedule,
+.p_b p,
+.a_floor>h5 {
+    font-size: 14px;
+}
+
+.level_,
+.dps-show {
+    font-size: 15px;
+}
+
+.avd {
+    font-size: 12px!important;
+}
+
+.result_ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.result_ h4, .result_ .a_select {
+    width: 100%;
+}
+
+.result_ .a_floor {
+    width: 65%
+}
+
+.result_ .p_b {
+    width: 27%;
+}
+
+.result_ .p_h {
+    width: 100%
+}
+
+.result_ .p_b_ul>li {
+    width: calc(100% - 4px);
+}
+
+.p_b_ {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.p_b_ div {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.arena, .arena-n {
+    border: 1.5px solid black;
+    width: 95%;
+    max-width: 500px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    margin: 4px auto 20px;
+    position: relative;
+}
+
+.arenadot {
+    width: 2.4%;
+    height: 2.4%;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+._pic {
+    height: 7.6%;
+    width: 7.6%;
+}
+
+.individual {
+    margin: -3px 7px 7px;
+    padding: 3px;
+}
+
+.enemy_count {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;;
+}
+
+.monster_left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.monster_left_img {
+    width: 48px;
+    height: 48px;
+}
+
+.monsters_stuff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.monster_card_2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+}
+
+.monster_right {
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 14px;
+    color: black;
+    padding-top: 5px;
+}
+
+.monster_hp {
+    text-align: center;
+    font-weight: bold;
+}
+.sch_2 {
+    font-size: 19px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.hp_coeff {
+    font-weight: bold;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.ver {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bossguide {
+    display: flex;
+    padding: 0 8px;
+    flex-wrap: wrap;
+}
+
+.a_section {
+    background-color: #27363e;
+    color: #eeeeee;
+    border-radius: 5px;
+    width: 100%; /* set a fixed width for all a_section elements */
+    padding: 10px;
+    box-sizing: border-box; /* ensures padding doesn't break width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bossguide_img_w {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bossguide_img {
+    width: 40px;
+}
+
+.bossguide_p {
+    font-size: 12px;
+    line-height: 2;
+    margin-top: 5px;
+}
+
+.bossguide_p_b {
+    font-size: 15px;
+    line-height: 2;
+    margin-top: 8px;
+}
+
+.emote_ {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+}
+
+.emote_ img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -5px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .bossguide {
+        padding: 0 9px;
+    }
+
+    .bossguide_img {
+        width: 50px;
+    }
+    .bossguide_p_b {
+        font-size: 16px;
+    }
+
+    .bossguide_p {
+        font-size: 13px;
+    }
+    .v_r, .v_l {
+        font-size: 41px;
+    }
+    .ver_text {
+        width: 290px;
+    }
+    .ver_text_name {
+        font-size: 19px;
+    }
+    .ver_text_time {
+        font-size: 15px;
+    }
+    .sch_2 {
+        font-size: 21px;
+    }
+
+    .monster_right {
+        font-size: 15px;
+    }
+
+    .monster_left_img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .enemy_count {
+        font-size: 15px;;
+    }
+
+    .ui, .pos {
+        height: 33px;
+        font-size: 16px;
+    }
+
+    .monnote {
+        font-size: 14px;
+    }
+
+    .a_floor h6 {
+        line-height: 29px;
+    }
+
+    .avd {
+        font-size: 13px!important;
+    }
+
+    .level_,
+    .dps-show {
+        font-size: 16px;
+    }
+
+    section>span,
+    section>schedule,
+    .p_b p,
+    .a_floor>h5 {
+        font-size: 15px;
+    }
+
+    .a_select span {
+        width: 30%;
+    }
+
+    .monster_card {
+        padding: 7px;
+        font-size: 15px;
+    }
+
+    .monicon {
+        height: 59px;
+        width: 59px;
+    }
+
+    .monicon_num {
+        top: -4px;
+        right: -4px;
+        height: 19px;
+        width: 14px;
+        line-height: 19px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .p_b_ul>li {
+        width: calc(50% - 4px);
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    .bossguide {
+        padding: 0 10px;
+    }
+    .bossguide_img {
+        width: 60px;
+    }
+
+    .bossguide_p {
+        font-size: 14px;
+    }
+
+    .bossguide_p_b {
+        font-size: 17px;
+    }
+    .v_r, .v_l {
+        font-size: 43px;
+    }
+    .ver_text {
+        width: 350px;
+    }
+    .ver_text_name {
+        font-size: 21px;
+    }
+    .ver_text_time {
+        font-size: 16px;
+    }
+    .sch_2 {
+        font-size: 24px;
+    }
+
+    .monster_right {
+        font-size: 16px;
+    }
+
+    .monster_left_img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .enemy_count {
+        font-size: 16px;;
+    }
+    .a_floor_button {
+        margin: 6px 0px 10px;
+    }
+
+    .ui, .pos {
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .monnote {
+        font-size: 15px;
+    }
+
+    .a_floor h6 {
+        line-height: 32px;
+    }
+
+    .avd {
+        font-size: 14px!important;
+    }
+
+    .level_,
+    .dps-show {
+        font-size: 18px;
+    }
+
+    section>span,
+    section>schedule,
+    .p_b p,
+    .a_floor>h5 {
+        font-size: 16px;
+    }
+    .a_select span {
+        width: 14%;
+    }
+
+    .schedule schedule {
+        width: calc((100% - 70px) / 7);
+    }
+
+    .generation schedule {
+        width: calc((100% - 60px) / 6);
+    }
+
+    .monster_card {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .monicon {
+        height: 68px;
+        width: 68px;
+    }
+
+    .monicon_num {
+        top: -6px;
+        right: -6px;
+        height: 23px;
+        width: 18px;
+        line-height: 23px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    popdialog {
+        width: 93% !important;
+    }
+    .enemy_count {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .monster-name {
+        display: none;
+    }
+
+    .weav_hover {
+        font-size: 14px;
+    }
+
+    .affix_s_h em {
+        font-size: 14px;
+    }
+
+    .monster-name-ast {
+        display: inline;
+    }
+}
