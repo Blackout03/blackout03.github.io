@@ -1,4 +1,6 @@
 $(function () {
+    p_b = []
+    guide = []
 
     var imgpre = $('#IMGPRE').val()
     var lazy = $('#NOLAZY').val() ? '' : 'lazy'
@@ -408,6 +410,10 @@ $(function () {
                     class: 'p_b'
                 },
                 {
+                    section: '',
+                    class: 'guides'
+                },
+                {
                     section: function (d) {
                         var SpiralAbyssDPSDatas = _SpiralAbyssDPSData;
                         for (var i = 0; i < SpiralAbyssDPSDatas.length; i++) {
@@ -632,6 +638,13 @@ $(function () {
         }
         select_value = selected
         $('.a_floor').empty()
+        var p_b_show = []
+        p_b.forEach(function (w) {
+            p_b_show.push(`<b>${w.b.Name}</b>`)
+            p_b_show.push(w.b.Desc)
+        })
+        guide = _SpiralAbyssFloorConfig[index].Guide
+        if (!guide) guide = []
         if (_SpiralAbyssFloorConfig[index].Auto) {
             $('.a_floor').render({
                 data: _SpiralAbyssFloorConfig[index],
@@ -647,6 +660,12 @@ $(function () {
                     {
                         p: '',
                         class: 'hp_coeff'
+                    },
+                    {
+                        h5: p_b_show.join('<br>'),
+                        style: {
+                            'font-weight': 'normal'
+                        }
                     },
                     {
                         ul: function (f) {
@@ -688,13 +707,6 @@ $(function () {
                                                         div: [
                                                             function (h) {
                                                                 $(h.container).render(Floor_Render(h.data.Name, h.data.Upper, h.data.UpperCount))
-                                                            },
-                                                            {
-                                                                div: function (p) {
-                                                                    generate_boss_guide(p, ddd.UpperGuide)
-                                                                },
-                                                                class: 'bossguide',
-                                                                when: ddd.UpperGuide && ddd.UpperGuide.length
                                                             }
                                                         ],
                                                         class: 'upper'
@@ -703,13 +715,6 @@ $(function () {
                                                         div: [
                                                             function (h) {
                                                                 $(h.container).render(Floor_Render(h.data.Name, h.data.Lower, h.data.LowerCount))
-                                                            },
-                                                            {
-                                                                div: function (p) {
-                                                                    generate_boss_guide(p, ddd.LowerGuide)
-                                                                },
-                                                                class: 'bossguide',
-                                                                when: ddd.LowerGuide && ddd.LowerGuide.length
                                                             }
                                                         ],
                                                         class: 'lower'
@@ -729,18 +734,26 @@ $(function () {
         } else {
             $('.a_floor').render({
                 data: _SpiralAbyssFloorConfig[index],
-                template: [{
-                    h5: function (f) {
-                        return f.data.Disorder.replaceAll('• ', '')
+                template: [
+                    {
+                        h5: function (f) {
+                            return f.data.Disorder.replaceAll('• ', '')
+                        }, 
+                        style: {
+                            'font-weight': 'normal'
+                        }
                     },
-                    style: {
-                        'font-weight': 'normal'
-                    }
-                },
                     {
                         p: '',
                         class: 'hp_coeff'
-                    },{
+                    },
+                    {
+                        h5: p_b_show.join('<br>'),
+                        style: {
+                            'font-weight': 'normal'
+                        }
+                    },
+                    {
                         ul: function (f) {
                             f.data.Chambers.forEach(function (ddd) {
                                 trigger_hp_coeff(ddd.Name)
@@ -945,13 +958,6 @@ $(function () {
                                                         },
                                                         class: 'u_l_w',
 
-                                                    },
-                                                    {
-                                                        div: function (p) {
-                                                            generate_boss_guide(p, ddd.UpperGuide)
-                                                        },
-                                                        class: 'bossguide',
-                                                        when: ddd.UpperGuide && ddd.UpperGuide.length
                                                     }
                                                 ],
                                                 class: 'upper'
@@ -1125,13 +1131,6 @@ $(function () {
                                                                 'justify-content': 'center',
                                                                 'flex-wrap': 'wrap'
                                                             }
-                                                        },
-                                                        {
-                                                            div: function (p) {
-                                                                generate_boss_guide(p, ddd.LowerGuide)
-                                                            },
-                                                            class: 'bossguide',
-                                                            when: ddd.LowerGuide && ddd.LowerGuide.length
                                                         }
                                                     ],
                                                     class: 'lower'
@@ -1149,14 +1148,21 @@ $(function () {
         }
         $('.a_floor').show();
         $('.p_b').show()
-        $('.version-choose').val(selected);
-        toggle_ver_instant(selected);
-        rotate()
-    }
+        $('.guides').empty()
 
-    function generate_boss_guide(p, d) {
-        d.forEach(function (i) {
-            $(p.container).render({
+        if (window.innerWidth < 600) {
+            row_count = Math.min(guide.length, 1)
+        } else if (window.innerWidth < 900) {
+            row_count = Math.min(guide.length, 2)
+        } else if (window.innerWidth < 1200) {
+            row_count = Math.min(guide.length, 3)
+        } else {
+            row_count = Math.min(guide.length, 4)
+        }
+        var widtrh = `calc((100% / ${row_count}) - 8px)`
+
+        for (const g of guide) {
+            $('.guides').render({
                 div: {
                     div: [
                         {
@@ -1172,7 +1178,7 @@ $(function () {
                         },
                         {
                             div: {
-                                img: 'https://homdgcat.wiki/homdgcat-res/monster/' + _bossguide[i].Icon + '.png',
+                                img: 'https://homdgcat.wiki/homdgcat-res/monster/' + _bossguide[g].Icon + '.png',
                                 class: 'monster_left_img'
                             },
                             style: {
@@ -1182,7 +1188,7 @@ $(function () {
                             }
                         },
                         {
-                            p: _bossguide[i].Name,
+                            p: _bossguide[g].Name,
                             class: 'bossguide_p_b',
                             style: {
                                 'text-align': 'center',
@@ -1190,18 +1196,23 @@ $(function () {
                             }
                         },
                         {
-                            p: text_process(_bossguide[i].DescList.join('<br>')),
+                            p: text_process(_bossguide[g].DescList.join('<br>')),
                             class: 'bossguide_p'
                         }
                     ],
                     class: 'a_section_content'
                 },
-                class: 'a_section',
+                class: `a_section guide_${g}`,
+                id: `guide_${g}`,
                 style: {
-                    'margin-bottom': '8px'
+                    width: widtrh,
+                    'max-width': '500px'
                 }
             })
-        })
+        }
+        $('.version-choose').val(selected);
+        toggle_ver_instant(selected);
+        rotate()
     }
 
     function text_process(t) {

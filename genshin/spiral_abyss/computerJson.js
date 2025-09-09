@@ -5,6 +5,12 @@ var cur_time_0 = Date.now()
 //if ((cur_time_0 >= 1753930800000) && (cur_time_0 <= 1755165600000)) anniversary_show = 1
 
 var computer_ = {
+    "MiscText": {
+        "AbyssCount": {
+            "CH": "击败 <b>#</b> 个敌人",
+            "EN": "Defeat <b>#</b> Enemies",
+        },
+    },
     "TextColorConfig": {
         "Fire": "#FF0000",
         "Water": "#0070C0",

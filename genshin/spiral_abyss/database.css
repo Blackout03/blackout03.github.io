@@ -715,6 +715,7 @@ i.affix_hover {
     font-size: 13px;
     text-align: center;
     line-height: 1.5;
+    text-wrap: nowrap;
 }
 
 section>span,
@@ -864,12 +865,6 @@ section>schedule,
     justify-content: center;
 }
 
-.bossguide {
-    display: flex;
-    padding: 0 8px;
-    flex-wrap: wrap;
-}
-
 .a_section {
     background-color: #27363e;
     color: #eeeeee;
@@ -880,6 +875,29 @@ section>schedule,
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.a_section_content {
+    padding: 10px 13px 16px;
+    margin-top: 6px;
+}
+
+.bossguide {
+    display: flex;
+    padding: 0 8px;
+    flex-wrap: wrap;
+}
+
+.guides {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: calc(100% + 32px);
+    position: relative;
+    left: -16px;
+    line-height: 2;
+    font-size: 15px;
+    margin-top: 20px;
 }
 
 .bossguide_img_w {
@@ -894,15 +912,37 @@ section>schedule,
 }
 
 .bossguide_p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 2;
     margin-top: 5px;
 }
 
 .bossguide_p_b {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 2;
     margin-top: 8px;
+}
+
+.bossguide_icon {
+    margin: 10px 0 10px;
+}
+
+.bossguide_icon_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bossguide_icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.bossguide_icon p {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .emote_ {
@@ -927,11 +967,11 @@ section>schedule,
         width: 50px;
     }
     .bossguide_p_b {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .bossguide_p {
-        font-size: 13px;
+        font-size: 14px;
     }
     .v_r, .v_l {
         font-size: 41px;
