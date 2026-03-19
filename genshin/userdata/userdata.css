@@ -1,38 +1,65 @@
-﻿/* General Reset and Body Styling */
+﻿/* General Reset */
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
+/* -------------------- */
+/* DEFAULT: DARK MODE   */
+/* -------------------- */
+:root {
+	--bg: #121212;
+	--text: #e6e6e6;
+	--card: #1e1e1e;
+	--list: #252525;
+	--border: #333;
+	--accent: #4da3ff;
+	--accent-hover: #7cbcff;
+}
+
+/* Light mode if user prefers it */
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg: #f9f9f9;
+		--text: #333;
+		--card: #ffffff;
+		--list: #f4f4f4;
+		--border: #e0e0e0;
+		--accent: #007acc;
+		--accent-hover: #005999;
+	}
+}
+
+/* Body */
 body {
-	font-family: 'Arial', sans-serif;
-	background-color: #f9f9f9;
-	color: #333;
-	line-height: 1.6;
+	font-family: Arial, sans-serif;
+	background-color: var(--bg);
+	color: var(--text);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: flex-start;
 	min-height: 100vh;
 	padding: 20px;
 }
 
+/* Headings */
 h1 {
 	font-size: 2.5rem;
-	color: #2a2a2a;
 	margin-bottom: 20px;
+	text-align: center;
+	color: var(--text);
 }
 
 h2 {
 	font-size: 1.8rem;
-	color: #2a2a2a;
-	border-bottom: 2px solid #007acc;
+	border-bottom: 2px solid var(--accent);
 	padding-bottom: 5px;
 	margin-bottom: 15px;
 	text-align: center;
 }
 
+/* Container */
 .container {
 	display: flex;
 	justify-content: space-between;
@@ -42,97 +69,109 @@ h2 {
 	max-width: 1200px;
 }
 
+/* Sections */
 #characters-section,
 #weapons-section {
 	flex: 1;
 	min-width: 280px;
 	max-width: 550px;
-	background-color: #fff;
+	background-color: var(--card);
 	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 	padding: 20px;
 	overflow: hidden;
+	border: 1px solid var(--border);
 }
 
+/* Grid List for nicer layout */
 ul {
-	list-style-type: none;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 12px;
 	padding: 0;
 }
 
 li {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	margin-bottom: 12px;
-	background-color: #f4f4f4;
-	border-radius: 8px;
-	padding: 8px 12px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	background-color: var(--list);
+	border-radius: 12px;
+	padding: 12px;
+	text-align: center;
+	transition: transform 0.25s ease, background 0.25s ease;
+	border: 1px solid var(--border);
 }
 
 li:hover {
-	background-color: #e6f7ff;
+	transform: translateY(-5px);
+	background-color: color-mix(var(--list), color-mix(black 65%, var(--accent)));
+	/*background-color: var(--accent);*/
 }
 
+/* Image */
 li img {
-	width: 50px;
-	height: 50px;
-	margin-right: 15px;
-	border-radius: 8px;
-	transition: transform 0.3s ease;
-	background-color: white; /* Ensuring the image background is clean */
+	width: 80px;
+	height: 80px;
+	margin-bottom: 8px;
+	border-radius: 12px;
+	transition: transform 0.25s ease;
+	background-color: #ffffff;
 }
 
 li img:hover {
 	transform: scale(1.1);
 }
 
+/* Name */
 .item-link {
 	text-decoration: none;
-	color: #007acc;
+	color: var(--accent);
 	font-weight: bold;
-	transition: color 0.3s ease;
+	display: block;
+	margin-bottom: 4px;
+	transition: color 0.2s ease;
 }
 
 .item-link:hover {
-	color: #005999;
+	color: var(--accent-hover);
 }
 
-/* Star Rating Backgrounds */
-.five-star-image {
-	border: 2px solid gold;
+/* Keep name and count on the same line */
+.name-count {
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
+	gap: 4px;
 }
 
-.four-star-image {
-	border: 2px solid purple;
+/* Keep name and count on the same line */
+.name {
+	font-weight: bold;
+	white-space: break-spaces;
 }
 
-.special-star-image {
-	border: 2px solid crimson;
+.count {
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: var(--text);
 }
 
-.three-star-image {
-	border: 2px solid #56a85b;
-}
-
-.unknown-star-image {
-	border: 2px solid gray;
-}
-
-/* Styling for loading text and fallback */
+/* Loading text */
 #characters-container,
 #weapons-container {
 	text-align: center;
 	font-size: 1.2rem;
-	color: #999;
+	color: #888;
 }
 
-/* Media Queries for responsiveness */
+/* Responsive */
 @media (max-width: 768px) {
 	.container {
 		flex-direction: column;
 		align-items: center;
 	}
-
 	#characters-section,
 	#weapons-section {
 		width: 100%;

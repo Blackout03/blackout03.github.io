@@ -36,7 +36,7 @@ function createWeaponImage(weapon) {
 			`https://genshin-impact.fandom.com/wiki/${weapon}`);
 	const weaponImage =
 		createImage('weapon-image',
-			`https://api.hakush.in/gi/UI/${weaponIcons[weapon]}.webp`,
+			`https://whiteineffa.gitlab.io/gi/Images/UI/${weaponIcons[weapon]}.png`,
 			weapon);
 	weaponImageLink.appendChild(weaponImage)
 	return weaponImageLink;
@@ -48,7 +48,7 @@ function createElementImage(element) {
 		"Anemo": "Wind",
 		"Cryo": "Ice",
 		"Dendro": "Grass",
-		"Electro": "Elec",
+		"Electro": "Electric",
 		"Geo": "Rock",
 		"Hydro": "Water",
 		"Pyro": "Fire"
@@ -58,7 +58,7 @@ function createElementImage(element) {
 			`https://genshin-impact.fandom.com/wiki/${element}`);
 	const elementImage =
 		createImage('element-image',
-			`https://api.hakush.in/gi/UI/${element}.webp`,
+			`https://whiteineffa.gitlab.io/gi/Images/UI/UI_Icon_Element_${elementIcons[element]}.png`,
 			element);
 	elementImageLink.appendChild(elementImage)
 	return elementImageLink;
@@ -94,7 +94,7 @@ function checkJsonData() {
 						`https://genshin-impact.fandom.com/wiki/${getCharacterName(character.name, character.element)}`);
 				const characterImage =
 					createImage(['character-image', character.star === 5 && character.starType ? 'special-star-image' : character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
-						`https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`,
+						`https://whiteineffa.gitlab.io/gi/Images/Avatar/UI_AvatarIcon_${characterName}.png`,
 						`${character.name} avatar`,
 						`${getCharacterName(character.name, character.element)}`);
 				characterImageLink.appendChild(characterImage);

@@ -16,7 +16,6 @@ h1 {
 	height: 80px;
 	border-radius: 50%;
 	object-fit: cover;
-	margin-right: 15px; /* Adds space between image and name */
 }
 
 /* Style for 5-star characters images */
@@ -50,6 +49,42 @@ h1 {
 .unknown-star-image {
 	background-image: linear-gradient(
 			0deg,
+			#a4a4a4 0%,
+			#76787c 100%
+	);
+}
+
+/* Style for 5-star weapon images */
+.five-star-weapon-image {
+	background-image: linear-gradient(
+			135deg,
+			#7a5e55 0%,
+			#e3a851 100%
+	);
+}
+
+/* Style for 4-star weapon images */
+.four-star-weapon-image {
+	background-image: linear-gradient(
+			135deg,
+			#635b8b 0%,
+			#b684c7 100%
+	);
+}
+
+/* Style for 3-star weapon images */
+.three-star-weapon-image {
+	background-image: linear-gradient(
+			135deg,
+			#545f80 0%,
+			#51a0b5 100%
+	);
+}
+
+/* Style for ???-star weapon images */
+.unknown-star-weapon-image {
+	background-image: linear-gradient(
+			135deg,
 			#a4a4a4 0%,
 			#76787c 100%
 	);

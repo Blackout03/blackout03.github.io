@@ -4,10 +4,32 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>User Data</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="../../css/menu-icon.css">
+	<link rel="stylesheet" href="../banners/base.css">
 	<link rel="stylesheet" href="userdata.css">
 </head>
 <body>
+<!-- Home Button (Top-Left Corner) -->
+<a href="https://blackout03.github.io/" class="home-icon">
+	<i class="fas fa-home"></i>
+</a>
+
+<!-- Settings Button (Top-Right Corner) -->
+<a id="settings-btn" class="settings-btn">
+	<i class="fas fa-cogs"></i>
+</a>
+
+<!-- Settings Menu (Hidden by default) -->
+<div id="settings-menu" class="settings-menu">
+	<label>
+		UID:
+		<input type="text" id="uidInput" placeholder="Enter UID" />
+	</label>
+</div>
+
 <h1>Genshin User Data</h1>
+
 <div class="container">
 	<div id="characters-section">
 		<h2>Characters</h2>
@@ -15,6 +37,7 @@
 			<p>Loading characters...</p>
 		</div>
 	</div>
+
 	<div id="weapons-section">
 		<h2>Weapons</h2>
 		<div id="weapons-container">
@@ -22,6 +45,8 @@
 		</div>
 	</div>
 </div>
+
 <script src="userdata.js"></script>
+<script src="../settings.js"></script>
 </body>
 </html>

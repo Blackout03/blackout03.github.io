@@ -36,6 +36,36 @@ window.onload = function() {
 		topLengthInput.value = savedTop;
 	}
 
+	// UID input handling
+	const uidInput = document.getElementById('uidInput');
+	if (uidInput) {
+		// Load saved UID from localStorage, default to empty string
+		const savedUid = localStorage.getItem('uid') || '';
+		uidInput.value = savedUid;
+
+		// Function to save UID and reload page
+		function saveUidAndReload() {
+			const trimmedUid = uidInput.value.trim();
+			localStorage.setItem('uid', trimmedUid);
+			location.reload();
+		}
+
+		// Trigger on Enter key press
+		uidInput.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter') {
+				saveUidAndReload();
+			}
+		});
+
+		// Trigger when input loses focus
+		uidInput.addEventListener('blur', () => {
+			if (!document.hidden) { // only save if tab is active
+				localStorage.setItem('uid', uidInput.value.trim());
+				location.reload();
+			}
+		});
+	}
+	
 	const birthdayMonth = document.getElementById('birthdayMonth');
 	const birthdayDay = document.getElementById('birthdayDay');
 
@@ -144,3 +174,5 @@ if (topLengthInput) {
 		location.reload();
 	});
 }
+
+

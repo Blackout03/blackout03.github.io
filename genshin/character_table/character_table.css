@@ -1,38 +1,91 @@
-﻿/* General table styling */
+﻿:root {
+	/* Dark Mode Colors (default) */
+	--bg-color: #121212;
+	--text-color: #e0e0e0;
+	--table-bg: #1e1e1e;
+	--table-border: #333;
+	--table-header-bg: #2c2c2c;
+	--table-header-border: #444;
+	--cell-bg: #1e1e1e;
+	--hover-bg: #2a2a2a;
+	--highlight-color: #ffcc00;
+	--link-color: #82cfff;
+	--icon-color: #e0e0e0;
+}
+
+/* Light mode override */
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: #f5f5f5;
+		--text-color: #222;
+		--table-bg: #fff;
+		--table-border: #ccc;
+		--table-header-bg: #ccc;
+		--table-header-border: #aaa;
+		--cell-bg: #fff;
+		--hover-bg: #eee;
+		--highlight-color: #ff9900;
+		--link-color: #0066cc;
+		--icon-color: #222;
+	}
+}
+
+/* Global body and text colors */
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Headings */
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	text-align: center;
+	color: var(--text);
+}
+
+/* Links */
+a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Table styling */
 #character-table {
 	display: table;
 	justify-self: center;
 	width: 80%;
 	border-collapse: collapse;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin: 20px auto;
+	background-color: var(--table-bg);
+	border: 1px solid var(--table-border);
 }
 
-#character-table th, #character-table td {
-	padding: 30px;
-	text-align: center;
-	border: 1px solid #ddd;
-}
-
-#character-table .weapon-image, #character-table .element-image {
-	display: inline-block;
-	margin: 2px;
-}
-
-/* Spacing between columns */
-#character-table th, #character-table td {
+#character-table th,
+#character-table td {
 	padding: 15px 20px;
+	text-align: center;
+	border: 1px solid var(--table-border);
+	background-color: var(--cell-bg);
+	color: var(--text-color);
+	transition: background-color 0.3s;
 }
 
 #character-table th {
 	font-size: 16px;
-	background-color: #777;
-	border: #555 2px solid;
+	background-color: var(--table-header-bg);
+	border: 2px solid var(--table-header-border);
 }
 
-#character-table td {
-	vertical-align: middle;
-	background-color: #fff;
+#character-table td:hover {
+	background-color: var(--hover-bg);
 }
 
 .character-grid {
@@ -41,9 +94,9 @@
 	justify-content: center;
 	align-items: center;
 	gap: 4px;
- }
+}
 
-/* Center the last item when there's an odd number of items */
+/* Center the last item if odd number of items */
 .character-grid > :nth-last-child(1):nth-child(odd) {
 	grid-column: span 2;
 	justify-self: center;
@@ -53,10 +106,28 @@
 .element-image {
 	width: 50px;
 	height: 50px;
+	display: inline-block;
+	margin: 2px;
 }
 
 .character-image {
-	height: 70px;
 	width: 70px;
+	height: 70px;
 	margin-right: 0;
+}
+
+/* Optional: Highlight special characters */
+.special-star-image {
+	border: 2px solid var(--highlight-color);
+	border-radius: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+	#character-table {
+		width: 95%;
+	}
+	.character-grid {
+		grid-template-columns: repeat(1, auto);
+	}
 }
