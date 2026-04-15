@@ -1,15 +1,9 @@
 ﻿// Function to find the 3 longest gaps without a banner
 function findLongestGaps(data) {
-	const excludedCharacters = new Set([
-		"Tighnari", "Dehya", "Amber", "Kaeya",
-		"Lisa", "Jean", "Diluc", "Mona"
-	]);
-
 	const gaps = [];
 	const currentDate = new Date(); // Get the current date as a Date object
 
 	data.characters
-		.filter(character => !excludedCharacters.has(character.name))
 		.forEach(character => {
 			const reruns = character.reruns
 				// Filter out upcoming banners (future start dates)
@@ -53,21 +47,34 @@ function findLongestGaps(data) {
 	// Get settings from localStorage
 	const isOngoing = localStorage.getItem('isOngoing') === 'true';
 	const top = parseInt(localStorage.getItem('top') || '10');
+	const starFilter = localStorage.getItem('starFilter') || 'all';
 
 	// Filter for ongoing banners if ?ongoing is in the URL
-	let filteredGaps;
+	let filteredGaps = gaps;
+
+	// Ongoing filter
 	if (isOngoing) {
-		filteredGaps = gaps.filter(gap => gap.end === "Ongoing");
-	} else {
-		filteredGaps = gaps;
+		filteredGaps = filteredGaps.filter(gap => gap.end === "Ongoing");
+	}
+
+	// Star filter
+	if (starFilter === '5') {
+		filteredGaps = filteredGaps.filter(gap => gap.star === 5);
+	} else if (starFilter === '4') {
+		filteredGaps = filteredGaps.filter(gap => gap.star === 4);
 	}
 
 	// Return the top gaps based on the query parameter
 	const heading = document.querySelector('h1');
+
+	let starText = '';
+	if (starFilter === '5') starText = ' (5★ Only)';
+	if (starFilter === '4') starText = ' (4★ Only)';
+
 	if (isOngoing) {
-		heading.textContent = `Top ${top} Longest Ongoing Banners`;
+		heading.textContent = `Top ${top} Longest Ongoing Banners${starText}`;
 	} else {
-		heading.textContent = `Top ${top} Longest Periods Between Banners`;
+		heading.textContent = `Top ${top} Longest Periods Between Banners${starText}`;
 	}
 
 	return filteredGaps.slice(0, top);
@@ -98,7 +105,7 @@ Promise.all([
 					`https://genshin-impact.fandom.com/wiki/${character.character}`);
 			const characterImage =
 				createImage(['character-image', character.star === 5 && character.starType ? 'special-star-image' : character.star === 5 ? 'five-star-image' : character.star === 4 ? 'four-star-image' : 'unknown-star-image'],
-					`https://api.hakush.in/gi/UI/UI_AvatarIcon_${characterName}.webp`,
+					`https://whiteineffa.gitlab.io/gi/Images/Avatar/UI_AvatarIcon_${characterName}.png`,
 					`${character.character} avatar`,
 					character.character);
 			characterImageLink.appendChild(characterImage);

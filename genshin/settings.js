@@ -112,6 +112,12 @@ window.onload = function() {
 			location.reload();
 		});
 	}
+
+	const starFilter = document.getElementById('starFilter');
+	if (starFilter) {
+		const savedStarFilter = localStorage.getItem('starFilter') || 'all';
+		starFilter.value = savedStarFilter;
+	}
 };
 
 // Update the traveler when the user selects a new option
@@ -175,4 +181,11 @@ if (topLengthInput) {
 	});
 }
 
-
+// Save starFilter preference and apply it
+const starFilter = document.getElementById('starFilter');
+if (starFilter) {
+	starFilter.addEventListener('change', () => {
+		localStorage.setItem('starFilter', starFilter.value);
+		location.reload();
+	});
+}
